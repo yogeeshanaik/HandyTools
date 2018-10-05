@@ -1,0 +1,392 @@
+5/1/2017 4:27:06 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:27:06 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:27:06 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:27:06 PM Added reference "System.dll".
+5/1/2017 4:27:06 PM Added reference "System.Data.dll".
+5/1/2017 4:27:06 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:27:06 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:27:11 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:27:11 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:27:11 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:27:11 PM Added reference "System.dll".
+5/1/2017 4:27:11 PM Added reference "System.Data.dll".
+5/1/2017 4:27:11 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\DDLEventsClient.cs".
+5/1/2017 4:27:11 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:27:11 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:27:11 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:27:11 PM Added reference "System.dll".
+5/1/2017 4:27:11 PM Added reference "System.Data.dll".
+5/1/2017 4:27:11 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/DDLEventsService.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\LocalizedTypesClient.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/LocalizedTypesService.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\LocalizedViewsClient.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/LocalizedViewsService.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\NavigationClient.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/NavigationService.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\PermissionClient.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/PermissionService.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\RoleClient.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/RoleService.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\RolePermissionClient.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/RolePermissionService.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\TraceClient.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/TraceService.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserClient.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/UserService.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserLoginClient.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/UserLoginService.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserRoleClient.cs".
+5/1/2017 4:27:11 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:27:11 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/UserRoleService.cs".
+5/1/2017 4:28:31 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:28:31 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:28:31 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:28:31 PM Added reference "System.dll".
+5/1/2017 4:28:31 PM Added reference "System.Data.dll".
+5/1/2017 4:28:31 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:28:31 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:34:08 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:08 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:08 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:34:08 PM Added reference "System.dll".
+5/1/2017 4:34:08 PM Added reference "System.Data.dll".
+5/1/2017 4:34:08 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:34:08 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:08 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\DDLEventsClient.cs".
+5/1/2017 4:34:08 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:08 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:08 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:34:08 PM Added reference "System.dll".
+5/1/2017 4:34:08 PM Added reference "System.Data.dll".
+5/1/2017 4:34:08 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IDDLEventsService.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\LocalizedTypesClient.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/ILocalizedTypesService.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\LocalizedViewsClient.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/ILocalizedViewsService.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\NavigationClient.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/INavigationService.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\PermissionClient.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IPermissionService.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\RoleClient.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IRoleService.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\RolePermissionClient.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IRolePermissionService.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\TraceClient.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/ITraceService.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserClient.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IUserService.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserLoginClient.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IUserLoginService.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserRoleClient.cs".
+5/1/2017 4:34:09 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:09 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IUserRoleService.cs".
+5/1/2017 4:34:17 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:34:17 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:34:17 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:34:17 PM Added reference "System.dll".
+5/1/2017 4:34:17 PM Added reference "System.Data.dll".
+5/1/2017 4:34:17 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:34:17 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:34:22 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:22 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:22 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:34:22 PM Added reference "System.dll".
+5/1/2017 4:34:22 PM Added reference "System.Data.dll".
+5/1/2017 4:34:22 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\DDLEventsClient.cs".
+5/1/2017 4:34:22 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:22 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:22 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:34:22 PM Added reference "System.dll".
+5/1/2017 4:34:22 PM Added reference "System.Data.dll".
+5/1/2017 4:34:22 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IDDLEventsService.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\LocalizedTypesClient.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/ILocalizedTypesService.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\LocalizedViewsClient.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/ILocalizedViewsService.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\NavigationClient.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/INavigationService.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\PermissionClient.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IPermissionService.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\RoleClient.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IRoleService.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\RolePermissionClient.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IRolePermissionService.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\TraceClient.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/ITraceService.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserClient.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IUserService.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserLoginClient.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IUserLoginService.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserRoleClient.cs".
+5/1/2017 4:34:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IUserRoleService.cs".
+5/1/2017 4:34:31 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:34:32 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:34:32 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:34:32 PM Added reference "System.dll".
+5/1/2017 4:34:32 PM Added reference "System.Data.dll".
+5/1/2017 4:34:32 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:34:32 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:34:35 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:35 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:35 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:34:35 PM Added reference "System.dll".
+5/1/2017 4:34:35 PM Added reference "System.Data.dll".
+5/1/2017 4:34:35 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\DDLEventsClient.cs".
+5/1/2017 4:34:36 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:36 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:36 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:34:36 PM Added reference "System.dll".
+5/1/2017 4:34:36 PM Added reference "System.Data.dll".
+5/1/2017 4:34:36 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IDDLEventsService.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\LocalizedTypesClient.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/ILocalizedTypesService.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\LocalizedViewsClient.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/ILocalizedViewsService.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\NavigationClient.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/INavigationService.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\PermissionClient.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IPermissionService.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\RoleClient.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IRoleService.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\RolePermissionClient.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IRolePermissionService.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\TraceClient.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/ITraceService.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserClient.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IUserService.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserLoginClient.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IUserLoginService.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserRoleClient.cs".
+5/1/2017 4:34:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:34:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IUserRoleService.cs".
+5/1/2017 4:36:30 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:36:30 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:36:30 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:36:30 PM Added reference "System.dll".
+5/1/2017 4:36:30 PM Added reference "System.Data.dll".
+5/1/2017 4:36:30 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:36:31 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:36:36 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:36:36 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:36:36 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:36:36 PM Added reference "System.dll".
+5/1/2017 4:36:36 PM Added reference "System.Data.dll".
+5/1/2017 4:36:36 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:36:36 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:36:36 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\DDLEventsClient.cs".
+5/1/2017 4:36:36 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:36:36 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:36:36 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:36:36 PM Added reference "System.dll".
+5/1/2017 4:36:36 PM Added reference "System.Data.dll".
+5/1/2017 4:36:36 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IDDLEventsService.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\LocalizedTypesClient.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/ILocalizedTypesService.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\LocalizedViewsClient.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/ILocalizedViewsService.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\NavigationClient.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/INavigationService.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\PermissionClient.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IPermissionService.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\RoleClient.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IRoleService.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\RolePermissionClient.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IRolePermissionService.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\TraceClient.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/ITraceService.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserClient.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IUserService.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserLoginClient.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IUserLoginService.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserRoleClient.cs".
+5/1/2017 4:36:37 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:36:37 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IUserRoleService.cs".
+5/1/2017 4:37:42 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:37:42 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:37:42 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:37:42 PM Added reference "System.dll".
+5/1/2017 4:37:42 PM Added reference "System.Data.dll".
+5/1/2017 4:37:42 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:37:42 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+5/1/2017 4:37:46 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:37:46 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:37:46 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:37:46 PM Added reference "System.dll".
+5/1/2017 4:37:46 PM Added reference "System.Data.dll".
+5/1/2017 4:37:46 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\DDLEventsClient.cs".
+5/1/2017 4:37:46 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:37:46 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:37:46 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 4:37:46 PM Added reference "System.dll".
+5/1/2017 4:37:46 PM Added reference "System.Data.dll".
+5/1/2017 4:37:46 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IDDLEventsService.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\LocalizedTypesClient.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/ILocalizedTypesService.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\LocalizedViewsClient.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/ILocalizedViewsService.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\NavigationClient.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/INavigationService.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\PermissionClient.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IPermissionService.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\RoleClient.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IRoleService.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\RolePermissionClient.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IRolePermissionService.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\TraceClient.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/ITraceService.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserClient.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IUserService.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserLoginClient.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IUserLoginService.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Proxy.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\UserRoleClient.cs".
+5/1/2017 4:37:46 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Contract.cst".
+5/1/2017 4:37:46 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\Output\Contracts/IUserRoleService.cs".
+11/11/2017 1:11:17 PM Parsing template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+11/11/2017 1:11:17 PM Compiling template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+11/11/2017 1:11:17 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+11/11/2017 1:11:17 PM Added reference "System.dll".
+11/11/2017 1:11:17 PM Added reference "System.Data.dll".
+11/11/2017 1:11:17 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+11/11/2017 1:11:17 PM Invoking template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+11/12/2017 2:15:31 PM Parsing template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+11/12/2017 2:15:31 PM Compiling template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".
+11/12/2017 2:15:31 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+11/12/2017 2:15:31 PM Added reference "System.dll".
+11/12/2017 2:15:31 PM Added reference "System.Data.dll".
+11/12/2017 2:15:31 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+11/12/2017 2:15:32 PM Invoking template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Client\Proxy\BuildClasses.cst".

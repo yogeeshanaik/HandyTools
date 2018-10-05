@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+
+
+   <!-- Generator settings -->
+   <add name="template" value="Templates\Client\Entity\BuildClasses.cst" />
+   <add name="targetdir" value="Templates\Client\Entity\" />
+   <add name="logfile" value="Templates\Client\Entity\generation.log" />
+
+
+   <!-- Project settings: Your custom settings here -->
+   <add name="namespace" value="Client.Entity" />
+
+
+</settings>

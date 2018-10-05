@@ -1,0 +1,70 @@
+﻿@model Client.Entities.User
+
+<div class="row">
+
+    <div class="col-md-6 col-sm-12">
+        <div class="col-md-6 col-sm-12">
+            @Html.LabelFor(model => model.Username)
+        </div>
+        <div class="col-md-6 col-sm-12">
+            @Html.DisplayFor(model => model.Username)
+        </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+        <div class="col-md-6 col-sm-12">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="col-md-6 col-sm-12">
+            @Html.DisplayFor(model => model.FirstName)
+        </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+        <div class="col-md-6 col-sm-12">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+        <div class="col-md-6 col-sm-12">
+            @Html.DisplayFor(model => model.LastName)
+        </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+        <div class="col-md-6 col-sm-12">
+            @Html.LabelFor(model => model.EmailId)
+        </div>
+        <div class="col-md-6 col-sm-12">
+            @Html.DisplayFor(model => model.EmailId)
+        </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+        <div class="col-md-6 col-sm-12">
+            @Html.LabelFor(model => model.Mobile)
+        </div>
+        <div class="col-md-6 col-sm-12">
+            @Html.DisplayFor(model => model.Mobile)
+        </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+        <div class="col-md-6 col-sm-12">
+            @Html.LabelFor(model => model.IsActive)
+        </div>
+        <div class="col-md-6 col-sm-12">
+            @Html.DisplayFor(model => model.IsActive)
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6 col-sm-12">
+
+    @Html.LabelFor(model => model.ImageBytes)
+
+    @{
+        var imgSrc = (Model.ImageBytes == null) ? GlobalVariables.UserDefaultImagePath
+            : String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.ImageBytes));
+    }
+
+    <img src="@Url.Content(imgSrc)" class="img-responsive avatar-view" onclick="location.href='@Url.Action("Upload", "Avatar", new { id = Model.UserId, profile = "User" })'" />
+</div>

@@ -1,0 +1,76 @@
+
+
+@model AssociatePayroll.Core.Models.Company.ClientGst
+
+<div class="row">
+
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.ClientGstId)
+                @Html.TextBoxFor(model => model.ClientGstId, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ClientGstId, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.StateName)
+                @Html.TextBoxFor(model => model.StateName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.StateName, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.GstNumber)
+                @Html.TextBoxFor(model => model.GstNumber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.GstNumber, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.PanNumber)
+                @Html.TextBoxFor(model => model.PanNumber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.PanNumber, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.TanNumber)
+                @Html.TextBoxFor(model => model.TanNumber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TanNumber, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.InvoicingStateName)
+                @Html.TextBoxFor(model => model.InvoicingStateName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.InvoicingStateName, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+                <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.CreatedBy)
+                @Html.TextBoxFor(model => model.CreatedBy, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CreatedBy, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelFor(model => model.CreatedOn)
+                @Html.TextBoxFor(model => model.CreatedOn, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CreatedOn, null, new { @class = "text-danger" })
+            </div>
+        </div>
+            
+</div>

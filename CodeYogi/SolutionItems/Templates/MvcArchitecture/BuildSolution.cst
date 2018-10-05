@@ -1,0 +1,94 @@
+<%@ CodeTemplate Language="C#" %>
+
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ ReferenceAssembly Path="Arebis.CodeGeneration.VisualStudio.dll" %>
+
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.IO" %>
+<%@ Import Namespace="Arebis.CodeGeneration.VisualStudio" %>
+
+<%
+   SqlTable cat = new SqlTable();
+    if(!cat.IsConnected())
+        throw new ApplicationException("No connection to database");
+%>
+
+<%
+System.Diagnostics.Debugger.Launch();
+
+ProjectManager projManager = new ProjectManager();    
+
+
+// Create Solution
+string SolutionPath = this.Settings.GetValues("Solution_Path")[0];
+SolutionPath = Path.GetFullPath(SolutionPath);
+string SolutionName = Path.GetFileName(SolutionPath);
+
+if(!Directory.Exists(Path.GetDirectoryName(SolutionPath)))
+    Directory.CreateDirectory(Path.GetDirectoryName(SolutionPath));
+
+if(!File.Exists(SolutionPath))
+    projManager.CreateSolutionFile(Path.GetDirectoryName(SolutionPath), SolutionName);   
+
+
+// Create Project
+string templatePath = this.Settings.GetValues("Template_ClassLibrary_Path")[0];
+string projectPath = "";
+string projectName = "";
+
+// Business Entity
+projectPath = this.Settings.GetValues("Project_BusinessEntity_Path")[0];
+projectPath = Path.GetDirectoryName(Path.GetFullPath(projectPath));
+projectName = System.IO.Path.GetFileName(projectPath);
+
+if(!Directory.Exists(projectPath))
+    Directory.CreateDirectory(projectPath);
+    
+if(!System.IO.File.Exists(projectPath))
+    projManager.CreateProjectFile(templatePath, projectPath, projectName);
+
+    // Business Service
+    projectPath = this.Settings.GetValues("Project_BusinessService_Path")[0];
+projectPath = Path.GetDirectoryName(Path.GetFullPath(projectPath));
+projectName = System.IO.Path.GetFileName(projectPath);
+
+if(!Directory.Exists(projectPath))
+    Directory.CreateDirectory(projectPath);
+    
+if(!System.IO.File.Exists(projectPath))
+    projManager.CreateProjectFile(templatePath, projectPath, projectName);
+    
+foreach(SqlTable table in cat.GetSqlTables()){
+
+    string classname = table.Name;
+    
+    // Build Business Library
+    this.Host.CallTemplateToFile(@"Business\BusinessEntity\BusinessEntity.cst", @"Business\BusinessEntity\"+classname + ".cs", table );
+    this.Host.CallTemplateToFile(@"Business\BusinessService\BusinessContract.cst", @"Business\BusinessService\"+classname + ".cs", table );
+    this.Host.CallTemplateToFile(@"Business\BusinessService\BusinessService.cst", @"Business\BusinessService\"+classname + ".cs", table );   
+
+
+    var prj = new ProjectManagerFileWriter();
+
+    prj.AddFileToProject(
+        new FileInfo(
+        Path.GetFullPath(@"Templates\MvcArchitecture\Output\Business\BusinessEntity\"+classname + ".cs")
+        )
+    );
+
+}
+
+
+%>
+
+
+
+
+
+
+

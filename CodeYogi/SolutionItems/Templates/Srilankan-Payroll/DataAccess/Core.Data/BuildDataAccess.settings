@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+
+   <!-- Generator settings -->
+   <add name="template" value="Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst" />
+   <add name="targetdir" value="Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\" />
+   <add name="logfile" value="Templates\Srilankan-Payroll\DataAccess\Core.Data\generation.log" />
+
+   <!-- Project settings -->
+   <add name="namespace" value="Data.Core.Repositories" />
+
+</settings>

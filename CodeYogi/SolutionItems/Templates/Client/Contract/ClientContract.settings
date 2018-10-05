@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+
+   <!-- Generator settings -->
+   <add name="template" value="Templates\Business\BusinessEntity\BusinessEntity.cst" />
+   <add name="targetdir" value="Templates\Business\BusinessEntity\" />
+   <add name="logfile" value="Templates\Business\BusinessEntity\generation.log" />
+   <add name="output" value="BusinessEntity.cs" />
+
+
+   <!-- Project settings: Your custom settings here -->
+   <add name="namespace" value="Business.Entities" />
+
+
+</settings>

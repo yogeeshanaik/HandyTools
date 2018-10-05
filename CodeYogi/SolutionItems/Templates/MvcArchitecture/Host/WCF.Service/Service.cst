@@ -1,0 +1,20 @@
+<%@ CodeTemplate Language="C#" ClassName="Template.Class" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Parameter Name="table" Type="SqlTable" %>
+
+<%
+
+string openTag = "<%@";
+
+string closeTag1 = @"%";
+string closeTag2 = @">";
+%>
+
+<%= openTag %> ServiceHost 
+    Language="C#" 
+    Debug="true" 
+    Service="Business.Services.Contracts.I<%= table.Name %>Service, Business.Services" 
+    Factory="Autofac.Integration.Wcf.AutofacServiceHostFactory, Autofac.Integration.Wcf" <%= closeTag1 %><%= closeTag2 %>

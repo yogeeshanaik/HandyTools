@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+
+   <!-- Generator settings -->
+   <add name="template" value="Templates\DataAccess\DataAccess.cst" />
+   <add name="targetdir" value="Templates\DataAccess\" />
+   <add name="logfile" value="Templates\DataAccess\generation.log" />
+   <add name="output" value="DataAccess.cs" />
+
+   <!-- Project settings -->
+   <add name="namespace" value="Data.Core.Repositories" />
+
+</settings>

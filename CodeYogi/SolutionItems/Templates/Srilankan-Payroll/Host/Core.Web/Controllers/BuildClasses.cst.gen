@@ -1,0 +1,60 @@
+using System;
+using System.Text;
+using DatabaseCatalogReader;
+using System.Data;
+
+
+namespace Arebis.DynamicAssembly
+{
+	[Arebis.CodeGeneration.TemplateInfo(@"E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Controllers\BuildClasses.cst")]
+	public sealed partial class BuildClasses_cst : Arebis.CodeGeneration.CodeTemplate
+	{
+
+
+		public BuildClasses_cst(Arebis.CodeGeneration.IGenerationHost _host)
+			: base(_host)
+		{
+
+		}
+		
+		public override void Generate()
+		{
+#line 9 "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Controllers\BuildClasses.cst"
+this.WriteObjects("\r\n");
+this.WriteObjects("\r\n");
+#line 12 "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Controllers\BuildClasses.cst"
+// System.Diagnostics.Debugger.Launch();
+   SqlTable cat = new SqlTable();
+    if(!cat.IsConnected())
+        throw new ApplicationException("No connection to database");
+
+#line 17 "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Controllers\BuildClasses.cst"
+this.WriteObjects("\r\n");
+this.WriteObjects("\r\n");
+#line 20 "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Controllers\BuildClasses.cst"
+System.Diagnostics.Debugger.Launch();
+foreach(SqlTable table in cat.GetSqlTables()){
+
+    this.Host.CallTemplateToFile(
+    "BuildClass.cst", table.Name+"Controller.cs",
+        table
+    );
+    
+}
+
+
+#line 31 "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Controllers\BuildClasses.cst"
+this.WriteObjects("\r\n");
+this.WriteObjects("\r\n");
+this.WriteObjects("\r\n");
+this.WriteObjects("\r\n");
+this.WriteObjects("\r\n");
+this.WriteObjects("\r\n");
+this.WriteObjects("\r\n");
+
+		}
+
+
+
+	}
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<class name="Address">
+  <property name="Line1" type="String" />
+  <property name="Line2" type="String" />
+  <property name="ZIP" type="String" />
+  <property name="Town" type="String" />
+  <property name="Country" type="String" />
+</class>
+
+

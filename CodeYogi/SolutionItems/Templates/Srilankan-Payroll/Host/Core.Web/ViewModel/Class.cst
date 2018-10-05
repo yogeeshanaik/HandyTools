@@ -1,0 +1,117 @@
+<%@ CodeTemplate Language="C#" ClassName="Template.Class" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ ReferenceAssembly Path="System.core.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Parameter Name="table" Type="SqlTable" %>
+
+<%
+
+System.Diagnostics.Debugger.Launch();
+
+var fields = table.GetFields();
+
+string properties = string.Empty;
+string newline="\n\t\t";
+
+string defualtValues = string.Empty;
+
+for(int i=0; i<fields.Length; i++)
+{
+    if (fields[i].DefaultValue.Length>0)
+        defualtValues+= fields[i].Name +" = "+ fields[i].DefaultValue+";"+newline;
+    
+    if(!fields[i].IsNullable)
+        properties += "[Required]"+newline;
+        
+        properties += "[Display(Name=\""+ToProperCase(fields[i].Name)+"\")]" +newline; 
+        //properties += "[DataMember]" +newline;
+    properties += "public "+fields[i].ToNetType()+" "+fields[i].Name +" { get; set; }" +newline;
+    
+    properties +=newline;
+    
+    
+    //Text properties for foriegn key fields
+    if(fields[i].IsForiegnKey)
+    {
+        var refTable = new ReferencedTable(fields[i].ReferencedTable,table.ConnectionString).GetSqlTable();
+        var refFields = refTable.GetFields();
+        
+        string idField = string.Empty;
+    var field2 = refFields.ToList().Where(s=>s.IsPrimaryKey == true).FirstOrDefault();
+    if(field2 != null)
+    idField = field2.Name;
+    
+    TableField textField = fields[i]; //Simply initialize
+    // Assuming Text field will be right next to the primary key field
+    if(refFields.Count() >= field2.Ordinal+1)
+        textField = refFields[field2.Ordinal+1]; 
+        
+        if(!textField.IsNullable)
+        properties += "[Required]"+newline;
+        
+        properties += "[Display(Name=\""+ToProperCase(textField.Name)+"\")]" +newline; 
+        //properties += "[DataMember]" +newline;
+    properties += "public "+textField.ToNetType()+" "+textField.Name +" { get; set; }" +newline;
+    
+    properties +=newline;
+    }
+}
+
+if(defualtValues.Length>0)
+defualtValues = "public "+table.Name+"(){"+newline+defualtValues+"}";
+
+// replace sql code with c#
+defualtValues = defualtValues.Replace("((0))", "false");
+defualtValues = defualtValues.Replace("((1))", "true");
+
+defualtValues = defualtValues.Replace("(getdate())", "DateTime.Now");
+
+%>
+<%%
+// Capitalize the first character and add a space before
+// each capitalized letter (except the first character).
+public string ToProperCase(string the_string)
+{
+    the_string = the_string.Replace("_",string.Empty);
+    
+    // If there are 0 or 1 characters, just return the string.
+    if (the_string == null) return the_string;
+    if (the_string.Length < 2) return the_string.ToUpper();
+
+    // Start with the first character.
+    string result = the_string.Substring(0, 1).ToUpper();
+
+    // Add the remaining characters.
+    for (int i = 1; i < the_string.Length; i++)
+    {
+        if (
+        char.IsUpper(the_string[i]) 
+        && ( i+1<= the_string.Length && !char.IsUpper(the_string[i+1])) 
+        ) result += " ";
+        
+        result += the_string[i];
+    }
+
+    return result;
+}
+
+%%>
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+
+namespace <%= Settings["namespace"] %>
+{
+    
+    // [DataContract]
+    public class <%= table.Name %> : BaseEntity
+    {
+        <%= defualtValues %>
+         
+        <%= properties %>
+    }
+
+}

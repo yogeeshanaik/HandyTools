@@ -1,0 +1,56 @@
+<%@ CodeTemplate Language="C#" CodeFile="Class.cst.cs" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Xml.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="System.Xml" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Import Namespace="System.Data" %>
+
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+
+
+<%
+   System.Diagnostics.Debugger.Launch();
+   SqlTable cat = new SqlTable();
+    if(!cat.IsConnected())
+        throw new ApplicationException("No connection to database");
+%>
+
+namespace <%= Settings["namespace"] %>
+{
+    
+     <%
+     foreach(SqlTable table in cat.GetSqlTables())
+    {
+        %>
+    
+    [DataContract]
+    public class <%= table.Name %> : IExtensibleDataObject
+    {
+        
+          <% 
+            foreach(TableField p in table.GetFields()) { 
+            %>
+        [DataMember]
+        public <%=p.ToNetType()%> <%=p.Name%> { get; set; }
+            <%
+            } // foreach(..)
+            %>
+            
+        
+        #region IExtensibleDataObject Members
+
+        public ExtensionDataObject ExtensionData { get; set; }
+
+        #endregion
+    }
+
+        <%
+        } // foreach(..)
+        %>
+
+}

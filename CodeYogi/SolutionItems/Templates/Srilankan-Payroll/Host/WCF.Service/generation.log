@@ -1,0 +1,116 @@
+05/02/2017 3:08:37 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst".
+05/02/2017 3:08:37 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst".
+05/02/2017 3:08:37 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/02/2017 3:08:37 PM Added reference "System.dll".
+05/02/2017 3:08:37 PM Added reference "System.Data.dll".
+05/02/2017 3:08:37 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/02/2017 3:08:37 PM Compile error CS0103: The name 'registerIOC' does not exist in the current context
+  File "d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst", line 73
+05/02/2017 3:08:37 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\Bootstrapper.cs".
+05/02/2017 3:09:35 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst".
+05/02/2017 3:09:35 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst".
+05/02/2017 3:09:35 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/02/2017 3:09:35 PM Added reference "System.dll".
+05/02/2017 3:09:35 PM Added reference "System.Data.dll".
+05/02/2017 3:09:35 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/02/2017 3:09:36 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst".
+05/02/2017 3:09:44 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:09:44 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:09:44 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/02/2017 3:09:44 PM Added reference "System.dll".
+05/02/2017 3:09:44 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/02/2017 3:09:44 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:09:44 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\DDLEventsService.svc".
+05/02/2017 3:09:45 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:09:45 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\LocalizedTypesService.svc".
+05/02/2017 3:09:45 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:09:45 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\LocalizedViewsService.svc".
+05/02/2017 3:09:45 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:09:45 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\NavigationService.svc".
+05/02/2017 3:09:45 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:09:45 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\PermissionService.svc".
+05/02/2017 3:09:45 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:09:45 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\RoleService.svc".
+05/02/2017 3:09:45 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:09:45 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\RolePermissionService.svc".
+05/02/2017 3:09:45 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:09:45 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\TraceService.svc".
+05/02/2017 3:09:45 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:09:45 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\UserService.svc".
+05/02/2017 3:09:45 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:09:45 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\UserLoginService.svc".
+05/02/2017 3:09:45 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:09:45 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\UserRoleService.svc".
+05/02/2017 3:09:45 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\Bootstrapper.cs".
+05/02/2017 3:10:50 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst".
+05/02/2017 3:10:50 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst".
+05/02/2017 3:10:50 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/02/2017 3:10:50 PM Added reference "System.dll".
+05/02/2017 3:10:50 PM Added reference "System.Data.dll".
+05/02/2017 3:10:50 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/02/2017 3:10:50 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst".
+05/02/2017 3:10:54 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:10:54 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:10:54 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/02/2017 3:10:54 PM Added reference "System.dll".
+05/02/2017 3:10:54 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/02/2017 3:10:54 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:10:54 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\DDLEventsService.svc".
+05/02/2017 3:10:54 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:10:54 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\LocalizedTypesService.svc".
+05/02/2017 3:10:54 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:10:54 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\LocalizedViewsService.svc".
+05/02/2017 3:10:54 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:10:54 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\NavigationService.svc".
+05/02/2017 3:10:54 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:10:54 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\PermissionService.svc".
+05/02/2017 3:10:54 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:10:54 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\RoleService.svc".
+05/02/2017 3:10:54 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:10:54 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\RolePermissionService.svc".
+05/02/2017 3:10:54 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:10:54 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\TraceService.svc".
+05/02/2017 3:10:54 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:10:54 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\UserService.svc".
+05/02/2017 3:10:54 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:10:54 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\UserLoginService.svc".
+05/02/2017 3:10:54 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:10:54 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\UserRoleService.svc".
+05/02/2017 3:10:54 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\Bootstrapper.cs".
+05/02/2017 3:11:16 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst".
+05/02/2017 3:11:16 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst".
+05/02/2017 3:11:16 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/02/2017 3:11:16 PM Added reference "System.dll".
+05/02/2017 3:11:16 PM Added reference "System.Data.dll".
+05/02/2017 3:11:16 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/02/2017 3:11:16 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst".
+05/02/2017 3:11:24 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:11:24 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:11:24 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/02/2017 3:11:24 PM Added reference "System.dll".
+05/02/2017 3:11:24 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/02/2017 3:11:24 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:11:24 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\NavigationService.svc".
+05/02/2017 3:11:24 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:11:24 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\PermissionService.svc".
+05/02/2017 3:11:24 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:11:24 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\RoleService.svc".
+05/02/2017 3:11:24 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:11:24 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\RolePermissionService.svc".
+05/02/2017 3:11:24 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:11:24 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\TraceService.svc".
+05/02/2017 3:11:24 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:11:24 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\UserService.svc".
+05/02/2017 3:11:24 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:11:24 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\UserLoginService.svc".
+05/02/2017 3:11:24 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Service.cst".
+05/02/2017 3:11:24 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\UserRoleService.svc".
+05/02/2017 3:11:24 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\Bootstrapper.cs".
+11/11/2017 1:11:48 PM Parsing template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst".
+11/11/2017 1:11:48 PM Compiling template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst".
+11/11/2017 1:11:48 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+11/11/2017 1:11:48 PM Added reference "System.dll".
+11/11/2017 1:11:48 PM Added reference "System.Data.dll".
+11/11/2017 1:11:48 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+11/11/2017 1:11:49 PM Invoking template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst".
+11/11/2017 1:11:53 PM Writing file "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\WCF.Service\Output\Bootstrapper.cs".

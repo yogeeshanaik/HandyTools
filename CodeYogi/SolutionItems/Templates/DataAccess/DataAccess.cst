@@ -1,0 +1,54 @@
+
+<%@ CodeTemplate Language="C#"%>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Import Namespace="System.Data" %>
+
+
+<%
+   System.Diagnostics.Debugger.Launch();
+   SqlTable cat = new SqlTable();
+    if(!cat.IsConnected())
+        throw new ApplicationException("No connection to database");
+%>
+
+using Business.Entities;
+using Data.Core.Infrastructure;
+using System.Linq;
+
+namespace <%= Settings["namespace"] %>
+{
+    
+     <%
+     foreach(SqlTable table in cat.GetSqlTables())
+    {
+        %>
+    
+    public class <%= table.Name %>Repository : RepositoryBase<<%= table.Name %>>, IUserRepository
+    {
+        
+        public <%= table.Name %>Repository(IDbFactory dbFactory)
+            : base(dbFactory) { }
+            
+        public <%= table.Name %> Manage<%= table.Name %>(<%= table.Name %> <%= table.Name.ToLower() %>)
+        {
+            return base.ExecuteProcedure(user, "AppName_Manage<%= table.Name %>").FirstOrDefault();
+        }            
+        
+        public interface I<%= table.Name %>Repository : IRepository<User>
+        {
+            <%= table.Name %> Validate<%= table.Name %>(<%= table.Name %> <%= table.Name.ToLower() %>);
+        }
+            
+
+    }
+
+        <%
+        } // foreach(..)
+        %>
+
+}

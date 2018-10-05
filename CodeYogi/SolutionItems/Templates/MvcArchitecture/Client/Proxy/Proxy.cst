@@ -1,0 +1,69 @@
+<%@ CodeTemplate Language="C#" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Parameter Name="table" Type="SqlTable" %>
+
+using Client.Contracts;
+using Client.Entities;
+using System;
+using System.Collections.Generic;
+using System.ServiceModel;
+
+namespace <%= Settings["namespace"] %>
+{
+    public class <%= table.Name %>Client : ClientBase<I<%= table.Name %>Service>, I<%= table.Name %>Service
+    {
+        #region I<%= table.Name %>Service implementation
+        public void Add(<%= table.Name %> <%= table.Name.ToLower() %>)
+        {
+            Channel.Add(<%= table.Name.ToLower() %>);
+        }
+
+        public void Update(<%= table.Name %> <%= table.Name.ToLower() %>)
+        {
+            Channel.Update(<%= table.Name.ToLower() %>);
+        }
+
+        public void Delete(<%= table.Name %> <%= table.Name.ToLower() %>)
+        {
+            Channel.Delete(<%= table.Name.ToLower() %>);
+        }
+
+        public <%= table.Name %> GetById(int id)
+        {
+            return Channel.GetById(id);
+        }
+
+        public <%= table.Name %>[] GetAll()
+        {
+            return Channel.GetAll();
+        }
+
+        public IEnumerable<<%= table.Name %>> ExecuteProcedure(<%= table.Name %> model, string storedProcedure)
+        {
+            return Channel.ExecuteProcedure(model, storedProcedure);
+        }
+
+        #endregion
+
+        public void CleanUp()
+        {
+            try
+            {
+                if (base.State != CommunicationState.Faulted)
+                    base.Close();
+                else
+                    base.Abort();
+            }
+            catch (Exception ex)
+            {
+                base.Abort();
+            }
+        }
+    }
+}

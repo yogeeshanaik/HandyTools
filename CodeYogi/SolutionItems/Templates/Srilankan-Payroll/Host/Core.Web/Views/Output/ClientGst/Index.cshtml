@@ -1,0 +1,110 @@
+
+
+@model Core.Common.UI.DbPager.Pager<AssociatePayroll.Core.Models.Company.ClientGst>
+
+@{
+    ViewBag.Title = T("ClientGst List");
+}
+
+    
+
+@using (Html.BeginForm())
+{
+
+    <div class="box">
+
+        <div class="box-header with-border">
+            <h3 class="box-title"><b>@ViewBag.Title</b></h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            </div>
+        </div>
+
+        <div class="box-body">
+
+            <p class="pull-right">
+                <a href="@Url.Action("Create")" class="btn btn-default"><span class="fa fa-plus"></span>&nbsp New</a>
+            </p>
+
+             @{Html.RenderPartial("_Search");}
+            @if (Model != null && Model != null && Model.Count > 0)
+            {
+                var header = Model[0];
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                            
+                                <th>@Html.DisplayNameFor(model => header.ClientGstId)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.StateName)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.GstNumber)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.PanNumber)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.TanNumber)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.InvoicingStateName)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.CreatedBy)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.CreatedOn)</th>
+
+ 
+                                <th commandcolumn="true"></th>                              
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.ClientGstId)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.StateName)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.GstNumber)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.PanNumber)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.TanNumber)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.InvoicingStateName)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.CreatedBy)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.CreatedOn)</td>
+ 
+                                    <td style='white-space: nowrap'>
+                                        <a href="javascript:void(0)"
+                                            onclick="location.href='@Url.Action("Details", new { id = item.ClientGstId })'"
+                                             class="btn btn-default btn-xs"><i class="fa fa-info"></i></a>
+                                        <a href="javascript:void(0)"
+                                        onclick="location.href='@Url.Action("Edit", new { id = item.ClientGstId })'"
+                                             class="btn btn-default btn-xs"><i class="fa fa-edit"></i></a>
+                                             <a href="javascript:void(0)"
+                                            onclick="location.href='@Url.Action("Delete", new { id = item.ClientGstId })'"
+                                             class="btn btn-default btn-xs"><i class="fa fa-remove"></i></a>
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    @Html.Partial("_PagingPartial", Model)
+                </div>
+            }
+        </div>
+    </div>
+
+}
+
+

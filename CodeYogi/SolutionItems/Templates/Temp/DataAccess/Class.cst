@@ -1,0 +1,12 @@
+<%@ CodeTemplate Language="C#" ClassName="Template.Class" CodeFile="Class.cst.cs" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Xml.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Xml" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Parameter Name="classElement" Type="XmlElement" %>
+
+using System;
+using System.Collections.Generic;

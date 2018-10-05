@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+
+
+   <!-- Generator settings -->
+   <add name="template" value="Templates\Srilankan-Payroll\Business\BusinessService\BuildBusinessServiceClasses.cst" />
+   <add name="targetdir" value="Templates\Srilankan-Payroll\Business\BusinessService\Output\" />
+   <add name="logfile" value="Templates\Srilankan-Payroll\Business\BusinessService\generation.log" />
+
+
+   <!-- Project settings: Your custom settings here -->
+   <add name="namespace" value="Business.Services" />
+
+
+</settings>

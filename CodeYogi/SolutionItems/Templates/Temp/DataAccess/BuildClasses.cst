@@ -1,0 +1,203 @@
+<%@ CodeTemplate Language="C#" CodeFile="Class.cst.cs" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Xml.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="System.Xml" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Import Namespace="System.Data" %>
+
+using System;
+using System.Collections.Generic;
+
+
+<%%
+    string pp(ProcParameter[] Parameters)
+    {
+        int i=0;
+        StringBuilder sb = new StringBuilder();
+        
+        string separator = ", ";
+        if(Parameters.Length > 8)
+        {
+            separator = ",\n\t\t\t";
+            sb.Append("\n\t\t\t");
+        }
+        
+        foreach(ProcParameter p in Parameters)
+        {   
+            if(i++ > 0)
+                sb.Append(separator);
+                
+            if(p.Direction == ParameterDirection.Output)                
+                sb.AppendFormat("out {0} {1}", p.ToNetType(), p.Name.Substring(1));
+            else
+                sb.AppendFormat("{0} {1}", p.ToNetType(), p.Name.Substring(1));
+        }
+        
+        return sb.ToString();
+    }
+%%>
+
+
+<%
+   System.Diagnostics.Debugger.Launch();
+    SqlStoredProcedure cat = new SqlStoredProcedure();
+    if(!cat.IsConnected())
+        throw new ApplicationException("No connection to database");
+        
+    //string nameSpace = "ClearViews.Repository.Module.Sql";
+    string className = cat.Name;
+    
+%>
+
+
+
+
+/* 
+    This file was created by a code generation tool.
+    Do not modify it.
+*/ 
+
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Xml;
+
+
+namespace <%= Settings["namespace"] %>
+{
+    public partial class <%= className %>
+    { 
+        string connString = "<%=cat.ConnectionString%>";
+        SqlConnection GetSqlConnection()
+        { 
+            return new SqlConnection(connString);
+        }
+        
+        public <%= className %>()
+        { 
+        }
+        
+        <%
+        foreach(SqlStoredProcedure proc in cat.GetStoredProcedures())
+        {
+            string retType = "void";
+            string retValue = null;
+            string cmdExecute = "cmd.ExecuteNonQuery();";
+            if(proc.ExecuteType == ExecuteType.Reader)
+            {
+                retType = "SqlDataReader" ;
+                cmdExecute = "SqlDataReader reader = cmd.ExecuteReader();" ;
+                retValue = "return reader;";
+            }
+            else
+            if(proc.ExecuteType == ExecuteType.XmlReader)
+            {
+                retType = "XmlReader" ;
+                cmdExecute = "XmlReader reader = cmd.ExecuteXmlReader();" ;
+                retValue = "return reader;";
+            }
+            else
+            if(proc.ExecuteType == ExecuteType.Scalar)
+            {
+                retType = "object" ;
+                cmdExecute = "object scalar = cmd.ExecuteScalar();" ;
+                retValue = "return scalar;";
+            }
+        %>
+        
+
+        public <%=retType%> <%=proc.Name%>(<%=pp(proc.GetParameters())%>)
+        {
+            SqlConnection conn = GetSqlConnection();
+            using(conn)
+            { 
+                if(conn.State == ConnectionState.Closed)
+                    conn.Open();
+                    
+                SqlCommand cmd = new SqlCommand("<%= proc.Name %>", conn);
+                cmd.CommandType = CommandType.StoredProcedure; SqlParameter param;
+                
+                
+            <% 
+            foreach(ProcParameter p in proc.GetParameters()) { 
+            %>
+                param = new SqlParameter("<%=p.Name%>", SqlDbType.<%=p.Type%>, <%=p.Length%>);
+                cmd.Parameters.Add(param);
+                param.Direction = ParameterDirection.<%=p.Direction%>;
+                <%if(p.Direction == ParameterDirection.Input) {%>
+                param.Value = <%=p.Name.Substring(1)%>;
+                <%}%>
+            <%
+            } // foreach(..)
+            %>
+                // execute the stored procedure
+                <%=cmdExecute%>
+                
+            <%
+            foreach(ProcParameter p in proc.GetParameters()) {
+                if(p.Direction == ParameterDirection.Output) {
+            %> 
+                <%=p.Name.Substring(1)%> = (<%=p.ToNetType()%>)cmd.Parameters["<%=p.Name%>"].Value;
+            <%
+                } // if(..)
+            } // foreach(..)
+            %>
+            
+            <% if(retValue != null) { %>
+                <%= retValue %>
+            <% } %>
+            
+            
+            }
+        }
+        
+        
+        <%
+        } // foreach(..)
+        %>
+        public SqlDataReader GetReader(string query)
+        {
+            SqlConnection conn = GetSqlConnection();
+            using(conn)
+            {
+                if(conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                return cmd.ExecuteReader();
+            }
+        } 
+                    
+        public XmlReader GetXmlReader(string query)
+        {
+            SqlConnection conn = GetSqlConnection();
+            using(conn)
+            {
+                if(conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                return cmd.ExecuteXmlReader();
+            }
+        }
+        
+        public object GetScalar(string query)
+        {
+            SqlConnection conn = GetSqlConnection();
+            using(conn)
+            {
+                if(conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                return cmd.ExecuteScalar();
+            }
+        }                    
+    }
+}
+
+
+
+
+

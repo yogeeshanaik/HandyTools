@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+
+
+   <!-- Generator settings -->
+   <add name="template" value="Templates\Srilankan-Payroll\Client\Entity\BuildClasses.cst" />
+   <add name="targetdir" value="Templates\Srilankan-Payroll\Client\Entity\Output\" />
+   <add name="logfile" value="Templates\Srilankan-Payroll\Client\Entity\generation.log" />
+
+
+   <!-- Project settings: Your custom settings here -->
+   <add name="namespace" value="Client.Entities" />
+
+
+</settings>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+
+   <!-- Generator settings -->
+   <add name="template" value="EntityFrameworkT3.cst" />
+   <add name="targetdir" value="Result\Domain" />
+   <add name="logfile" value="generation.log" />
+   <add name="output" value="Result\Domain\Test.xml" />
+
+   <!-- Project settings -->
+   <add name="namespace" value="Yogeesha.Sample.Repository" />
+
+</settings>

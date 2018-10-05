@@ -1,0 +1,54 @@
+<%@ CodeTemplate Language="C#" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Parameter Name="table" Type="SqlTable" %>
+<%
+
+var fields = table.GetFields();
+
+string properties = string.Empty;
+string newline="\n\t\t";
+string nullable = string.Empty;
+
+string defualtValues = string.Empty;
+
+for(int i=0; i<fields.Length; i++)
+{
+    if (fields[i].DefaultValue.Length>0)
+    defualtValues+= fields[i].Name +" = "+ fields[i].DefaultValue+";"+newline;
+    
+    properties += "[DataMember]" +newline;
+    properties += "public "+fields[i].ToNetType(fields[i].IsNullable)+" "+fields[i].Name +" { get; set; }" +newline;
+    properties +=newline;
+}
+
+if(defualtValues.Length>0)
+defualtValues = "public "+table.Name+"(){"+newline+defualtValues+"}";
+
+// replace sql code with c#
+defualtValues = defualtValues.Replace("((0))", "false");
+defualtValues = defualtValues.Replace("((1))", "true");
+
+defualtValues = defualtValues.Replace("(getdate())", "DateTime.Now");
+
+%>
+using System;
+using System.Runtime.Serialization;
+
+namespace <%= Settings["namespace"] %>
+{
+    
+    [DataContract]
+    public class <%= table.Name %> : BaseEntity
+    {
+        <%= defualtValues %>
+        
+        <%= properties %>
+    }
+
+}

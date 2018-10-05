@@ -1,0 +1,94 @@
+
+<%@ CodeTemplate Language="C#" CodeFile="Class.cst.cs" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Xml.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="System.Xml" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Import Namespace="System.Data" %>
+
+
+<%
+   System.Diagnostics.Debugger.Launch();
+   SqlTable cat = new SqlTable();
+    if(!cat.IsConnected())
+        throw new ApplicationException("No connection to database");
+%>
+
+using Business.Entities;
+using Business.Services.Contracts;
+using Data.Core.Infrastructure;
+using Data.Core.Repositories;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace <%= Settings["namespace"] %>
+{
+    
+     <%
+     foreach(SqlTable table in cat.GetSqlTables())
+    {
+        %>
+    
+        public class <%= table.Name %>Service : I<%= table.Name %>Service
+    {
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly I<%= table.Name %>Repository _<%= table.Name.ToLower() %>Repository;  
+  
+        public <%= table.Name %>Service(IUnitOfWork unitOfWork, I<%= table.Name %>Repository <%= table.Name.ToLower() %>Repository)
+        {
+            _unitOfWork = unitOfWork;
+            _<%= table.Name.ToLower() %>Repository = <%= table.Name.ToLower() %>Repository;
+        }
+  
+  
+        public void Add(<%= table.Name %> <%= table.Name.ToLower() %>)
+        {
+            _<%= table.Name.ToLower() %>Repository.Add(<%= table.Name.ToLower() %>);
+            _unitOfWork.Commit();
+        }
+
+        public void Update(<%= table.Name %> <%= table.Name.ToLower() %>)
+        {
+            _<%= table.Name.ToLower() %>Repository.Update(<%= table.Name.ToLower() %>);
+            _unitOfWork.Commit();
+        }
+
+        public void Delete(<%= table.Name %> <%= table.Name.ToLower() %>)
+        {
+            _<%= table.Name.ToLower() %>Repository.Delete(<%= table.Name.ToLower() %>);
+            _unitOfWork.Commit();
+        }
+
+        public <%= table.Name %> GetById(int id)
+        {
+            return _<%= table.Name.ToLower() %>Repository.GetById(id);
+        }
+
+        public <%= table.Name %>[] GetAll()
+        {
+            return _<%= table.Name.ToLower() %>Repository.GetAll().ToArray();
+        }
+
+        public <%= table.Name %> Validate<%= table.Name %>(<%= table.Name %> <%= table.Name.ToLower() %>)
+        {
+            return _<%= table.Name.ToLower() %>Repository.Validate<%= table.Name %>(<%= table.Name.ToLower() %>);
+        }      
+        
+            
+        public IEnumerable<%= table.Name %> ExecuteProcedure(<%= table.Name %> model, string storedProcedure)
+        {
+            return _<%= table.Name.ToLower() %>Repository.ExecuteProcedure(model, storedProcedure);
+        }
+        
+    }
+
+        <%
+        } // foreach(..)
+        %>
+
+}
+    

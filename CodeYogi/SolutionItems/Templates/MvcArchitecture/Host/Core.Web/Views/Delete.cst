@@ -1,0 +1,47 @@
+<%@ CodeTemplate Language="C#" ClassName="Template.Class" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ ReferenceAssembly Path="System.core.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Parameter Name="table" Type="SqlTable" %>
+
+@model <%= Settings["namespace"] %>.<%= table.Name %>
+
+@{
+    ViewBag.Title = "Delete <%= table.Name %>";
+}
+
+<%
+string primaryKey = string.Empty;
+var field = table.GetFields().ToList().Where(s=>s.IsPrimaryKey == true).FirstOrDefault();
+if(field != null)
+    primaryKey = field.Name;
+%>
+
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+    <div class="box">
+        <div class="box-header with-border">
+        <h3 class="box-title">Are you sure you want to delete this record?</h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            </div>
+        </div>
+
+        <div class="box-body" style="display: block">
+        @Html.HiddenFor(model => model.<%= primaryKey %>)
+            @{Html.RenderPartial("_DisplayFields", Model);}
+
+            <div>
+                <input type="submit" value="Delete" />
+                |
+        @Html.ActionLink("Back to List", "Index")
+            </div>
+        </div>
+    </div>
+
+}

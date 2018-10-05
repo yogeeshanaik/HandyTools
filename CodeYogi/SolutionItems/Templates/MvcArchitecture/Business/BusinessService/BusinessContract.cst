@@ -1,0 +1,39 @@
+<%@ CodeTemplate Language="C#" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Parameter Name="table" Type="SqlTable" %>
+
+using Business.Entities;
+using System.Collections.Generic;
+using System.ServiceModel;
+
+namespace <%= Settings["namespace"] %>.Contracts
+{
+    [ErrorBehaviour(typeof(ErrorHandler))]
+    [ServiceContract]
+    public interface I<%= table.Name %>Service
+    {
+        [OperationContract]
+        void Add(<%= table.Name %> <%= table.Name.ToLower() %>);
+
+        [OperationContract]
+        void Update(<%= table.Name %> <%= table.Name.ToLower() %>);
+
+        [OperationContract]
+        void Delete(<%= table.Name %> <%= table.Name.ToLower() %>);
+
+        [OperationContract]
+        <%= table.Name %> GetById(int id);
+
+        [OperationContract]
+        <%= table.Name %>[] GetAll();
+
+        [OperationContract]
+        IEnumerable<<%= table.Name %>> ExecuteProcedure(<%= table.Name %> model, string storedProcedure);
+    }
+}

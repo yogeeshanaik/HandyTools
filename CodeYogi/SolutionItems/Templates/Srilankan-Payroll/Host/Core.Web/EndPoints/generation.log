@@ -1,0 +1,16 @@
+05/02/2017 2:38:18 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\EndPoints\BuildEndPoints.cst".
+05/02/2017 2:38:18 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\EndPoints\BuildEndPoints.cst".
+05/02/2017 2:38:18 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/02/2017 2:38:18 PM Added reference "System.dll".
+05/02/2017 2:38:18 PM Added reference "System.Data.dll".
+05/02/2017 2:38:18 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/02/2017 2:38:20 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\EndPoints\BuildEndPoints.cst".
+05/02/2017 2:38:33 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\EndPoints\Output\Web.config".
+11/11/2017 1:11:36 PM Parsing template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\EndPoints\BuildEndPoints.cst".
+11/11/2017 1:11:36 PM Compiling template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\EndPoints\BuildEndPoints.cst".
+11/11/2017 1:11:36 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+11/11/2017 1:11:36 PM Added reference "System.dll".
+11/11/2017 1:11:36 PM Added reference "System.Data.dll".
+11/11/2017 1:11:36 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+11/11/2017 1:11:37 PM Invoking template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\EndPoints\BuildEndPoints.cst".
+11/11/2017 1:11:39 PM Writing file "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\EndPoints\Output\Web.config".

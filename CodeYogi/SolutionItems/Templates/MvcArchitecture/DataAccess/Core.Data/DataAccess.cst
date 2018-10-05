@@ -1,0 +1,31 @@
+
+<%@ CodeTemplate Language="C#" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Parameter Name="table" Type="SqlTable" %>
+
+
+using Business.Entities;
+using Data.Core.Infrastructure;
+
+namespace <%= Settings["namespace"] %>
+{
+    
+    public interface I<%= table.Name %>Repository : IRepository<<%= table.Name %>>
+    {
+    }
+    
+    public class <%= table.Name %>Repository : RepositoryBase<<%= table.Name %>>, I<%= table.Name %>Repository
+    {
+        
+        public <%= table.Name %>Repository(IDbFactory dbFactory)
+            : base(dbFactory) { }
+            
+    }
+
+}

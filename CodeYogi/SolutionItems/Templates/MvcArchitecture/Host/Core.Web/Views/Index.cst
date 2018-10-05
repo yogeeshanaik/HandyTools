@@ -1,0 +1,100 @@
+<%@ CodeTemplate Language="C#" ClassName="Template.Class" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ ReferenceAssembly Path="System.core.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Parameter Name="table" Type="SqlTable" %>
+
+
+@model Core.Common.UI.DbPager.Pager<<%= Settings["namespace"] %>.<%= table.Name %>>
+
+@{
+    ViewBag.Title = T("<%=table.Name %> List");
+}
+
+<%
+string primaryKey = string.Empty;
+var _field = table.GetFields().ToList().Where(s=>s.IsPrimaryKey == true).FirstOrDefault();
+if(_field != null)
+    primaryKey = _field.Name;
+%>    
+
+@using (Html.BeginForm())
+{
+
+    <div class="box">
+
+        <div class="box-header with-border">
+            <h3 class="box-title"><b>@ViewBag.Title</b></h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            </div>
+        </div>
+
+        <div class="box-body">
+
+            <p class="pull-right">
+                <a href="@Url.Action("Create")" class="btn btn-default"><span class="fa fa-plus"></span>&nbsp New</a>
+            </p>
+
+             @{Html.RenderPartial("_Search");}
+            @if (Model != null && Model != null && Model.Count > 0)
+            {
+                var header = Model[0];
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                            <th commandcolumn="true">Action</th>   
+<%
+foreach(TableField field in table.GetFields())
+{
+%>                            
+                                <th>@Html.DisplayNameFor(model => header.<%= field.Name %>)</th>
+
+<%           
+} // foreach(..)
+%> 
+                                                           
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <td style='white-space: nowrap'>
+                                    <a href="javascript:void(0)"
+                                        onclick="location.href='@Url.Action("Details", new { id = item.<%= primaryKey %> })'"
+                                         class="btn btn-default btn-xs"><i class="fa fa-info"></i></a>
+                                    <a href="javascript:void(0)"
+                                    onclick="location.href='@Url.Action("Edit", new { id = item.<%= primaryKey %> })'"
+                                         class="btn btn-default btn-xs"><i class="fa fa-edit"></i></a>
+                                         <a href="javascript:void(0)"
+                                        onclick="location.href='@Url.Action("Delete", new { id = item.<%= primaryKey %> })'"
+                                         class="btn btn-default btn-xs"><i class="fa fa-remove"></i></a>
+                                </td>
+                                    <%
+foreach(TableField field in table.GetFields())
+{
+%>                                
+                                    <td>@Html.DisplayFor(modelItem => item.<%= field.Name %>)</td>
+<%           
+} // foreach(..)
+%> 
+
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    @Html.Partial("_PagingPartial", Model)
+                </div>
+            }
+        </div>
+    </div>
+
+}
+
+

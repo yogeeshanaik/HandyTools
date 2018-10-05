@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+
+
+   <!-- Generator settings -->
+   <add name="template" value="C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\ProjectTemplatesCache\CSharp\Windows\1033\WindowsApplication\csWindowsApplication.vstemplate" />
+   <add name="targetdir" value="Templates\RnD\Output\" />
+   <add name="logfile" value="Templates\RnD\generation.log" />
+
+
+</settings>

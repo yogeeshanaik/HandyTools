@@ -1,0 +1,543 @@
+05/29/2017 6:44:33 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+05/29/2017 6:44:33 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+05/29/2017 6:44:33 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/29/2017 6:44:33 PM Added reference "System.dll".
+05/29/2017 6:44:33 PM Added reference "System.Data.dll".
+05/29/2017 6:44:33 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/29/2017 6:44:34 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+05/29/2017 6:44:52 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+05/29/2017 6:44:52 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+05/29/2017 6:44:52 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/29/2017 6:44:52 PM Added reference "System.dll".
+05/29/2017 6:44:52 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/29/2017 6:44:53 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+05/29/2017 6:44:53 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Create.cshtml".
+05/29/2017 6:44:53 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+05/29/2017 6:44:53 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+05/29/2017 6:44:53 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/29/2017 6:44:53 PM Added reference "System.dll".
+05/29/2017 6:44:53 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/29/2017 6:44:53 PM Added reference "System.core.dll".
+05/29/2017 6:44:53 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+05/29/2017 6:44:53 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Delete.cshtml".
+05/29/2017 6:44:53 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+05/29/2017 6:44:53 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+05/29/2017 6:44:53 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/29/2017 6:44:53 PM Added reference "System.dll".
+05/29/2017 6:44:53 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/29/2017 6:44:53 PM Added reference "System.core.dll".
+05/29/2017 6:44:53 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+05/29/2017 6:44:53 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Details.cshtml".
+05/29/2017 6:44:53 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+05/29/2017 6:44:53 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+05/29/2017 6:44:53 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/29/2017 6:44:53 PM Added reference "System.dll".
+05/29/2017 6:44:53 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/29/2017 6:44:53 PM Added reference "System.core.dll".
+05/29/2017 6:44:53 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+05/29/2017 6:44:53 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Edit.cshtml".
+05/29/2017 6:44:53 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+05/29/2017 6:44:53 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+05/29/2017 6:44:53 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/29/2017 6:44:53 PM Added reference "System.dll".
+05/29/2017 6:44:53 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/29/2017 6:44:54 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+05/29/2017 6:44:54 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Index.cshtml".
+05/29/2017 6:44:54 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+05/29/2017 6:44:54 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+05/29/2017 6:44:54 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/29/2017 6:44:54 PM Added reference "System.dll".
+05/29/2017 6:44:54 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/29/2017 6:44:54 PM Added reference "System.core.dll".
+05/29/2017 6:44:54 PM Compile error CS0012: The type 'System.Data.SqlDbType' is defined in an assembly that is not referenced. You must add a reference to assembly 'System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+  File "d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst", line 18
+05/29/2017 6:44:54 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/_DisplayFields.cshtml".
+05/29/2017 6:48:23 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+05/29/2017 6:48:23 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+05/29/2017 6:48:23 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/29/2017 6:48:23 PM Added reference "System.dll".
+05/29/2017 6:48:23 PM Added reference "System.Data.dll".
+05/29/2017 6:48:23 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/29/2017 6:48:24 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+05/29/2017 6:48:35 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+05/29/2017 6:48:35 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+05/29/2017 6:48:35 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/29/2017 6:48:35 PM Added reference "System.dll".
+05/29/2017 6:48:35 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/29/2017 6:48:35 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+05/29/2017 6:48:35 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Create.cshtml".
+05/29/2017 6:48:35 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+05/29/2017 6:48:35 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+05/29/2017 6:48:35 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/29/2017 6:48:35 PM Added reference "System.dll".
+05/29/2017 6:48:35 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/29/2017 6:48:35 PM Added reference "System.core.dll".
+05/29/2017 6:48:36 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+05/29/2017 6:48:36 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Delete.cshtml".
+05/29/2017 6:48:36 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+05/29/2017 6:48:36 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+05/29/2017 6:48:36 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/29/2017 6:48:36 PM Added reference "System.dll".
+05/29/2017 6:48:36 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/29/2017 6:48:36 PM Added reference "System.core.dll".
+05/29/2017 6:48:36 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+05/29/2017 6:48:36 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Details.cshtml".
+05/29/2017 6:48:36 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+05/29/2017 6:48:36 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+05/29/2017 6:48:36 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/29/2017 6:48:36 PM Added reference "System.dll".
+05/29/2017 6:48:36 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/29/2017 6:48:36 PM Added reference "System.core.dll".
+05/29/2017 6:48:36 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+05/29/2017 6:48:36 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Edit.cshtml".
+05/29/2017 6:48:36 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+05/29/2017 6:48:36 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+05/29/2017 6:48:36 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/29/2017 6:48:36 PM Added reference "System.dll".
+05/29/2017 6:48:36 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/29/2017 6:48:36 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+05/29/2017 6:48:36 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Index.cshtml".
+05/29/2017 6:48:36 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+05/29/2017 6:48:36 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+05/29/2017 6:48:36 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/29/2017 6:48:36 PM Added reference "System.dll".
+05/29/2017 6:48:36 PM Added reference "System.Data.dll".
+05/29/2017 6:48:36 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/29/2017 6:48:36 PM Added reference "System.core.dll".
+05/29/2017 6:48:36 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+05/29/2017 6:48:36 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/_DisplayFields.cshtml".
+05/29/2017 6:48:36 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+05/29/2017 6:48:36 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+05/29/2017 6:48:36 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/29/2017 6:48:36 PM Added reference "System.dll".
+05/29/2017 6:48:36 PM Added reference "System.Data.dll".
+05/29/2017 6:48:36 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/29/2017 6:48:37 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+05/29/2017 6:48:37 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/_InputFields.cshtml".
+05/30/2017 10:03:28 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+05/30/2017 10:03:28 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+05/30/2017 10:03:28 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 10:03:28 AM Added reference "System.dll".
+05/30/2017 10:03:28 AM Added reference "System.Data.dll".
+05/30/2017 10:03:28 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 10:03:28 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+05/30/2017 10:03:44 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+05/30/2017 10:03:44 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+05/30/2017 10:03:44 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 10:03:44 AM Added reference "System.dll".
+05/30/2017 10:03:44 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 10:03:44 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+05/30/2017 10:03:44 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Create.cshtml".
+05/30/2017 10:03:44 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+05/30/2017 10:03:45 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+05/30/2017 10:03:45 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 10:03:45 AM Added reference "System.dll".
+05/30/2017 10:03:45 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 10:03:45 AM Added reference "System.core.dll".
+05/30/2017 10:03:45 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+05/30/2017 10:03:45 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Delete.cshtml".
+05/30/2017 10:03:45 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+05/30/2017 10:03:45 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+05/30/2017 10:03:45 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 10:03:45 AM Added reference "System.dll".
+05/30/2017 10:03:45 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 10:03:45 AM Added reference "System.core.dll".
+05/30/2017 10:03:45 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+05/30/2017 10:03:45 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Details.cshtml".
+05/30/2017 10:03:45 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+05/30/2017 10:03:45 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+05/30/2017 10:03:45 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 10:03:45 AM Added reference "System.dll".
+05/30/2017 10:03:45 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 10:03:45 AM Added reference "System.core.dll".
+05/30/2017 10:03:45 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+05/30/2017 10:03:45 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Edit.cshtml".
+05/30/2017 10:03:45 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+05/30/2017 10:03:45 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+05/30/2017 10:03:45 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 10:03:45 AM Added reference "System.dll".
+05/30/2017 10:03:45 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 10:03:45 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+05/30/2017 10:03:45 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Index.cshtml".
+05/30/2017 10:03:45 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+05/30/2017 10:03:45 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+05/30/2017 10:03:45 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 10:03:45 AM Added reference "System.dll".
+05/30/2017 10:03:45 AM Added reference "System.Data.dll".
+05/30/2017 10:03:45 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 10:03:45 AM Added reference "System.core.dll".
+05/30/2017 10:03:46 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+05/30/2017 10:03:46 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/_DisplayFields.cshtml".
+05/30/2017 10:03:46 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+05/30/2017 10:03:46 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+05/30/2017 10:03:46 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 10:03:46 AM Added reference "System.dll".
+05/30/2017 10:03:46 AM Added reference "System.Data.dll".
+05/30/2017 10:03:46 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 10:03:46 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+05/30/2017 10:03:46 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/_InputFields.cshtml".
+05/30/2017 4:18:00 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+05/30/2017 4:18:00 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+05/30/2017 4:18:00 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:18:00 PM Added reference "System.dll".
+05/30/2017 4:18:00 PM Added reference "System.Data.dll".
+05/30/2017 4:18:00 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:18:01 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+05/30/2017 4:18:18 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+05/30/2017 4:18:18 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+05/30/2017 4:18:18 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:18:18 PM Added reference "System.dll".
+05/30/2017 4:18:18 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:18:18 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+05/30/2017 4:18:18 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Create.cshtml".
+05/30/2017 4:18:18 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+05/30/2017 4:18:18 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+05/30/2017 4:18:18 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:18:18 PM Added reference "System.dll".
+05/30/2017 4:18:18 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:18:18 PM Added reference "System.core.dll".
+05/30/2017 4:18:19 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+05/30/2017 4:18:19 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Delete.cshtml".
+05/30/2017 4:18:19 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+05/30/2017 4:18:19 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+05/30/2017 4:18:19 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:18:19 PM Added reference "System.dll".
+05/30/2017 4:18:19 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:18:19 PM Added reference "System.core.dll".
+05/30/2017 4:18:19 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+05/30/2017 4:18:19 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Details.cshtml".
+05/30/2017 4:18:19 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+05/30/2017 4:18:19 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+05/30/2017 4:18:19 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:18:19 PM Added reference "System.dll".
+05/30/2017 4:18:19 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:18:19 PM Added reference "System.core.dll".
+05/30/2017 4:18:19 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+05/30/2017 4:18:19 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Edit.cshtml".
+05/30/2017 4:18:19 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+05/30/2017 4:18:19 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+05/30/2017 4:18:20 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:18:20 PM Added reference "System.dll".
+05/30/2017 4:18:20 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:18:20 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+05/30/2017 4:18:20 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Index.cshtml".
+05/30/2017 4:18:20 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+05/30/2017 4:18:20 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+05/30/2017 4:18:20 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:18:20 PM Added reference "System.dll".
+05/30/2017 4:18:20 PM Added reference "System.Data.dll".
+05/30/2017 4:18:20 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:18:20 PM Added reference "System.core.dll".
+05/30/2017 4:18:20 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+05/30/2017 4:18:20 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/_DisplayFields.cshtml".
+05/30/2017 4:18:20 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+05/30/2017 4:18:20 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+05/30/2017 4:18:20 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:18:20 PM Added reference "System.dll".
+05/30/2017 4:18:20 PM Added reference "System.Data.dll".
+05/30/2017 4:18:20 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:18:20 PM Compile error CS0152: The label 'case "DateTime":' already occurs in this switch statement
+  File "d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst", line 88
+05/30/2017 4:18:20 PM Compile error CS0152: The label 'case "DateTime2":' already occurs in this switch statement
+  File "d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst", line 89
+05/30/2017 4:18:20 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/_InputFields.cshtml".
+05/30/2017 4:19:53 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+05/30/2017 4:19:53 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+05/30/2017 4:19:53 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:19:53 PM Added reference "System.dll".
+05/30/2017 4:19:53 PM Added reference "System.Data.dll".
+05/30/2017 4:19:53 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:19:54 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+05/30/2017 4:20:16 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+05/30/2017 4:20:16 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+05/30/2017 4:20:16 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:20:16 PM Added reference "System.dll".
+05/30/2017 4:20:16 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:20:16 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+05/30/2017 4:20:16 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Create.cshtml".
+05/30/2017 4:20:16 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+05/30/2017 4:20:16 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+05/30/2017 4:20:16 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:20:16 PM Added reference "System.dll".
+05/30/2017 4:20:16 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:20:16 PM Added reference "System.core.dll".
+05/30/2017 4:20:16 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+05/30/2017 4:20:16 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Delete.cshtml".
+05/30/2017 4:20:16 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+05/30/2017 4:20:16 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+05/30/2017 4:20:16 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:20:16 PM Added reference "System.dll".
+05/30/2017 4:20:16 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:20:16 PM Added reference "System.core.dll".
+05/30/2017 4:20:17 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+05/30/2017 4:20:17 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Details.cshtml".
+05/30/2017 4:20:17 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+05/30/2017 4:20:17 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+05/30/2017 4:20:17 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:20:17 PM Added reference "System.dll".
+05/30/2017 4:20:17 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:20:17 PM Added reference "System.core.dll".
+05/30/2017 4:20:17 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+05/30/2017 4:20:17 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Edit.cshtml".
+05/30/2017 4:20:17 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+05/30/2017 4:20:17 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+05/30/2017 4:20:17 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:20:17 PM Added reference "System.dll".
+05/30/2017 4:20:17 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:20:17 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+05/30/2017 4:20:17 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/Index.cshtml".
+05/30/2017 4:20:17 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+05/30/2017 4:20:17 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+05/30/2017 4:20:17 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:20:17 PM Added reference "System.dll".
+05/30/2017 4:20:17 PM Added reference "System.Data.dll".
+05/30/2017 4:20:17 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:20:17 PM Added reference "System.core.dll".
+05/30/2017 4:20:17 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+05/30/2017 4:20:17 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/_DisplayFields.cshtml".
+05/30/2017 4:20:17 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+05/30/2017 4:20:17 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+05/30/2017 4:20:17 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/30/2017 4:20:17 PM Added reference "System.dll".
+05/30/2017 4:20:17 PM Added reference "System.Data.dll".
+05/30/2017 4:20:17 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/30/2017 4:20:18 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+05/30/2017 4:20:18 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\tbl_GSTMaster/_InputFields.cshtml".
+06/02/2017 11:46:34 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+06/02/2017 11:46:35 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+06/02/2017 11:46:35 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 11:46:35 AM Added reference "System.dll".
+06/02/2017 11:46:35 AM Added reference "System.Data.dll".
+06/02/2017 11:46:35 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 11:46:35 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+06/02/2017 11:47:40 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+06/02/2017 11:47:40 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+06/02/2017 11:47:40 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 11:47:40 AM Added reference "System.dll".
+06/02/2017 11:47:40 AM Added reference "System.Data.dll".
+06/02/2017 11:47:40 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 11:47:40 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+06/02/2017 11:47:47 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+06/02/2017 11:47:47 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+06/02/2017 11:47:47 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 11:47:47 AM Added reference "System.dll".
+06/02/2017 11:47:47 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 11:47:47 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+06/02/2017 11:47:47 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Create.cshtml".
+06/02/2017 11:47:47 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+06/02/2017 11:47:47 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+06/02/2017 11:47:47 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 11:47:47 AM Added reference "System.dll".
+06/02/2017 11:47:47 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 11:47:47 AM Added reference "System.core.dll".
+06/02/2017 11:47:48 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+06/02/2017 11:47:48 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Delete.cshtml".
+06/02/2017 11:47:48 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+06/02/2017 11:47:48 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+06/02/2017 11:47:48 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 11:47:48 AM Added reference "System.dll".
+06/02/2017 11:47:48 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 11:47:48 AM Added reference "System.core.dll".
+06/02/2017 11:47:48 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+06/02/2017 11:47:48 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Details.cshtml".
+06/02/2017 11:47:48 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+06/02/2017 11:47:48 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+06/02/2017 11:47:48 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 11:47:48 AM Added reference "System.dll".
+06/02/2017 11:47:48 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 11:47:48 AM Added reference "System.core.dll".
+06/02/2017 11:47:48 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+06/02/2017 11:47:48 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Edit.cshtml".
+06/02/2017 11:47:48 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+06/02/2017 11:47:48 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+06/02/2017 11:47:48 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 11:47:48 AM Added reference "System.dll".
+06/02/2017 11:47:48 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 11:47:49 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+06/02/2017 11:47:49 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Index.cshtml".
+06/02/2017 11:47:49 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+06/02/2017 11:47:49 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+06/02/2017 11:47:49 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 11:47:49 AM Added reference "System.dll".
+06/02/2017 11:47:49 AM Added reference "System.Data.dll".
+06/02/2017 11:47:49 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 11:47:49 AM Added reference "System.core.dll".
+06/02/2017 11:47:49 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+06/02/2017 11:47:49 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/_DisplayFields.cshtml".
+06/02/2017 11:47:49 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+06/02/2017 11:47:49 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+06/02/2017 11:47:49 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 11:47:49 AM Added reference "System.dll".
+06/02/2017 11:47:49 AM Added reference "System.Data.dll".
+06/02/2017 11:47:49 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 11:47:49 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+06/02/2017 11:47:49 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/_InputFields.cshtml".
+06/02/2017 12:51:01 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+06/02/2017 12:51:01 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+06/02/2017 12:51:01 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:51:01 PM Added reference "System.dll".
+06/02/2017 12:51:01 PM Added reference "System.Data.dll".
+06/02/2017 12:51:01 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:51:02 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+06/02/2017 12:51:16 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+06/02/2017 12:51:16 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+06/02/2017 12:51:16 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:51:16 PM Added reference "System.dll".
+06/02/2017 12:51:16 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:51:16 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+06/02/2017 12:51:16 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Create.cshtml".
+06/02/2017 12:51:16 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+06/02/2017 12:51:16 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+06/02/2017 12:51:16 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:51:16 PM Added reference "System.dll".
+06/02/2017 12:51:16 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:51:16 PM Added reference "System.core.dll".
+06/02/2017 12:51:16 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+06/02/2017 12:51:16 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Delete.cshtml".
+06/02/2017 12:51:16 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+06/02/2017 12:51:17 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+06/02/2017 12:51:17 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:51:17 PM Added reference "System.dll".
+06/02/2017 12:51:17 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:51:17 PM Added reference "System.core.dll".
+06/02/2017 12:51:17 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+06/02/2017 12:51:17 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Details.cshtml".
+06/02/2017 12:51:17 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+06/02/2017 12:51:17 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+06/02/2017 12:51:17 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:51:17 PM Added reference "System.dll".
+06/02/2017 12:51:17 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:51:17 PM Added reference "System.core.dll".
+06/02/2017 12:51:17 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+06/02/2017 12:51:17 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Edit.cshtml".
+06/02/2017 12:51:17 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+06/02/2017 12:51:17 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+06/02/2017 12:51:17 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:51:17 PM Added reference "System.dll".
+06/02/2017 12:51:17 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:51:17 PM Compile error CS1061: 'System.Array' does not contain a definition for 'ToList' and no extension method 'ToList' accepting a first argument of type 'System.Array' could be found (are you missing a using directive or an assembly reference?)
+  File "d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst", line 17
+06/02/2017 12:51:17 PM Compile error CS0136: A local variable named 'field' cannot be declared in this scope because it would give a different meaning to 'field', which is already used in a 'parent or current' scope to denote something else
+  File "d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst", line 49
+06/02/2017 12:51:17 PM Compile error CS0136: A local variable named 'field' cannot be declared in this scope because it would give a different meaning to 'field', which is already used in a 'parent or current' scope to denote something else
+  File "d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst", line 65
+06/02/2017 12:51:17 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Index.cshtml".
+06/02/2017 12:52:01 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+06/02/2017 12:52:01 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+06/02/2017 12:52:01 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:52:01 PM Added reference "System.dll".
+06/02/2017 12:52:01 PM Added reference "System.Data.dll".
+06/02/2017 12:52:01 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:52:01 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+06/02/2017 12:52:08 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+06/02/2017 12:52:08 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+06/02/2017 12:52:08 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:52:08 PM Added reference "System.dll".
+06/02/2017 12:52:08 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:52:08 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+06/02/2017 12:52:08 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Create.cshtml".
+06/02/2017 12:52:08 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+06/02/2017 12:52:08 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+06/02/2017 12:52:08 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:52:08 PM Added reference "System.dll".
+06/02/2017 12:52:08 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:52:08 PM Added reference "System.core.dll".
+06/02/2017 12:52:09 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+06/02/2017 12:52:09 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Delete.cshtml".
+06/02/2017 12:52:09 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+06/02/2017 12:52:09 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+06/02/2017 12:52:09 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:52:09 PM Added reference "System.dll".
+06/02/2017 12:52:09 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:52:09 PM Added reference "System.core.dll".
+06/02/2017 12:52:09 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+06/02/2017 12:52:09 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Details.cshtml".
+06/02/2017 12:52:09 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+06/02/2017 12:52:09 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+06/02/2017 12:52:09 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:52:09 PM Added reference "System.dll".
+06/02/2017 12:52:09 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:52:09 PM Added reference "System.core.dll".
+06/02/2017 12:52:09 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+06/02/2017 12:52:09 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Edit.cshtml".
+06/02/2017 12:52:09 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+06/02/2017 12:52:09 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+06/02/2017 12:52:09 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:52:09 PM Added reference "System.dll".
+06/02/2017 12:52:09 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:52:09 PM Added reference "System.core.dll".
+06/02/2017 12:52:09 PM Compile error CS0136: A local variable named 'field' cannot be declared in this scope because it would give a different meaning to 'field', which is already used in a 'parent or current' scope to denote something else
+  File "d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst", line 51
+06/02/2017 12:52:09 PM Compile error CS0136: A local variable named 'field' cannot be declared in this scope because it would give a different meaning to 'field', which is already used in a 'parent or current' scope to denote something else
+  File "d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst", line 67
+06/02/2017 12:52:09 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Index.cshtml".
+06/02/2017 12:52:59 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+06/02/2017 12:52:59 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+06/02/2017 12:52:59 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:52:59 PM Added reference "System.dll".
+06/02/2017 12:52:59 PM Added reference "System.Data.dll".
+06/02/2017 12:52:59 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:52:59 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+06/02/2017 12:53:09 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+06/02/2017 12:53:09 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+06/02/2017 12:53:09 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:53:09 PM Added reference "System.dll".
+06/02/2017 12:53:09 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:53:09 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Create.cst".
+06/02/2017 12:53:09 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Create.cshtml".
+06/02/2017 12:53:09 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+06/02/2017 12:53:09 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+06/02/2017 12:53:09 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:53:09 PM Added reference "System.dll".
+06/02/2017 12:53:09 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:53:09 PM Added reference "System.core.dll".
+06/02/2017 12:53:09 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Delete.cst".
+06/02/2017 12:53:09 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Delete.cshtml".
+06/02/2017 12:53:09 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+06/02/2017 12:53:09 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+06/02/2017 12:53:09 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:53:09 PM Added reference "System.dll".
+06/02/2017 12:53:09 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:53:09 PM Added reference "System.core.dll".
+06/02/2017 12:53:10 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Details.cst".
+06/02/2017 12:53:10 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Details.cshtml".
+06/02/2017 12:53:10 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+06/02/2017 12:53:10 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+06/02/2017 12:53:10 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:53:10 PM Added reference "System.dll".
+06/02/2017 12:53:10 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:53:10 PM Added reference "System.core.dll".
+06/02/2017 12:53:10 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Edit.cst".
+06/02/2017 12:53:10 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Edit.cshtml".
+06/02/2017 12:53:10 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+06/02/2017 12:53:10 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+06/02/2017 12:53:10 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:53:10 PM Added reference "System.dll".
+06/02/2017 12:53:10 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:53:10 PM Added reference "System.core.dll".
+06/02/2017 12:53:10 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Index.cst".
+06/02/2017 12:53:10 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/Index.cshtml".
+06/02/2017 12:53:10 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+06/02/2017 12:53:10 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+06/02/2017 12:53:10 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:53:10 PM Added reference "System.dll".
+06/02/2017 12:53:10 PM Added reference "System.Data.dll".
+06/02/2017 12:53:10 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:53:10 PM Added reference "System.core.dll".
+06/02/2017 12:53:10 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_DisplayFields.cst".
+06/02/2017 12:53:10 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/_DisplayFields.cshtml".
+06/02/2017 12:53:10 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+06/02/2017 12:53:10 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+06/02/2017 12:53:10 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/02/2017 12:53:10 PM Added reference "System.dll".
+06/02/2017 12:53:10 PM Added reference "System.Data.dll".
+06/02/2017 12:53:10 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/02/2017 12:53:11 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\_InputFields.cst".
+06/02/2017 12:53:11 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\Output\ClientGst/_InputFields.cshtml".
+11/11/2017 1:11:44 PM Parsing template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+11/11/2017 1:11:44 PM Compiling template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".
+11/11/2017 1:11:44 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+11/11/2017 1:11:44 PM Added reference "System.dll".
+11/11/2017 1:11:44 PM Added reference "System.Data.dll".
+11/11/2017 1:11:44 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+11/11/2017 1:11:45 PM Invoking template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Host\Core.Web\Views\BuildViews.cst".

@@ -1,0 +1,224 @@
+04/27/2017 6:34:59 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/27/2017 6:34:59 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/27/2017 6:34:59 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+04/27/2017 6:34:59 PM Added reference "System.dll".
+04/27/2017 6:34:59 PM Added reference "System.Data.dll".
+04/27/2017 6:34:59 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+04/27/2017 6:34:59 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/27/2017 6:35:50 PM System.NullReferenceException: Object reference not set to an instance of an object.
+   at DatabaseCatalogReader.DatabaseCatalog.SaveConnectionString(String name, String value) in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\DatabaseCatalogReader\DatabaseCatalog.cs:line 161
+   at DatabaseCatalogReader.DatabaseCatalog.DialogGetConnectionString() in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\DatabaseCatalogReader\DatabaseCatalog.cs:line 112
+   at DatabaseCatalogReader.DatabaseCatalog..ctor() in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\DatabaseCatalogReader\DatabaseCatalog.cs:line 78
+   at DatabaseCatalogReader.SqlTable..ctor() in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\DatabaseCatalogReader\Tables.cs:line 104
+   at Arebis.DynamicAssembly.BuildDataAccessClasses_cst.Generate() in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst:line 13
+   at Arebis.CodeGenerator.Templated.TemplateInfo.Invoke(Object[] parameters) in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\Arebis.CodeGenerator\Templated\TemplateInfo.cs:line 80
+04/27/2017 8:33:53 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/27/2017 8:33:53 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/27/2017 8:33:53 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+04/27/2017 8:33:53 PM Added reference "System.dll".
+04/27/2017 8:33:53 PM Added reference "System.Data.dll".
+04/27/2017 8:33:53 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+04/27/2017 8:33:54 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/27/2017 8:37:07 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/27/2017 8:37:07 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/27/2017 8:37:07 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+04/27/2017 8:37:07 PM Added reference "System.dll".
+04/27/2017 8:37:07 PM Added reference "System.Data.dll".
+04/27/2017 8:37:07 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+04/27/2017 8:37:07 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/27/2017 8:37:27 PM System.ArgumentException: Requested value 'sysname' was not found.
+   at System.Enum.EnumResult.SetFailure(ParseFailureKind failure, String failureMessageID, Object failureMessageFormatArgument)
+   at System.Enum.TryParseEnum(Type enumType, String value, Boolean ignoreCase, EnumResult& parseResult)
+   at System.Enum.Parse(Type enumType, String value, Boolean ignoreCase)
+   at DatabaseCatalogReader.Parameter.<>c__DisplayClass1.<ToSqlDbType>b__0(SqlDbType s) in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\DatabaseCatalogReader\Parameter.cs:line 110
+   at System.Array.FindAll[T](T[] array, Predicate`1 match)
+   at DatabaseCatalogReader.Parameter.ToSqlDbType(String type) in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\DatabaseCatalogReader\Parameter.cs:line 110
+   at DatabaseCatalogReader.TableField..ctor(SqlDataReader reader) in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\DatabaseCatalogReader\Tables.cs:line 23
+   at DatabaseCatalogReader.SqlTable.Load(SqlConnection connection) in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\DatabaseCatalogReader\Tables.cs:line 165
+   at DatabaseCatalogReader.SqlTable.GetSqlTables() in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\DatabaseCatalogReader\Tables.cs:line 225
+   at Arebis.DynamicAssembly.BuildDataAccessClasses_cst.Generate() in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst:line 21
+   at Arebis.CodeGenerator.Templated.TemplateInfo.Invoke(Object[] parameters) in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\Arebis.CodeGenerator\Templated\TemplateInfo.cs:line 80
+04/27/2017 8:37:34 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/27/2017 8:37:35 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/27/2017 8:37:35 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+04/27/2017 8:37:35 PM Added reference "System.dll".
+04/27/2017 8:37:35 PM Added reference "System.Data.dll".
+04/27/2017 8:37:35 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+04/27/2017 8:37:35 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/28/2017 6:46:33 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/28/2017 6:46:33 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/28/2017 6:46:33 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+04/28/2017 6:46:33 AM Added reference "System.dll".
+04/28/2017 6:46:33 AM Added reference "System.Data.dll".
+04/28/2017 6:46:33 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+04/28/2017 6:46:34 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/28/2017 6:47:58 AM System.ArgumentException: Requested value 'sysname' was not found.
+   at System.Enum.EnumResult.SetFailure(ParseFailureKind failure, String failureMessageID, Object failureMessageFormatArgument)
+   at System.Enum.TryParseEnum(Type enumType, String value, Boolean ignoreCase, EnumResult& parseResult)
+   at System.Enum.Parse(Type enumType, String value, Boolean ignoreCase)
+   at DatabaseCatalogReader.Parameter.<>c__DisplayClass1.<ToSqlDbType>b__0(SqlDbType s) in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\DatabaseCatalogReader\Parameter.cs:line 110
+   at System.Array.FindAll[T](T[] array, Predicate`1 match)
+   at DatabaseCatalogReader.Parameter.ToSqlDbType(String type) in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\DatabaseCatalogReader\Parameter.cs:line 110
+   at DatabaseCatalogReader.TableField..ctor(SqlDataReader reader) in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\DatabaseCatalogReader\Tables.cs:line 23
+   at DatabaseCatalogReader.SqlTable.Load(SqlConnection connection) in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\DatabaseCatalogReader\Tables.cs:line 165
+   at DatabaseCatalogReader.SqlTable.GetSqlTables() in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\DatabaseCatalogReader\Tables.cs:line 225
+   at Arebis.DynamicAssembly.BuildDataAccessClasses_cst.Generate() in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst:line 21
+   at Arebis.CodeGenerator.Templated.TemplateInfo.Invoke(Object[] parameters) in d:\Yogeesha\Handy Tools\Code Generation\CodeYogi\Arebis.CodeGenerator\Templated\TemplateInfo.cs:line 80
+04/28/2017 6:48:19 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/28/2017 6:48:19 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/28/2017 6:48:19 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+04/28/2017 6:48:19 AM Added reference "System.dll".
+04/28/2017 6:48:19 AM Added reference "System.Data.dll".
+04/28/2017 6:48:19 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+04/28/2017 6:48:20 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+04/28/2017 6:48:48 AM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+04/28/2017 6:48:48 AM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+04/28/2017 6:48:48 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+04/28/2017 6:48:48 AM Added reference "System.dll".
+04/28/2017 6:48:48 AM Added reference "System.Xml.dll".
+04/28/2017 6:48:48 AM Added reference "System.Data.dll".
+04/28/2017 6:48:48 AM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+04/28/2017 6:48:49 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+04/28/2017 6:48:49 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\DDLEvents.cs".
+04/28/2017 6:48:49 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+04/28/2017 6:48:49 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\LocalizedTypes.cs".
+04/28/2017 6:48:49 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+04/28/2017 6:48:49 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\LocalizedViews.cs".
+04/28/2017 6:48:49 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+04/28/2017 6:48:49 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\Navigation.cs".
+04/28/2017 6:48:49 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+04/28/2017 6:48:49 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\Permission.cs".
+04/28/2017 6:48:49 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+04/28/2017 6:48:49 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\Role.cs".
+04/28/2017 6:48:49 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+04/28/2017 6:48:49 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\RolePermission.cs".
+04/28/2017 6:48:49 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+04/28/2017 6:48:49 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\Trace.cs".
+04/28/2017 6:48:49 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+04/28/2017 6:48:49 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\User.cs".
+04/28/2017 6:48:49 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+04/28/2017 6:48:49 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\UserLogin.cs".
+04/28/2017 6:48:49 AM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+04/28/2017 6:48:49 AM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\UserRole.cs".
+5/1/2017 12:07:16 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+5/1/2017 12:07:16 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+5/1/2017 12:07:16 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 12:07:16 PM Added reference "System.dll".
+5/1/2017 12:07:16 PM Added reference "System.Data.dll".
+5/1/2017 12:07:16 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 12:07:16 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+5/1/2017 12:07:21 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:07:21 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:07:21 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 12:07:21 PM Added reference "System.dll".
+5/1/2017 12:07:21 PM Added reference "System.Data.dll".
+5/1/2017 12:07:21 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 12:07:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:07:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\DDLEvents.cs".
+5/1/2017 12:07:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:07:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\LocalizedTypes.cs".
+5/1/2017 12:07:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:07:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\LocalizedViews.cs".
+5/1/2017 12:07:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:07:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\Navigation.cs".
+5/1/2017 12:07:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:07:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\Permission.cs".
+5/1/2017 12:07:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:07:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\Role.cs".
+5/1/2017 12:07:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:07:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\RolePermission.cs".
+5/1/2017 12:07:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:07:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\Trace.cs".
+5/1/2017 12:07:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:07:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\User.cs".
+5/1/2017 12:07:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:07:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\UserLogin.cs".
+5/1/2017 12:07:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:07:22 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\UserRole.cs".
+5/1/2017 12:10:41 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+5/1/2017 12:10:42 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+5/1/2017 12:10:42 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 12:10:42 PM Added reference "System.dll".
+5/1/2017 12:10:42 PM Added reference "System.Data.dll".
+5/1/2017 12:10:42 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 12:10:42 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+5/1/2017 12:11:13 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:13 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:13 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 12:11:13 PM Added reference "System.dll".
+5/1/2017 12:11:13 PM Added reference "System.Data.dll".
+5/1/2017 12:11:13 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 12:11:13 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:13 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\NavigationRepository.cs".
+5/1/2017 12:11:13 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:13 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\PermissionRepository.cs".
+5/1/2017 12:11:13 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:13 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\RoleRepository.cs".
+5/1/2017 12:11:13 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:13 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\RolePermissionRepository.cs".
+5/1/2017 12:11:13 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:13 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\TraceRepository.cs".
+5/1/2017 12:11:13 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:13 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\UserRepository.cs".
+5/1/2017 12:11:13 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:13 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\UserLoginRepository.cs".
+5/1/2017 12:11:13 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:13 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\UserRoleRepository.cs".
+5/1/2017 12:11:22 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+5/1/2017 12:11:22 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+5/1/2017 12:11:22 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 12:11:22 PM Added reference "System.dll".
+5/1/2017 12:11:22 PM Added reference "System.Data.dll".
+5/1/2017 12:11:22 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 12:11:22 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+5/1/2017 12:11:31 PM Parsing template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:31 PM Compiling template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:31 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+5/1/2017 12:11:31 PM Added reference "System.dll".
+5/1/2017 12:11:31 PM Added reference "System.Data.dll".
+5/1/2017 12:11:31 PM Added reference "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+5/1/2017 12:11:31 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:31 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\NavigationRepository.cs".
+5/1/2017 12:11:31 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:31 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\PermissionRepository.cs".
+5/1/2017 12:11:31 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:31 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\RoleRepository.cs".
+5/1/2017 12:11:31 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:31 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\RolePermissionRepository.cs".
+5/1/2017 12:11:31 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:31 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\TraceRepository.cs".
+5/1/2017 12:11:31 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:31 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\UserRepository.cs".
+5/1/2017 12:11:31 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:31 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\UserLoginRepository.cs".
+5/1/2017 12:11:31 PM Invoking template: "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+5/1/2017 12:11:31 PM Writing file "F:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\UserRoleRepository.cs".
+05/26/2017 8:03:16 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+05/26/2017 8:03:16 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+05/26/2017 8:03:16 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/26/2017 8:03:16 PM Added reference "System.dll".
+05/26/2017 8:03:16 PM Added reference "System.Data.dll".
+05/26/2017 8:03:16 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/26/2017 8:03:17 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+05/26/2017 8:03:41 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+05/26/2017 8:03:41 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+05/26/2017 8:03:41 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+05/26/2017 8:03:41 PM Added reference "System.dll".
+05/26/2017 8:03:41 PM Added reference "System.Data.dll".
+05/26/2017 8:03:41 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+05/26/2017 8:03:41 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\DataAccess.cst".
+05/26/2017 8:03:41 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\Output\tbl_GSTMasterRepository.cs".
+11/11/2017 1:11:20 PM Parsing template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+11/11/2017 1:11:20 PM Compiling template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+11/11/2017 1:11:20 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+11/11/2017 1:11:20 PM Added reference "System.dll".
+11/11/2017 1:11:20 PM Added reference "System.Data.dll".
+11/11/2017 1:11:20 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+11/11/2017 1:11:21 PM Invoking template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+11/12/2017 2:15:35 PM Parsing template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+11/12/2017 2:15:35 PM Compiling template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".
+11/12/2017 2:15:35 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+11/12/2017 2:15:35 PM Added reference "System.dll".
+11/12/2017 2:15:35 PM Added reference "System.Data.dll".
+11/12/2017 2:15:35 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+11/12/2017 2:15:35 PM Invoking template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\DataAccess\Core.Data\BuildDataAccessClasses.cst".

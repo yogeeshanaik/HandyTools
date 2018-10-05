@@ -1,0 +1,106 @@
+<%@ CodeTemplate Language="C#" ClassName="Template.Class" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Parameter Name="table" Type="SqlTable" %>
+
+
+@model <%= Settings["namespace"] %>.<%= table.Name %>
+
+<div class="row">
+
+<%
+foreach(TableField field in table.GetFields())
+{
+        
+    switch(field.Type.ToString())
+    {
+        case "BigInt":
+        case "Int":
+        
+
+        
+        if (field.IsForiegnKey && field.ReferencedTable.Length > 0)
+        {
+            var referencedTable = new ReferencedTable(field.ReferencedTable,table.ConnectionString).GetSqlTable();
+ %>  
+            <div class="col-md-6 col-sm-12">
+              <div class="form-group">
+                    @Html.LabelForRequired(model => model.<%= field.Name %>)
+                    @Html.ListBoxFor(model => model.<%= field.Name %>, (MultiSelectList)Model.<%=referencedTable.Name%>List, new { @class = "form-control select2", @multiple = "multiple" })
+                    @Html.ValidationMessageFor(model => model.<%= field.Name %>, null, new { @class = "text-danger" })
+                </div>
+            </div>      
+<%  
+        } else{
+%>
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.<%= field.Name %>)
+                @Html.TextBoxFor(model => model.<%= field.Name %>, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.<%= field.Name %>, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+<%        
+
+        }
+
+
+        break;      
+        case "NVarChar":
+        case "VarChar":
+        
+        case "Float":
+        case "Decimal":
+        
+%>
+
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.<%= field.Name %>)
+                @Html.TextBoxFor(model => model.<%= field.Name %>, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.<%= field.Name %>, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        <% break;
+        
+        case "Bit": %>
+        
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelFor(model => model.<%= field.Name %>)
+                @Html.EditorFor(model => model.<%= field.Name %>, new { @checked = "checked" })
+                @Html.ValidationMessageFor(model => model.<%= field.Name %>, null, new { @class = "text-danger" })
+            </div>
+        </div>
+<%            
+        break;
+        case "Date":
+        case "DateTime":
+        case "DateTime2": %>
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelFor(model => model.<%= field.Name %>)
+                @Html.TextBoxFor(model => model.<%= field.Name %>, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.<%= field.Name %>, null, new { @class = "text-danger" })
+            </div>
+        </div>
+<%            
+        break;        
+        
+        default: 
+%>        
+        <%= "// The following data type not handled in template.. "+field.Type.ToString() %>
+<%         
+        break;
+              
+    }   
+} // foreach(..)
+%>
+            
+</div>

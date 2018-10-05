@@ -1,0 +1,57 @@
+<%@ CodeTemplate Language="C#" ClassName="Template.Class" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ ReferenceAssembly Path="System.core.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Parameter Name="table" Type="SqlTable" %>
+
+@model <%= Settings["namespace"] %>.<%= table.Name %>
+
+<div class="row">
+
+<%
+foreach(TableField field in table.GetFields())
+{
+  
+    switch(field.Type.ToString())
+    {
+        case "Binary":
+ %> 
+ 
+     <div class="col-md-6 col-sm-12">
+     @Html.LabelFor(model => model.<%= field.Name %>)
+        @{
+            var imgSrc = (Model.<%= field.Name %> == null) ? GlobalVariables.UserDefaultImagePath
+                : String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.<%= field.Name %>));
+        }
+        <img src="@Url.Content(imgSrc)" class="img-responsive avatar-view" onclick="location.href='@Url.Action("Upload", "Avatar", new { id = Model.UserId, profile = "User" })'" />
+    </div>
+
+
+<%      break;     
+        default:
+%>
+
+    <div class="col-md-6 col-sm-12">
+        <div class="col-md-6 col-sm-12">
+            @Html.LabelFor(model => model.<%= field.Name %>)
+        </div>
+        <div class="col-md-6 col-sm-12">
+            @Html.DisplayFor(model => model.<%= field.Name %>)
+        </div>
+    </div>
+
+    
+<%            
+        break;        
+              
+    }   
+} // foreach(..)
+%>
+    
+</div>
+

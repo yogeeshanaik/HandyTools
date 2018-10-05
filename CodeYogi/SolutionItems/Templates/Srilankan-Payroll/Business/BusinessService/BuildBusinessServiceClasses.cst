@@ -1,0 +1,41 @@
+<%@ CodeTemplate Language="C#" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Import Namespace="System.Data" %>
+
+
+<%
+   // System.Diagnostics.Debugger.Launch();
+   SqlTable cat = new SqlTable();
+    if(!cat.IsConnected())
+        throw new ApplicationException("No connection to database");
+%>
+
+
+<%
+System.Diagnostics.Debugger.Launch();
+foreach(SqlTable table in cat.GetSqlTables()){
+
+    this.Host.CallTemplateToFile(
+    "BusinessService.cst", table.Name+"Service.cs",
+        table
+    );
+    
+    this.Host.CallTemplateToFile(
+    "BusinessContract.cst", "Contracts/I"+table.Name+"Service.cs",
+        table
+    );
+}
+
+%>
+
+
+
+
+
+
+

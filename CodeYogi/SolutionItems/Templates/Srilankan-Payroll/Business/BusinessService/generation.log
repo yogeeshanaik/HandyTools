@@ -1,0 +1,62 @@
+06/03/2017 5:57:21 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BuildBusinessServiceClasses.cst".
+06/03/2017 5:57:21 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BuildBusinessServiceClasses.cst".
+06/03/2017 5:57:21 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/03/2017 5:57:21 PM Added reference "System.dll".
+06/03/2017 5:57:21 PM Added reference "System.Data.dll".
+06/03/2017 5:57:21 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/03/2017 5:57:21 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BuildBusinessServiceClasses.cst".
+06/03/2017 5:58:14 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BusinessService.cst".
+06/03/2017 5:58:14 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BusinessService.cst".
+06/03/2017 5:58:14 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/03/2017 5:58:14 PM Added reference "System.dll".
+06/03/2017 5:58:14 PM Added reference "System.Xml.dll".
+06/03/2017 5:58:14 PM Added reference "System.Data.dll".
+06/03/2017 5:58:14 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/03/2017 5:58:14 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BusinessService.cst".
+06/03/2017 5:58:14 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\Output\UserService.cs".
+06/03/2017 5:58:14 PM Parsing template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BusinessContract.cst".
+06/03/2017 5:58:15 PM Compiling template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BusinessContract.cst".
+06/03/2017 5:58:15 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+06/03/2017 5:58:15 PM Added reference "System.dll".
+06/03/2017 5:58:15 PM Added reference "System.Data.dll".
+06/03/2017 5:58:15 PM Added reference "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+06/03/2017 5:58:15 PM Invoking template: "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BusinessContract.cst".
+06/03/2017 5:58:15 PM Writing file "D:\Yogeesha\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\Output\Contracts/IUserService.cs".
+11/11/2017 12:39:12 PM Parsing template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BuildBusinessServiceClasses.cst".
+11/11/2017 12:39:12 PM Compiling template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BuildBusinessServiceClasses.cst".
+11/11/2017 12:39:13 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+11/11/2017 12:39:13 PM Added reference "System.dll".
+11/11/2017 12:39:13 PM Added reference "System.Data.dll".
+11/11/2017 12:39:13 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+11/11/2017 12:39:13 PM Invoking template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BuildBusinessServiceClasses.cst".
+11/11/2017 1:11:01 PM Parsing template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BuildBusinessServiceClasses.cst".
+11/11/2017 1:11:01 PM Compiling template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BuildBusinessServiceClasses.cst".
+11/11/2017 1:11:01 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+11/11/2017 1:11:01 PM Added reference "System.dll".
+11/11/2017 1:11:01 PM Added reference "System.Data.dll".
+11/11/2017 1:11:01 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+11/11/2017 1:11:02 PM Invoking template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BuildBusinessServiceClasses.cst".
+11/12/2017 2:15:13 PM Parsing template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BuildBusinessServiceClasses.cst".
+11/12/2017 2:15:13 PM Compiling template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BuildBusinessServiceClasses.cst".
+11/12/2017 2:15:13 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+11/12/2017 2:15:13 PM Added reference "System.dll".
+11/12/2017 2:15:13 PM Added reference "System.Data.dll".
+11/12/2017 2:15:13 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+11/12/2017 2:15:13 PM Invoking template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BuildBusinessServiceClasses.cst".
+11/12/2017 2:15:17 PM Parsing template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BusinessService.cst".
+11/12/2017 2:15:17 PM Compiling template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BusinessService.cst".
+11/12/2017 2:15:17 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+11/12/2017 2:15:17 PM Added reference "System.dll".
+11/12/2017 2:15:17 PM Added reference "System.Xml.dll".
+11/12/2017 2:15:17 PM Added reference "System.Data.dll".
+11/12/2017 2:15:17 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+11/12/2017 2:15:17 PM Invoking template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BusinessService.cst".
+11/12/2017 2:15:17 PM Writing file "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\Output\DDLEventsService.cs".
+11/12/2017 2:15:17 PM Parsing template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BusinessContract.cst".
+11/12/2017 2:15:17 PM Compiling template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BusinessContract.cst".
+11/12/2017 2:15:17 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Arebis.CodeGeneration.dll".
+11/12/2017 2:15:17 PM Added reference "System.dll".
+11/12/2017 2:15:17 PM Added reference "System.Data.dll".
+11/12/2017 2:15:17 PM Added reference "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\DatabaseCatalogReader.dll".
+11/12/2017 2:15:18 PM Invoking template: "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\BusinessContract.cst".
+11/12/2017 2:15:18 PM Writing file "E:\Handy Tools\Code Generation\CodeYogi\CGen\bin\Debug\Templates\Srilankan-Payroll\Business\BusinessService\Output\Contracts/IDDLEventsService.cs".

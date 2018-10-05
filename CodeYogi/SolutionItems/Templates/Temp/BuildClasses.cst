@@ -1,0 +1,27 @@
+<%@ CodeTemplate Language="C#" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Xml.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Xml" %>
+<%
+System.Diagnostics.Debugger.Launch();
+foreach(string sourcefile in this.Settings.GetValues("source")) {
+	XmlDocument doc = new XmlDocument();
+	string classname;
+	doc.Load(sourcefile);
+	classname = doc.DocumentElement.GetAttribute("name");
+	this.Host.CallTemplateToFile(
+		"Class.cst",
+		classname + ".generated.cs",
+		doc.DocumentElement
+	);
+}
+
+%>
+
+
+
+
+
+
+

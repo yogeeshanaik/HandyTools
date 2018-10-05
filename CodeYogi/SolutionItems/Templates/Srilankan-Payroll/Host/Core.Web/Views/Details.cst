@@ -1,0 +1,39 @@
+<%@ CodeTemplate Language="C#" ClassName="Template.Class" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ ReferenceAssembly Path="System.core.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Parameter Name="table" Type="SqlTable" %>
+
+@model <%= Settings["namespace"] %>.<%= table.Name %>
+
+@{
+    ViewBag.Title = T("<%=table.Name %> Details");
+}
+
+<%
+string primaryKey = string.Empty;
+var field = table.GetFields().ToList().Where(s=>s.IsPrimaryKey == true).FirstOrDefault();
+if(field != null)
+    primaryKey = field.Name;
+%>
+
+
+<div class="box">
+    <div class="box-header with-border">
+        <h3 class="box-title">@ViewBag.Title</h3>
+        <div class="box-tools pull-right">
+            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+        </div>
+    </div>
+    <div class="box-body" style="display: block">
+
+        @{Html.RenderPartial("_DisplayFields", Model);}
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.<%= primaryKey %> }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,218 @@
+<%@ CodeTemplate Language="C#" ClassName="Template.Class" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ ReferenceAssembly Path="System.core.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Parameter Name="table" Type="SqlTable" %>
+
+<%
+System.Diagnostics.Debugger.Launch();
+
+string primaryKey = string.Empty;
+var field = table.GetFields().ToList().Where(s=>s.IsPrimaryKey == true).FirstOrDefault();
+if(field != null)
+    primaryKey = field.Name;
+ 
+    string newline="\n\t\t";
+string codeSelectList =  string.Empty;   
+foreach(TableField foreignKey in table.GetFields().Where(s=>s.IsForiegnKey == true))
+{
+    var refTable = new ReferencedTable(foreignKey.ReferencedTable,table.ConnectionString).GetSqlTable();
+    var refFields = refTable.GetFields();
+  
+    string referencedTable = refTable.Name;
+    
+   string idField = string.Empty;
+    var field2 = refFields.ToList().Where(s=>s.IsPrimaryKey == true).FirstOrDefault();
+    if(field2 != null)
+    idField = field2.Name;
+    
+    string textField = string.Empty;
+    
+    // Assuming Text field will be right next to the primary key field
+    if(refFields.Count() >= field2.Ordinal+1)
+    textField = refFields[field2.Ordinal+1].Name; 
+    
+    string valueAndTextFields = "\""+idField+"\", \""+textField+"\"";
+    
+    codeSelectList+=  newline;
+    codeSelectList+= "private static Lazy<MultiSelectList> _"+referencedTable.ToLower()+"List = new Lazy<MultiSelectList>(() => Get"+referencedTable+"List());" + newline;
+    codeSelectList+= @"public static MultiSelectList "+referencedTable+"List{get { return _"+referencedTable.ToLower()+"List.Value; }}" + newline;
+    codeSelectList+=  newline;
+    codeSelectList+= @"private static MultiSelectList Get"+referencedTable+"List() { var list = new BusinessBase().Get"+referencedTable+"List(); return new MultiSelectList(list, "+valueAndTextFields+"); }"+ newline;
+    codeSelectList+=  newline;
+
+}    
+%>
+
+using AssociatePayroll.BAL.Master;
+using AssociatePayroll.Core.Models.Master;
+using System;
+using System.Linq;
+using System.Web.Mvc;
+
+namespace <%= Settings["namespace"] %>
+{
+    public class <%= table.Name %>Controller : BaseController
+    {
+  
+        #region properties
+        public int UserId
+        {
+            get
+            {
+                //store the object in session if not already stored
+                if (Session["UserId"] == null)
+                    Session["UserId"] = 0;
+
+                //return the object from session
+                return (int)Session["UserId"];
+            }
+        }
+        
+
+        private <%= table.Name %>Business _service;
+        public <%= table.Name %>Business <%= table.Name %>Service
+        {
+            get
+            {
+                //store the object in session if not already stored
+                if (_service == null)
+                    _service = new <%= table.Name %>Business();
+
+                //return the object from session
+                return _service;
+            }
+        }
+        #endregion
+
+    
+    <%= codeSelectList %>
+    
+        public ActionResult Index(int? page, int? pageSize, int id = 0)
+        {
+            int pageno = 0;
+            pageno = page == null ? 1 : int.Parse(page.ToString());
+
+            var model = new <%= table.Name %>()
+            {
+                Action = "Get",
+                UserId = UserId,
+                PageNo = pageno,
+                PageSize = pageSize ?? 10
+            };
+
+            return View(GetData(model));
+        }
+
+        public ActionResult Search(<%= table.Name %> model)
+        {
+            return View("Index",GetData(model));
+        }
+
+        Pager<<%= table.Name %>> GetData(<%= table.Name %> model)
+        {
+            int totalCount = 0;
+
+            model.Action = "Get";
+            model.UserId = UserId;
+
+            var list = <%= table.Name %>Service.Manage<%= table.Name %>(model);
+
+            if (model != null && list.Count() > 0)
+                totalCount = list.First().TotalCount;
+
+            Pager<<%= table.Name %>> pagedList = new Pager<<%= table.Name %>>(list.ToList().AsQueryable(), model.PageNo, model.PageSize, totalCount);
+            return pagedList;
+        }
+
+        public ActionResult Details(int? id)
+        {
+            var model = new <%= table.Name %>()
+            {
+                Action = "Get",
+                UserId = UserId,
+                <%= primaryKey %> = Convert.ToInt32(id)
+            };
+            model = <%= table.Name %>Service.Manage<%= table.Name %>(model).FirstOrDefault();
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            var model = new <%= table.Name %>();
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(<%= table.Name %> model)
+        {
+            if (ModelState.IsValid)
+            {
+                model.Action = "Add";
+                model.UserId = UserId;
+                model.<%= primaryKey %> = <%= table.Name %>Service.Manage<%= table.Name %>(model).FirstOrDefault().<%= primaryKey %>;
+                Success(string.Format("<%= table.Name %> '{0}' created successfully.", model.GstNumber), true);
+                return RedirectToAction("Details", new { id = model.<%= primaryKey %> });
+            }
+            return View();
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var model = new <%= table.Name %>()
+            {
+                Action = "Get",
+                UserId = UserId,
+                <%= primaryKey %> = id,
+            };
+            model = <%= table.Name %>Service.Manage<%= table.Name %>(model).FirstOrDefault();
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(<%= table.Name %> model, string SelctedPermissionIds)
+        {
+            if (ModelState.IsValid)
+            {
+                model.Action = "Edit";
+                model.UserId = UserId;
+                <%= table.Name %>Service.Manage<%= table.Name %>(model);
+                Success(string.Format("<%= table.Name %> '{0}' updated successfully.", model.GstNumber), true);
+                return RedirectToAction("Details", new { id = model.<%= primaryKey %> });
+            }
+            return View(model);
+        }
+
+        public ActionResult Delete(int id)
+        {
+            var model = new <%= table.Name %>()
+            {
+                Action = "Get",
+                UserId = UserId,
+                <%= primaryKey %> = id
+            };
+            model = <%= table.Name %>Service.Manage<%= table.Name %>(model).FirstOrDefault();
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(<%= table.Name %> model)
+        {
+            model.Action = "Delete";
+            model.UserId = UserId;
+
+            <%= table.Name %>Service.Manage<%= table.Name %>(model);
+            Success("<%= table.Name %> deleted successfully.", true);
+            return RedirectToAction("Index", new { id = model.<%= primaryKey %> });
+        }
+
+    }
+}

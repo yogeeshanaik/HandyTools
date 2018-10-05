@@ -1,0 +1,85 @@
+<%@ CodeTemplate Language="C#" ClassName="Template.Class" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Parameter Name="table" Type="SqlTable" %>
+
+
+@model Core.Common.UI.DbPager.Pager<Client.Entities.<%= table.Name %>>
+
+@{
+    ViewBag.Title = T("User Index");
+}
+
+@using (Html.BeginForm())
+{
+
+    <div class="box">
+
+        <div class="box-header with-border">
+            <h3 class="box-title"><b>@ViewBag.Title</b></h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            </div>
+        </div>
+
+        <div class="box-body">
+
+            <p class="pull-right">
+                <a href="@Url.Action("Create")" class="btn btn-default"><span class="fa fa-plus"></span>&nbsp New</a>
+            </p>
+
+             @{Html.RenderPartial("_Search");}
+            @if (Model != null && Model != null && Model.Count > 0)
+            {
+                var header = Model[0];
+                <div class="table-responsive">
+                    <table id="tblUsers" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => header.Username)</th>
+                                <th>@Html.DisplayNameFor(model => header.FirstName)</th>
+                                <th>@Html.DisplayNameFor(model => header.LastName)</th>
+                                @*<th>@Html.DisplayNameFor(model => header.UserRoles)</th>*@
+                                <th>@Html.DisplayNameFor(model => header.EmailId)</th>
+                                <th>@Html.DisplayNameFor(model => header.Mobile)</th>
+                                <th>@Html.DisplayNameFor(model => header.IsActive)</th>
+                                <th commandcolumn="true"></th>
+                                <th commandcolumn="true"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@Html.DisplayFor(modelItem => item.Username)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.LastName)</td>
+                                    @*<td>@Html.DisplayFor(modelItem => item.UserRoles)</td>*@
+
+                                    <td>@Html.DisplayFor(modelItem => item.EmailId)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.Mobile)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.IsActive)</td>
+
+                                    <td>
+                                        <a href="javascript:void(0)"
+                                            onclick="location.href='@Url.Action("Edit", new { id = item.UserId })'"
+                                             class="btn btn-default btn-xs"><i class="fa fa-edit"></i></a>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:void(0)"
+                                            onclick="location.href='@Url.Action("Details", new { id = item.UserId })'"
+                                             class="btn btn-default btn-xs"><i class="fa fa-info"></i></a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    @Html.Partial("_PagingPartial", Model)
+                </div>
+            }
+        </div>
+    </div>
+
+}

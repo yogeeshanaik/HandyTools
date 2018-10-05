@@ -1,0 +1,256 @@
+<%@ CodeTemplate Language="C#" ClassName="Template.Class" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Parameter Name="table" Type="SqlTable" %>
+
+
+<%
+
+System.Diagnostics.Debugger.Launch();
+
+var fields = table.GetFields();
+
+string sourceFields=string.Empty;
+string targetFields=string.Empty;
+string updateFields=string.Empty;
+string xmlFields=string.Empty;
+string sampleXml = string.Empty;
+string declareVariables = string.Empty;
+string executeVariables = string.Empty;
+string selectVariables = string.Empty;
+string primaryKeyField=string.Empty;
+string fieldsWithAliases=string.Empty;
+string searchClauses=string.Empty;
+
+string sourceFieldPrefix="S.";
+string comma=",\n\t\t";
+string orClause="\n\t\t OR ";
+
+System.Diagnostics.Debugger.Launch();
+for(int i=0; i<fields.Length; i++)
+{
+    if(i==fields.Length-1){
+        comma = string.Empty;
+        orClause = string.Empty;
+    }
+    
+    if(fields[i].IsPrimaryKey)
+        primaryKeyField = fields[i].Name;
+    else
+    {
+        updateFields += "T.["+fields[i].Name + "] = " + "S.["+fields[i].Name+"]" + comma;
+        sourceFields += fields[i].Name + comma;
+        targetFields += "S.["+fields[i].Name +"]"+ comma;
+        searchClauses += " ["+fields[i].Name+"] LIKE '%'+@SearchText+'%'" +orClause;
+    }
+    
+    xmlFields += "C.value('("+fields[i].Name + ")[1]', '" + fields[i].QualifiedType + "') AS ["+fields[i].Name + "]" + comma;
+    
+    sampleXml += "<"+ fields[i].Name +"></"+ fields[i].Name +">"+ comma;
+    
+    declareVariables += "@"+fields[i].Name +" "+fields[i].QualifiedType + " = NULL " + comma;
+    
+    executeVariables += "@"+fields[i].Name +" = @"+fields[i].Name + comma;
+    
+    selectVariables += "@"+fields[i].Name+ comma;
+    
+    //fieldsWithAliases += "S.["+fields[i].Name +"] AS ["+ ToProperCase(fields[i].Name) +"]"+ comma;
+    fieldsWithAliases += "S.["+fields[i].Name +"] AS ["+ fields[i].Name +"]"+ comma;
+    
+        //Text properties for foriegn key fields
+    if(fields[i].IsForiegnKey)
+    {
+        var refTable = new ReferencedTable(fields[i].ReferencedTable,table.ConnectionString).GetSqlTable();
+        var refFields = refTable.GetFields();
+        
+        string idField = string.Empty;
+    var field2 = refFields.ToList().Where(s=>s.IsPrimaryKey == true).FirstOrDefault();
+    if(field2 != null)
+    idField = field2.Name;
+    
+    TableField textField = fields[i]; //Simply initialize
+    // Assuming Text field will be right next to the primary key field
+    if(refFields.Count() >= field2.Ordinal+1)
+        textField = refFields[field2.Ordinal+1]; 
+      
+    fieldsWithAliases += "S.["+textField[i].Name +"] AS ["+ textField[i].Name +"]"+ comma;
+      
+    }
+  
+}
+
+%>
+
+<%%
+// Capitalize the first character and add a space before
+// each capitalized letter (except the first character).
+public string ToProperCase(string the_string)
+{
+    // If there are 0 or 1 characters, just return the string.
+    if (the_string == null) return the_string;
+    if (the_string.Length < 2) return the_string.ToUpper();
+
+    // Start with the first character.
+    string result = the_string.Substring(0, 1).ToUpper();
+
+    // Add the remaining characters.
+    for (int i = 1; i < the_string.Length; i++)
+    {
+        if (char.IsUpper(the_string[i])) result += " ";
+        result += the_string[i];
+    }
+
+    return result;
+}
+
+%%>
+
+/******************************************************************************************
+** Auth: Yogeesha Naik
+** Date: <%= DateTime.Now %>
+** Desc: To manage all operations on <%= table.Name %> 
+    -- Add or Copy
+    -- Edit
+    -- Delete
+    -- Get
+    -- Import
+    -- Export
+*******************************************************************************************
+** Change History
+*******************************************************************************************
+**  PR  Date        Author          Description 
+**  --  --------    -------         ------------------------------------
+**  
+*******************************************************************************************
+** Test Data:
+
+declare @XmlData xml = '<Data><<%= table.Name %>><%= sampleXml %></<%= table.Name %>></Data>'
+
+declare 
+       -- Default parameters                                  
+        @Action NVARCHAR(50)
+       ,@SearchText NVARCHAR(50)
+       ,@UserId INT
+       -- Entity parameters
+       ,<%= declareVariables %>
+       -- Paging parameters
+       ,@PageNo INT= 1, @PageSize INT= 10, @SortField NVARCHAR(50)= NULL, @SortDirection NVARCHAR(10)= NULL
+
+EXECUTE Manage<%= table.Name %> 
+       -- Default parameters                                  
+        @Action = @Action
+       ,@SearchText = @SearchText
+       ,@UserId = @UserId
+       ,@XmlData = @XmlData
+       -- Entity parameters
+       ,<%= executeVariables %>
+       -- Paging parameters
+       ,@PageNo = @PageNo, @PageSize = @PageSize, @SortField = @SortField, @SortDirection = @SortDirection
+*******************************************************************************************/
+
+<%
+string tempTableName = "#Temp_"+table.Name;
+%>
+
+CREATE PROCEDURE [dbo].[Proc_Manage<%= table.Name %>](
+       -- Default parameters                                  
+        @Action NVARCHAR(50)
+       ,@SearchText NVARCHAR(50)=NULL
+       ,@UserId INT
+       ,@XmlData XML = NULL
+       -- Entity parameters
+       ,<%= declareVariables %>
+       -- Paging parameters
+       ,@PageNo INT= 1, @PageSize INT= 10, @SortField NVARCHAR(50)= NULL, @SortDirection NVARCHAR(10)= NULL, @TotalCount INT = NULL
+       )
+AS
+BEGIN TRY
+
+SET NOCOUNT ON
+SET XACT_ABORT ON
+
+-- Create temp table
+
+IF OBJECT_ID('tempdb.dbo.<%= tempTableName %>') IS NOT NULL
+DROP TABLE tempdb.dbo.<%= tempTableName %>
+
+SELECT 
+<%= xmlFields %>
+INTO <%= tempTableName %>
+FROM @XmlData.nodes('/Data/<%= table.Name %>') AS T(C)
+
+
+    IF @Action IN ('Add','Copy','Edit')
+    BEGIN
+    
+    INSERT INTO <%= tempTableName %>
+    SELECT <%= selectVariables %>
+    
+    goto mergedata
+    
+    END
+    ELSE IF @Action IN ('Get','Export')
+    BEGIN
+
+        -- Paging params declaration
+        DECLARE @LimitEnd INT= (@PageNo * @PageSize)
+        DECLARE @LimitStart INT= @LimitEnd - @PageSize
+        
+        SELECT 
+            COUNT(*) OVER() AS [TotalCount],
+            <%= fieldsWithAliases %>
+            FROM <%= table.Name %> S
+            WHERE ( ISNULL(@<%= primaryKeyField %>,0)=0  OR S.[<%= primaryKeyField %>] = @<%= primaryKeyField %> )
+        AND  (ISNULL(@SearchText, '') = '' OR ( <%= searchClauses %> ))
+        ORDER BY S.<%= primaryKeyField %> DESC
+        OFFSET @LimitStart ROWS FETCH NEXT @PageSize ROWS ONLY;
+    END
+    
+    ELSE IF @Action = 'Delete'
+    BEGIN 
+       DELETE FROM <%= table.Name %> WHERE <%= primaryKeyField %> = @<%= primaryKeyField %>
+    END    
+
+
+    IF @Action = 'Import'
+    BEGIN
+    mergedata:
+        BEGIN TRAN;
+
+        MERGE <%= table.Name %> AS T
+        USING <%= tempTableName %> AS S
+        ON (T.<%= primaryKeyField %> = S.<%= primaryKeyField %>) 
+        WHEN NOT MATCHED BY TARGET
+            
+        THEN INSERT(
+                    <%= sourceFields %> 
+                ) VALUES(
+                    <%= targetFields %>
+                )
+      
+        WHEN MATCHED 
+        THEN UPDATE SET <%= updateFields %>;
+
+        
+        IF @@TRANCOUNT > 0
+        COMMIT;
+        
+       IF @@IDENTITY>0
+          SELECT @@IDENTITY AS <%= primaryKeyField %>        
+    END
+
+IF OBJECT_ID('tempdb.dbo.<%= tempTableName %>') IS NOT NULL
+DROP TABLE tempdb.dbo.<%= tempTableName %>
+
+END TRY
+BEGIN CATCH
+    IF @@TRANCOUNT > 0
+    ROLLBACK
+    DECLARE @Message    NVARCHAR(500) = ERROR_MESSAGE(),
+            @ErrorState INT = ERROR_STATE();
+    RAISERROR( @Message, 16, @ErrorState );
+END CATCH;

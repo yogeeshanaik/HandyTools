@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+
+   <!-- Generator settings -->
+   <add name="template" value="Templates\Srilankan-Payroll\Host\WCF.Service\BuildServices.cst" />
+   <add name="targetdir" value="Templates\Srilankan-Payroll\Host\WCF.Service\Output\" />
+   <add name="output" value="Bootstrapper.cs" />
+   <add name="logfile" value="Templates\Srilankan-Payroll\Host\WCF.Service\generation.log" />
+
+</settings>

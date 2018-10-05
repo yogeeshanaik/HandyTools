@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+
+   <!-- Generator settings -->
+   <add name="template" value="Templates\Example\BuildClasses.cst" />
+   <add name="targetdir" value="Templates\Example\" />
+   <add name="logfile" value="generation.log" />
+
+   <!-- Project settings -->
+   <add name="namespace" value="CodeProject.Sample.Domain" />
+   <add name="source" value="Templates\Example\Person.xml" />
+   <add name="source" value="Templates\Example\Address.xml" />
+
+</settings>

@@ -1,0 +1,38 @@
+<%@ CodeTemplate Language="C#" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Import Namespace="System.Data" %>
+
+
+<%
+   System.Diagnostics.Debugger.Launch();
+   SqlTable cat = new SqlTable();
+    if(!cat.IsConnected())
+        throw new ApplicationException("No connection to database");
+%>
+
+
+<%
+
+string openTag = @"<";
+string closeTag = @">";
+string baseUrl = @"http://localhost:18849/";
+
+foreach(SqlTable table in cat.GetSqlTables()){
+%>
+    <%= openTag %>endpoint address="<%= baseUrl %><%= table.Name %>Service.svc" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_LargeData" contract="Client.Contracts.I<%= table.Name %>Service" name="" /<%= closeTag %>
+<%    
+}
+
+%>
+
+
+
+
+
+
+

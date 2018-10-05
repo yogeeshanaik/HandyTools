@@ -1,0 +1,32 @@
+<%@ CodeTemplate Language="C#" ClassName="Template.Class" CodeFile="Class.cst.cs" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Parameter Name="table" Type="SqlTable" %>
+
+namespace <%= Settings["namespace"] %>
+{
+    
+    [DataContract]
+    public class <%= table.Name %> : IExtensibleDataObject
+    {
+        
+          <% 
+            foreach(TableField p in table.GetFields()) { 
+            %>
+        [DataMember]
+        public <%=p.ToNetType()%> <%=p.Name%> { get; set; }
+            <%
+            } // foreach(..)
+            %>
+            
+        
+        #region IExtensibleDataObject Members
+
+        public ExtensionDataObject ExtensionData { get; set; }
+
+        #endregion
+    }
+
+}

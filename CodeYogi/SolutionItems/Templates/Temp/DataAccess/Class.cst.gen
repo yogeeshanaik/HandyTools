@@ -1,0 +1,34 @@
+using System;
+using System.Xml;
+using System.Text;
+using System.Data;
+
+
+namespace Template
+{
+	[Arebis.CodeGeneration.TemplateInfo(@"F:\Test\ArebisCGenSource12\CGen\bin\Debug\Input\DataAccess\Class.cst")]
+	public sealed partial class Class : Arebis.CodeGeneration.CodeTemplate
+	{
+		private XmlElement classElement;
+
+
+		public Class(Arebis.CodeGeneration.IGenerationHost _host, XmlElement classElement)
+			: base(_host)
+		{
+			this.classElement = classElement;
+
+		}
+		
+		public override void Generate()
+		{
+#line 10 "F:\Test\ArebisCGenSource12\CGen\bin\Debug\Input\DataAccess\Class.cst"
+this.WriteObjects("\r\n");
+this.WriteObjects("using System;\r\n");
+this.WriteObjects("using System.Collections.Generic;\r\n");
+
+		}
+
+
+
+	}
+}

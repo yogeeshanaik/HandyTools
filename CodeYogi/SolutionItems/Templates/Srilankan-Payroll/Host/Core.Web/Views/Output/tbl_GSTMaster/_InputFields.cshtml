@@ -1,0 +1,127 @@
+
+
+@model AssociatePayroll.Core.Models.Master.tbl_GSTMaster
+
+<div class="row">
+
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.GstMasterId)
+                @Html.TextBoxFor(model => model.GstMasterId, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.GstMasterId, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelFor(model => model.EffectiveDate)
+                @Html.TextBoxFor(model => model.EffectiveDate, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.EffectiveDate, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.StateName)
+                @Html.TextBoxFor(model => model.StateName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.StateName, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.GstNumber)
+                @Html.TextBoxFor(model => model.GstNumber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.GstNumber, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.PanNumber)
+                @Html.TextBoxFor(model => model.PanNumber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.PanNumber, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.TanNumber)
+                @Html.TextBoxFor(model => model.TanNumber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TanNumber, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+                
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelFor(model => model.CGST_Applicable)
+                @Html.EditorFor(model => model.CGST_Applicable, new { @checked = "checked" })
+                @Html.ValidationMessageFor(model => model.CGST_Applicable, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.CGST_Percentage)
+                @Html.TextBoxFor(model => model.CGST_Percentage, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CGST_Percentage, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+                
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelFor(model => model.SGST_Applicable)
+                @Html.EditorFor(model => model.SGST_Applicable, new { @checked = "checked" })
+                @Html.ValidationMessageFor(model => model.SGST_Applicable, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.SGST_Percentage)
+                @Html.TextBoxFor(model => model.SGST_Percentage, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.SGST_Percentage, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+                
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelFor(model => model.UTGST_Applicable)
+                @Html.EditorFor(model => model.UTGST_Applicable, new { @checked = "checked" })
+                @Html.ValidationMessageFor(model => model.UTGST_Applicable, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.UTGST_Percentage)
+                @Html.TextBoxFor(model => model.UTGST_Percentage, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.UTGST_Percentage, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+                
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelFor(model => model.IGST_Applicable)
+                @Html.EditorFor(model => model.IGST_Applicable, new { @checked = "checked" })
+                @Html.ValidationMessageFor(model => model.IGST_Applicable, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+                @Html.LabelForRequired(model => model.IGST_Percentage)
+                @Html.TextBoxFor(model => model.IGST_Percentage, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.IGST_Percentage, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        
+                    
+</div>

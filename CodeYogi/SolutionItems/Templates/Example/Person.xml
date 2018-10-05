@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<class name="Person">
+  <property name="FirstName" type="String" />
+  <property name="LastName" type="String" />
+  <property name="DateOfBirth" type="DateTime" />
+  <property name="Address" type="Address" />
+</class>
+
+

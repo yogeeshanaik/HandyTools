@@ -1,0 +1,7 @@
+
+
+<%@ ServiceHost 
+    Language="C#" 
+    Debug="true" 
+    Service="Business.Services.Contracts.IUserService, Business.Services" 
+    Factory="Autofac.Integration.Wcf.AutofacServiceHostFactory, Autofac.Integration.Wcf" %>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+
+   <!-- Generator settings -->
+   <add name="template" value="Templates\MvcArchitecture\BuildSolution.cst" />
+   <add name="targetdir" value="Templates\MvcArchitecture\Output\" />
+   <add name="logfile" value="Templates\MvcArchitecture\generation.log" />
+
+   <!-- Project settings: Your custom settings here -->
+   
+   <add name="Template_ClassLibrary_Path" value= "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\ProjectTemplatesCache\CSharp\Windows\1033\ClassLibrary\csClassLibrary.vstemplate" />
+   
+   <add name="Solution_Path" value="Templates\MvcArchitecture\Output\MvcArchitecture.sln" />
+   
+   <add name="Project_BusinessEntity_Path" value="Templates\MvcArchitecture\Output\Business\BusinessEntity\BusinessEntity.csproj" />
+   <add name="Project_BusinessService_Path" value="Templates\MvcArchitecture\Output\Business\BusinessService\BusinessService.csproj" />
+   <add name="Project_ClientContract_Path" value="" />
+   <add name="Project_ClientEntity_Path" value="" />
+   <add name="Project_ClientProxy_Path" value="" />
+   
+   
+   
+   <add name="namespace" value="AssociatePayroll.Web.Controllers" />
+   
+</settings>

@@ -1,0 +1,140 @@
+
+
+@model Core.Common.UI.DbPager.Pager<AssociatePayroll.Core.Models.Master.tbl_GSTMaster>
+
+@{
+    ViewBag.Title = T("tbl_GSTMaster List");
+}
+
+    
+
+@using (Html.BeginForm())
+{
+
+    <div class="box">
+
+        <div class="box-header with-border">
+            <h3 class="box-title"><b>@ViewBag.Title</b></h3>
+            <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            </div>
+        </div>
+
+        <div class="box-body">
+
+            <p class="pull-right">
+                <a href="@Url.Action("Create")" class="btn btn-default"><span class="fa fa-plus"></span>&nbsp New</a>
+            </p>
+
+             @{Html.RenderPartial("_Search");}
+            @if (Model != null && Model != null && Model.Count > 0)
+            {
+                var header = Model[0];
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                            
+                                <th>@Html.DisplayNameFor(model => header.GstMasterId)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.EffectiveDate)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.StateName)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.GstNumber)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.PanNumber)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.TanNumber)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.CGST_Applicable)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.CGST_Percentage)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.SGST_Applicable)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.SGST_Percentage)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.UTGST_Applicable)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.UTGST_Percentage)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.IGST_Applicable)</th>
+
+                            
+                                <th>@Html.DisplayNameFor(model => header.IGST_Percentage)</th>
+
+ 
+                                <th commandcolumn="true"></th>
+                                <th commandcolumn="true"></th>                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                            <tr>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.GstMasterId)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.EffectiveDate)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.StateName)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.GstNumber)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.PanNumber)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.TanNumber)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.CGST_Applicable)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.CGST_Percentage)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.SGST_Applicable)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.SGST_Percentage)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.UTGST_Applicable)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.UTGST_Percentage)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.IGST_Applicable)</td>
+                                
+                                    <td>@Html.DisplayFor(modelItem => item.IGST_Percentage)</td>
+ 
+                                    <td>
+                                        <a href="javascript:void(0)"
+                                            onclick="location.href='@Url.Action("Edit", new { id = item.UserId })'"
+                                             class="btn btn-default btn-xs"><i class="fa fa-edit"></i></a>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:void(0)"
+                                            onclick="location.href='@Url.Action("Details", new { id = item.UserId })'"
+                                             class="btn btn-default btn-xs"><i class="fa fa-info"></i></a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    @Html.Partial("_PagingPartial", Model)
+                </div>
+            }
+        </div>
+    </div>
+
+}
+
+

@@ -1,0 +1,43 @@
+<%@ CodeTemplate Language="C#" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Import Namespace="System.Data" %>
+
+
+<%
+   // System.Diagnostics.Debugger.Launch();
+   SqlTable cat = new SqlTable();
+    if(!cat.IsConnected())
+        throw new ApplicationException("No connection to database");
+%>
+
+
+<%
+System.Diagnostics.Debugger.Launch();
+foreach(SqlTable table in cat.GetSqlTables()){
+
+    this.Host.CallTemplateToFile(
+    "Create.cst", table.Name+"/Create.cshtml",
+        table
+    );
+    
+    this.Host.CallTemplateToFile(
+    "_InputFields.cst", table.Name+"/_InputFields.cshtml",
+        table
+    );    
+    
+    
+}
+
+%>
+
+
+
+
+
+
+

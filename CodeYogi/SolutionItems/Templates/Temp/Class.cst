@@ -1,0 +1,30 @@
+<%@ CodeTemplate Language="C#" ClassName="Template.Class" CodeFile="Class.cst.cs" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Xml.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Xml" %>
+<%@ Parameter Name="classElement" Type="XmlElement" %>
+using System;
+using System.Collections.Generic;
+
+namespace <%= Settings["namespace"] %>
+{
+	public partial class <%= classElement.GetAttribute("name") %> : System.Object
+	{
+<% foreach(XmlElement property in classElement.SelectNodes("property")) { 
+       string typeName = property.GetAttribute("type");
+	   string propName = property.GetAttribute("name");
+%>
+
+		private <%= typeName %> <%= ToCamel(propName) %>;
+		
+		public <%= typeName %> <%= propName %>
+		{
+			get { return this.<%= ToCamel(propName) %>; }
+			set { this.<%= ToCamel(propName) %> = value; }
+		}
+<% } %>
+	}
+}
+
+

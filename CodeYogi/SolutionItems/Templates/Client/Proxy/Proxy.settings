@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+
+
+   <!-- Generator settings -->
+   <add name="template" value="" />
+   <add name="targetdir" value="" />
+   <add name="logfile" value="generation.log" />
+
+
+   <!-- Project settings: Your custom settings here -->
+   <add name="namespace" value="YourNamespace" />
+
+
+</settings>

@@ -1,0 +1,37 @@
+<%@ CodeTemplate Language="C#" %>
+<%@ ReferenceAssembly Path="System.dll" %>
+<%@ ReferenceAssembly Path="System.Data.dll" %>
+<%@ ReferenceAssembly Path="DatabaseCatalogReader.dll" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="DatabaseCatalogReader" %>
+<%@ Import Namespace="System.Data" %>
+
+
+<%
+   SqlTable cat = new SqlTable();
+    if(!cat.IsConnected())
+        throw new ApplicationException("No connection to database");
+%>
+
+
+<%
+System.Diagnostics.Debugger.Launch();
+foreach(SqlTable table in cat.GetSqlTables()){
+    string classname;
+    classname = table.Name;
+    this.Host.CallTemplateToFile(
+        "Class.cst",
+        classname + "ViewModel.cs",
+        table
+    );
+}
+
+%>
+
+
+
+
+
+
+
