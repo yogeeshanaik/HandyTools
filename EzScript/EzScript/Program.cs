@@ -1,27 +1,20 @@
-﻿/****************** Request to the Developers *****************
-
-You are free to use, modify and distribute any portion of this code. 
-The only requirement to do that, you need to keep the developer name, as provided below to recognize and encourage original work:
-Thank you..
- 
-=======================================================
-   
-Architecture Designed and Implemented By:
-Yogeesha Naik
-Twitter: http://facebook.com/yogeesha.thangode | Mail: yogishdj@live.com
-   
-*******************************************************/
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
+﻿using System;
+using System.Configuration;
 using System.Security.Principal;
+using System.Windows.Forms;
 
 namespace EzScript
 {
     static class Program
     {
+        static bool RunAsAdministrator
+        {
+            get
+            {
+                return Convert.ToBoolean(ConfigurationManager.AppSettings["RunAsAdministrator"]);
+            }
+        }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -32,23 +25,18 @@ namespace EzScript
             Application.SetCompatibleTextRenderingDefault(false);
             try
             {
-                if (!Convert.ToBoolean(System.Configuration.ConfigurationManager.AppSettings["RunAsAdministrator"]))
-                    Application.Run(new frmEzScript());
+                if (RunAsAdministrator && !IsUserAdministrator())
+                    MessageBox.Show("You do not have administrator previllages. Please Run as Administrator.", "Run as Administrator", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
-                {
-                    if (IsUserAdministrator())
-                        Application.Run(new frmEzScript());
-                    else
-                        MessageBox.Show("You do not have administrator previllages. Please Run as Administrator.", "Run as Administrator", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                    Application.Run(new EzScriptForm());
             }
-            catch
+            catch (Exception ex)
             {
-                Application.Run(new frmEzScript());
+                MessageBox.Show(ex.Message, "EzScript", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        public static bool IsUserAdministrator()
+        static bool IsUserAdministrator()
         {
             bool isAdmin;
             try
@@ -57,11 +45,11 @@ namespace EzScript
                 WindowsPrincipal principal = new WindowsPrincipal(user);
                 isAdmin = principal.IsInRole(WindowsBuiltInRole.Administrator);
             }
-            catch (UnauthorizedAccessException ex)
+            catch (UnauthorizedAccessException)
             {
                 isAdmin = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 isAdmin = false;
             }

@@ -1,24 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-
+using System.Text;
 
 class SQLHelper
 {
-
     internal static SqlConnection CreateNewConnection(ServerInfo Info)
     {
         var builder = new SqlConnectionStringBuilder();
-        builder.ApplicationName = Settings.Title;
+        builder.ApplicationName = "EzScript";
         builder.IntegratedSecurity = Info.AuthType == AuthTypes.Windows;
         builder.DataSource = Info.Server;
         builder.UserID = Info.User;
         builder.Password = Info.Password;
         builder.InitialCatalog = Info.Database;
-        builder.ConnectTimeout = Settings.Instance.ConnectionTimeout;
+        builder.ConnectTimeout = Info.ConnectTimeout;
         return new SqlConnection(builder.ConnectionString);
     }
 
@@ -81,4 +76,3 @@ class SQLHelper
         return result;
     }
 }
-

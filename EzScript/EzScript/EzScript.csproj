@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -10,8 +10,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EzScript</RootNamespace>
     <AssemblyName>EzScript</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -23,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -32,19 +34,24 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+      <HintPath>..\packages\Microsoft.SqlServer.ConnectionInfo.dll.1.0.1\lib\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+      <HintPath>..\packages\Microsoft.SqlServer.Smo.dll.1.0.1\lib\Microsoft.SqlServer.Smo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlEnum.dll.1.0.1\lib\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -59,32 +66,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\DataAccess.cs" />
-    <Compile Include="Core\Extensions.cs" />
-    <Compile Include="Core\IDataAccess.cs" />
-    <Compile Include="Core\SQLScript.cs" />
-    <Compile Include="Core\ScriptOptions.cs" />
-    <Compile Include="Core\Settings.cs" />
-    <Compile Include="Core\SQLHelper.cs" />
-    <Compile Include="frmEzScript.cs">
+    <Compile Include="Helpers\BackgroundWorker\BWHelper.cs" />
+    <Compile Include="Core\DataAccess\DataAccess.cs" />
+    <Compile Include="Helpers\Extensions\DelegateExpansion.cs" />
+    <Compile Include="Helpers\ConfigHelper.cs" />
+    <Compile Include="Helpers\Extensions\Extensions.cs" />
+    <Compile Include="Helpers\FormSerialisor.cs" />
+    <Compile Include="Core\DataAccess\IDataAccess.cs" />
+    <Compile Include="Core\Models\SqlObject.cs" />
+    <Compile Include="Core\Models\ServerInfo.cs" />
+    <Compile Include="Helpers\BackgroundWorker\ValueMonitor.cs" />
+    <Compile Include="Helpers\IO\IOHelper.cs" />
+    <Compile Include="Helpers\ListViewItemComparer.cs" />
+    <Compile Include="Helpers\Logging\ControlTraceListener.cs" />
+    <Compile Include="Helpers\Logging\ListBoxLog.cs" />
+    <Compile Include="Helpers\SQLHelper.cs" />
+    <Compile Include="Helpers\SqlScript\DatabaseScripter.cs" />
+    <Compile Include="Helpers\SqlScript\SQLScript.cs" />
+    <Compile Include="Helpers\WaitCursor.cs" />
+    <Compile Include="EzScriptForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEzScript.Designer.cs">
-      <DependentUpon>frmEzScript.cs</DependentUpon>
+    <Compile Include="EzScriptForm.Designer.cs">
+      <DependentUpon>EzScriptForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmScriptOptions.cs">
+    <Compile Include="ScriptOptionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmScriptOptions.Designer.cs">
-      <DependentUpon>frmScriptOptions.cs</DependentUpon>
+    <Compile Include="ScriptOptionsForm.Designer.cs">
+      <DependentUpon>ScriptOptionsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Control\ListViewHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmEzScript.resx">
-      <DependentUpon>frmEzScript.cs</DependentUpon>
+    <EmbeddedResource Include="EzScriptForm.resx">
+      <DependentUpon>EzScriptForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmScriptOptions.resx">
-      <DependentUpon>frmScriptOptions.cs</DependentUpon>
+    <EmbeddedResource Include="ScriptOptionsForm.resx">
+      <DependentUpon>ScriptOptionsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,10 +113,12 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -107,6 +128,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Scripts\jquery-2.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\nugetexample.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
