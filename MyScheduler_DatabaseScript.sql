@@ -1,162 +1,155 @@
-/****** Object:  StoredProcedure [dbo].[sp_verify_schedule_identifiers]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_schedule_identifiers]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_schedule_identifiers]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_verify_schedule_identifiers]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_schedule]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_schedule]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_schedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_verify_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_jobstep]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_jobstep]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_jobstep]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_verify_jobstep]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_jobproc_caller]    Script Date: 11-06-2020 18:09:05 ******/
-DROP PROCEDURE [dbo].[sp_verify_jobproc_caller]
-GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job_time]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_job_time]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job_time]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_verify_job_time]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job_identifiers]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_job_identifiers]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job_identifiers]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_verify_job_identifiers]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job_date]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_job_date]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job_date]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_verify_job_date]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_job]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_verify_job]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_category_identifiers]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_category_identifiers]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_category_identifiers]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_verify_category_identifiers]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_update_schedule]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_update_schedule]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_update_schedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_update_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_update_replication_job_parameter]    Script Date: 11-06-2020 18:09:05 ******/
-DROP PROCEDURE [dbo].[sp_update_replication_job_parameter]
-GO
-/****** Object:  StoredProcedure [dbo].[sp_update_jobstep]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_update_jobstep]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_update_jobstep]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_update_jobstep]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_update_job]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_update_job]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_update_job]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_update_job]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_start_job]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_start_jobsteps]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_start_jobsteps]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[sp_start_jobsteps]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_start_job]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_start_job]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_start_job]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_sqlagent_set_jobstep_completion_state]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_sqlagent_set_jobstep_completion_state]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_sqlagent_set_jobstep_completion_state]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_sqlagent_set_jobstep_completion_state]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_sqlagent_notify]    Script Date: 11-06-2020 18:09:05 ******/
-DROP PROCEDURE [dbo].[sp_sqlagent_notify]
-GO
-/****** Object:  StoredProcedure [dbo].[sp_sqlagent_log_jobhistory]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_sqlagent_log_jobhistory]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_sqlagent_log_jobhistory]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_sqlagent_log_jobhistory]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_post_msx_operation]    Script Date: 11-06-2020 18:09:05 ******/
-DROP PROCEDURE [dbo].[sp_post_msx_operation]
-GO
-/****** Object:  StoredProcedure [dbo].[sp_help_jobstep]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_help_jobstep]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_help_jobstep]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_help_jobstep]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_help_jobschedule]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_help_jobschedule]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_help_jobschedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_help_jobschedule]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_get_schedule_description]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_get_schedule_description]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_get_schedule_description]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_get_schedule_description]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_downloaded_row_limiter]    Script Date: 11-06-2020 18:09:05 ******/
-DROP PROCEDURE [dbo].[sp_downloaded_row_limiter]
-GO
-/****** Object:  StoredProcedure [dbo].[sp_detach_schedule]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_detach_schedule]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_detach_schedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_detach_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_delete_schedule]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_delete_schedule]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_delete_schedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_delete_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_attach_schedule]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_attach_schedule]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_attach_schedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_attach_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_schedule]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_add_schedule]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_schedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_add_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_jobstep_internal]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_add_jobstep_internal]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_jobstep_internal]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_add_jobstep_internal]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_jobstep]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_add_jobstep]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_jobstep]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_add_jobstep]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_jobserver]    Script Date: 11-06-2020 18:09:05 ******/
-DROP PROCEDURE [dbo].[sp_add_jobserver]
-GO
-/****** Object:  StoredProcedure [dbo].[sp_add_jobschedule]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_add_jobschedule]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_jobschedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_add_jobschedule]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_job]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_add_job]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_job]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_add_job]
 GO
-ALTER TABLE [dbo].[sysoriginatingservers] DROP CONSTRAINT [CK_originating_server_id_MustBe_1]
-GO
-ALTER TABLE [dbo].[sysoriginatingservers] DROP CONSTRAINT [CK_master_server_MustBe_1]
-GO
-ALTER TABLE [dbo].[sysoriginatingservers] DROP CONSTRAINT [DF__sysorigin__maste__145C0A3F]
-GO
-ALTER TABLE [dbo].[sysoriginatingservers] DROP CONSTRAINT [DF__sysorigin__origi__1367E606]
-GO
-ALTER TABLE [dbo].[sysjobstepslogs] DROP CONSTRAINT [DF__sysjobste__date___4BAC3F29]
-GO
-ALTER TABLE [dbo].[sysjobstepslogs] DROP CONSTRAINT [DF__sysjobste__date___4AB81AF0]
-GO
-/****** Object:  Index [UQ__sysorigi__57F15AAC1CBD2DD6]    Script Date: 11-06-2020 18:09:05 ******/
-ALTER TABLE [dbo].[sysoriginatingservers] DROP CONSTRAINT [UQ__sysorigi__57F15AAC1CBD2DD6]
-GO
-/****** Object:  View [dbo].[sysschedules_localserver_view]    Script Date: 11-06-2020 18:09:05 ******/
-DROP VIEW [dbo].[sysschedules_localserver_view]
-GO
-/****** Object:  View [dbo].[sysjobs_view]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  View [dbo].[sysjobs_view]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].[sysjobs_view]'))
 DROP VIEW [dbo].[sysjobs_view]
 GO
-/****** Object:  View [dbo].[sysoriginatingservers_view]    Script Date: 11-06-2020 18:09:05 ******/
-DROP VIEW [dbo].[sysoriginatingservers_view]
-GO
-/****** Object:  Table [dbo].[sysschedules]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  Table [dbo].[sysschedules]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysschedules]') AND type in (N'U'))
 DROP TABLE [dbo].[sysschedules]
 GO
-/****** Object:  Table [dbo].[sysoriginatingservers]    Script Date: 11-06-2020 18:09:05 ******/
-DROP TABLE [dbo].[sysoriginatingservers]
-GO
-/****** Object:  Table [dbo].[sysjobstepslogs]    Script Date: 11-06-2020 18:09:05 ******/
-DROP TABLE [dbo].[sysjobstepslogs]
-GO
-/****** Object:  Table [dbo].[sysjobsteps]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  Table [dbo].[sysjobsteps]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobsteps]') AND type in (N'U'))
 DROP TABLE [dbo].[sysjobsteps]
 GO
-/****** Object:  Table [dbo].[sysjobservers]    Script Date: 11-06-2020 18:09:05 ******/
-DROP TABLE [dbo].[sysjobservers]
-GO
-/****** Object:  Table [dbo].[sysjobschedules]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  Table [dbo].[sysjobschedules]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobschedules]') AND type in (N'U'))
 DROP TABLE [dbo].[sysjobschedules]
 GO
-/****** Object:  Table [dbo].[sysjobs]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  Table [dbo].[sysjobs]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobs]') AND type in (N'U'))
 DROP TABLE [dbo].[sysjobs]
 GO
-/****** Object:  Table [dbo].[sysjobhistory]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  Table [dbo].[sysjobhistory]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobhistory]') AND type in (N'U'))
 DROP TABLE [dbo].[sysjobhistory]
 GO
-/****** Object:  Table [dbo].[syscategories]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  Table [dbo].[syscategories]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[syscategories]') AND type in (N'U'))
 DROP TABLE [dbo].[syscategories]
 GO
-/****** Object:  UserDefinedFunction [dbo].[udfGetScheduleTimes]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  UserDefinedFunction [dbo].[udfGetScheduleTimes]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[udfGetScheduleTimes]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
 DROP FUNCTION [dbo].[udfGetScheduleTimes]
 GO
-/****** Object:  UserDefinedFunction [dbo].[fn_IntToTimeString]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  UserDefinedFunction [dbo].[fn_IntToTimeString]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_IntToTimeString]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
 DROP FUNCTION [dbo].[fn_IntToTimeString]
 GO
-/****** Object:  UserDefinedFunction [dbo].[agent_datetime]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  UserDefinedFunction [dbo].[agent_datetime]    Script Date: 15-06-2020 17:15:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[agent_datetime]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
 DROP FUNCTION [dbo].[agent_datetime]
 GO
-/****** Object:  UserDefinedFunction [dbo].[agent_datetime]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  UserDefinedFunction [dbo].[agent_datetime]    Script Date: 15-06-2020 17:15:35 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[agent_datetime]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+BEGIN
+execute dbo.sp_executesql @statement = N'
 
 CREATE FUNCTION [dbo].[agent_datetime](@date int, @time int)
 RETURNS DATETIME
@@ -165,24 +158,28 @@ BEGIN
  RETURN
   (
     CONVERT(DATETIME,
-          CONVERT(NVARCHAR(4),@date / 10000) + N'-' + 
-          CONVERT(NVARCHAR(2),(@date % 10000)/100)  + N'-' +
-          CONVERT(NVARCHAR(2),@date % 100) + N' ' +        
-          CONVERT(NVARCHAR(2),@time / 10000) + N':' +        
-          CONVERT(NVARCHAR(2),(@time % 10000)/100) + N':' +        
+          CONVERT(NVARCHAR(4),@date / 10000) + N''-'' + 
+          CONVERT(NVARCHAR(2),(@date % 10000)/100)  + N''-'' +
+          CONVERT(NVARCHAR(2),@date % 100) + N'' '' +        
+          CONVERT(NVARCHAR(2),@time / 10000) + N'':'' +        
+          CONVERT(NVARCHAR(2),(@time % 10000)/100) + N'':'' +        
           CONVERT(NVARCHAR(2),@time % 100),
     120)
   )
 END
 
- 
+ ' 
+END
+
 GO
-/****** Object:  UserDefinedFunction [dbo].[fn_IntToTimeString]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  UserDefinedFunction [dbo].[fn_IntToTimeString]    Script Date: 15-06-2020 17:15:35 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-/************************************************
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_IntToTimeString]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+BEGIN
+execute dbo.sp_executesql @statement = N'/************************************************
 -- FUNCTION fn_IntToTimeString
 -- AUTHOR	Alan Jefferson
 -- Date		5/11/2017
@@ -194,20 +191,24 @@ returns varchar(20)
 AS
 BEGIN
 declare @return varchar(20)
-set @return = ''
+set @return = ''''
 if @time is NOT null and @time >= 0 and @time < 240000
-select @return = REPLACE(convert(varchar(20), convert(TIME, left(right('000000' + convert(varchar(6),@time), 6),2) + ':' 
-				+ substring(right('000000' + convert(varchar(6),@time), 6), 3,2) + ':' 
-				+ right('00' + convert(varchar(6),@time), 2)),109),'.0000000', ' ')
+select @return = REPLACE(convert(varchar(20), convert(TIME, left(right(''000000'' + convert(varchar(6),@time), 6),2) + '':'' 
+				+ substring(right(''000000'' + convert(varchar(6),@time), 6), 3,2) + '':'' 
+				+ right(''00'' + convert(varchar(6),@time), 2)),109),''.0000000'', '' '')
 return @return;
+END' 
 END
+
 GO
-/****** Object:  UserDefinedFunction [dbo].[udfGetScheduleTimes]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  UserDefinedFunction [dbo].[udfGetScheduleTimes]    Script Date: 15-06-2020 17:15:35 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE FUNCTION [dbo].[udfGetScheduleTimes]
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[udfGetScheduleTimes]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+BEGIN
+execute dbo.sp_executesql @statement = N'CREATE FUNCTION [dbo].[udfGetScheduleTimes]
 (
 	@startDate DATETIME,
 	@endDate DATETIME
@@ -302,7 +303,7 @@ INSERT		@JobSchedules
 		)
 SELECT		srv.srvname,
 		sj.name,
-		COALESCE(sj.description, ''),
+		COALESCE(sj.description, ''''),
 		ss.name,
 		ss.schedule_id,
 		sc.name,
@@ -313,9 +314,9 @@ SELECT		srv.srvname,
 		ss.freq_relative_interval,
 		ss.freq_recurrence_factor,
 		COALESCE(STR(ss.active_start_date, 8), CONVERT(CHAR(8), GETDATE(), 112)),
-		STUFF(STUFF(REPLACE(STR(ss.active_start_time, 6), ' ', '0'), 3, 0, ':'), 6, 0, ':'),
+		STUFF(STUFF(REPLACE(STR(ss.active_start_time, 6), '' '', ''0''), 3, 0, '':''), 6, 0, '':''),
 		STR(ss.active_end_date, 8),
-		STUFF(STUFF(REPLACE(STR(ss.active_end_time, 6), ' ', '0'), 3, 0, ':'), 6, 0, ':'),
+		STUFF(STUFF(REPLACE(STR(ss.active_end_time, 6), '' '', ''0''), 3, 0, '':''), 6, 0, '':''),
 		sj.enabled,
 		ss.enabled
 FROM		msdb..sysschedules AS ss
@@ -332,8 +333,8 @@ ORDER BY	srv.srvname,
 DECLARE	@tempStart DATETIME,
 	@tempEnd DATETIME
 
-SELECT	@tempStart = DATEADD(MONTH, DATEDIFF(MONTH, '19000101', @startDate), '19000101'),
-	@TempEnd = DATEADD(MONTH, DATEDIFF(MONTH, '18991231', @endDate), '18991231')
+SELECT	@tempStart = DATEADD(MONTH, DATEDIFF(MONTH, ''19000101'', @startDate), ''19000101''),
+	@TempEnd = DATEADD(MONTH, DATEDIFF(MONTH, ''18991231'', @endDate), ''18991231'')
 
 DECLARE	@dayInformation TABLE
 		(
@@ -368,22 +369,22 @@ UPDATE		di
 SET		di.statusCode = di.statusCode + 16
 FROM		@dayInformation AS di
 INNER JOIN	(
-			SELECT		DATEDIFF(MONTH, '19000101', infoDate) AS theMonth,
+			SELECT		DATEDIFF(MONTH, ''19000101'', infoDate) AS theMonth,
 					DATEPART(DAY, MAX(infoDate)) - 6 AS theDay
 			FROM		@dayInformation
-			GROUP BY	DATEDIFF(MONTH, '19000101', infoDate)
-		) AS x ON x.theMonth = DATEDIFF(MONTH, '19000101', di.infoDate)
+			GROUP BY	DATEDIFF(MONTH, ''19000101'', infoDate)
+		) AS x ON x.theMonth = DATEDIFF(MONTH, ''19000101'', di.infoDate)
 WHERE		DATEPART(DAY, di.infoDate) >= x.theDay
 
 UPDATE		di
 SET		di.lastDay = 16
 FROM		@dayInformation AS di
 INNER JOIN	(
-			SELECT		DATEDIFF(MONTH, '19000101', infoDate) AS theMonth,
+			SELECT		DATEDIFF(MONTH, ''19000101'', infoDate) AS theMonth,
 					MAX(infoDate) AS theDay
 			FROM		@dayInformation
-			GROUP BY	DATEDIFF(MONTH, '19000101', infoDate)
-		) AS x ON x.theMonth = DATEDIFF(MONTH, '19000101', di.infoDate)
+			GROUP BY	DATEDIFF(MONTH, ''19000101'', infoDate)
+		) AS x ON x.theMonth = DATEDIFF(MONTH, ''19000101'', di.infoDate)
 WHERE		di.infoDate = x.theDay
 
 UPDATE	@dayInformation
@@ -467,13 +468,13 @@ INNER JOIN	@dayInformation AS di ON di.infoDate >= @startDate
 			AND di.infoDate <= @endDate
 WHERE		js.freq_type = 8
 		AND 1 =	CASE
-				WHEN js.freq_interval & 1 = 1 AND di.weekdayName = 'Sunday' THEN 1
-				WHEN js.freq_interval & 2 = 2 AND di.weekdayName = 'Monday' THEN 1
-				WHEN js.freq_interval & 4 = 4 AND di.weekdayName = 'Tuesday' THEN 1
-				WHEN js.freq_interval & 8 = 8 AND di.weekdayName = 'Wednesday' THEN 1
-				WHEN js.freq_interval & 16 = 16 AND di.weekdayName = 'Thursday' THEN 1
-				WHEN js.freq_interval & 32 = 32 AND di.weekdayName = 'Friday' THEN 1
-				WHEN js.freq_interval & 64 = 64 AND di.weekdayName = 'Saturday' THEN 1
+				WHEN js.freq_interval & 1 = 1 AND di.weekdayName = ''Sunday'' THEN 1
+				WHEN js.freq_interval & 2 = 2 AND di.weekdayName = ''Monday'' THEN 1
+				WHEN js.freq_interval & 4 = 4 AND di.weekdayName = ''Tuesday'' THEN 1
+				WHEN js.freq_interval & 8 = 8 AND di.weekdayName = ''Wednesday'' THEN 1
+				WHEN js.freq_interval & 16 = 16 AND di.weekdayName = ''Thursday'' THEN 1
+				WHEN js.freq_interval & 32 = 32 AND di.weekdayName = ''Friday'' THEN 1
+				WHEN js.freq_interval & 64 = 64 AND di.weekdayName = ''Saturday'' THEN 1
 				ELSE 0
 			END
 		AND (DATEDIFF(DAY, js.startDate, di.infoDate) / 7) % js.freq_recurrence_factor = 0
@@ -528,16 +529,16 @@ INNER JOIN	@dayInformation AS di ON di.infoDate >= @startDate
 			AND di.infoDate <= @endDate
 WHERE		js.freq_type = 32
 		AND 1 =	CASE
-				WHEN js.freq_interval = 1 AND di.weekdayName = 'Sunday' THEN 1
-				WHEN js.freq_interval = 2 AND di.weekdayName = 'Monday' THEN 1
-				WHEN js.freq_interval = 3 AND di.weekdayName = 'Tuesday' THEN 1
-				WHEN js.freq_interval = 4 AND di.weekdayName = 'Wednesday' THEN 1
-				WHEN js.freq_interval = 5 AND di.weekdayName = 'Thursday' THEN 1
-				WHEN js.freq_interval = 6 AND di.weekdayName = 'Friday' THEN 1
-				WHEN js.freq_interval = 7 AND di.weekdayName = 'Saturday' THEN 1
+				WHEN js.freq_interval = 1 AND di.weekdayName = ''Sunday'' THEN 1
+				WHEN js.freq_interval = 2 AND di.weekdayName = ''Monday'' THEN 1
+				WHEN js.freq_interval = 3 AND di.weekdayName = ''Tuesday'' THEN 1
+				WHEN js.freq_interval = 4 AND di.weekdayName = ''Wednesday'' THEN 1
+				WHEN js.freq_interval = 5 AND di.weekdayName = ''Thursday'' THEN 1
+				WHEN js.freq_interval = 6 AND di.weekdayName = ''Friday'' THEN 1
+				WHEN js.freq_interval = 7 AND di.weekdayName = ''Saturday'' THEN 1
 				WHEN js.freq_interval = 8 AND js.freq_relative_interval = di.lastDay THEN 1
-				WHEN js.freq_interval = 9 AND di.weekdayName NOT IN ('Sunday', 'Saturday') THEN 1
-				WHEN js.freq_interval = 10 AND di.weekdayName IN ('Sunday', 'Saturday') THEN 1
+				WHEN js.freq_interval = 9 AND di.weekdayName NOT IN (''Sunday'', ''Saturday'') THEN 1
+				WHEN js.freq_interval = 10 AND di.weekdayName IN (''Sunday'', ''Saturday'') THEN 1
 				ELSE 0
 			END
 		AND di.statusCode & js.freq_relative_interval = js.freq_relative_interval
@@ -592,26 +593,32 @@ WHERE		js.jobEnabled = 1
 
 RETURN
 
+END' 
 END
+
 GO
-/****** Object:  Table [dbo].[syscategories]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  Table [dbo].[syscategories]    Script Date: 15-06-2020 17:15:35 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[syscategories]') AND type in (N'U'))
+BEGIN
 CREATE TABLE [dbo].[syscategories](
 	[category_id] [int] IDENTITY(1,1) NOT NULL,
 	[category_class] [int] NOT NULL,
 	[category_type] [tinyint] NOT NULL,
 	[name] [sysname] NOT NULL
 ) ON [PRIMARY]
-
+END
 GO
-/****** Object:  Table [dbo].[sysjobhistory]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  Table [dbo].[sysjobhistory]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobhistory]') AND type in (N'U'))
+BEGIN
 CREATE TABLE [dbo].[sysjobhistory](
 	[instance_id] [int] IDENTITY(1,1) NOT NULL,
 	[job_id] [uniqueidentifier] NOT NULL,
@@ -624,37 +631,28 @@ CREATE TABLE [dbo].[sysjobhistory](
 	[run_date] [int] NOT NULL,
 	[run_time] [int] NOT NULL,
 	[run_duration] [int] NOT NULL,
-	[operator_id_emailed] [int] NOT NULL,
-	[operator_id_netsent] [int] NOT NULL,
-	[operator_id_paged] [int] NOT NULL,
 	[retries_attempted] [int] NOT NULL,
 	[server] [sysname] NOT NULL
 ) ON [PRIMARY]
-
+END
 GO
-/****** Object:  Table [dbo].[sysjobs]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  Table [dbo].[sysjobs]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_PADDING ON
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobs]') AND type in (N'U'))
+BEGIN
 CREATE TABLE [dbo].[sysjobs](
 	[job_id] [uniqueidentifier] NOT NULL,
-	[originating_server_id] [int] NOT NULL,
 	[name] [sysname] NOT NULL,
 	[enabled] [tinyint] NOT NULL,
 	[description] [nvarchar](512) NULL,
 	[start_step_id] [int] NOT NULL,
 	[category_id] [int] NOT NULL,
 	[owner_sid] [varbinary](85) NOT NULL,
-	[notify_level_eventlog] [int] NOT NULL,
-	[notify_level_email] [int] NOT NULL,
-	[notify_level_netsend] [int] NOT NULL,
-	[notify_level_page] [int] NOT NULL,
-	[notify_email_operator_id] [int] NOT NULL,
-	[notify_netsend_operator_id] [int] NOT NULL,
-	[notify_page_operator_id] [int] NOT NULL,
 	[delete_level] [int] NOT NULL,
 	[date_created] [datetime] NOT NULL,
 	[date_modified] [datetime] NOT NULL,
@@ -664,51 +662,38 @@ CREATE TABLE [dbo].[sysjobs](
 	[job_id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
-
+END
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[sysjobschedules]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  Table [dbo].[sysjobschedules]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobschedules]') AND type in (N'U'))
+BEGIN
 CREATE TABLE [dbo].[sysjobschedules](
 	[schedule_id] [int] NULL,
 	[job_id] [uniqueidentifier] NULL,
 	[next_run_date] [int] NOT NULL DEFAULT ((0)),
 	[next_run_time] [int] NOT NULL DEFAULT ((0))
 ) ON [PRIMARY]
-
+END
 GO
-/****** Object:  Table [dbo].[sysjobservers]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  Table [dbo].[sysjobsteps]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[sysjobservers](
-	[job_id] [uniqueidentifier] NOT NULL,
-	[server_id] [int] NOT NULL,
-	[last_run_outcome] [tinyint] NOT NULL,
-	[last_outcome_message] [nvarchar](4000) NULL,
-	[last_run_date] [int] NOT NULL,
-	[last_run_time] [int] NOT NULL,
-	[last_run_duration] [int] NOT NULL
-) ON [PRIMARY]
-
-GO
-/****** Object:  Table [dbo].[sysjobsteps]    Script Date: 11-06-2020 18:09:05 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobsteps]') AND type in (N'U'))
+BEGIN
 CREATE TABLE [dbo].[sysjobsteps](
 	[job_id] [uniqueidentifier] NOT NULL,
 	[step_id] [int] NOT NULL,
 	[step_name] [sysname] NOT NULL,
 	[subsystem] [nvarchar](40) NOT NULL,
 	[command] [nvarchar](max) NULL,
-	[flags] [int] NOT NULL,
 	[additional_parameters] [nvarchar](max) NULL,
 	[cmdexec_success_code] [int] NOT NULL,
 	[on_success_action] [tinyint] NOT NULL,
@@ -720,64 +705,28 @@ CREATE TABLE [dbo].[sysjobsteps](
 	[database_user_name] [sysname] NULL,
 	[retry_attempts] [int] NOT NULL,
 	[retry_interval] [int] NOT NULL,
-	[os_run_priority] [int] NOT NULL,
 	[output_file_name] [nvarchar](200) NULL,
 	[last_run_outcome] [int] NOT NULL,
 	[last_run_duration] [int] NOT NULL,
 	[last_run_retries] [int] NOT NULL,
 	[last_run_date] [int] NOT NULL,
 	[last_run_time] [int] NOT NULL,
-	[proxy_id] [int] NULL,
 	[step_uid] [uniqueidentifier] NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-
+END
 GO
-/****** Object:  Table [dbo].[sysjobstepslogs]    Script Date: 11-06-2020 18:09:05 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[sysjobstepslogs](
-	[log_id] [int] IDENTITY(1,1) NOT NULL,
-	[log] [nvarchar](max) NOT NULL,
-	[date_created] [datetime] NOT NULL,
-	[date_modified] [datetime] NOT NULL,
-	[log_size] [bigint] NOT NULL,
-	[step_uid] [uniqueidentifier] NOT NULL,
-PRIMARY KEY CLUSTERED 
-(
-	[log_id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-
-GO
-/****** Object:  Table [dbo].[sysoriginatingservers]    Script Date: 11-06-2020 18:09:05 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[sysoriginatingservers](
-	[originating_server_id] [int] NULL,
-	[originating_server] [sysname] NOT NULL,
-	[master_server] [bit] NULL,
-UNIQUE CLUSTERED 
-(
-	[originating_server_id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-
-GO
-/****** Object:  Table [dbo].[sysschedules]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  Table [dbo].[sysschedules]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_PADDING ON
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysschedules]') AND type in (N'U'))
+BEGIN
 CREATE TABLE [dbo].[sysschedules](
 	[schedule_id] [int] IDENTITY(1,1) NOT NULL,
 	[schedule_uid] [uniqueidentifier] NOT NULL,
-	[originating_server_id] [int] NOT NULL,
 	[name] [sysname] NOT NULL,
 	[owner_sid] [varbinary](85) NOT NULL,
 	[enabled] [int] NOT NULL,
@@ -799,91 +748,34 @@ PRIMARY KEY CLUSTERED
 	[schedule_id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
-
+END
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  View [dbo].[sysoriginatingservers_view]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  View [dbo].[sysjobs_view]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE VIEW [dbo].[sysoriginatingservers_view](originating_server_id, originating_server, master_server)
-AS 
-   SELECT
-      0 AS originating_server_id, 
-      UPPER(CONVERT(sysname, SERVERPROPERTY('ServerName'))) AS originating_server,
-      0 AS master_server
-   UNION
-   SELECT 
-      originating_server_id,
-      originating_server,
-      master_server
-   FROM
-      dbo.sysoriginatingservers
-
-GO
-/****** Object:  View [dbo].[sysjobs_view]    Script Date: 11-06-2020 18:09:05 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+IF NOT EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].[sysjobs_view]'))
+EXEC dbo.sp_executesql @statement = N'
 /* filter out local jobs  
 
 WHERE        (jobs.owner_sid = SUSER_SID()) OR
-                         (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1) OR
-                         (ISNULL(IS_MEMBER(N'SQLAgentReaderRole'), 0) = 1) OR
-                         (ISNULL(IS_MEMBER(N'TargetServersRole'), 0) = 1) AND EXISTS
+                         (ISNULL(IS_SRVROLEMEMBER(N''sysadmin''), 0) = 1) OR
+                         (ISNULL(IS_MEMBER(N''SQLAgentReaderRole''), 0) = 1) OR
+                         (ISNULL(IS_MEMBER(N''TargetServersRole''), 0) = 1) AND EXISTS
                              (SELECT        job_id, server_id, last_run_outcome, last_outcome_message, last_run_date, last_run_time, last_run_duration
                                FROM            dbo.sysjobservers AS js
                                WHERE        (server_id <> 0) AND (job_id = jobs.job_id))
 */
 CREATE VIEW [dbo].[sysjobs_view]
 AS
-SELECT        jobs.job_id, svr.originating_server, jobs.name, jobs.enabled, jobs.description, jobs.start_step_id, jobs.category_id, jobs.owner_sid, jobs.notify_level_eventlog, jobs.notify_level_email, jobs.notify_level_netsend, 
-                         jobs.notify_level_page, jobs.notify_email_operator_id, jobs.notify_netsend_operator_id, jobs.notify_page_operator_id, jobs.delete_level, jobs.date_created, jobs.date_modified, jobs.version_number, jobs.originating_server_id, 
-                         svr.master_server
-FROM            dbo.sysjobs AS jobs INNER JOIN
-                         dbo.sysoriginatingservers_view AS svr ON jobs.originating_server_id = svr.originating_server_id
+SELECT        jobs.job_id, jobs.name, jobs.enabled, jobs.description, jobs.start_step_id, jobs.category_id, jobs.owner_sid,
+                         jobs.delete_level, jobs.date_created, jobs.date_modified, jobs.version_number
+FROM            dbo.sysjobs AS jobs
 
-GO
-/****** Object:  View [dbo].[sysschedules_localserver_view]    Script Date: 11-06-2020 18:09:05 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE VIEW [dbo].[sysschedules_localserver_view]
-AS
-SELECT sched.schedule_id,
-       sched.schedule_uid,
-       sched.originating_server_id,
-       sched.name,
-       sched.owner_sid,
-       sched.enabled,
-       sched.freq_type,
-       sched.freq_interval,
-       sched.freq_subday_type,
-       sched.freq_subday_interval,
-       sched.freq_relative_interval,
-       sched.freq_recurrence_factor,
-       sched.active_start_date,
-       sched.active_end_date,
-       sched.active_start_time,
-       sched.active_end_time,
-       sched.date_created,
-       sched.date_modified,
-       sched.version_number,
-       svr.originating_server,
-       svr.master_server
-FROM dbo.sysschedules as sched
-    JOIN dbo.sysoriginatingservers_view as svr
-    ON sched.originating_server_id = svr.originating_server_id
-WHERE (svr.master_server = 0)
-  AND ( (sched.owner_sid = SUSER_SID())
-        OR (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1)
-      OR (ISNULL(IS_MEMBER(N'SQLAgentReaderRole'), 0) = 1)
-      )
-
+' 
 GO
 SET IDENTITY_INSERT [dbo].[syscategories] ON 
 
@@ -935,70 +827,38 @@ GO
 SET IDENTITY_INSERT [dbo].[sysjobhistory] ON 
 
 GO
-INSERT [dbo].[sysjobhistory] ([instance_id], [job_id], [step_id], [step_name], [sql_message_id], [sql_severity], [message], [run_status], [run_date], [run_time], [run_duration], [operator_id_emailed], [operator_id_netsent], [operator_id_paged], [retries_attempted], [server]) VALUES (16581, N'356a817f-19a8-47d4-b0c9-42a995405ade', 1, N'Generate_SummaryReport_And_Email', 0, 0, N'Executed as user: YOGEESHA\Yogi. The step succeeded.', 1, 20200611, 44608, 0, 0, 0, 0, 0, N'YOGEESHA')
+INSERT [dbo].[sysjobhistory] ([instance_id], [job_id], [step_id], [step_name], [sql_message_id], [sql_severity], [message], [run_status], [run_date], [run_time], [run_duration], [retries_attempted], [server]) VALUES (1, N'b00ad8cc-498e-43fc-8ae2-3a7f372eab84', 1, N'Generate_SummaryReport_And_Email', 0, 0, N'Executed as user: YOGEESHA\Yogi. The step succeeded.', 1, 20200614, 110353, 0, 0, N'YOGEESHA')
 GO
-INSERT [dbo].[sysjobhistory] ([instance_id], [job_id], [step_id], [step_name], [sql_message_id], [sql_severity], [message], [run_status], [run_date], [run_time], [run_duration], [operator_id_emailed], [operator_id_netsent], [operator_id_paged], [retries_attempted], [server]) VALUES (16582, N'356a817f-19a8-47d4-b0c9-42a995405ade', 1, N'Generate_SummaryReport_And_Email', 0, 0, N'Executed as user: YOGEESHA\Yogi. The step succeeded.', 1, 20200611, 45012, 0, 0, 0, 0, 0, N'YOGEESHA')
-GO
-INSERT [dbo].[sysjobhistory] ([instance_id], [job_id], [step_id], [step_name], [sql_message_id], [sql_severity], [message], [run_status], [run_date], [run_time], [run_duration], [operator_id_emailed], [operator_id_netsent], [operator_id_paged], [retries_attempted], [server]) VALUES (16583, N'356a817f-19a8-47d4-b0c9-42a995405ade', 2, N'Generate_DetailedReport_And_Email', 0, 0, N'Executed as user: YOGEESHA\Yogi. The step succeeded.', 1, 20200611, 45012, 0, 0, 0, 0, 0, N'YOGEESHA')
-GO
-INSERT [dbo].[sysjobhistory] ([instance_id], [job_id], [step_id], [step_name], [sql_message_id], [sql_severity], [message], [run_status], [run_date], [run_time], [run_duration], [operator_id_emailed], [operator_id_netsent], [operator_id_paged], [retries_attempted], [server]) VALUES (16584, N'356a817f-19a8-47d4-b0c9-42a995405ade', 1, N'Generate_SummaryReport_And_Email', 0, 0, N'Executed as user: YOGEESHA\Yogi. The step succeeded.', 1, 20200611, 60056, 0, 0, 0, 0, 0, N'YOGEESHA')
-GO
-INSERT [dbo].[sysjobhistory] ([instance_id], [job_id], [step_id], [step_name], [sql_message_id], [sql_severity], [message], [run_status], [run_date], [run_time], [run_duration], [operator_id_emailed], [operator_id_netsent], [operator_id_paged], [retries_attempted], [server]) VALUES (16585, N'356a817f-19a8-47d4-b0c9-42a995405ade', 2, N'Generate_DetailedReport_And_Email', 0, 0, N'Executed as user: YOGEESHA\Yogi. The step succeeded.', 1, 20200611, 60056, 0, 0, 0, 0, 0, N'YOGEESHA')
-GO
-INSERT [dbo].[sysjobhistory] ([instance_id], [job_id], [step_id], [step_name], [sql_message_id], [sql_severity], [message], [run_status], [run_date], [run_time], [run_duration], [operator_id_emailed], [operator_id_netsent], [operator_id_paged], [retries_attempted], [server]) VALUES (16586, N'356a817f-19a8-47d4-b0c9-42a995405ade', 1, N'Generate_SummaryReport_And_Email', 0, 0, N'Executed as user: YOGEESHA\Yogi. The step succeeded.', 1, 20200611, 60146, 0, 0, 0, 0, 0, N'YOGEESHA')
-GO
-INSERT [dbo].[sysjobhistory] ([instance_id], [job_id], [step_id], [step_name], [sql_message_id], [sql_severity], [message], [run_status], [run_date], [run_time], [run_duration], [operator_id_emailed], [operator_id_netsent], [operator_id_paged], [retries_attempted], [server]) VALUES (16587, N'356a817f-19a8-47d4-b0c9-42a995405ade', 2, N'Generate_DetailedReport_And_Email', 0, 0, N'Executed as user: YOGEESHA\Yogi. The step succeeded.', 1, 20200611, 60146, 0, 0, 0, 0, 0, N'YOGEESHA')
+INSERT [dbo].[sysjobhistory] ([instance_id], [job_id], [step_id], [step_name], [sql_message_id], [sql_severity], [message], [run_status], [run_date], [run_time], [run_duration], [retries_attempted], [server]) VALUES (2, N'b00ad8cc-498e-43fc-8ae2-3a7f372eab84', 2, N'Generate_DetailedReport_And_Email', 8134, 16, N'Msg 8134, Level 16, State 1, Line 1, (null). Divide by zero error encountered.', 1, 20200614, 110353, 0, 0, N'YOGEESHA')
 GO
 SET IDENTITY_INSERT [dbo].[sysjobhistory] OFF
 GO
-INSERT [dbo].[sysjobs] ([job_id], [originating_server_id], [name], [enabled], [description], [start_step_id], [category_id], [owner_sid], [notify_level_eventlog], [notify_level_email], [notify_level_netsend], [notify_level_page], [notify_email_operator_id], [notify_netsend_operator_id], [notify_page_operator_id], [delete_level], [date_created], [date_modified], [version_number]) VALUES (N'356a817f-19a8-47d4-b0c9-42a995405ade', 0, N'Email_ShortfallSummary_Report', 1, N'Genrate shortfall summary report and email to the receipients', 1, 0, 0x0105000000000005150000006A427F5AEEEC7EF00F3C03ACE9030000, 0, 0, 0, 0, 0, 0, 0, 0, CAST(N'2020-06-11 11:02:07.523' AS DateTime), CAST(N'2020-06-11 11:02:07.527' AS DateTime), 4)
+INSERT [dbo].[sysjobs] ([job_id], [name], [enabled], [description], [start_step_id], [category_id], [owner_sid], [delete_level], [date_created], [date_modified], [version_number]) VALUES (N'b00ad8cc-498e-43fc-8ae2-3a7f372eab84', N'Email_ShortfallSummary_Report', 1, N'Genrate shortfall summary report and email to the receipients', 1, 0, 0x0105000000000005150000006A427F5AEEEC7EF00F3C03ACE9030000, 0, CAST(N'2020-06-14 11:03:16.577' AS DateTime), CAST(N'2020-06-14 11:03:16.580' AS DateTime), 4)
 GO
-INSERT [dbo].[sysjobschedules] ([schedule_id], [job_id], [next_run_date], [next_run_time]) VALUES (1, N'356a817f-19a8-47d4-b0c9-42a995405ade', 0, 0)
+INSERT [dbo].[sysjobschedules] ([schedule_id], [job_id], [next_run_date], [next_run_time]) VALUES (1, N'b00ad8cc-498e-43fc-8ae2-3a7f372eab84', 0, 0)
 GO
-INSERT [dbo].[sysjobservers] ([job_id], [server_id], [last_run_outcome], [last_outcome_message], [last_run_date], [last_run_time], [last_run_duration]) VALUES (N'356a817f-19a8-47d4-b0c9-42a995405ade', 0, 5, NULL, 0, 0, 0)
+INSERT [dbo].[sysjobsteps] ([job_id], [step_id], [step_name], [subsystem], [command], [additional_parameters], [cmdexec_success_code], [on_success_action], [on_success_step_id], [on_fail_action], [on_fail_step_id], [server], [database_name], [database_user_name], [retry_attempts], [retry_interval], [output_file_name], [last_run_outcome], [last_run_duration], [last_run_retries], [last_run_date], [last_run_time], [step_uid]) VALUES (N'b00ad8cc-498e-43fc-8ae2-3a7f372eab84', 1, N'Generate_SummaryReport_And_Email', N'TSQL', N'SELECT GETDATE() AS [ReportDate], ''Summary'' AS [Report Type]', NULL, 0, 3, 0, 2, 0, NULL, N'master', NULL, 1, 1, NULL, 1, 0, 0, 20200614, 110353, N'86a131e8-6431-4a8b-bade-38def2aab95f')
 GO
-INSERT [dbo].[sysjobsteps] ([job_id], [step_id], [step_name], [subsystem], [command], [flags], [additional_parameters], [cmdexec_success_code], [on_success_action], [on_success_step_id], [on_fail_action], [on_fail_step_id], [server], [database_name], [database_user_name], [retry_attempts], [retry_interval], [os_run_priority], [output_file_name], [last_run_outcome], [last_run_duration], [last_run_retries], [last_run_date], [last_run_time], [proxy_id], [step_uid]) VALUES (N'356a817f-19a8-47d4-b0c9-42a995405ade', 1, N'Generate_SummaryReport_And_Email', N'TSQL', N'SELECT GETDATE() AS [ReportDate], ''Summary'' AS [Report Type]', 0, NULL, 0, 3, 0, 2, 0, NULL, N'master', NULL, 1, 1, 0, NULL, 0, 0, 0, 0, 0, NULL, N'dd2cf9ac-800b-43a3-b11d-f9bbf1d2f89c')
-GO
-INSERT [dbo].[sysjobsteps] ([job_id], [step_id], [step_name], [subsystem], [command], [flags], [additional_parameters], [cmdexec_success_code], [on_success_action], [on_success_step_id], [on_fail_action], [on_fail_step_id], [server], [database_name], [database_user_name], [retry_attempts], [retry_interval], [os_run_priority], [output_file_name], [last_run_outcome], [last_run_duration], [last_run_retries], [last_run_date], [last_run_time], [proxy_id], [step_uid]) VALUES (N'356a817f-19a8-47d4-b0c9-42a995405ade', 2, N'Generate_DetailedReport_And_Email', N'TSQL', N'SELECT GETDATE() AS [ReportDate], ''Detailed'' AS [Report Type]', 0, NULL, 0, 1, 0, 2, 0, NULL, N'master', NULL, 1, 1, 0, NULL, 0, 0, 0, 0, 0, NULL, N'cb4dc14e-ce28-4fbd-ae14-bf6d2d544fe6')
+INSERT [dbo].[sysjobsteps] ([job_id], [step_id], [step_name], [subsystem], [command], [additional_parameters], [cmdexec_success_code], [on_success_action], [on_success_step_id], [on_fail_action], [on_fail_step_id], [server], [database_name], [database_user_name], [retry_attempts], [retry_interval], [output_file_name], [last_run_outcome], [last_run_duration], [last_run_retries], [last_run_date], [last_run_time], [step_uid]) VALUES (N'b00ad8cc-498e-43fc-8ae2-3a7f372eab84', 2, N'Generate_DetailedReport_And_Email', N'TSQL', N'SELECT 1/0 AS [ReportDate], ''Detailed'' AS [Report Type]', NULL, 0, 1, 0, 2, 0, NULL, N'master', NULL, 1, 1, NULL, 0, 0, 0, 20200614, 110353, N'98eeeaec-6a1d-43a1-ae8a-70aa26d8ce55')
 GO
 SET IDENTITY_INSERT [dbo].[sysschedules] ON 
 
 GO
-INSERT [dbo].[sysschedules] ([schedule_id], [schedule_uid], [originating_server_id], [name], [owner_sid], [enabled], [freq_type], [freq_interval], [freq_subday_type], [freq_subday_interval], [freq_relative_interval], [freq_recurrence_factor], [active_start_date], [active_end_date], [active_start_time], [active_end_time], [date_created], [date_modified], [version_number]) VALUES (1, N'631b3284-8cff-4234-a40e-00a2a098fac8', 0, N'Every_Friday', 0x0105000000000005150000006A427F5AEEEC7EF00F3C03ACE9030000, 1, 8, 32, 1, 0, 0, 1, 20200611, 99991231, 110000, 235959, CAST(N'2020-06-11 11:02:07.590' AS DateTime), CAST(N'2020-06-11 11:02:07.590' AS DateTime), 1)
+INSERT [dbo].[sysschedules] ([schedule_id], [schedule_uid], [name], [owner_sid], [enabled], [freq_type], [freq_interval], [freq_subday_type], [freq_subday_interval], [freq_relative_interval], [freq_recurrence_factor], [active_start_date], [active_end_date], [active_start_time], [active_end_time], [date_created], [date_modified], [version_number]) VALUES (1, N'631b3284-8cff-4234-a40e-00a2a098fac8', N'Every_Friday', 0x0105000000000005150000006A427F5AEEEC7EF00F3C03ACE9030000, 1, 8, 32, 1, 0, 0, 1, 20200611, 99991231, 110000, 235959, CAST(N'2020-06-14 11:03:16.580' AS DateTime), CAST(N'2020-06-14 11:03:16.580' AS DateTime), 1)
 GO
 SET IDENTITY_INSERT [dbo].[sysschedules] OFF
 GO
-SET ANSI_PADDING ON
-
-GO
-/****** Object:  Index [UQ__sysorigi__57F15AAC1CBD2DD6]    Script Date: 11-06-2020 18:09:05 ******/
-ALTER TABLE [dbo].[sysoriginatingservers] ADD UNIQUE NONCLUSTERED 
-(
-	[originating_server] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-GO
-ALTER TABLE [dbo].[sysjobstepslogs] ADD  DEFAULT (getdate()) FOR [date_created]
-GO
-ALTER TABLE [dbo].[sysjobstepslogs] ADD  DEFAULT (getdate()) FOR [date_modified]
-GO
-ALTER TABLE [dbo].[sysoriginatingservers] ADD  DEFAULT ((1)) FOR [originating_server_id]
-GO
-ALTER TABLE [dbo].[sysoriginatingservers] ADD  DEFAULT ((1)) FOR [master_server]
-GO
-ALTER TABLE [dbo].[sysoriginatingservers]  WITH CHECK ADD  CONSTRAINT [CK_master_server_MustBe_1] CHECK  (([master_server]=(1)))
-GO
-ALTER TABLE [dbo].[sysoriginatingservers] CHECK CONSTRAINT [CK_master_server_MustBe_1]
-GO
-ALTER TABLE [dbo].[sysoriginatingservers]  WITH CHECK ADD  CONSTRAINT [CK_originating_server_id_MustBe_1] CHECK  (([originating_server_id]=(1)))
-GO
-ALTER TABLE [dbo].[sysoriginatingservers] CHECK CONSTRAINT [CK_originating_server_id_MustBe_1]
-GO
-/****** Object:  StoredProcedure [dbo].[sp_add_job]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_add_job]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_add_job]
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_job]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_add_job] AS' 
+END
+GO
+ALTER PROCEDURE [dbo].[sp_add_job]
   @job_name                     sysname,
   @enabled                      TINYINT          = 1,        -- 0 = Disabled, 1 = Enabled
   @description                  NVARCHAR(512)    = NULL,
@@ -1006,47 +866,23 @@ CREATE PROCEDURE [dbo].[sp_add_job]
   @category_name                sysname          = NULL,
   @category_id                  INT              = NULL,     -- A language-independent way to specify which category to use
   @owner_login_name             sysname          = NULL,     -- The procedure assigns a default
-  @notify_level_eventlog        INT              = 2,        -- 0 = Never, 1 = On Success, 2 = On Failure, 3 = Always
-  @notify_level_email           INT              = 0,        -- 0 = Never, 1 = On Success, 2 = On Failure, 3 = Always
-  @notify_level_netsend         INT              = 0,        -- 0 = Never, 1 = On Success, 2 = On Failure, 3 = Always
-  @notify_level_page            INT              = 0,        -- 0 = Never, 1 = On Success, 2 = On Failure, 3 = Always
-  @notify_email_operator_name   sysname          = 0,
-  @notify_netsend_operator_name sysname          = 0,
-  @notify_page_operator_name    sysname          = 0,
   @delete_level                 INT              = 0,        -- 0 = Never, 1 = On Success, 2 = On Failure, 3 = Always
-  @job_id                       UNIQUEIDENTIFIER = NULL OUTPUT,
-  @originating_server           sysname           = NULL      -- For SQLAgent use only
+  @job_id                       UNIQUEIDENTIFIER = NULL OUTPUT
 AS
 BEGIN
   DECLARE @retval                     INT
-  DECLARE @notify_email_operator_id   INT
-  DECLARE @notify_netsend_operator_id INT
-  DECLARE @notify_page_operator_id    INT
   DECLARE @owner_sid                  VARBINARY(85)
-  DECLARE @originating_server_id      INT
 
   SET NOCOUNT ON
 
   -- Remove any leading/trailing spaces from parameters (except @owner_login_name)
-  SELECT @originating_server           = UPPER(LTRIM(RTRIM(@originating_server)))
   SELECT @job_name                     = LTRIM(RTRIM(@job_name))
   SELECT @description                  = LTRIM(RTRIM(@description))
   SELECT @category_name                = LTRIM(RTRIM(@category_name))
-  SELECT @notify_email_operator_name   = LTRIM(RTRIM(@notify_email_operator_name))
-  SELECT @notify_netsend_operator_name = LTRIM(RTRIM(@notify_netsend_operator_name))
-  SELECT @notify_page_operator_name    = LTRIM(RTRIM(@notify_page_operator_name))
-  SELECT @originating_server_id        = NULL
 
   -- Turn [nullable] empty string parameters into NULLs
-  IF (@originating_server           = N'') SELECT @originating_server           = NULL
   IF (@description                  = N'') SELECT @description                  = NULL
   IF (@category_name                = N'') SELECT @category_name                = NULL
-  IF (@notify_email_operator_name   = N'') SELECT @notify_email_operator_name   = NULL
-  IF (@notify_netsend_operator_name = N'') SELECT @notify_netsend_operator_name = NULL
-  IF (@notify_page_operator_name    = N'') SELECT @notify_page_operator_name    = NULL
-
-  IF (@originating_server IS NULL) OR (@originating_server = '(LOCAL)')
-    SELECT @originating_server= UPPER(CONVERT(sysname, SERVERPROPERTY('ServerName')))
 
   --only members of sysadmins role can set the owner
   IF (@owner_login_name IS NOT NULL AND ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 0) AND (@owner_login_name <> SUSER_SNAME())
@@ -1092,33 +928,11 @@ BEGIN
                                   @start_step_id,
                                   @category_name,
                                   @owner_sid                  OUTPUT,
-                                  @notify_level_eventlog,
-                                  @notify_level_email         OUTPUT,
-                                  @notify_level_netsend       OUTPUT,
-                                  @notify_level_page          OUTPUT,
-                                  @notify_email_operator_name,
-                                  @notify_netsend_operator_name,
-                                  @notify_page_operator_name,
                                   @delete_level,
-                                  @category_id                OUTPUT,
-                                  @notify_email_operator_id   OUTPUT,
-                                  @notify_netsend_operator_id OUTPUT,
-                                  @notify_page_operator_id    OUTPUT,
-                                  @originating_server         OUTPUT
+                                  @category_id                OUTPUT
   IF (@retval <> 0)
     RETURN(1) -- Failure
     
-    
-  SELECT @originating_server_id = originating_server_id 
-  FROM dbo.sysoriginatingservers_view 
-  WHERE (originating_server = @originating_server)
-  IF (@originating_server_id IS NULL)
-  BEGIN
-    RAISERROR(14370, -1, -1)
-    RETURN(1) -- Failure
-  END
-    
-
   IF (@job_id IS NULL)
   BEGIN
     -- Assign the GUID
@@ -1134,44 +948,25 @@ BEGIN
     END
   END
 
-  SET @notify_email_operator_id = 0
-  SET @notify_netsend_operator_id = 0
-  SET @notify_page_operator_id = 0
   INSERT INTO dbo.sysjobs
          (job_id,
-          originating_server_id,
           name,
           enabled,
           description,
           start_step_id,
           category_id,
           owner_sid,
-          notify_level_eventlog,
-          notify_level_email,
-          notify_level_netsend,
-          notify_level_page,
-          notify_email_operator_id,
-          notify_netsend_operator_id,
-          notify_page_operator_id,
           delete_level,
           date_created,
           date_modified,
           version_number)
   VALUES  (@job_id,
-          @originating_server_id,
           @job_name,
           @enabled,
           @description,
           @start_step_id,
           @category_id,
           @owner_sid,
-          @notify_level_eventlog,
-          @notify_level_email,
-          @notify_level_netsend,
-          @notify_level_page,
-          @notify_email_operator_id,
-          @notify_netsend_operator_id,
-          @notify_page_operator_id,
           @delete_level,
           GETDATE(),
           GETDATE(),
@@ -1184,12 +979,17 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_jobschedule]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_add_jobschedule]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_add_jobschedule]                 
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_jobschedule]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_add_jobschedule] AS' 
+END
+GO
+ALTER PROCEDURE [dbo].[sp_add_jobschedule]                 
   @job_id                 UNIQUEIDENTIFIER = NULL,
   @job_name               sysname          = NULL,
   @name                   sysname,
@@ -1214,11 +1014,6 @@ BEGIN
 
   SET NOCOUNT ON
 
-  -- Check authority (only SQLServerAgent can add a schedule to a non-local job)
-  EXECUTE @retval = sp_verify_jobproc_caller @job_id = @job_id, @program_name = N'SQLAgent%'
-  IF (@retval <> 0)
-    RETURN(@retval)
-
   -- Check that we can uniquely identify the job
   EXECUTE @retval = sp_verify_job_identifiers '@job_name',
                                               '@job_id',
@@ -1226,23 +1021,7 @@ BEGIN
                                                @job_id   OUTPUT
   IF (@retval <> 0)
     RETURN(1) -- Failure
-/*
-  -- Get the owner of the job. Prior to resusable schedules the job owner also owned the schedule
-  SELECT @owner_login_name = dbo.SQLAGENT_SUSER_SNAME(owner_sid)
-  FROM   sysjobs
-  WHERE  (job_id = @job_id) 
 
-  IF ((ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) <> 1) AND
-      (SUSER_SNAME() <> @owner_login_name))
-  BEGIN
-   RAISERROR(14525, -1, -1)
-   RETURN(1) -- Failure
-  END
-*/
-  -- Check authority (only SQLServerAgent can add a schedule to a non-local job)
-  EXECUTE @retval = sp_verify_jobproc_caller @job_id = @job_id, @program_name = N'SQLAgent%'
-  IF (@retval <> 0)
-    RETURN(@retval)
 
   -- Add the schedule first
   EXECUTE @retval = dbo.sp_add_schedule @schedule_name          = @name,
@@ -1278,221 +1057,17 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_jobserver]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_add_jobstep]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-
-CREATE PROCEDURE [dbo].[sp_add_jobserver]
-  @job_id         UNIQUEIDENTIFIER = NULL, -- Must provide either this or job_name
-  @job_name       sysname          = NULL, -- Must provide either this or job_id
-  @server_name    sysname         = NULL, -- if NULL will default to serverproperty('ServerName')
-  @automatic_post BIT = 1                  -- Flag for SEM use only
-AS
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_jobstep]') AND type in (N'P', N'PC'))
 BEGIN
-  DECLARE @retval                    INT
-  DECLARE @server_id                 INT
-  DECLARE @job_type                  VARCHAR(12)
-  DECLARE @current_job_category_type VARCHAR(12)
-  DECLARE @msx_operator_id           INT
-  DECLARE @local_server_name         sysname
-  DECLARE @is_sysadmin               INT
-  DECLARE @job_owner                 sysname
-  DECLARE @owner_sid                 VARBINARY(85)
-  DECLARE @owner_name                sysname
-
-  SET NOCOUNT ON
-
-  IF (@server_name IS NULL) OR (UPPER(@server_name collate SQL_Latin1_General_CP1_CS_AS) = N'(LOCAL)')
-    SELECT @server_name = CONVERT(sysname, SERVERPROPERTY('ServerName'))
-
-  -- Remove any leading/trailing spaces from parameters
-  SELECT @server_name = UPPER(LTRIM(RTRIM(@server_name)))
-
-  EXECUTE @retval = sp_verify_job_identifiers '@job_name',
-                                              '@job_id',
-                                               @job_name OUTPUT,
-                                               @job_id   OUTPUT
-  IF (@retval <> 0)
-    RETURN(1) -- Failure
-
-  -- First, check if the server is the local server
-  SELECT @local_server_name = CONVERT(NVARCHAR,SERVERPROPERTY ('SERVERNAME'))
-
-  IF (@server_name = UPPER(@local_server_name))
-    SELECT @server_name = UPPER(CONVERT(sysname, SERVERPROPERTY('ServerName')))
-
-  -- For a multi-server job...
-  IF (@server_name <> UPPER(CONVERT(sysname, SERVERPROPERTY('ServerName'))))
-  BEGIN
-    -- 1) Only sysadmin can add a multi-server job
-    IF (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 0) 
-    BEGIN
-       RAISERROR(14398, -1, -1);
-       RETURN(1) -- Failure
-    END
-
-    -- 2) Job must be owned by sysadmin
-    SELECT @owner_sid = owner_sid, @owner_name = dbo.SQLAGENT_SUSER_SNAME(owner_sid)
-    FROM dbo.sysjobs
-    WHERE (job_id = @job_id)
-
-    IF @owner_sid = 0xFFFFFFFF
-    BEGIN
-      SELECT @is_sysadmin = 1
-    END
-    ELSE
-    BEGIN
-      SELECT @is_sysadmin = 0
-      EXECUTE dbo.sp_sqlagent_has_server_access @login_name = @owner_name, @is_sysadmin_member = @is_sysadmin OUTPUT
-    END
-    
-    IF (@is_sysadmin = 0)
-    BEGIN
-      RAISERROR(14544, -1, -1, @owner_name, N'sysadmin')
-      RETURN(1) -- Failure
-    END
-
-    -- 3) Check if any of the TSQL steps have a non-null database_user_name
-    IF (EXISTS (SELECT *
-                FROM dbo.sysjobsteps
-                WHERE (job_id = @job_id)
-                  AND (subsystem = N'TSQL')
-                  AND (database_user_name IS NOT NULL)))
-    BEGIN
-      RAISERROR(14542, -1, -1, N'database_user_name')
-      RETURN(1) -- Failure
-    END
-
-    SELECT @server_id = server_id
-    FROM dbo.systargetservers
-    WHERE (UPPER(server_name) = @server_name)
-    IF (@server_id IS NULL)
-    BEGIN
-      RAISERROR(14262, -1, -1, '@server_name', @server_name)
-      RETURN(1) -- Failure
-    END
-  END
-  ELSE
-    SELECT @server_id = 0
-
-  -- Check that this job has not already been targeted at this server
-  IF (EXISTS (SELECT *
-               FROM dbo.sysjobservers
-               WHERE (job_id = @job_id)
-                 AND (server_id = @server_id)))
-  BEGIN
-    RAISERROR(14269, -1, -1, @job_name, @server_name)
-    RETURN(1) -- Failure
-  END
-
-  -- Prevent the job from being targeted at both the local AND remote servers
-  SELECT @job_type = 'UNKNOWN'
-  IF (EXISTS (SELECT *
-              FROM dbo.sysjobservers
-              WHERE (job_id = @job_id)
-                AND (server_id = 0)))
-    SELECT @job_type = 'LOCAL'
-  ELSE
-  IF (EXISTS (SELECT *
-              FROM dbo.sysjobservers
-              WHERE (job_id = @job_id)
-                AND (server_id <> 0)))
-    SELECT @job_type = 'MULTI-SERVER'
-
-  IF ((@server_id = 0) AND (@job_type = 'MULTI-SERVER'))
-  BEGIN
-    RAISERROR(14290, -1, -1)
-    RETURN(1) -- Failure
-  END
-  IF ((@server_id <> 0) AND (@job_type = 'LOCAL'))
-  BEGIN
-    RAISERROR(14291, -1, -1)
-    RETURN(1) -- Failure
-  END
-
-  -- For a multi-server job, check that any notifications are to the MSXOperator
-  IF (@job_type = 'MULTI-SERVER')
-  BEGIN
-    SELECT @msx_operator_id = id
-    FROM dbo.sysoperators
-    WHERE (name = N'MSXOperator')
-
-    IF (EXISTS (SELECT *
-                FROM dbo.sysjobs
-                WHERE (job_id = @job_id)
-                  AND (((notify_email_operator_id <> 0)   AND (notify_email_operator_id <> @msx_operator_id)) OR
-                       ((notify_page_operator_id <> 0)    AND (notify_page_operator_id <> @msx_operator_id))  OR
-                       ((notify_netsend_operator_id <> 0) AND (notify_netsend_operator_id <> @msx_operator_id)))))
-    BEGIN
-      RAISERROR(14221, -1, -1, 'MSXOperator')
-      RETURN(1) -- Failure
-    END
-  END
-
-  -- Insert the sysjobservers row
-  INSERT INTO dbo.sysjobservers
-         (job_id,
-          server_id,
-          last_run_outcome,
-          last_outcome_message,
-          last_run_date,
-          last_run_time,
-          last_run_duration)
-  VALUES (@job_id,
-          @server_id,
-          5,  -- ie. SQLAGENT_EXEC_UNKNOWN (can't use 0 since this is SQLAGENT_EXEC_FAIL)
-          NULL,
-          0,
-          0,
-          0)
-
-  -- Re-categorize the job (if necessary)
-  SELECT @current_job_category_type = CASE category_type
-                                        WHEN 1 THEN 'LOCAL'
-                                        WHEN 2 THEN 'MULTI-SERVER'
-                                      END
-  FROM dbo.sysjobs_view  sjv,
-       dbo.syscategories sc
-  WHERE (sjv.category_id = sc.category_id)
-    AND (sjv.job_id = @job_id)
-
-  IF (@server_id = 0) AND (@current_job_category_type = 'MULTI-SERVER')
-  BEGIN
-    UPDATE dbo.sysjobs
-    SET category_id = 0 -- [Uncategorized (Local)]
-    WHERE (job_id = @job_id)
-  END
-  IF (@server_id <> 0) AND (@current_job_category_type = 'LOCAL')
-  BEGIN
-    UPDATE dbo.sysjobs
-    SET category_id = 2 -- [Uncategorized (Multi-Server)]
-    WHERE (job_id = @job_id)
-  END
-
-  -- Instruct the new server to pick up the job
-  IF (@automatic_post = 1)
-    EXECUTE @retval = sp_post_msx_operation 'INSERT', 'JOB', @job_id, @server_name
-
-  -- If the job is local, make sure that SQLServerAgent caches it
-  IF (@server_id = 0)
-  BEGIN
-    EXECUTE dbo.sp_sqlagent_notify @op_type     = N'J',
-                                        @job_id      = @job_id,
-                                        @action_type = N'I'
-  END
-
-  RETURN(@retval) -- 0 means success
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_add_jobstep] AS' 
 END
-
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_jobstep]    Script Date: 11-06-2020 18:09:05 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER OFF
-GO
-CREATE PROCEDURE [dbo].[sp_add_jobstep]
+ALTER PROCEDURE [dbo].[sp_add_jobstep]
   @job_id                UNIQUEIDENTIFIER = NULL,   -- Must provide either this or job_name
   @job_name              sysname          = NULL,   -- Must provide either this or job_id
   @step_id               INT              = NULL,   -- The proc assigns a default
@@ -1510,20 +1085,7 @@ CREATE PROCEDURE [dbo].[sp_add_jobstep]
   @database_user_name    sysname          = NULL,
   @retry_attempts        INT              = 0,      -- No retries
   @retry_interval        INT              = 0,      -- 0 minute interval
-  @os_run_priority       INT              = 0,      -- -15 = Idle, -1 = Below Normal, 0 = Normal, 1 = Above Normal, 15 = Time Critical)
-  @output_file_name      NVARCHAR(200)    = NULL,
-  @flags                 INT              = 0,       -- 0 = Normal, 
-                                                     -- 1 = Encrypted command (read only), 
-                                                     -- 2 = Append output files (if any), 
-                                                     -- 4 = Write TSQL step output to step history,                                            
-                                                     -- 8 = Write log to table (overwrite existing history), 
-                                                     -- 16 = Write log to table (append to existing history)
-                                                     -- 32 = Write all output to job history
-                                                     -- 64 = Create a Windows event to use as a signal for the Cmd jobstep to abort
-  @proxy_id                 INT                = NULL,
-  @proxy_name               sysname          = NULL,
-  -- mutual exclusive; must specify only one of above 2 parameters to 
-  -- identify the proxy. 
+  @output_file_name      NVARCHAR(200)    = NULL, 
   @step_uid UNIQUEIDENTIFIER = NULL OUTPUT
 AS
 BEGIN
@@ -1577,11 +1139,7 @@ BEGIN
                                                 @database_user_name = @database_user_name,
                                                 @retry_attempts = @retry_attempts,
                                                 @retry_interval = @retry_interval,
-                                                @os_run_priority = @os_run_priority,
                                                 @output_file_name = @output_file_name,
-                                                @flags = @flags,
-                                                            @proxy_id = @proxy_id,
-                                                @proxy_name = @proxy_name,
                                                             @step_uid = @step_uid OUTPUT
 
 
@@ -1589,12 +1147,17 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_jobstep_internal]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_add_jobstep_internal]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_add_jobstep_internal]
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_jobstep_internal]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_add_jobstep_internal] AS' 
+END
+GO
+ALTER PROCEDURE [dbo].[sp_add_jobstep_internal]
   @job_id                UNIQUEIDENTIFIER = NULL,   -- Must provide either this or job_name
   @job_name              sysname          = NULL,   -- Must provide either this or job_id
   @step_id               INT              = NULL,   -- The proc assigns a default
@@ -1612,18 +1175,7 @@ CREATE PROCEDURE [dbo].[sp_add_jobstep_internal]
   @database_user_name    sysname          = NULL,
   @retry_attempts        INT              = 0,      -- No retries
   @retry_interval        INT              = 0,      -- 0 minute interval
-  @os_run_priority       INT              = 0,      -- -15 = Idle, -1 = Below Normal, 0 = Normal, 1 = Above Normal, 15 = Time Critical)
   @output_file_name      NVARCHAR(200)    = NULL,
-  @flags                 INT              = 0,       --  0 = Normal, 
-                                                     --  1 = Encrypted command (read only), 
-                                                     --  2 = Append output files (if any), 
-                                                     --  4 = Write TSQL step output to step history
-                                                     --  8 = Write log to table (overwrite existing history)
-                                                     -- 16 = Write log to table (append to existing history)
-                                                     -- 32 = Write all output to job history
-                                                     -- 64 = Create a Windows event to use as a signal for the Cmd jobstep to abort
-  @proxy_id               int               = NULL,
-  @proxy_name              sysname           = NULL,
   -- mutual exclusive; must specify only one of above 2 parameters to 
   -- identify the proxy. 
   @step_uid UNIQUEIDENTIFIER              = NULL OUTPUT
@@ -1643,19 +1195,12 @@ BEGIN
   SELECT @database_name      = LTRIM(RTRIM(@database_name))
   SELECT @database_user_name = LTRIM(RTRIM(@database_user_name))
   SELECT @output_file_name   = LTRIM(RTRIM(@output_file_name))
-  SELECT @proxy_name         = LTRIM(RTRIM(@proxy_name))
 
   -- Turn [nullable] empty string parameters into NULLs
   IF (@server             = N'') SELECT @server             = NULL
   IF (@database_name      = N'') SELECT @database_name      = NULL
   IF (@database_user_name = N'') SELECT @database_user_name = NULL
   IF (@output_file_name   = N'') SELECT @output_file_name   = NULL
-  IF (@proxy_name         = N'') SELECT @proxy_name         = NULL
-
-  -- Check authority (only SQLServerAgent can add a step to a non-local job)
-  EXECUTE @retval = sp_verify_jobproc_caller @job_id = @job_id, @program_name = N'SQLAgent%'
-  IF (@retval <> 0)
-    RETURN(@retval)
 
   EXECUTE @retval = sp_verify_job_identifiers '@job_name',
                                               '@job_id',
@@ -1672,18 +1217,7 @@ BEGIN
      RETURN(1) -- Failure
   END
   
-  /*
-  -- check proxy identifiers only if a proxy has been provided
-  IF (@proxy_id IS NOT NULL) or (@proxy_name IS NOT NULL)
-  BEGIN
-    EXECUTE @retval = sp_verify_proxy_identifiers '@proxy_name',
-                                                  '@proxy_id',
-                                                   @proxy_name OUTPUT,
-                                                   @proxy_id   OUTPUT
-    IF (@retval <> 0)
-      RETURN(1) -- Failure
-   END
-   */
+
   -- Default step id (if not supplied)
   IF (@step_id IS NULL)
   BEGIN
@@ -1703,13 +1237,8 @@ BEGIN
                                       @on_success_step_id,
                                       @on_fail_action,
                                       @on_fail_step_id,
-                                      @os_run_priority,
                                       @database_name      OUTPUT,
-                                      @database_user_name OUTPUT,
-                                      @flags,
-                                      @output_file_name,
-                                               @proxy_id
-
+                                      @database_user_name OUTPUT
   IF (@retval <> 0)
     RETURN(1) -- Failure
 
@@ -1776,7 +1305,6 @@ BEGIN
             step_name,
             subsystem,
             command,
-            flags,
             additional_parameters,
             cmdexec_success_code,
             on_success_action,
@@ -1788,21 +1316,18 @@ BEGIN
             database_user_name,
             retry_attempts,
             retry_interval,
-            os_run_priority,
             output_file_name,
             last_run_outcome,
             last_run_duration,
             last_run_retries,
             last_run_date,
             last_run_time,
-            proxy_id,
          step_uid)
     VALUES (@job_id,
             @step_id,
             @step_name,
             @subsystem,
             @command,
-            @flags,
             @additional_parameters,
             @cmdexec_success_code,
             @on_success_action,
@@ -1814,14 +1339,12 @@ BEGIN
             @database_user_name,
             @retry_attempts,
             @retry_interval,
-            @os_run_priority,
             @output_file_name,
             0,
             0,
             0,
             0,
             0,
-         @proxy_id,
          @step_uid)
          
   IF @TranCounter = 0
@@ -1854,44 +1377,23 @@ BEGIN
                   )
       RETURN (1)                  
   END CATCH
-  
-  -- Make sure that SQLServerAgent refreshes the job if the 'Has Steps' property has changed
-  IF ((SELECT COUNT(*)
-       FROM dbo.sysjobsteps
-       WHERE (job_id = @job_id)) = 1)
-  BEGIN
-    -- NOTE: We only notify SQLServerAgent if we know the job has been cached
-    IF (EXISTS (SELECT *
-                FROM dbo.sysjobservers
-                WHERE (job_id = @job_id)
-                  AND (server_id = 0)))
-      EXECUTE dbo.sp_sqlagent_notify @op_type       = N'J',
-                                            @job_id      = @job_id,
-                                            @action_type = N'U'
-  END
-
-  /*
-  -- For a multi-server job, push changes to the target servers
-  IF (EXISTS (SELECT *
-              FROM dbo.sysjobservers
-              WHERE (job_id = @job_id)
-                AND (server_id <> 0)))
-  BEGIN
-    EXECUTE dbo.sp_post_msx_operation 'INSERT', 'JOB', @job_id
-  END
-  */
 
   RETURN(0) -- Success
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_schedule]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_add_schedule]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_schedule]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_add_schedule] AS' 
+END
+GO
 
-CREATE PROCEDURE [dbo].[sp_add_schedule]
+ALTER PROCEDURE [dbo].[sp_add_schedule]
 (
   @schedule_name        sysname,
   @enabled              TINYINT         = 1,            -- Name does not have to be unique
@@ -1907,9 +1409,8 @@ CREATE PROCEDURE [dbo].[sp_add_schedule]
   @active_end_time         INT             = 235959,       -- 11:59:59 pm
   @owner_login_name        sysname         = NULL,
   @schedule_uid             UNIQUEIDENTIFIER= NULL  OUTPUT, -- Used by a TSX machine when inserting a schedule
-  @schedule_id              INT             = NULL  OUTPUT,
-  @originating_server       sysname        = NULL
-)   
+  @schedule_id              INT             = NULL  OUTPUT
+  )   
 AS
 BEGIN
   DECLARE @retval           INT
@@ -1921,7 +1422,6 @@ BEGIN
   -- Remove any leading/trailing spaces from parameters
   SELECT @schedule_name         = LTRIM(RTRIM(@schedule_name)),
          @owner_login_name      = LTRIM(RTRIM(@owner_login_name)),
-         @originating_server    = UPPER(LTRIM(RTRIM(@originating_server))),
          @schedule_id           = 0
          
          
@@ -1961,28 +1461,6 @@ BEGIN
                                        @owner_sid               = @owner_sid
   IF (@retval <> 0)
     RETURN(1) -- Failure
-
-  -- ignore @originating_server unless SQLAgent is calling
-  if((@originating_server IS NULL) OR (@originating_server = N'') OR (PROGRAM_NAME() NOT LIKE N'SQLAgent%'))
-  BEGIN
-    --Get the local originating_server_id
-    SELECT @orig_server_id = originating_server_id 
-    FROM dbo.sysoriginatingservers_view 
-    WHERE master_server = 0
-  END
-  ELSE
-  BEGIN
-    --Get the MSX originating_server_id. If @originating_server isn't the msx server error out
-    SELECT @orig_server_id = originating_server_id 
-    FROM dbo.sysoriginatingservers_view 
-    WHERE (originating_server = @originating_server)
-
-    IF (@orig_server_id IS NULL)
-    BEGIN
-      RAISERROR(14370, -1, -1)
-      RETURN(1) -- Failure
-    END
-  END
   
   IF (@schedule_uid IS NULL)
   BEGIN
@@ -2022,7 +1500,6 @@ BEGIN
   --MSX not found so add a record to sysschedules
   INSERT INTO dbo.sysschedules
          (schedule_uid,
-          originating_server_id,
           name,
           owner_sid,
           enabled,
@@ -2037,7 +1514,6 @@ BEGIN
           active_start_time,
           active_end_time)
   select @schedule_uid,
-         @orig_server_id, 
          @schedule_name,
          @owner_sid,
          @enabled,
@@ -2059,13 +1535,18 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_attach_schedule]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_attach_schedule]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_attach_schedule]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_attach_schedule] AS' 
+END
+GO
 
-CREATE PROCEDURE [dbo].[sp_attach_schedule]
+ALTER PROCEDURE [dbo].[sp_attach_schedule]
 (
   @job_id               UNIQUEIDENTIFIER    = NULL,     -- Must provide either this or job_name
   @job_name             sysname             = NULL,     -- Must provide either this or job_id
@@ -2090,33 +1571,15 @@ BEGIN
                                                         @owner_sid = @job_owner_sid OUTPUT
     IF (@retval <> 0)
         RETURN(1) -- Failure
-
-/*
-  -- Check authority (only SQLServerAgent can add a schedule to a non-local job)
-  EXECUTE @retval = sp_verify_jobproc_caller @job_id = @job_id, @program_name = N'SQLAgent%'
-  IF (@retval <> 0)
-    RETURN(@retval)
-	*/
         
   -- Check that we can uniquely identify the schedule
   EXECUTE @retval = dbo.sp_verify_schedule_identifiers @name_of_name_parameter = '@schedule_name',
                                                             @name_of_id_parameter   = '@schedule_id',
                                                             @schedule_name          = @schedule_name    OUTPUT,
                                                             @schedule_id            = @schedule_id      OUTPUT,
-                                                            @owner_sid              = @sched_owner_sid  OUTPUT,
-                                                            @orig_server_id         = NULL
+                                                            @owner_sid              = @sched_owner_sid  OUTPUT
   IF (@retval <> 0)
       RETURN(1) -- Failure     
- /*
-  --Schedules can only be attached to a job if the caller owns the job
-  --or the caller is a sysadmin
-  IF ((@job_owner_sid <> SUSER_SID()) AND
-      (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) <> 1))
-  BEGIN
-     RAISERROR(14377, -1, -1)
-     RETURN(1) -- Failure
-  END
-  */
 
   -- If the record doesn't already exist create it
   IF( NOT EXISTS(SELECT *  
@@ -2128,49 +1591,25 @@ BEGIN
     SELECT @schedule_id, @job_id
     
     SELECT @retval = @@ERROR
-	/*
-    -- Notify SQLServerAgent of the change, but only if we know the job has been cached
-    IF (EXISTS (SELECT *
-                FROM dbo.sysjobservers
-                WHERE (job_id = @job_id)
-                    AND (server_id = 0)))
-    BEGIN
-        EXECUTE dbo.sp_sqlagent_notify @op_type     = N'S',
-                                            @job_id      = @job_id,
-                                            @schedule_id = @schedule_id,
-                                            @action_type = N'I'
-    END
-    
-    -- For a multi-server job, remind the user that they need to call sp_post_msx_operation
-    IF (EXISTS (SELECT *
-                FROM dbo.sysjobservers
-                WHERE (job_id = @job_id)
-                    AND (server_id <> 0)))
-      -- sp_post_msx_operation will do nothing if the schedule isn't assigned to any tsx machines 
-      IF (@automatic_post = 1)
-        EXECUTE sp_post_msx_operation @operation = 'INSERT', @object_type = 'JOB', @job_id = @job_id
-      ELSE
-        RAISERROR(14547, 0, 1, N'INSERT', N'sp_post_msx_operation')
 
-    -- update this job's subplan to point to this schedule
-    UPDATE dbo.sysmaintplan_subplans
-      SET schedule_id = @schedule_id
-    WHERE (job_id = @job_id)
-      AND (schedule_id IS NULL)
-	  */
   END
   
   RETURN(@retval) -- 0 means success
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_delete_schedule]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_delete_schedule]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_delete_schedule]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_delete_schedule] AS' 
+END
+GO
 
-CREATE PROCEDURE [dbo].[sp_delete_schedule]
+ALTER PROCEDURE [dbo].[sp_delete_schedule]
 (
   @schedule_id          INT                 = NULL,     -- Must provide either this or schedule_name
   @schedule_name        sysname             = NULL,     -- Must provide either this or schedule_id
@@ -2279,13 +1718,18 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_detach_schedule]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_detach_schedule]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_detach_schedule]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_detach_schedule] AS' 
+END
+GO
 
-CREATE PROCEDURE [dbo].[sp_detach_schedule]
+ALTER PROCEDURE [dbo].[sp_detach_schedule]
 (
   @job_id               UNIQUEIDENTIFIER    = NULL,     -- Must provide either this or job_name
   @job_name             sysname             = NULL,     -- Must provide either this or job_id
@@ -2312,10 +1756,6 @@ BEGIN
   IF (@retval <> 0)
     RETURN(1) -- Failure
 
-  -- Check authority (only SQLServerAgent can add a schedule to a non-local job)
-  EXECUTE @retval = sp_verify_jobproc_caller @job_id = @job_id, @program_name = N'SQLAgent%'
-  IF (@retval <> 0)
-    RETURN(@retval)
         
   -- Check that we can uniquely identify the schedule
   EXECUTE @retval = dbo.sp_verify_schedule_identifiers @name_of_name_parameter = '@schedule_name',
@@ -2323,7 +1763,6 @@ BEGIN
                                                             @schedule_name          = @schedule_name OUTPUT,
                                                             @schedule_id            = @schedule_id   OUTPUT,
                                                             @owner_sid              = @sched_owner_sid OUTPUT,
-                                                            @orig_server_id         = NULL,
                                                             @job_id_filter          = @job_id
   IF (@retval <> 0)
       RETURN(1) -- Failure
@@ -2425,89 +1864,17 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_downloaded_row_limiter]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_get_schedule_description]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_downloaded_row_limiter]
-  @server_name sysname -- Target server name
-AS
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_get_schedule_description]') AND type in (N'P', N'PC'))
 BEGIN
-  -- This trigger controls how many downloaded (status = 1) sysdownloadlist rows exist
-  -- for any given server.  It does NOT control the absolute number of rows in the table.
-
-  DECLARE @current_rows_per_server INT
-  DECLARE @max_rows_per_server     INT -- This value comes from the resgistry (DownloadedMaxRows)
-  DECLARE @rows_to_delete          INT
-  DECLARE @quoted_server_name      NVARCHAR(514) -- enough room to accomodate the quoted name
-  SET NOCOUNT ON
-
-  -- Remove any leading/trailing spaces from parameters
-  SELECT @server_name = LTRIM(RTRIM(@server_name))
-
-  -- Check the server name (if it's bad we fail silently)
-  IF (@server_name IS NULL) OR
-     (NOT EXISTS (SELECT *
-                  FROM dbo.sysdownloadlist
-                  WHERE (target_server = @server_name)))
-    RETURN(1) -- Failure
-
-  SELECT @max_rows_per_server = 0
-
-  -- Get the max-rows-per-server from the registry
-  EXECUTE master.dbo.xp_instance_regread N'HKEY_LOCAL_MACHINE',
-                                         N'SOFTWARE\Microsoft\MSSQLServer\SQLServerAgent',
-                                         N'DownloadedMaxRows',
-                                         @max_rows_per_server OUTPUT,
-                                         N'no_output'
-
-  -- Check if we are limiting sysdownloadlist rows
-  IF (ISNULL(@max_rows_per_server, -1) = -1)
-    RETURN
-
-  -- Check that max_rows_per_server is >= 0
-  IF (@max_rows_per_server < -1)
-  BEGIN
-    -- It isn't, so default to 100 rows
-    SELECT @max_rows_per_server = 100
-    EXECUTE master.dbo.xp_instance_regwrite N'HKEY_LOCAL_MACHINE',
-                                            N'SOFTWARE\Microsoft\MSSQLServer\SQLServerAgent',
-                                            N'DownloadedMaxRows',
-                                            N'REG_DWORD',
-                                            @max_rows_per_server
-  END
-
-  -- Get the number of downloaded rows in sysdownloadlist for the target server in question
-  -- NOTE: Determining this [quickly] requires a [non-clustered] index on target_server
-  SELECT @current_rows_per_server = COUNT(*)
-  FROM dbo.sysdownloadlist
-  WHERE (target_server = @server_name)
-    AND (status = 1)
-
-  -- Delete the oldest downloaded row(s) for the target server in question if the new row has
-  -- pushed us over the per-server row limit
-  SELECT @rows_to_delete = @current_rows_per_server - @max_rows_per_server
-  IF (@rows_to_delete > 0)
-  BEGIN
-    WITH RowsToDelete AS (
-      SELECT TOP (@rows_to_delete) *
-      FROM dbo.sysdownloadlist
-      WHERE (target_server = @server_name)
-        AND (status = 1)
-      ORDER BY instance_id
-    )
-    DELETE FROM RowsToDelete;
-  END
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_get_schedule_description] AS' 
 END
-
 GO
-/****** Object:  StoredProcedure [dbo].[sp_get_schedule_description]    Script Date: 11-06-2020 18:09:05 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER OFF
-GO
-CREATE PROCEDURE [dbo].[sp_get_schedule_description]
+ALTER PROCEDURE [dbo].[sp_get_schedule_description]
   @freq_type              INT          = NULL,
   @freq_interval          INT          = NULL,
   @freq_subday_type       INT          = NULL,
@@ -2583,6 +1950,7 @@ BEGIN
     RETURN
   END
 
+  /*
   IF (@freq_type = 0x80) -- OnIdle
   BEGIN
     EXECUTE master.dbo.xp_instance_regread N'HKEY_LOCAL_MACHINE',
@@ -2598,6 +1966,7 @@ BEGIN
     SELECT @schedule_description = FORMATMESSAGE(14578, ISNULL(@idle_cpu_percent, 10), ISNULL(@idle_cpu_duration, 600))
     RETURN
   END
+  */
 
   -- Subday stuff
   SELECT @schedule_description = @schedule_description +
@@ -2613,13 +1982,18 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_help_jobschedule]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_help_jobschedule]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_help_jobschedule]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_help_jobschedule] AS' 
+END
+GO
 
-CREATE PROCEDURE [dbo].[sp_help_jobschedule]
+ALTER PROCEDURE [dbo].[sp_help_jobschedule]
   @job_id              UNIQUEIDENTIFIER = NULL,
   @job_name            sysname          = NULL,
   @schedule_name       sysname          = NULL,
@@ -2827,12 +2201,17 @@ END
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_help_jobstep]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_help_jobstep]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_help_jobstep]
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_help_jobstep]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_help_jobstep] AS' 
+END
+GO
+ALTER PROCEDURE [dbo].[sp_help_jobstep]
   @job_id    UNIQUEIDENTIFIER = NULL, -- Must provide either this or job_name
   @job_name  sysname          = NULL, -- Must provide either this or job_id
   @step_id   INT              = NULL,
@@ -2901,7 +2280,6 @@ BEGIN
            step_name,
            subsystem,
            command,
-           flags,
            cmdexec_success_code,
            on_success_action,
            on_success_step_id,
@@ -2912,14 +2290,12 @@ BEGIN
            database_user_name,
            retry_attempts,
            retry_interval,
-           os_run_priority,
            output_file_name,
            last_run_outcome,
            last_run_duration,
            last_run_retries,
            last_run_date,
-           last_run_time,
-         proxy_id
+           last_run_time
     FROM dbo.sysjobsteps
     WHERE (job_id = @job_id)
       AND ((@step_id IS NULL) OR (step_id = @step_id))
@@ -2931,11 +2307,6 @@ BEGIN
            step_name,
            subsystem,
            command,
-          'flags' = CONVERT(NVARCHAR, flags) + N' (' +
-                    ISNULL(CASE WHEN (flags = 0)     THEN FORMATMESSAGE(14561) END, '') +
-                    ISNULL(CASE WHEN (flags & 1) = 1 THEN FORMATMESSAGE(14558) + ISNULL(CASE WHEN (flags > 1) THEN N', ' END, '') END, '') +
-                    ISNULL(CASE WHEN (flags & 2) = 2 THEN FORMATMESSAGE(14559) + ISNULL(CASE WHEN (flags > 3) THEN N', ' END, '') END, '') +
-                    ISNULL(CASE WHEN (flags & 4) = 4 THEN FORMATMESSAGE(14560) END, '') + N')',
            cmdexec_success_code,
           'on_success_action' = CASE on_success_action
                                   WHEN 1 THEN CONVERT(NVARCHAR, on_success_action) + N' ' + FORMATMESSAGE(14562)
@@ -2958,21 +2329,12 @@ BEGIN
            database_user_name,
            retry_attempts,
            retry_interval,
-          'os_run_priority' = CASE os_run_priority
-                                WHEN -15 THEN CONVERT(NVARCHAR, os_run_priority) + N' ' + FORMATMESSAGE(14566)
-                                WHEN -1  THEN CONVERT(NVARCHAR, os_run_priority) + N' ' + FORMATMESSAGE(14567)
-                                WHEN  0  THEN CONVERT(NVARCHAR, os_run_priority) + N' ' + FORMATMESSAGE(14561)
-                                WHEN  1  THEN CONVERT(NVARCHAR, os_run_priority) + N' ' + FORMATMESSAGE(14568)
-                                WHEN  15 THEN CONVERT(NVARCHAR, os_run_priority) + N' ' + FORMATMESSAGE(14569)
-                                ELSE          CONVERT(NVARCHAR, os_run_priority) + N' ' + FORMATMESSAGE(14205)
-                              END,
            output_file_name,
            last_run_outcome,
            last_run_duration,
            last_run_retries,
            last_run_date,
-           last_run_time,
-         proxy_id
+           last_run_time
     FROM dbo.sysjobsteps
     WHERE (job_id = @job_id)
       AND ((@step_id IS NULL) OR (step_id = @step_id))
@@ -2984,400 +2346,17 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_post_msx_operation]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_sqlagent_log_jobhistory]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_post_msx_operation]
-  @operation              VARCHAR(64),
-  @object_type            VARCHAR(64)       = 'JOB',-- Can be JOB, SERVER or SCHEDULE
-  @job_id                 UNIQUEIDENTIFIER  = NULL, -- NOTE: 0x00 means 'ALL' jobs
-  @specific_target_server sysname           = NULL,
-  @value                  INT               = NULL, -- For polling interval value
-  @schedule_uid           UNIQUEIDENTIFIER  = NULL  -- schedule_uid if the @object_type = 'SCHEDULE'
-AS
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_sqlagent_log_jobhistory]') AND type in (N'P', N'PC'))
 BEGIN
-  DECLARE @operation_code            INT
-  DECLARE @specific_target_server_id INT
-  DECLARE @instructions_posted       INT
-  DECLARE @job_id_as_char            VARCHAR(36)
-  DECLARE @schedule_uid_as_char      VARCHAR(36)
-  DECLARE @msx_time_zone_adjustment  INT
-  DECLARE @local_machine_name        sysname
-  DECLARE @retval                    INT
-
-  SET NOCOUNT ON
-
-  -- Remove any leading/trailing spaces from parameters
-  SELECT @operation              = LTRIM(RTRIM(@operation))
-  SELECT @object_type            = LTRIM(RTRIM(@object_type))
-  SELECT @specific_target_server = LTRIM(RTRIM(@specific_target_server))
-
-  -- Turn [nullable] empty string parameters into NULLs
-  IF (@specific_target_server = N'') SELECT @specific_target_server = NULL
-
-  -- Only a sysadmin can do this, but fail silently for a non-sysadmin
-  IF (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) <> 1) 
-    RETURN(0) -- Success (or more accurately a no-op)
-
-  -- Check operation
-  SELECT @operation = UPPER(@operation collate SQL_Latin1_General_CP1_CS_AS)
-  SELECT @operation_code = CASE @operation
-                             WHEN 'INSERT'    THEN 1
-                             WHEN 'UPDATE'    THEN 2
-                             WHEN 'DELETE'    THEN 3
-                             WHEN 'START'     THEN 4
-                             WHEN 'STOP'      THEN 5
-                             WHEN 'RE-ENLIST' THEN 6
-                             WHEN 'DEFECT'    THEN 7
-                             WHEN 'SYNC-TIME' THEN 8
-                             WHEN 'SET-POLL'  THEN 9
-                             ELSE 0
-                           END
-  IF (@operation_code = 0)
-  BEGIN
-    RAISERROR(14266, -1, -1, '@operation_code', 'INSERT, UPDATE, DELETE, START, STOP, RE-ENLIST, DEFECT, SYNC-TIME, SET-POLL')
-    RETURN(1) -- Failure
-  END
-
-  -- Check object type (in 9.0 only 'JOB', 'SERVER' or 'SCHEDULE'are valid)
-  IF ((@object_type <> 'JOB') AND (@object_type <> 'SERVER') AND (@object_type <> 'SCHEDULE'))
-  BEGIN
-    RAISERROR(14266, -1, -1, '@object_type', 'JOB, SERVER, SCHEDULE')
-    RETURN(1) -- Failure
-  END
-
-  -- Check that for a object type of JOB a job_id has been supplied
-  IF ((@object_type = 'JOB') AND (@job_id IS NULL))
-  BEGIN
-    RAISERROR(14233, -1, -1)
-    RETURN(1) -- Failure
-  END
-  
-    -- Check that for a object type of JOB a job_id has been supplied
-  IF ((@object_type = 'SCHEDULE') AND (@schedule_uid IS NULL))
-  BEGIN
-    RAISERROR(14365, -1, -1)
-    RETURN(1) -- Failure
-  END
-
-  -- Check polling interval value
-  IF (@operation_code = 9) AND ((ISNULL(@value, 0) < 10) OR (ISNULL(@value, 0) > 28800))
-  BEGIN
-    RAISERROR(14266, -1, -1, '@value', '10..28800')
-    RETURN(1) -- Failure
-  END
-
-  -- Check specific target server
-  IF (@specific_target_server IS NOT NULL)
-  BEGIN
-    SELECT @specific_target_server = UPPER(@specific_target_server)
-
-    -- Check if the local server is being targeted
-    IF (@specific_target_server = UPPER(CONVERT(sysname, SERVERPROPERTY('ServerName'))))
-    BEGIN
-      RETURN(0)
-    END
-    ELSE
-    BEGIN
-      SELECT @specific_target_server_id = server_id
-      FROM dbo.systargetservers
-      WHERE (UPPER(server_name) = @specific_target_server)
-      IF (@specific_target_server_id IS NULL)
-      BEGIN
-        RAISERROR(14262, -1, -1, '@specific_target_server', @specific_target_server)
-        RETURN(1) -- Failure
-      END
-    END
-  END
-
-  -- Check that this server is an MSX server
-  IF ((SELECT COUNT(*)
-       FROM dbo.systargetservers) = 0)
-  BEGIN
-    RETURN(0)
-  END
-
-  -- Get local machine name
-  EXECUTE @retval = master.dbo.xp_getnetname @local_machine_name OUTPUT
-  IF (@retval <> 0) OR (@local_machine_name IS NULL)
-  BEGIN
-    RAISERROR(14225, -1, -1)
-    RETURN(1)
-  END
-
-  -- Job-specific processing...
-  IF (@object_type = 'JOB')
-  BEGIN
-    -- Validate the job (if supplied)
-    IF (@job_id <> CONVERT(UNIQUEIDENTIFIER, 0x00))
-    BEGIN
-      SELECT @job_id_as_char = CONVERT(VARCHAR(36), @job_id)
-
-      -- Check if the job exists
-      IF (NOT EXISTS (SELECT *
-                      FROM dbo.sysjobs_view
-                      WHERE (job_id = @job_id)))
-      BEGIN
-        RAISERROR(14262, -1, -1, '@job_id', @job_id_as_char)
-        RETURN(1) -- Failure
-      END
-
-      -- If this is a local job then there's nothing for us to do
-      IF (EXISTS (SELECT *
-                  FROM dbo.sysjobservers
-                  WHERE (job_id = @job_id)
-                    AND (server_id = 0))) -- 0 means local server
-      OR (NOT EXISTS (SELECT *
-                      FROM dbo.sysjobservers
-                      WHERE (job_id = @job_id)))
-      BEGIN
-        RETURN(0)
-      END
-    END
-
-    -- Generate the sysdownloadlist row(s)...
-    IF (@operation_code = 1) OR  -- Insert
-       (@operation_code = 2) OR  -- Update
-       (@operation_code = 3) OR  -- Delete
-       (@operation_code = 4) OR  -- Start
-       (@operation_code = 5)     -- Stop
-    BEGIN
-      IF (@job_id = CONVERT(UNIQUEIDENTIFIER, 0x00)) -- IE. 'ALL'
-      BEGIN
-        -- All jobs
-
-        -- Handle DELETE as a special case (rather than posting 1 instruction per job we just
-        -- post a single instruction that means 'delete all jobs from the MSX')
-        IF (@operation_code = 3)
-        BEGIN
-          INSERT INTO dbo.sysdownloadlist
-                (source_server,
-                 operation_code,
-                 object_type,
-                 object_id,
-                 target_server)
-          SELECT @local_machine_name,
-                 @operation_code,
-                 1,                -- 1 means 'JOB'
-                 CONVERT(UNIQUEIDENTIFIER, 0x00),
-                 sts.server_name
-          FROM systargetservers sts
-          WHERE ((@specific_target_server_id IS NULL) OR (sts.server_id = @specific_target_server_id))
-            AND ((SELECT COUNT(*)
-                  FROM dbo.sysjobservers
-                  WHERE (server_id = sts.server_id)) > 0)
-          SELECT @instructions_posted = @@rowcount
-        END
-        ELSE
-        BEGIN
-          INSERT INTO dbo.sysdownloadlist
-                (source_server,
-                 operation_code,
-                 object_type,
-                 object_id,
-                 target_server)
-          SELECT @local_machine_name,
-                 @operation_code,
-                 1,                -- 1 means 'JOB'
-                 sjv.job_id,
-                 sts.server_name
-          FROM sysjobs_view     sjv,
-               sysjobservers    sjs,
-               systargetservers sts
-          WHERE (sjv.job_id = sjs.job_id)
-            AND (sjs.server_id = sts.server_id)
-            AND (sjs.server_id <> 0) -- We want to exclude local jobs
-            AND ((@specific_target_server_id IS NULL) OR (sjs.server_id = @specific_target_server_id))
-          SELECT @instructions_posted = @@rowcount
-        END
-      END
-      ELSE
-      BEGIN
-        -- Specific job (ie. @job_id is not 0x00)
-        INSERT INTO dbo.sysdownloadlist
-              (source_server,
-               operation_code,
-               object_type,
-               object_id,
-               target_server,
-               deleted_object_name)
-        SELECT @local_machine_name,
-               @operation_code,
-               1,                -- 1 means 'JOB'
-               sjv.job_id,
-               sts.server_name,
-               CASE @operation_code WHEN 3 -- Delete
-                                      THEN sjv.name
-                                      ELSE NULL
-                                    END
-        FROM sysjobs_view     sjv,
-             sysjobservers    sjs,
-             systargetservers sts
-        WHERE (sjv.job_id = @job_id)
-          AND (sjv.job_id = sjs.job_id)
-          AND (sjs.server_id = sts.server_id)
-          AND (sjs.server_id <> 0) -- We want to exclude local jobs
-          AND ((@specific_target_server_id IS NULL) OR (sjs.server_id = @specific_target_server_id))
-        SELECT @instructions_posted = @@rowcount
-      END
-    END
-    ELSE
-    BEGIN
-      RAISERROR(14266, -1, -1, '@operation_code', 'INSERT, UPDATE, DELETE, START, STOP')
-      RETURN(1) -- Failure
-    END
-  END
-  
-  
-  -- SCHEDULE specific processing for INSERT, UPDATE or DELETE schedule operations
-  -- All msx jobs that use the specified @schedule_uid will be notified with an Insert operation. 
-  -- This will cause agent to reload all schedules for each job. 
-  -- This is compatible with the legacy shiloh servers that don't know about reusable schedules
-  IF (@object_type = 'SCHEDULE')
-  BEGIN
-    -- Validate the schedule
-    -- Check if the schedule exists
-    IF (NOT EXISTS (SELECT *
-                    FROM dbo.sysschedules_localserver_view
-                    WHERE (schedule_uid = @schedule_uid)))
-    BEGIN
-      SELECT @schedule_uid_as_char = CONVERT(VARCHAR(36), @schedule_uid)
-      
-      RAISERROR(14262, -1, -1, '@schedule_uid', @schedule_uid_as_char)
-      RETURN(1) -- Failure
-    END
-
-    -- If this schedule is only used locally (no target servers) then there's nothing to do
-    IF (NOT EXISTS (SELECT *
-                    FROM dbo.sysschedules    s,
-                        dbo.sysjobschedules  js,
-                        dbo.sysjobs_view     sjv,
-                        dbo.sysjobservers    sjs,
-                        dbo.systargetservers sts
-                    WHERE (s.schedule_uid = @schedule_uid)
-                    AND (s.schedule_id = js.schedule_id)
-                    AND (sjv.job_id = js.job_id)
-                    AND (sjv.job_id = sjs.job_id)
-                    AND (sjs.server_id = sts.server_id)
-                    AND (sjs.server_id <> 0)))                        
-    BEGIN
-      RETURN(0)
-    END
-
-    -- Generate the sysdownloadlist row(s)...
-    IF (@operation_code = 1) OR  -- Insert
-       (@operation_code = 2) OR  -- Update
-       (@operation_code = 3)     -- Delete
-    BEGIN
-      -- Insert specific schedule into sysdownloadlist 
-      -- We need to create a sysdownloadlist JOB INSERT record for each job that runs the schedule
-     INSERT INTO dbo.sysdownloadlist
-         (source_server,
-          operation_code,
-          object_type,
-          object_id,
-          target_server)
-     SELECT @local_machine_name,
-          1,             -- 1 means 'Insert'
-          1,             -- 1 means 'JOB'
-          sjv.job_id,
-          sts.server_name
-     FROM dbo.sysschedules     s,
-           dbo.sysjobschedules  js,
-           dbo.sysjobs_view     sjv,
-         dbo.sysjobservers    sjs,
-         systargetservers          sts
-     WHERE (s.schedule_id = js.schedule_id)
-        AND (js.job_id = sjv.job_id)
-        AND (sjv.job_id = sjs.job_id)
-      AND (sjs.server_id = sts.server_id)
-        AND (s.schedule_uid = @schedule_uid)
-      AND (sjs.server_id <> 0)            -- We want to exclude local jobs
-      AND ((@specific_target_server_id IS NULL) OR (sjs.server_id = @specific_target_server_id))
-
-      SELECT @instructions_posted = @@rowcount
-
-
-    END
-    ELSE
-    BEGIN
-      RAISERROR(14266, -1, -1, '@operation_code', 'UPDATE, DELETE')
-      RETURN(1) -- Failure
-    END
-  END
-  
-
-  -- Server-specific processing...
-  IF (@object_type = 'SERVER')
-  BEGIN
-    -- Generate the sysdownloadlist row(s)...
-    IF (@operation_code = 6) OR  -- ReEnlist
-       (@operation_code = 7) OR  -- Defect
-       (@operation_code = 8) OR  -- Synchronize time (with MSX)
-       (@operation_code = 9)     -- Set MSX polling interval (in seconds)
-    BEGIN
-      IF (@operation_code = 8)
-      BEGIN
-        EXECUTE master.dbo.xp_regread N'HKEY_LOCAL_MACHINE',
-                                      N'SYSTEM\CurrentControlSet\Control\TimeZoneInformation',
-                                      N'Bias',
-                                      @msx_time_zone_adjustment OUTPUT,
-                                      N'no_output'
-        SELECT @msx_time_zone_adjustment = -ISNULL(@msx_time_zone_adjustment, 0)
-      END
-
-      INSERT INTO dbo.sysdownloadlist
-            (source_server,
-             operation_code,
-             object_type,
-             object_id,
-             target_server)
-      SELECT @local_machine_name,
-             @operation_code,
-             2,                  -- 2 means 'SERVER'
-             CASE @operation_code
-               WHEN 8 THEN CONVERT(UNIQUEIDENTIFIER, CONVERT(BINARY(16), -(@msx_time_zone_adjustment - sts.time_zone_adjustment)))
-               WHEN 9 THEN CONVERT(UNIQUEIDENTIFIER, CONVERT(BINARY(16), @value))
-               ELSE CONVERT(UNIQUEIDENTIFIER, 0x00)
-             END,
-             sts.server_name
-      FROM systargetservers sts
-      WHERE ((@specific_target_server_id IS NULL) OR (sts.server_id = @specific_target_server_id))
-      SELECT @instructions_posted = @@rowcount
-    END
-    ELSE
-    BEGIN
-      RAISERROR(14266, -1, -1, '@operation_code', 'RE-ENLIST, DEFECT, SYNC-TIME, SET-POLL')
-      RETURN(1) -- Failure
-    END
-  END
-
-
-  -- Report number of rows inserted
-  IF (@object_type = 'JOB') AND
-     (@job_id = CONVERT(UNIQUEIDENTIFIER, 0x00)) AND
-     (@instructions_posted = 0) AND
-     (@specific_target_server_id IS NOT NULL)
-    RAISERROR(14231, 0, 1, '@specific_target_server', @specific_target_server)
-  ELSE
-    RAISERROR(14230, 0, 1, @instructions_posted, @operation)
-
-  -- Delete any [downloaded] instructions that are over the registry-defined limit
-  IF (@specific_target_server IS NOT NULL)
-    EXECUTE dbo.sp_downloaded_row_limiter @specific_target_server
-
-  RETURN(0) -- 0 means success
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_sqlagent_log_jobhistory] AS' 
 END
-
 GO
-/****** Object:  StoredProcedure [dbo].[sp_sqlagent_log_jobhistory]    Script Date: 11-06-2020 18:09:05 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER OFF
-GO
-CREATE PROCEDURE [dbo].[sp_sqlagent_log_jobhistory]
+ALTER PROCEDURE [dbo].[sp_sqlagent_log_jobhistory]
   @job_id               UNIQUEIDENTIFIER,
   @step_id              INT,
   @sql_message_id       INT = 0,
@@ -3387,9 +2366,6 @@ CREATE PROCEDURE [dbo].[sp_sqlagent_log_jobhistory]
   @run_date             INT,
   @run_time             INT,
   @run_duration         INT,
-  @operator_id_emailed  INT = 0,
-  @operator_id_netsent  INT = 0,
-  @operator_id_paged    INT = 0,
   @retries_attempted    INT,
   @server               sysname = NULL,
   @session_id           INT = 0
@@ -3404,11 +2380,6 @@ BEGIN
 
   IF (@server IS NULL) OR (UPPER(@server collate SQL_Latin1_General_CP1_CS_AS) = '(LOCAL)')
     SELECT @server = UPPER(CONVERT(sysname, SERVERPROPERTY('ServerName')))
-
-  -- Check authority (only SQLServerAgent can add a history entry for a job)
-  EXECUTE @retval = sp_verify_jobproc_caller @job_id = @job_id, @program_name = N'SQLAgent%'
-  IF (@retval <> 0)
-    RETURN(@retval)
 
   -- NOTE: We raise all errors as informational (sev 0) to prevent SQLServerAgent from caching
   --       the operation (if it fails) since if the operation will never run successfully we
@@ -3460,46 +2431,7 @@ BEGIN
   EXECUTE @retval = sp_verify_job_time @run_time, '@run_time', 10
   IF (@retval <> 0)
     RETURN(1) -- Failure
-/*
-  -- Check operator_id_emailed
-  IF (@operator_id_emailed <> 0)
-  BEGIN
-    IF (NOT EXISTS (SELECT *
-                    FROM dbo.sysoperators
-                    WHERE (id = @operator_id_emailed)))
-    BEGIN
-      SELECT @operator_id_as_char = CONVERT(VARCHAR, @operator_id_emailed)
-      RAISERROR(14262, @error_severity, -1, '@operator_id_emailed', @operator_id_as_char)
-      RETURN(1) -- Failure
-    END
-  END
 
-  -- Check operator_id_netsent
-  IF (@operator_id_netsent <> 0)
-  BEGIN
-    IF (NOT EXISTS (SELECT *
-                    FROM dbo.sysoperators
-                    WHERE (id = @operator_id_netsent)))
-    BEGIN
-      SELECT @operator_id_as_char = CONVERT(VARCHAR, @operator_id_netsent)
-      RAISERROR(14262, @error_severity, -1, '@operator_id_netsent', @operator_id_as_char)
-      RETURN(1) -- Failure
-    END
-  END
-
-  -- Check operator_id_paged
-  IF (@operator_id_paged <> 0)
-  BEGIN
-    IF (NOT EXISTS (SELECT *
-                    FROM dbo.sysoperators
-                    WHERE (id = @operator_id_paged)))
-    BEGIN
-      SELECT @operator_id_as_char = CONVERT(VARCHAR, @operator_id_paged)
-      RAISERROR(14262, @error_severity, -1, '@operator_id_paged', @operator_id_as_char)
-      RETURN(1) -- Failure
-    END
-  END
-*/
   -- Insert the history row
   INSERT INTO dbo.sysjobhistory
          (job_id,
@@ -3512,9 +2444,6 @@ BEGIN
           run_date,
           run_time,
           run_duration,
-          operator_id_emailed,
-          operator_id_netsent,
-          operator_id_paged,
           retries_attempted,
           server)
   VALUES (@job_id,
@@ -3527,9 +2456,6 @@ BEGIN
           @run_date,
           @run_time,
           @run_duration,
-          @operator_id_emailed,
-          @operator_id_netsent,
-          @operator_id_paged,
           @retries_attempted,
           @server)
 /*
@@ -3579,353 +2505,17 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_sqlagent_notify]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_sqlagent_set_jobstep_completion_state]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_sqlagent_notify]
-  @op_type     NCHAR(1),                -- One of: J (Job action [refresh or start/stop]),
-                                        --         S (Schedule action [refresh only])
-                                        --         A (Alert action [refresh only]),
-                                        --         G (Re-cache all registry settings),
-                                        --         D (Dump job [or job schedule] cache to errorlog)
-                                        --         P (Force an immediate poll of the MSX)
-                                        --         L (Cycle log file)
-                                        --         T (Test WMI parameters (namespace and query))
-                                        --         M (DatabaseMail action [ refresh profile  associated with sql agent)
-  @job_id      UNIQUEIDENTIFIER = NULL, -- JobID (for OpTypes 'J', 'S' and 'D')
-  @schedule_id INT              = NULL, -- ScheduleID (for OpType 'S')
-  @alert_id    INT              = NULL, -- AlertID (for OpType 'A')
-  @action_type NCHAR(1)         = NULL, -- For 'J' one of: R (Run - no service check),
-                                        --                 S (Start - with service check),
-                                        --                 I (Insert),
-                                        --                 U (Update),
-                                        --                 D (Delete),
-                                        --                 C (Stop [Cancel])
-                                        -- For 'S' or 'A' one of: I (Insert),
-                                        --                        U (Update),
-                                        --                        D (Delete)
-  @error_flag  INT              = 1,    -- Set to 0 to suppress the error from xp_sqlagent_notify if SQLServer agent is not running
-  @wmi_namespace nvarchar(128) = NULL,
-  @wmi_query     nvarchar(512) = NULL
-AS
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_sqlagent_set_jobstep_completion_state]') AND type in (N'P', N'PC'))
 BEGIN
-
-
-
-  DECLARE @retval         INT
-  DECLARE @id_as_char     VARCHAR(10)
-  DECLARE @job_id_as_char VARCHAR(36)
-  DECLARE @nt_user_name   NVARCHAR(100)
-   
-  
-
-  SET NOCOUNT ON
-
-  SELECT @retval = 0 -- Success
-
-  -- Make sure that we're dealing only with uppercase characters
-  SELECT @op_type     = UPPER(@op_type collate SQL_Latin1_General_CP1_CS_AS)
-  SELECT @action_type = UPPER(@action_type collate SQL_Latin1_General_CP1_CS_AS)
-
-  -- Verify operation code
-  IF (CHARINDEX(@op_type, N'JSAGDPLTM') = 0)
-  BEGIN
-    RAISERROR(14266, -1, -1, '@op_type', 'J, S, A, G, D, P, L, T, M')
-    RETURN(1) -- Failure
-  END
-
-  -- Check the job id for those who use it
-  IF (CHARINDEX(@op_type, N'JSD') <> 0)
-  BEGIN
-    IF (NOT ((@op_type = N'D' OR @op_type = N'S') AND (@job_id IS NULL))) -- For 'D' and 'S' job_id is optional
-    BEGIN
-      IF ((@job_id IS NULL) OR
-          ((@action_type <> N'D') AND NOT EXISTS (SELECT *
-                                                  FROM dbo.sysjobs_view
-                                                  WHERE (job_id = @job_id))))
-      BEGIN
-        SELECT @job_id_as_char = CONVERT(VARCHAR(36), @job_id)
-        RAISERROR(14262, -1, -1, '@job_id', @job_id_as_char)
-        RETURN(1) -- Failure
-      END
-    END
-  END
-
-  -- Verify 'job' action parameters
-  IF (@op_type = N'J')
-  BEGIN
-    SELECT @alert_id = 0
-    IF (@schedule_id IS NULL) SELECT @schedule_id = 0
-
-    -- The schedule_id (if specified) is the start step
-    IF ((CHARINDEX(@action_type, N'RS') <> 0) AND (@schedule_id <> 0))
-    BEGIN
-      IF (NOT EXISTS (SELECT *
-                      FROM dbo.sysjobsteps
-                      WHERE (job_id = @job_id)
-                        AND (step_id = @schedule_id)))
-      BEGIN
-        SELECT @id_as_char = ISNULL(CONVERT(VARCHAR, @schedule_id), '(null)')
-        RAISERROR(14262, -1, -1, '@schedule_id', @id_as_char)
-        RETURN(1) -- Failure
-      END
-    END
-    ELSE
-      SELECT @schedule_id = 0
-
-    IF (CHARINDEX(@action_type, N'RSIUDC') = 0)
-    BEGIN
-      RAISERROR(14266, -1, -1, '@action_type', 'R, S, I, U, D, C')
-      RETURN(1) -- Failure
-    END
-  END
-
-  -- Verify 'schedule' action parameters
-  IF (@op_type = N'S')
-  BEGIN
-    SELECT @alert_id = 0
-
-    IF (CHARINDEX(@action_type, N'IUD') = 0)
-    BEGIN
-      RAISERROR(14266, -1, -1, '@action_type', 'I, U, D')
-      RETURN(1) -- Failure
-    END
-
-    IF ((@schedule_id IS NULL) OR
-        ((@action_type <> N'D') AND NOT EXISTS (SELECT *
-                                                FROM dbo.sysschedules
-                                                WHERE (schedule_id = @schedule_id))))
-    BEGIN
-      SELECT @id_as_char = ISNULL(CONVERT(VARCHAR, @schedule_id), '(null)')
-      RAISERROR(14262, -1, -1, '@schedule_id', @id_as_char)
-      RETURN(1) -- Failure
-    END
-  END
-
-  -- Verify 'alert' action parameters
-  IF (@op_type = N'A')
-  BEGIN
-    SELECT @job_id = 0x00
-    SELECT @schedule_id = 0
-
-    IF (CHARINDEX(@action_type, N'IUD') = 0)
-    BEGIN
-      RAISERROR(14266, -1, -1, '@action_type', 'I, U, D')
-      RETURN(1) -- Failure
-    END
-
-    IF ((@alert_id IS NULL) OR
-        ((@action_type <> N'D') AND NOT EXISTS (SELECT *
-                                                FROM dbo.sysalerts
-                                                WHERE (id = @alert_id))))
-    BEGIN
-      SELECT @id_as_char = ISNULL(CONVERT(VARCHAR, @alert_id), '(null)')
-      RAISERROR(14262, -1, -1, '@alert_id', @id_as_char)
-      RETURN(1) -- Failure
-    END
-  END
-
-  -- Verify 'registry', 'job dump' and 'force MSX poll' , 'cycle log', dbmail profile refresh action parameters
-  IF (CHARINDEX(@op_type, N'GDPLM') <> 0)
-  BEGIN
-    IF (@op_type <> N'D')
-      SELECT @job_id = 0x00
-    SELECT @alert_id = 0
-    SELECT @schedule_id = 0
-    SELECT @action_type = NULL
-  END
-
-  -- Parameters are valid, so now check execution permissions...
-
-  -- For anything except a job (or schedule) action the caller must be SysAdmin, DBO, or DB_Owner
-  IF (@op_type NOT IN (N'J', N'S'))
-  BEGIN
-    IF NOT ((ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1) OR
-            (ISNULL(IS_MEMBER(N'db_owner'), 0) = 1) OR
-            (UPPER(USER_NAME() collate SQL_Latin1_General_CP1_CS_AS) = N'DBO'))
-    BEGIN
-      RAISERROR(14260, -1, -1)
-      RETURN(1) -- Failure
-    END
-  END
-
-  -- For a Job Action the caller must be SysAdmin, DBO, DB_Owner, or the job owner
-  IF (@op_type = N'J')
-  BEGIN
-    IF NOT ((ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1) OR
-            (ISNULL(IS_MEMBER(N'db_owner'), 0) = 1) OR
-            (UPPER(USER_NAME() collate SQL_Latin1_General_CP1_CS_AS) = N'DBO') OR
-            (EXISTS (SELECT *
-                     FROM dbo.sysjobs_view
-                     WHERE (job_id = @job_id))))
-    BEGIN
-      RAISERROR(14252, -1, -1)
-      RETURN(1) -- Failure
-    END
-  END
-
-  --verify WMI parameters
-  IF (@op_type = N'T')
-  BEGIN
-   SELECT @wmi_namespace = LTRIM(RTRIM(@wmi_namespace))
-   SELECT @wmi_query = LTRIM(RTRIM(@wmi_query))  
-    IF (@wmi_namespace IS NULL) or (@wmi_query IS NULL)
-   BEGIN
-          RAISERROR(14508, 16, 1)
-          RETURN(1) -- Failure      
-   END
-  END
-
-  -- Ok, let's do it...
-  SELECT @nt_user_name = ISNULL(NT_CLIENT(), ISNULL(SUSER_SNAME(), FORMATMESSAGE(14205)))
-  --EXECUTE @retval = master.dbo.xp_sqlagent_notify @op_type, @job_id, @schedule_id, @alert_id, @action_type, @nt_user_name, @error_flag, @@trancount, @wmi_namespace, @wmi_query
-  
-  -- Start: Custom Code
-
-		DECLARE @step_id int
-		DECLARE @sql_message_id int
-		DECLARE @sql_severity int
-		DECLARE @message nvarchar(4000)
-		DECLARE @run_status int
-		DECLARE @run_date int
-		DECLARE @run_time int
-		DECLARE @run_duration int
-		DECLARE @operator_id_emailed int
-		DECLARE @operator_id_netsent int
-		DECLARE @operator_id_paged int
-		DECLARE @retries_attempted int
-		DECLARE @server sysname
-		DECLARE @session_id int
-
-		DECLARE @StartTime DATETIME
-
-		-- Variables for Loop
-		DECLARE @Min INT
-		DECLARE @Max INT
-
-		DECLARE	@JobSteps TABLE(
-			--[job_id] [uniqueidentifier] NOT NULL,
-			[step_id] [int] NOT NULL,
-			[step_name] [sysname] NOT NULL,
-			[subsystem] [nvarchar](40) NOT NULL,
-			[command] [nvarchar](max) NULL,
-			[flags] [int] NOT NULL,
-			[additional_parameters] [nvarchar](max) NULL,
-			[cmdexec_success_code] [int] NOT NULL,
-			[on_success_action] [tinyint] NOT NULL,
-			[on_success_step_id] [int] NOT NULL,
-			[on_fail_action] [tinyint] NOT NULL,
-			[on_fail_step_id] [int] NOT NULL,
-			[server] [sysname] NULL,
-			[database_name] [sysname] NULL,
-			[database_user_name] [sysname] NULL,
-			[retry_attempts] [int] NOT NULL,
-			[retry_interval] [int] NOT NULL,
-			[os_run_priority] [int] NOT NULL,
-			[output_file_name] [nvarchar](200) NULL,
-			[last_run_outcome] [int] NOT NULL,
-			[last_run_duration] [int] NOT NULL,
-			[last_run_retries] [int] NOT NULL,
-			[last_run_date] [int] NOT NULL,
-			[last_run_time] [int] NOT NULL,
-			[proxy_id] [int] NULL,
-			[step_uid] [uniqueidentifier] NULL
-		)
-
-	INSERT @JobSteps(
-		 step_id
-		,step_name
-		,subsystem
-		,command
-		,flags
-		,cmdexec_success_code
-		,on_success_action
-		,on_success_step_id
-		,on_fail_action
-		,on_fail_step_id
-		,server
-		,database_name
-		,database_user_name
-		,retry_attempts
-		,retry_interval
-		,os_run_priority
-		,output_file_name
-		,last_run_outcome
-		,last_run_duration
-		,last_run_retries
-		,last_run_date
-		,last_run_time
-		,proxy_id
-	)  
-	EXECUTE @retval = [dbo].[sp_help_jobstep] 
-	  @job_id    = @job_id, -- Must provide either this or job_name
-	  @job_name  = NULL, -- Must provide either this or job_id
-	  @step_id   = NULL,
-	  @step_name = NULL,
-	  @suffix    = 0     -- A flag to control how the result set is formatted
-
-	SELECT @Min=MIN(step_id), @Max= MAX(step_id) FROM @JobSteps
-	SELECT * FROM @JobSteps 
-	WHILE(@Min<=@Max)
-	BEGIN
-		SET @StartTime = GETDATE()
-		
-		DECLARE @Command VARCHAR(MAX)
-		SELECT @Command = command FROM @JobSteps WHERE step_id =	@Min
-
-		EXECUTE(@Command)
-	--[dbo].[sp_sqlagent_set_jobstep_completion_state]
-
-		-- TODO: Set parameter values here.
-		SET @run_status = 1 
-		SET @run_date	= FORMAT(GETDATE(),'yyyyMMdd')	
-		SET @run_time	= FORMAT(GETDATE(),'hhmmss')	
-		SET @step_id	= @Min
-		SET @sql_message_id		= 0	
-		SET @sql_severity		= 0	
-		SET @operator_id_emailed	= 0
-		SET @operator_id_netsent	= 0
-		SET @operator_id_paged		= 0	
-		SET @retries_attempted		= 0
-		SET @message = 'Executed as user: '+@nt_user_name+'. The step succeeded.'
-		SET @run_status = 1
-		SET @server = @@SERVERNAME
-		SET @run_duration = DATEDIFF(MINUTE, @StartTime, GETDATE())
-
-		EXECUTE @retval = [dbo].[sp_sqlagent_log_jobhistory] 
-			@job_id					= @job_id
-			,@step_id				= @step_id				
-			,@sql_message_id		= @sql_message_id		
-			,@sql_severity			= @sql_severity			
-			,@message				= @message				
-			,@run_status			= @run_status			
-			,@run_date				= @run_date				
-			,@run_time				= @run_time				
-			,@run_duration			= @run_duration			
-			,@operator_id_emailed	= @operator_id_emailed	
-			,@operator_id_netsent	= @operator_id_netsent	
-			,@operator_id_paged		= @operator_id_paged		
-			,@retries_attempted		= @retries_attempted		
-			,@server				= @server				
-			,@session_id			= @session_id	
-		
-		SELECT @Min = MIN(step_id) FROM @JobSteps WHERE step_id >	@Min		
-	END
-
-  -- End: Custom Code
-
-  RETURN(@retval)
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_sqlagent_set_jobstep_completion_state] AS' 
 END
-
 GO
-/****** Object:  StoredProcedure [dbo].[sp_sqlagent_set_jobstep_completion_state]    Script Date: 11-06-2020 18:09:05 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER OFF
-GO
-CREATE PROCEDURE [dbo].[sp_sqlagent_set_jobstep_completion_state]
+ALTER PROCEDURE [dbo].[sp_sqlagent_set_jobstep_completion_state]
     @job_id                UNIQUEIDENTIFIER,
     @step_id               INT,
     @last_run_outcome      INT,
@@ -3933,7 +2523,7 @@ CREATE PROCEDURE [dbo].[sp_sqlagent_set_jobstep_completion_state]
     @last_run_retries      INT,
     @last_run_date         INT,
     @last_run_time         INT,
-    @session_id            INT
+    @session_id            INT 
 AS
 BEGIN
     -- Update job step completion state in sysjobsteps as well as sysjobactivity
@@ -3949,20 +2539,25 @@ BEGIN
     DECLARE @last_executed_step_date DATETIME 
     SET @last_executed_step_date = [dbo].[agent_datetime](@last_run_date, @last_run_time)
 
-    UPDATE [dbo].[sysjobactivity]
-    SET last_executed_step_date = @last_executed_step_date,
-        last_executed_step_id   = @step_id
-    WHERE job_id     = @job_id 
-    AND   session_id = @session_id
+    --UPDATE [dbo].[sysjobactivity]
+    --SET last_executed_step_date = @last_executed_step_date,
+    --    last_executed_step_id   = @step_id
+    --WHERE job_id     = @job_id 
+    --AND   session_id = @session_id
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_start_job]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_start_job]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_start_job]
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_start_job]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_start_job] AS' 
+END
+GO
+ALTER PROCEDURE [dbo].[sp_start_job]
   @job_name    sysname          = NULL,
   @job_id      UNIQUEIDENTIFIER = NULL,
   @error_flag  INT              = 1,    -- Set to 0 to suppress the error from sp_sqlagent_notify if SQLServerAgent is not running
@@ -4007,22 +2602,6 @@ BEGIN
    RETURN(1) -- Failure
   END
 
-  IF (NOT EXISTS (SELECT *
-                  FROM dbo.sysjobservers
-                  WHERE (job_id = @job_id)))
-  BEGIN
-    SELECT @job_id_as_char = CONVERT(VARCHAR(36), @job_id)
-    RAISERROR(14256, -1, -1, @job_name, @job_id_as_char)
-    RETURN(1) -- Failure
-  END
-
-  IF (EXISTS (SELECT *
-              FROM dbo.sysjobservers
-              WHERE (job_id = @job_id)
-                AND (server_id = 0)))
-  BEGIN
-    -- The job is local, so start (run) the job locally
-
     -- Check the step name (if supplied)
     IF (@step_name IS NOT NULL)
     BEGIN
@@ -4038,57 +2617,243 @@ BEGIN
       END
     END
 
-    EXECUTE @retval = dbo.sp_sqlagent_notify @op_type     = N'J',
+    EXECUTE @retval = dbo.[sp_start_jobsteps] 
                                                   @job_id      = @job_id,
-                                                  @schedule_id = @step_id, -- This is the start step
-                                                  @action_type = N'S',
-                                                  @error_flag  = @error_flag
+                                                  @schedule_id = NULL -- This is the start step
+
     IF ((@retval = 0) AND (@output_flag = 1))
       RAISERROR(14243, 0, 1, @job_name)
-  END
-  ELSE
-  BEGIN
-    -- The job is a multi-server job
-
-      -- Only sysadmin can start multi-server job
-      IF (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) <> 1)
-      BEGIN
-         RAISERROR(14397, -1, -1);
-         RETURN(1) -- Failure
-      END            
-
-    -- Check target server name (if any)
-    IF (@server_name IS NOT NULL)
-    BEGIN
-      IF (NOT EXISTS (SELECT *
-                      FROM dbo.systargetservers
-                      WHERE (UPPER(server_name) = @server_name)))
-      BEGIN
-        RAISERROR(14262, -1, -1, '@server_name', @server_name)
-        RETURN(1) -- Failure
-      END
-    END
-
-    -- Re-post the job if it's an auto-delete job
-    IF ((SELECT delete_level
-         FROM dbo.sysjobs
-         WHERE (job_id = @job_id)) <> 0)
-      EXECUTE @retval = dbo.sp_post_msx_operation 'INSERT', 'JOB', @job_id, @server_name
-
-    -- Post start instruction(s)
-    EXECUTE @retval = dbo.sp_post_msx_operation 'START', 'JOB', @job_id, @server_name
-  END
 
   RETURN(@retval) -- 0 means success
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_update_job]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_start_jobsteps]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_update_job]
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_start_jobsteps]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_start_jobsteps] AS' 
+END
+GO
+ALTER PROCEDURE [dbo].[sp_start_jobsteps]
+  @job_id      UNIQUEIDENTIFIER = NULL, 
+  @schedule_id INT              = NULL 
+AS
+BEGIN
+
+  DECLARE @retval         INT
+  DECLARE @nt_user_name   NVARCHAR(100)
+   
+  SET NOCOUNT ON
+
+  SELECT @retval = 0 -- Success
+
+  SELECT @nt_user_name = ISNULL(NT_CLIENT(), ISNULL(SUSER_SNAME(), FORMATMESSAGE(14205)))
+
+  -- Start: Custom Code
+
+		DECLARE @step_id int
+		DECLARE @sql_message_id int
+		DECLARE @sql_severity int
+		DECLARE @message nvarchar(4000)
+		DECLARE @run_status int
+		DECLARE @run_date int
+		DECLARE @run_time int
+		DECLARE @run_duration int
+		DECLARE @operator_id_emailed int
+		DECLARE @operator_id_netsent int
+		DECLARE @operator_id_paged int
+		DECLARE @retries_attempted int
+		DECLARE @server sysname
+		DECLARE @session_id int
+
+		DECLARE @StartTime DATETIME
+
+		-- Variables for Loop
+		DECLARE @Min INT
+		DECLARE @Max INT
+
+		DECLARE	@JobSteps TABLE(
+			--[job_id] [uniqueidentifier] NOT NULL,
+			[step_id] [int] NOT NULL,
+			[step_name] [sysname] NOT NULL,
+			[subsystem] [nvarchar](40) NOT NULL,
+			[command] [nvarchar](max) NULL,
+			[additional_parameters] [nvarchar](max) NULL,
+			[cmdexec_success_code] [int] NOT NULL,
+			[on_success_action] [tinyint] NOT NULL,
+			[on_success_step_id] [int] NOT NULL,
+			[on_fail_action] [tinyint] NOT NULL,
+			[on_fail_step_id] [int] NOT NULL,
+			[server] [sysname] NULL,
+			[database_name] [sysname] NULL,
+			[database_user_name] [sysname] NULL,
+			[retry_attempts] [int] NOT NULL,
+			[retry_interval] [int] NOT NULL,
+			[output_file_name] [nvarchar](200) NULL,
+			[last_run_outcome] [int] NOT NULL,
+			[last_run_duration] [int] NOT NULL,
+			[last_run_retries] [int] NOT NULL,
+			[last_run_date] [int] NOT NULL,
+			[last_run_time] [int] NOT NULL,
+			[step_uid] [uniqueidentifier] NULL
+		)
+
+	INSERT @JobSteps(
+		 step_id
+		,step_name
+		,subsystem
+		,command
+		,cmdexec_success_code
+		,on_success_action
+		,on_success_step_id
+		,on_fail_action
+		,on_fail_step_id
+		,server
+		,database_name
+		,database_user_name
+		,retry_attempts
+		,retry_interval
+		,output_file_name
+		,last_run_outcome
+		,last_run_duration
+		,last_run_retries
+		,last_run_date
+		,last_run_time
+	)  
+	EXECUTE @retval = [dbo].[sp_help_jobstep] 
+	  @job_id    = @job_id, -- Must provide either this or job_name
+	  @job_name  = NULL, -- Must provide either this or job_id
+	  @step_id   = NULL,
+	  @step_name = NULL,
+	  @suffix    = 0     -- A flag to control how the result set is formatted
+
+	SELECT @Min=MIN(step_id), @Max= MAX(step_id) FROM @JobSteps
+
+	WHILE(@Min<=@Max)
+	BEGIN
+		SET @StartTime = GETDATE()
+		
+		DECLARE @Command VARCHAR(MAX)
+
+		DECLARE @on_success_action tinyint
+		DECLARE @on_success_step_id int
+		DECLARE @on_fail_action tinyint
+		DECLARE @on_fail_step_id int
+
+		DECLARE @last_run_outcome int
+		
+		SELECT	@Command = command,
+				@on_success_action	= on_success_action,
+				@on_success_step_id = on_success_step_id,
+				@on_fail_action		= on_fail_action,
+				@on_fail_step_id	= on_fail_step_id
+		FROM @JobSteps WHERE step_id =	@Min
+
+		BEGIN TRY 
+			EXECUTE(@Command)
+			SET @last_run_outcome = 1
+		END TRY  
+		BEGIN CATCH  
+			SELECT @retval = @@ERROR, @sql_severity = ERROR_SEVERITY(), @message = FORMATMESSAGE('Msg %i, Level %i, State %i, Line %i, %s. %s', ERROR_NUMBER(), ERROR_SEVERITY(), ERROR_STATE(), ERROR_LINE(), ERROR_PROCEDURE(), ERROR_MESSAGE())
+			SET @sql_message_id = @retval 	 
+			SET @last_run_outcome = 0			 
+		END CATCH; 
+
+	--[dbo].[sp_sqlagent_set_jobstep_completion_state]
+
+		IF @retval = 0
+		BEGIN
+			SET @message = 'Executed as user: '+@nt_user_name+'. The step succeeded.'
+			SET @sql_message_id		= 0	
+			SET @sql_severity		= 0	
+		END
+
+		-- TODO: Set parameter values here.
+		SET @step_id	= @Min
+		SET @run_status = 1 
+		SET @run_date	= FORMAT(@StartTime,'yyyyMMdd')	
+		SET @run_time	= FORMAT(@StartTime,'hhmmss')	
+		SET @run_duration = DATEDIFF(MINUTE, @StartTime, GETDATE())		
+		SET @retries_attempted		= 0
+		SET @run_status = 1
+		SET @server = @@SERVERNAME		
+
+		EXECUTE [dbo].[sp_sqlagent_set_jobstep_completion_state]
+			@job_id					= @job_id
+			,@step_id               = @step_id
+			,@last_run_outcome      = @last_run_outcome
+			,@last_run_duration     = @run_duration
+			,@last_run_retries      = @retries_attempted
+			,@last_run_date         = @run_date
+			,@last_run_time         = @run_time
+			,@session_id            = @@SPID
+
+		EXECUTE @retval = [dbo].[sp_sqlagent_log_jobhistory] 
+			@job_id					= @job_id
+			,@step_id				= @step_id				
+			,@sql_message_id		= @sql_message_id		
+			,@sql_severity			= @sql_severity			
+			,@message				= @message				
+			,@run_status			= @run_status			
+			,@run_date				= @run_date				
+			,@run_time				= @run_time				
+			,@run_duration			= @run_duration					
+			,@retries_attempted		= @retries_attempted		
+			,@server				= @server				
+			,@session_id			= @session_id
+
+		/*
+		1 = Quit the job reporting success.
+		2 = Quit the job reporting failure.
+		3 = Go to the next step.
+		4 = Go to step.
+		*/		
+		IF @sql_message_id = 0
+		BEGIN
+			IF @on_success_action = 1
+				RETURN(0);	-- 0 means success
+			ELSE IF @on_success_action = 2 
+			BEGIN
+				RETURN(1); -- Failure
+			END		
+			ELSE IF @on_success_action = 3
+				SELECT @Min = MIN(step_id) FROM @JobSteps WHERE step_id >	@Min
+			ELSE IF @on_success_action = 4
+				SET @Min = 	@on_success_step_id	
+		END ELSE
+		BEGIN
+			IF @on_fail_action = 1
+				RETURN(0);	-- 0 means success
+			ELSE IF @on_fail_action = 2 
+			BEGIN
+				RETURN(1); -- Failure
+			END		
+			ELSE IF @on_fail_action = 3
+				SELECT @Min = MIN(step_id) FROM @JobSteps WHERE step_id >	@Min
+			ELSE IF @on_fail_action = 4
+				SET @Min = 	@on_fail_step_id	
+		END
+	END
+
+  RETURN(@retval)
+END
+
+GO
+/****** Object:  StoredProcedure [dbo].[sp_update_job]    Script Date: 15-06-2020 17:15:36 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER OFF
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_update_job]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_update_job] AS' 
+END
+GO
+ALTER PROCEDURE [dbo].[sp_update_job]
   @job_id                       UNIQUEIDENTIFIER = NULL, -- Must provide this or current_name
   @job_name                     sysname          = NULL, -- Must provide this or job_id
   @new_name                     sysname          = NULL,
@@ -4097,22 +2862,12 @@ CREATE PROCEDURE [dbo].[sp_update_job]
   @start_step_id                INT              = NULL,
   @category_name                sysname          = NULL,
   @owner_login_name             sysname          = NULL,
-  @notify_level_eventlog        INT              = NULL,
-  @notify_level_email           INT              = NULL,
-  @notify_level_netsend         INT              = NULL,
-  @notify_level_page            INT              = NULL,
-  @notify_email_operator_name   sysname          = NULL,
-  @notify_netsend_operator_name sysname          = NULL,
-  @notify_page_operator_name    sysname          = NULL,
   @delete_level                 INT              = NULL,
   @automatic_post               BIT              = 1     -- Flag for SEM use only
 AS
 BEGIN
   DECLARE @retval                        INT
   DECLARE @category_id                   INT
-  DECLARE @notify_email_operator_id      INT
-  DECLARE @notify_netsend_operator_id    INT
-  DECLARE @notify_page_operator_id       INT
   DECLARE @owner_sid                     VARBINARY(85)
   DECLARE @alert_id                      INT
   DECLARE @cached_attribute_modified     INT
@@ -4127,25 +2882,13 @@ BEGIN
   DECLARE @x_category_name               sysname
   DECLARE @x_category_id                 INT
   DECLARE @x_owner_sid                   VARBINARY(85)
-  DECLARE @x_notify_level_eventlog       INT
-  DECLARE @x_notify_level_email          INT
-  DECLARE @x_notify_level_netsend        INT
-  DECLARE @x_notify_level_page           INT
-  DECLARE @x_notify_email_operator_name  sysname
-  DECLARE @x_notify_netsnd_operator_name sysname
-  DECLARE @x_notify_page_operator_name   sysname
   DECLARE @x_delete_level                INT
-  DECLARE @x_originating_server_id       INT -- Not updatable
-  DECLARE @x_master_server               BIT
 
   -- Remove any leading/trailing spaces from parameters (except @owner_login_name)
   SELECT @job_name                     = LTRIM(RTRIM(@job_name))
   SELECT @new_name                     = LTRIM(RTRIM(@new_name))
   SELECT @description                  = LTRIM(RTRIM(@description))
   SELECT @category_name                = LTRIM(RTRIM(@category_name))
-  SELECT @notify_email_operator_name   = LTRIM(RTRIM(@notify_email_operator_name))
-  SELECT @notify_netsend_operator_name = LTRIM(RTRIM(@notify_netsend_operator_name))
-  SELECT @notify_page_operator_name    = LTRIM(RTRIM(@notify_page_operator_name))
 
   SET NOCOUNT ON
 
@@ -4161,13 +2904,6 @@ BEGIN
       (@enabled                      IS NOT NULL) OR
       (@start_step_id                IS NOT NULL) OR
       (@owner_login_name             IS NOT NULL) OR
-      (@notify_level_eventlog        IS NOT NULL) OR
-      (@notify_level_email           IS NOT NULL) OR
-      (@notify_level_netsend         IS NOT NULL) OR
-      (@notify_level_page            IS NOT NULL) OR
-      (@notify_email_operator_name   IS NOT NULL) OR
-      (@notify_netsend_operator_name IS NOT NULL) OR
-      (@notify_page_operator_name    IS NOT NULL) OR
       (@delete_level                 IS NOT NULL))
     SELECT @cached_attribute_modified = 1
   ELSE
@@ -4180,13 +2916,6 @@ BEGIN
      (@start_step_id                IS NULL) AND
      (@category_name                IS NULL) AND
      (@owner_login_name             IS NULL) AND
-     (@notify_level_eventlog        IS NULL) AND
-     (@notify_level_email           IS NULL) AND
-     (@notify_level_netsend         IS NULL) AND
-     (@notify_level_page            IS NULL) AND
-     (@notify_email_operator_name   IS NULL) AND
-     (@notify_netsend_operator_name IS NULL) AND
-     (@notify_page_operator_name    IS NULL) AND
      (@delete_level                 IS NULL))
     SELECT @enable_only_used = 1
   ELSE
@@ -4200,31 +2929,15 @@ BEGIN
          @x_category_name               = sc.name,                  -- From syscategories
          @x_category_id                 = sc.category_id,           -- From syscategories
          @x_owner_sid                   = sjv.owner_sid,
-         @x_notify_level_eventlog       = sjv.notify_level_eventlog,
-         @x_notify_level_email          = sjv.notify_level_email,
-         @x_notify_level_netsend        = sjv.notify_level_netsend,
-         @x_notify_level_page           = sjv.notify_level_page,
          --@x_notify_email_operator_name  = so1.name,                   -- From sysoperators
          --@x_notify_netsnd_operator_name = so2.name,                   -- From sysoperators
          --@x_notify_page_operator_name   = so3.name,                   -- From sysoperators
-         @x_delete_level                = sjv.delete_level,
-         @x_originating_server_id       = sjv.originating_server_id,
-         @x_master_server               = master_server
+         @x_delete_level                = sjv.delete_level
   FROM dbo.sysjobs_view                 sjv
-       --LEFT OUTER JOIN dbo.sysoperators so1 ON (sjv.notify_email_operator_id = so1.id)
-       --LEFT OUTER JOIN dbo.sysoperators so2 ON (sjv.notify_netsend_operator_id = so2.id)
-       --LEFT OUTER JOIN dbo.sysoperators so3 ON (sjv.notify_page_operator_id = so3.id),
        ,dbo.syscategories                sc
   WHERE (sjv.job_id = @job_id)
     AND (sjv.category_id = sc.category_id)
 
-  -- Check authority (only SQLServerAgent can modify a non-local job)
-  IF ((@x_master_server = 1) AND (PROGRAM_NAME() NOT LIKE N'SQLAgent%') )
-  BEGIN
-    RAISERROR(14274, -1, -1)
-    RETURN(1) -- Failure
-  END
-  
   -- Check permissions beyond what's checked by the sysjobs_view
   -- SQLAgentReader and SQLAgentOperator roles that can see all jobs
   -- cannot modify jobs they do not own
@@ -4255,13 +2968,6 @@ BEGIN
   IF (@start_step_id                IS NULL) SELECT @start_step_id                = @x_start_step_id
   IF (@category_name                IS NULL) SELECT @category_name                = @x_category_name
   IF (@owner_sid                    IS NULL) SELECT @owner_sid                    = @x_owner_sid
-  IF (@notify_level_eventlog        IS NULL) SELECT @notify_level_eventlog        = @x_notify_level_eventlog
-  IF (@notify_level_email           IS NULL) SELECT @notify_level_email           = @x_notify_level_email
-  IF (@notify_level_netsend         IS NULL) SELECT @notify_level_netsend         = @x_notify_level_netsend
-  IF (@notify_level_page            IS NULL) SELECT @notify_level_page            = @x_notify_level_page
-  IF (@notify_email_operator_name   IS NULL) SELECT @notify_email_operator_name   = @x_notify_email_operator_name
-  IF (@notify_netsend_operator_name IS NULL) SELECT @notify_netsend_operator_name = @x_notify_netsnd_operator_name
-  IF (@notify_page_operator_name    IS NULL) SELECT @notify_page_operator_name    = @x_notify_page_operator_name
   IF (@delete_level                 IS NULL) SELECT @delete_level                 = @x_delete_level
 
   -- If the SA is attempting to assign ownership of the job to someone else, then convert
@@ -4281,41 +2987,10 @@ BEGIN
   IF ((ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) <> 1) AND (@owner_login_name IS NOT NULL))
     RAISERROR(14242, -1, -1)
 
-/*
-  -- Ownership of a multi-server job cannot be assigned to a non-sysadmin
-  IF (@owner_login_name IS NOT NULL) AND
-     (EXISTS (SELECT *
-              FROM dbo.sysjobs       sj,
-                   dbo.sysjobservers sjs
-              WHERE (sj.job_id = sjs.job_id)
-                AND (sj.job_id = @job_id)
-                AND (sjs.server_id <> 0)))
-  BEGIN
-    IF (@owner_login_name = N'$(SQLAgentAccount)') -- allow distributed jobs to be assigned to special account
-    BEGIN
-      SELECT @is_sysadmin = 1    
-    END
-    ELSE
-    BEGIN
-      SELECT @is_sysadmin = 0
-      EXECUTE dbo.sp_sqlagent_has_server_access @login_name = @owner_login_name, @is_sysadmin_member = @is_sysadmin OUTPUT
-    END
-
-    IF (@is_sysadmin = 0)
-    BEGIN
-      SELECT @current_owner = dbo.SQLAGENT_SUSER_SNAME(@x_owner_sid)
-      RAISERROR(14543, -1, -1, @current_owner, N'sysadmin')
-      RETURN(1) -- Failure
-    END
-  END
-  */
 
   -- Turn [nullable] empty string parameters into NULLs
   IF (@description                  = N'') SELECT @description                  = NULL
   IF (@category_name                = N'') SELECT @category_name                = NULL
-  IF (@notify_email_operator_name   = N'') SELECT @notify_email_operator_name   = NULL
-  IF (@notify_netsend_operator_name = N'') SELECT @notify_netsend_operator_name = NULL
-  IF (@notify_page_operator_name    = N'') SELECT @notify_page_operator_name    = NULL
 
   -- Check new values
   EXECUTE @retval = sp_verify_job @job_id,
@@ -4324,19 +2999,8 @@ BEGIN
                                   @start_step_id,
                                   @category_name,
                                   @owner_sid                  OUTPUT,
-                                  @notify_level_eventlog,
-                                  @notify_level_email         OUTPUT,
-                                  @notify_level_netsend       OUTPUT,
-                                  @notify_level_page          OUTPUT,
-                                  @notify_email_operator_name,
-                                  @notify_netsend_operator_name,
-                                  @notify_page_operator_name,
                                   @delete_level,
-                                  @category_id                OUTPUT,
-                                  @notify_email_operator_id   OUTPUT,
-                                  @notify_netsend_operator_id OUTPUT,
-                                  @notify_page_operator_id    OUTPUT,
-                                  NULL  
+                                  @category_id                OUTPUT  
   IF (@retval <> 0)
     RETURN(1) -- Failure
 
@@ -4364,9 +3028,6 @@ BEGIN
     END
   END
 
-  SET @notify_email_operator_id = 0
-  SET @notify_netsend_operator_id = 0
-  SET @notify_page_operator_id = 0
 
   UPDATE dbo.sysjobs
   SET name                       = @new_name,
@@ -4375,13 +3036,6 @@ BEGIN
       start_step_id              = @start_step_id,
       category_id                = @category_id,              -- Returned from sp_verify_job
       owner_sid                  = @owner_sid,
-      notify_level_eventlog      = @notify_level_eventlog,
-      notify_level_email         = @notify_level_email,
-      notify_level_netsend       = @notify_level_netsend,
-      notify_level_page          = @notify_level_page,
-      notify_email_operator_id   = @notify_email_operator_id,   -- Returned from sp_verify_job
-      notify_netsend_operator_id = @notify_netsend_operator_id, -- Returned from sp_verify_job
-      notify_page_operator_id    = @notify_page_operator_id,    -- Returned from sp_verify_job
       delete_level               = @delete_level,
       version_number             = version_number + 1,  -- Update the job's version
       date_modified              = GETDATE()            -- Update the job's last-modified information
@@ -4390,70 +3044,21 @@ BEGIN
 
   COMMIT TRANSACTION
 
-/*
-  -- Always re-post the job if it's an auto-delete job (or if we're updating an auto-delete job
-  -- to be non-auto-delete)
-  IF (((SELECT delete_level
-        FROM dbo.sysjobs
-        WHERE (job_id = @job_id)) <> 0) OR
-      ((@x_delete_level = 1) AND (@delete_level = 0)))
-    EXECUTE dbo.sp_post_msx_operation 'INSERT', 'JOB', @job_id
-  ELSE
-  BEGIN
-    -- Post the update to target servers
-    IF (@automatic_post = 1)
-      EXECUTE dbo.sp_post_msx_operation 'UPDATE', 'JOB', @job_id
-  END
-
-  -- Keep SQLServerAgent's cache in-sync
-  -- NOTE: We only notify SQLServerAgent if we know the job has been cached and if
-  --       attributes other than description or category have been changed (since
-  --       SQLServerAgent doesn't cache these two)
-  IF (EXISTS (SELECT *
-              FROM dbo.sysjobservers
-              WHERE (job_id = @job_id)
-                AND (server_id = 0)
-                AND (@cached_attribute_modified = 1)))
-    EXECUTE dbo.sp_sqlagent_notify @op_type     = N'J',
-                                        @job_id      = @job_id,
-                                        @action_type = N'U'
-
-  -- If the name was changed, make SQLServerAgent re-cache any alerts that reference the job
-  -- since the alert cache contains the job name
-  IF ((@job_name <> @new_name) AND (EXISTS (SELECT *
-                                            FROM dbo.sysalerts
-                                            WHERE (job_id = @job_id))))
-  BEGIN
-    DECLARE sysalerts_cache_update CURSOR LOCAL
-    FOR
-    SELECT id
-    FROM dbo.sysalerts
-    WHERE (job_id = @job_id)
-
-    OPEN sysalerts_cache_update
-    FETCH NEXT FROM sysalerts_cache_update INTO @alert_id
-
-    WHILE (@@fetch_status = 0)
-    BEGIN
-      EXECUTE dbo.sp_sqlagent_notify @op_type     = N'A',
-                                          @alert_id    = @alert_id,
-                                          @action_type = N'U'
-      FETCH NEXT FROM sysalerts_cache_update INTO @alert_id
-    END
-    DEALLOCATE sysalerts_cache_update
-  END
-  */
-
   RETURN(@retval) -- 0 means success
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_update_jobstep]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_update_jobstep]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_update_jobstep]
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_update_jobstep]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_update_jobstep] AS' 
+END
+GO
+ALTER PROCEDURE [dbo].[sp_update_jobstep]
   @job_id                 UNIQUEIDENTIFIER = NULL, -- Must provide either this or job_name
   @job_name               sysname          = NULL, -- Not updatable (provided for identification purposes only)
   @step_id                INT,                     -- Not updatable (provided for identification purposes only)
@@ -4470,24 +3075,15 @@ CREATE PROCEDURE [dbo].[sp_update_jobstep]
   @database_name          sysname          = NULL,
   @database_user_name     sysname          = NULL,
   @retry_attempts         INT              = NULL,
-  @retry_interval         INT              = NULL,
-  @os_run_priority        INT              = NULL,
-  @output_file_name       NVARCHAR(200)    = NULL,
-  @flags                  INT              = NULL,
-  @proxy_id            int          = NULL,
-  @proxy_name          sysname         = NULL
-  -- mutual exclusive; must specify only one of above 2 parameters to 
-  -- identify the proxy. 
+  @retry_interval         INT              = NULL
 AS
 BEGIN
   DECLARE @retval                 INT
-  DECLARE @os_run_priority_code   INT
   DECLARE @step_id_as_char        VARCHAR(10)
   DECLARE @new_step_name          sysname
   DECLARE @x_step_name            sysname
   DECLARE @x_subsystem            NVARCHAR(40)
   DECLARE @x_command              NVARCHAR(max)
-  DECLARE @x_flags                INT
   DECLARE @x_cmdexec_success_code INT
   DECLARE @x_on_success_action    TINYINT
   DECLARE @x_on_success_step_id   INT
@@ -4498,23 +3094,17 @@ BEGIN
   DECLARE @x_database_user_name   sysname
   DECLARE @x_retry_attempts       INT
   DECLARE @x_retry_interval       INT
-  DECLARE @x_os_run_priority      INT
-  DECLARE @x_output_file_name     NVARCHAR(200)
-  DECLARE @x_proxy_id             INT         
   DECLARE @x_last_run_outcome     TINYINT      -- Not updatable (but may be in future)
   DECLARE @x_last_run_duration    INT          -- Not updatable (but may be in future)
   DECLARE @x_last_run_retries     INT          -- Not updatable (but may be in future)
   DECLARE @x_last_run_date        INT          -- Not updatable (but may be in future)
   DECLARE @x_last_run_time        INT          -- Not updatable (but may be in future)
 
-  DECLARE @new_proxy_id           INT
   DECLARE @subsystem_id           INT
-  DECLARE @auto_proxy_name        sysname
   DECLARE @job_owner_sid        VARBINARY(85)
   
   SET NOCOUNT ON
 
-  SELECT @new_proxy_id = NULL
 
   -- Remove any leading/trailing spaces from parameters
   SELECT @step_name          = LTRIM(RTRIM(@step_name))
@@ -4523,8 +3113,6 @@ BEGIN
   SELECT @server             = LTRIM(RTRIM(@server))
   SELECT @database_name      = LTRIM(RTRIM(@database_name))
   SELECT @database_user_name = LTRIM(RTRIM(@database_user_name))
-  SELECT @output_file_name   = LTRIM(RTRIM(@output_file_name))
-  SELECT @proxy_name         = LTRIM(RTRIM(@proxy_name))
 
   -- Make sure Dts is translated into new subsystem's name SSIS
   IF (@subsystem IS NOT NULL AND UPPER(@subsystem collate SQL_Latin1_General_CP1_CS_AS) = N'DTS')
@@ -4579,32 +3167,11 @@ BEGIN
     RAISERROR(14262, -1, -1, '@step_id', @step_id_as_char)
     RETURN(1) -- Failure
   END
-/*
-  -- check proxy identifiers only if a proxy has been provided
-  -- @proxy_name = N'' is a special case to allow change of an existing proxy with NULL
-  IF (@proxy_id IS NOT NULL) OR (@proxy_name IS NOT NULL AND @proxy_name <> N'') 
-  BEGIN
-    EXECUTE @retval = sp_verify_proxy_identifiers '@proxy_name',
-                                                  '@proxy_id',
-                                                   @proxy_name OUTPUT,
-                                                   @proxy_id   OUTPUT
-    IF (@retval <> 0)
-      RETURN(1) -- Failure
-
-     SELECT @new_proxy_id  = @proxy_id
-
-  END
-  */
-  -- Check authority (only SQLServerAgent can modify a step of a non-local job)
-  EXECUTE @retval = sp_verify_jobproc_caller @job_id = @job_id, @program_name = N'SQLAgent%'
-  IF (@retval <> 0)
-    RETURN(@retval)
 
   -- Set the x_ (existing) variables
   SELECT @x_step_name            = step_name,
          @x_subsystem            = subsystem,
          @x_command              = command,
-         @x_flags                = flags,
          @x_cmdexec_success_code = cmdexec_success_code,
          @x_on_success_action    = on_success_action,
          @x_on_success_step_id   = on_success_step_id,
@@ -4615,9 +3182,6 @@ BEGIN
          @x_database_user_name   = database_user_name,
          @x_retry_attempts       = retry_attempts,
          @x_retry_interval       = retry_interval,
-         @x_os_run_priority      = os_run_priority,
-         @x_output_file_name     = output_file_name,
-         @x_proxy_id             = proxy_id,
          @x_last_run_outcome     = last_run_outcome,
          @x_last_run_duration    = last_run_duration,
          @x_last_run_retries     = last_run_retries,
@@ -4634,7 +3198,6 @@ BEGIN
   IF (@step_name            IS NULL) SELECT @step_name            = @x_step_name
   IF (@subsystem            IS NULL) SELECT @subsystem            = @x_subsystem
   IF (@command              IS NULL) SELECT @command              = @x_command
-  IF (@flags                IS NULL) SELECT @flags                = @x_flags
   IF (@cmdexec_success_code IS NULL) SELECT @cmdexec_success_code = @x_cmdexec_success_code
   IF (@on_success_action    IS NULL) SELECT @on_success_action    = @x_on_success_action
   IF (@on_success_step_id   IS NULL) SELECT @on_success_step_id   = @x_on_success_step_id
@@ -4645,18 +3208,12 @@ BEGIN
   IF (@database_user_name   IS NULL) SELECT @database_user_name   = @x_database_user_name
   IF (@retry_attempts       IS NULL) SELECT @retry_attempts       = @x_retry_attempts
   IF (@retry_interval       IS NULL) SELECT @retry_interval       = @x_retry_interval
-  IF (@os_run_priority      IS NULL) SELECT @os_run_priority      = @x_os_run_priority
-  IF (@output_file_name     IS NULL) SELECT @output_file_name     = @x_output_file_name
-  IF (@proxy_id             IS NULL) SELECT @new_proxy_id         = @x_proxy_id
 
-  --if an empty proxy_name is supplied the proxy is removed
-  IF @proxy_name = N'' SELECT @new_proxy_id = NULL
   -- Turn [nullable] empty string parameters into NULLs
   IF (@command            = N'') SELECT @command            = NULL
   IF (@server             = N'') SELECT @server             = NULL
   IF (@database_name      = N'') SELECT @database_name      = NULL
   IF (@database_user_name = N'') SELECT @database_user_name = NULL
-  IF (@output_file_name   = N'') SELECT @output_file_name   = NULL
 
 
   -- Check new values
@@ -4670,12 +3227,8 @@ BEGIN
                                       @on_success_step_id,
                                       @on_fail_action,
                                       @on_fail_step_id,
-                                      @os_run_priority,
                                       @database_name      OUTPUT,
-                                      @database_user_name OUTPUT,
-                                      @flags,
-                                      @output_file_name,
-                                               @new_proxy_id
+                                      @database_user_name OUTPUT
   IF (@retval <> 0)
     RETURN(1) -- Failure
 
@@ -4692,7 +3245,6 @@ BEGIN
     SET step_name             = @step_name,
         subsystem             = @subsystem,
         command               = @command,
-        flags                 = @flags,
         additional_parameters = @additional_parameters,
         cmdexec_success_code  = @cmdexec_success_code,
         on_success_action     = @on_success_action,
@@ -4704,142 +3256,33 @@ BEGIN
         database_user_name    = @database_user_name,
         retry_attempts        = @retry_attempts,
         retry_interval        = @retry_interval,
-        os_run_priority       = @os_run_priority,
-        output_file_name      = @output_file_name,
         last_run_outcome      = @x_last_run_outcome,
         last_run_duration     = @x_last_run_duration,
         last_run_retries      = @x_last_run_retries,
         last_run_date         = @x_last_run_date,
-        last_run_time         = @x_last_run_time,
-          proxy_id                 = @new_proxy_id
+        last_run_time         = @x_last_run_time
     WHERE (job_id = @job_id)
       AND (step_id = @step_id)
 
 
   COMMIT TRANSACTION
 
-  -- For a multi-server job, push changes to the target servers
-  IF (EXISTS (SELECT *
-              FROM dbo.sysjobservers
-              WHERE (job_id = @job_id)
-                AND (server_id <> 0)))
-  BEGIN
-    EXECUTE dbo.sp_post_msx_operation 'INSERT', 'JOB', @job_id
-  END
-
   RETURN(0) -- Success
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_update_replication_job_parameter]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_update_schedule]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_update_replication_job_parameter]
-  @job_id        UNIQUEIDENTIFIER,
-  @old_freq_type INT,
-  @new_freq_type INT
-AS
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_update_schedule]') AND type in (N'P', N'PC'))
 BEGIN
-  DECLARE @category_id INT
-  DECLARE @pattern     NVARCHAR(50)
-  DECLARE @patternidx  INT
-  DECLARE @cmdline     NVARCHAR(3200)
-  DECLARE @step_id     INT
-
-  SET NOCOUNT ON
-  SELECT @pattern = N'%[-/][Cc][Oo][Nn][Tt][Ii][Nn][Uu][Oo][Uu][Ss]%'
-
-  -- Make sure that we are dealing with relevant replication jobs
-  SELECT @category_id = category_id
-  FROM dbo.sysjobs
-  WHERE (@job_id = job_id)
-
-  -- @category_id = 10 (REPL-Distribution), 13 (REPL-LogReader), 14 (REPL-Merge),
-  --  19 (REPL-QueueReader)
-  IF @category_id IN (10, 13, 14, 19)
-  BEGIN
-    -- Adding the -Continuous parameter (non auto-start to auto-start)
-    IF ((@old_freq_type <> 0x40) AND (@new_freq_type = 0x40))
-    BEGIN
-      -- Use a cursor to handle multiple replication agent job steps
-      DECLARE step_cursor CURSOR LOCAL FOR
-      SELECT command, step_id
-      FROM dbo.sysjobsteps
-      WHERE (@job_id = job_id)
-        AND (UPPER(subsystem collate SQL_Latin1_General_CP1_CS_AS) IN (N'MERGE', N'LOGREADER', N'DISTRIBUTION', N'QUEUEREADER'))
-      OPEN step_cursor
-      FETCH step_cursor INTO @cmdline, @step_id
-
-      WHILE (@@FETCH_STATUS <> -1)
-      BEGIN
-        SELECT @patternidx = PATINDEX(@pattern, @cmdline)
-        -- Make sure that the -Continuous parameter has not been specified already
-        IF (@patternidx = 0)
-        BEGIN
-          SELECT @cmdline = @cmdline + N' -Continuous'
-          UPDATE dbo.sysjobsteps
-          SET command = @cmdline
-          WHERE (@job_id = job_id)
-            AND (@step_id = step_id)
-        END -- IF (@patternidx = 0)
-        FETCH NEXT FROM step_cursor into @cmdline, @step_id
-      END -- WHILE (@@FETCH_STATUS <> -1)
-      CLOSE step_cursor
-      DEALLOCATE step_cursor
-    END -- IF ((@old_freq_type...
-    -- Removing the -Continuous parameter (auto-start to non auto-start)
-    ELSE
-    IF ((@old_freq_type = 0x40) AND (@new_freq_type <> 0x40))
-    BEGIN
-      DECLARE step_cursor CURSOR LOCAL FOR
-      SELECT command, step_id
-      FROM dbo.sysjobsteps
-      WHERE (@job_id = job_id)
-        AND (UPPER(subsystem collate SQL_Latin1_General_CP1_CS_AS) IN (N'MERGE', N'LOGREADER', N'DISTRIBUTION', N'QUEUEREADER'))
-      OPEN step_cursor
-      FETCH step_cursor INTO @cmdline, @step_id
-
-      WHILE (@@FETCH_STATUS <> -1)
-      BEGIN
-        SELECT @patternidx = PATINDEX(@pattern, @cmdline)
-        IF (@patternidx <> 0)
-        BEGIN
-          -- Handle multiple instances of -Continuous in the commandline
-          WHILE (@patternidx <> 0)
-          BEGIN
-            SELECT @cmdline = STUFF(@cmdline, @patternidx, 11, N'')
-            IF (@patternidx > 1)
-            BEGIN
-              -- Remove the preceding space if -Continuous does not start at the beginning of the commandline
-              SELECT @cmdline = stuff(@cmdline, @patternidx - 1, 1, N'')
-            END
-            SELECT @patternidx = PATINDEX(@pattern, @cmdline)
-          END -- WHILE (@patternidx <> 0)
-          UPDATE dbo.sysjobsteps
-          SET command = @cmdline
-          WHERE (@job_id = job_id)
-            AND (@step_id = step_id)
-        END -- IF (@patternidx <> -1)
-        FETCH NEXT FROM step_cursor INTO @cmdline, @step_id
-      END -- WHILE (@@FETCH_STATUS <> -1)
-      CLOSE step_cursor
-      DEALLOCATE step_cursor
-    END -- ELSE IF ((@old_freq_type = 0x40)...
-  END -- IF @category_id IN (10, 13, 14)
-
-  RETURN 0
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_update_schedule] AS' 
 END
-
-GO
-/****** Object:  StoredProcedure [dbo].[sp_update_schedule]    Script Date: 11-06-2020 18:09:05 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER OFF
 GO
 
-CREATE PROCEDURE [dbo].[sp_update_schedule]
+ALTER PROCEDURE [dbo].[sp_update_schedule]
 (
   @schedule_id              INT             = NULL,     -- Must provide either this or schedule_name
   @name                     sysname         = NULL,     -- Must provide either this or schedule_id
@@ -5016,70 +3459,22 @@ BEGIN
 
   SELECT @retval = @@error
 
- -- update any job that has repl steps
-  DECLARE @job_id UNIQUEIDENTIFIER
-  DECLARE jobsschedule_cursor CURSOR LOCAL FOR
-  SELECT job_id
-  FROM dbo.sysjobschedules
-  WHERE (schedule_id = @schedule_id)
-  
-  IF @x_freq_type <> @freq_type
-  BEGIN
-    OPEN jobsschedule_cursor
-    FETCH NEXT FROM jobsschedule_cursor INTO @job_id
-
-    WHILE (@@FETCH_STATUS = 0)
-    BEGIN 
-      EXEC  sp_update_replication_job_parameter @job_id = @job_id,
-                                                @old_freq_type = @x_freq_type,
-                                                @new_freq_type = @freq_type
-      FETCH NEXT FROM jobsschedule_cursor INTO @job_id
-    END
-    CLOSE jobsschedule_cursor
-  END
-  DEALLOCATE jobsschedule_cursor
-
-/*  
-  -- Notify SQLServerAgent of the change if this is attached to a local job
-  IF (EXISTS (SELECT *
-                FROM dbo.sysjobschedules AS jsched 
-              JOIN dbo.sysjobservers AS jsvr
-                    ON jsched.job_id = jsvr.job_id
-                WHERE (jsched.schedule_id = @schedule_id)
-                  AND (jsvr.server_id = 0)) )
-  BEGIN 
-      EXECUTE dbo.sp_sqlagent_notify @op_type     = N'S',
-                                          @schedule_id = @schedule_id,
-                                          @action_type = N'U'              
-  END
-*/
-
-/*
-  -- Instruct the tsx servers to pick up the altered schedule
-  IF (@automatic_post = 1)
-  BEGIN
-      SELECT @schedule_uid = schedule_uid 
-      FROM sysschedules 
-      WHERE schedule_id = @schedule_id
-
-      IF(NOT @schedule_uid IS NULL)
-      BEGIN
-          -- sp_post_msx_operation will do nothing if the schedule isn't assigned to any tsx machines 
-          EXECUTE @retval = sp_post_msx_operation @operation = 'INSERT', @object_type = 'SCHEDULE', @schedule_uid = @schedule_uid
-      END
-  END  
-  */
   RETURN(@retval) -- 0 means success
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_category_identifiers]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_category_identifiers]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_category_identifiers]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_category_identifiers] AS' 
+END
+GO
 
-CREATE PROCEDURE [dbo].[sp_verify_category_identifiers]
+ALTER PROCEDURE [dbo].[sp_verify_category_identifiers]
    @name_of_name_parameter [varchar](60),
    @name_of_id_parameter [varchar](60),
    @category_name [sysname] OUTPUT,
@@ -5136,32 +3531,26 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_job]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_job] AS' 
+END
+GO
 
-CREATE PROCEDURE [dbo].[sp_verify_job]
+ALTER PROCEDURE [dbo].[sp_verify_job]
   @job_id                       UNIQUEIDENTIFIER,
   @name                         sysname,
   @enabled                      TINYINT,
   @start_step_id                INT,
   @category_name                sysname,
   @owner_sid                    VARBINARY(85) OUTPUT, -- Output since we may modify it
-  @notify_level_eventlog        INT,
-  @notify_level_email           INT           OUTPUT, -- Output since we may reset it to 0
-  @notify_level_netsend         INT           OUTPUT, -- Output since we may reset it to 0
-  @notify_level_page            INT           OUTPUT, -- Output since we may reset it to 0
-  @notify_email_operator_name   sysname,
-  @notify_netsend_operator_name sysname,
-  @notify_page_operator_name    sysname,
   @delete_level                 INT,
-  @category_id                  INT           OUTPUT, -- The ID corresponding to the name
-  @notify_email_operator_id     INT           OUTPUT, -- The ID corresponding to the name
-  @notify_netsend_operator_id   INT           OUTPUT, -- The ID corresponding to the name
-  @notify_page_operator_id      INT           OUTPUT, -- The ID corresponding to the name
-  @originating_server           sysname       OUTPUT  -- Output since we may modify it
+  @category_id                  INT           OUTPUT -- The ID corresponding to the name
 AS
 BEGIN
   DECLARE @job_type           INT
@@ -5174,32 +3563,6 @@ BEGIN
   -- Remove any leading/trailing spaces from parameters
   SELECT @name                       = LTRIM(RTRIM(@name))
   SELECT @category_name              = LTRIM(RTRIM(@category_name))
-  SELECT @originating_server         = UPPER(LTRIM(RTRIM(@originating_server)))
-
-  SELECT @originating_server = ISNULL(@originating_server, UPPER(CONVERT(sysname, SERVERPROPERTY('ServerName'))))
-
-  -- Check originating server (only the SQLServerAgent can add jobs that originate from a remote server)
-  IF (@originating_server <> UPPER(CONVERT(sysname, SERVERPROPERTY('ServerName')))) AND
-     (PROGRAM_NAME() NOT LIKE N'SQLAgent%')
-  BEGIN
-    RAISERROR(14275, -1, -1)
-    RETURN(1) -- Failure
-  END
-  
-  -- NOTE: We allow jobs with the same name (since job_id is always unique) but only if
-  --       they originate from different servers.  Thus jobs can flow from an MSX to a TSX
-  --       without having to worry about naming conflicts.
-  IF (EXISTS (SELECT *
-              FROM dbo.sysjobs as job
-                JOIN dbo.sysoriginatingservers_view as svr 
-                  ON (svr.originating_server_id = job.originating_server_id)  
-              WHERE (name = @name)
-                AND (svr.originating_server = @originating_server)
-                AND (job_id <> ISNULL(@job_id, 0x911)))) -- When adding a new job @job_id is NULL
-  BEGIN
-    RAISERROR(14261, -1, -1, '@name', @name)
-    RETURN(1) -- Failure
-  END
 
   -- Check enabled state
   IF (@enabled <> 0) AND (@enabled <> 1)
@@ -5214,7 +3577,7 @@ BEGIN
     -- New job
     -- NOTE: For [new] MSX jobs we allow the start step to be other than 1 since
     --       the start step was validated when the job was created at the MSX
-    IF (@start_step_id <> 1) AND (@originating_server = UPPER(CONVERT(sysname, SERVERPROPERTY('ServerName'))))
+    IF (@start_step_id <> 1)
     BEGIN
       RAISERROR(14266, -1, -1, '@start_step_id', '1')
       RETURN(1) -- Failure
@@ -5242,17 +3605,8 @@ BEGIN
   -- Check category
   SELECT @job_type = NULL
 
-  IF (EXISTS (SELECT *
-              FROM dbo.sysjobservers
-              WHERE (job_id = @job_id)
-                AND (server_id = 0)))
     SELECT @job_type = 1 -- LOCAL
 
-  IF (EXISTS (SELECT *
-              FROM dbo.sysjobservers
-              WHERE (job_id = @job_id)
-                AND (server_id <> 0)))
-    SELECT @job_type = 2 -- MULTI-SERVER
 
   -- A local job cannot be added to a multi-server job_category
   IF (@job_type = 1) AND (EXISTS (SELECT *
@@ -5341,117 +3695,7 @@ BEGIN
        RETURN(1) -- Failure
      END
   END
-/*  
-  -- Check notification levels (must be 0, 1, 2 or 3)
-  IF (@notify_level_eventlog & 0x3 <> @notify_level_eventlog)
-  BEGIN
-    RAISERROR(14266, -1, -1, '@notify_level_eventlog', '0, 1, 2, 3')
-    RETURN(1) -- Failure
-  END
-  IF (@notify_level_email & 0x3 <> @notify_level_email)
-  BEGIN
-    RAISERROR(14266, -1, -1, '@notify_level_email', '0, 1, 2, 3')
-    RETURN(1) -- Failure
-  END
-  IF (@notify_level_netsend & 0x3 <> @notify_level_netsend)
-  BEGIN
-    RAISERROR(14266, -1, -1, '@notify_level_netsend', '0, 1, 2, 3')
-    RETURN(1) -- Failure
-  END
-  IF (@notify_level_page & 0x3 <> @notify_level_page)
-  BEGIN
-    RAISERROR(14266, -1, -1, '@notify_level_page', '0, 1, 2, 3')
-    RETURN(1) -- Failure
-  END
 
-  -- If we're at a TSX, only SQLServerAgent may add jobs that notify 'MSXOperator'
-  IF (NOT EXISTS (SELECT *
-                  FROM dbo.systargetservers)) AND
-     ((@notify_email_operator_name = N'MSXOperator') OR
-      (@notify_page_operator_name = N'MSXOperator') OR
-      (@notify_netsend_operator_name = N'MSXOperator')) AND
-     (PROGRAM_NAME() NOT LIKE N'SQLAgent%')
-  BEGIN
-    RAISERROR(14251, -1, -1, 'MSXOperator')
-    RETURN(1) -- Failure
-  END
-
-  -- Check operator to notify (via email)
-  IF (@notify_email_operator_name IS NOT NULL)
-  BEGIN
-    SELECT @notify_email_operator_id = id
-    FROM dbo.sysoperators
-    WHERE (name = @notify_email_operator_name)
-
-    IF (@notify_email_operator_id IS NULL)
-    BEGIN
-      RAISERROR(14234, -1, -1, '@notify_email_operator_name', 'sp_help_operator')
-      RETURN(1) -- Failure
-    END
-    -- If a valid operator is specified the level must be non-zero
-    IF (@notify_level_email = 0)
-    BEGIN
-      RAISERROR(14266, -1, -1, '@notify_level_email', '1, 2, 3')
-      RETURN(1) -- Failure
-    END
-  END
-  ELSE
-  BEGIN
-    SELECT @notify_email_operator_id = 0
-    SELECT @notify_level_email = 0
-  END
-
-  -- Check operator to notify (via netsend)
-  IF (@notify_netsend_operator_name IS NOT NULL)
-  BEGIN
-    SELECT @notify_netsend_operator_id = id
-    FROM dbo.sysoperators
-    WHERE (name = @notify_netsend_operator_name)
-
-    IF (@notify_netsend_operator_id IS NULL)
-    BEGIN
-      RAISERROR(14234, -1, -1, '@notify_netsend_operator_name', 'sp_help_operator')
-      RETURN(1) -- Failure
-    END
-    -- If a valid operator is specified the level must be non-zero
-    IF (@notify_level_netsend = 0)
-    BEGIN
-      RAISERROR(14266, -1, -1, '@notify_level_netsend', '1, 2, 3')
-      RETURN(1) -- Failure
-    END
-  END
-  ELSE
-  BEGIN
-    SELECT @notify_netsend_operator_id = 0
-    SELECT @notify_level_netsend = 0
-  END
-
-  -- Check operator to notify (via page)
-  IF (@notify_page_operator_name IS NOT NULL)
-  BEGIN
-    SELECT @notify_page_operator_id = id
-    FROM dbo.sysoperators
-    WHERE (name = @notify_page_operator_name)
-
-    IF (@notify_page_operator_id IS NULL)
-    BEGIN
-      RAISERROR(14234, -1, -1, '@notify_page_operator_name', 'sp_help_operator')
-      RETURN(1) -- Failure
-    END
-    -- If a valid operator is specified the level must be non-zero
-    IF (@notify_level_page = 0)
-    BEGIN
-      RAISERROR(14266, -1, -1, '@notify_level_page', '1, 2, 3')
-      RETURN(1) -- Failure
-    END
-  END
-  ELSE
-  BEGIN
-    SELECT @notify_page_operator_id = 0
-    SELECT @notify_level_page = 0
-  END
-*/
-  -- Check delete level (must be 0, 1, 2 or 3)
   IF (@delete_level & 0x3 <> @delete_level)
   BEGIN
     RAISERROR(14266, -1, -1, '@delete_level', '0, 1, 2, 3')
@@ -5463,12 +3707,17 @@ END
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job_date]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_job_date]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_verify_job_date]
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job_date]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_job_date] AS' 
+END
+GO
+ALTER PROCEDURE [dbo].[sp_verify_job_date]
   @date           INT,
   @date_name      VARCHAR(60) = 'date',
   @error_severity INT         = -1
@@ -5489,12 +3738,17 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job_identifiers]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_job_identifiers]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_verify_job_identifiers]
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job_identifiers]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_job_identifiers] AS' 
+END
+GO
+ALTER PROCEDURE [dbo].[sp_verify_job_identifiers]
   @name_of_name_parameter  VARCHAR(60),             -- Eg. '@job_name'
   @name_of_id_parameter    VARCHAR(60),             -- Eg. '@job_id'
   @job_name                sysname          OUTPUT, -- Eg. 'My Job'
@@ -5580,13 +3834,18 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job_time]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_job_time]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job_time]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_job_time] AS' 
+END
+GO
 
-CREATE PROCEDURE [dbo].[sp_verify_job_time]
+ALTER PROCEDURE [dbo].[sp_verify_job_time]
   @time           INT,
   @time_name      VARCHAR(60) = 'time',
   @error_severity INT = -1
@@ -5640,41 +3899,17 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_jobproc_caller]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_jobstep]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_verify_jobproc_caller]
-  @job_id       UNIQUEIDENTIFIER,
-  @program_name sysname
-AS
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_jobstep]') AND type in (N'P', N'PC'))
 BEGIN
-  SET NOCOUNT ON
-
-  -- Remove any leading/trailing spaces from parameters
-  SELECT @program_name = LTRIM(RTRIM(@program_name))
-
-  IF (EXISTS (SELECT    *
-              FROM      dbo.sysjobs_view
-              WHERE     (job_id = @job_id)
-              AND       (master_server = 1) )) -- master_server = 1 filters on MSX jobs in this TSX server
-              AND       (PROGRAM_NAME() NOT LIKE @program_name)
-  BEGIN
-    RAISERROR(14274, -1, -1)
-    RETURN(1) -- Failure
-  END
-
-  RETURN(0)
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_jobstep] AS' 
 END
-
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_jobstep]    Script Date: 11-06-2020 18:09:05 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER OFF
-GO
-CREATE PROCEDURE [dbo].[sp_verify_jobstep]
+ALTER PROCEDURE [dbo].[sp_verify_jobstep]
   @job_id             UNIQUEIDENTIFIER,
   @step_id            INT,
   @step_name          sysname,
@@ -5685,12 +3920,8 @@ CREATE PROCEDURE [dbo].[sp_verify_jobstep]
   @on_success_step_id INT,
   @on_fail_action     TINYINT,
   @on_fail_step_id    INT,
-  @os_run_priority    INT,
   @database_name      sysname OUTPUT,
-  @database_user_name sysname OUTPUT,
-  @flags              INT,
-  @output_file_name   NVARCHAR(200),
-  @proxy_id         INT 
+  @database_user_name sysname OUTPUT
 AS
 BEGIN
   DECLARE @max_step_id             INT
@@ -5708,7 +3939,6 @@ BEGIN
   -- Remove any leading/trailing spaces from parameters
   SELECT @subsystem        = LTRIM(RTRIM(@subsystem))
   SELECT @server           = LTRIM(RTRIM(@server))
-  SELECT @output_file_name = LTRIM(RTRIM(@output_file_name))
 
   -- Get current maximum step id
   SELECT @max_step_id = ISNULL(MAX(step_id), 0)
@@ -5722,68 +3952,7 @@ BEGIN
     RAISERROR(14266, -1, -1, '@step_id', @valid_values)
     RETURN(1) -- Failure
   END
-/*
-  -- Check subsystem
-  EXECUTE @retval = sp_verify_subsystem @subsystem
-  IF (@retval <> 0)
-    RETURN(1) -- Failure
-  
-  --check if proxy is allowed for this subsystem for current user
-  IF (@proxy_id IS NOT NULL)
-  BEGIN
-    --get the job owner
-    SELECT @owner_sid = owner_sid FROM sysjobs
-    WHERE  job_id = @job_id
-    IF @owner_sid = 0xFFFFFFFF
-    BEGIN
-      --ask to verify for the special account
-      EXECUTE @retval = sp_verify_proxy_permissions 
-        @subsystem_name = @subsystem, 
-        @proxy_id = @proxy_id, 
-        @name = NULL, 
-        @raise_error = 1, 
-        @allow_disable_proxy = 1, 
-        @verify_special_account = 1
-      IF (@retval <> 0)
-        RETURN(1) -- Failure
-    END
-    ELSE
-    BEGIN
-      SELECT @owner_name = SUSER_SNAME(@owner_sid)
-      EXECUTE @retval = sp_verify_proxy_permissions 
-      @subsystem_name = @subsystem, 
-      @proxy_id = @proxy_id, 
-      @name = @owner_name, 
-      @raise_error = 1, 
-      @allow_disable_proxy = 1
-      IF (@retval <> 0)
-        RETURN(1) -- Failure
-    END
-  END
-  */
-  --Only sysadmin can specify @output_file_name 
-  IF (@output_file_name IS NOT NULL) AND  (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) <> 1)
-  BEGIN
-    RAISERROR(14582, -1, -1)
-    RETURN(1) -- Failure    
-  END
 
-  --Determmine if this is a olap subsystem jobstep
-  IF ( UPPER(@subsystem collate SQL_Latin1_General_CP1_CS_AS) in (N'ANALYSISQUERY', N'ANALYSISCOMMAND') )
-    SELECT @is_olap_subsystem = 1
-  ELSE
-    SELECT @is_olap_subsystem = 0
-
-  -- Check command length
-  -- not necessary now, command can be any length
-/*
-  IF ((DATALENGTH(@command) / 2) > 3200)
-  BEGIN
-    RAISERROR(14250, 16, 1, '@command', 3200)
-    RETURN(1) -- Failure
-  END
-*/
-  -- For a VBScript command, check that object creations are paired with object destructions
   IF ((UPPER(@subsystem collate SQL_Latin1_General_CP1_CS_AS) = N'ACTIVESCRIPTING') AND (@database_name = N'VBScript'))
   BEGIN
     SET @temp_command = @command
@@ -5892,55 +4061,6 @@ BEGIN
     END
   END
 
-  -- Check run priority: must be a valid value to pass to SetThreadPriority:
-  -- [-15 = IDLE, -1 = BELOW_NORMAL, 0 = NORMAL, 1 = ABOVE_NORMAL, 15 = TIME_CRITICAL]
-  IF (@os_run_priority NOT IN (-15, -1, 0, 1, 15))
-  BEGIN
-    RAISERROR(14266, -1, -1, '@os_run_priority', '-15, -1, 0, 1, 15')
-    RETURN(1) -- Failure
-  END
-
-  -- Check flags
-  IF ((@flags < 0) OR (@flags > 114))
-  BEGIN
-    RAISERROR(14266, -1, -1, '@flags', '0..114')
-    RETURN(1) -- Failure
-  END
-
-  -- @flags=4 is valid only for TSQL subsystem
-  IF (((@flags & 4) <> 0) AND (UPPER(@subsystem collate SQL_Latin1_General_CP1_CS_AS) NOT IN ('TSQL')))
-  BEGIN
-    RAISERROR(14545, -1, -1, '@flags', @subsystem)
-    RETURN(1) -- Failure
-  END
-
-  -- values 8 and 16 for @flags cannot be combined
-  IF (((@flags & 8) <> 0) AND ((@flags & 16) <> 0))
-  BEGIN
-    RAISERROR(14545, -1, -1, '@flags', @subsystem)
-    RETURN(1) -- Failure
-  END
-
-  IF (((@flags & 64) <> 0) AND (UPPER(@subsystem collate SQL_Latin1_General_CP1_CS_AS) NOT IN ('CMDEXEC')))
-  BEGIN
-    RAISERROR(14545, -1, -1, '@flags', @subsystem)
-    RETURN(1) -- Failure
-  END
-
-  -- Check output file
-  IF (@output_file_name IS NOT NULL) AND (UPPER(@subsystem collate SQL_Latin1_General_CP1_CS_AS) NOT IN ('TSQL', 'CMDEXEC', 'ANALYSISQUERY', 'ANALYSISCOMMAND', 'SSIS', 'POWERSHELL'))
-  BEGIN
-    RAISERROR(14545, -1, -1, '@output_file_name', @subsystem)
-    RETURN(1) -- Failure
-  END
-
-  -- Check writing to table flags
-  -- Note: explicit check for null is required here
-  IF (@flags IS NOT NULL) AND (((@flags & 8) <> 0) OR ((@flags & 16) <> 0)) AND (UPPER(@subsystem collate SQL_Latin1_General_CP1_CS_AS) NOT IN ('TSQL', 'CMDEXEC', 'ANALYSISQUERY', 'ANALYSISCOMMAND', 'SSIS', 'POWERSHELL'))
-  BEGIN
-    RAISERROR(14545, -1, -1, '@flags', @subsystem)
-    RETURN(1) -- Failure
-  END
 
   -- For CmdExec steps database-name and database-user-name should both be null
   IF (UPPER(@subsystem collate SQL_Latin1_General_CP1_CS_AS) = N'CMDEXEC')
@@ -5979,21 +4099,6 @@ BEGIN
     --       so if it's bad we'll get a runtime error when the job executes.
     IF (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1)
     BEGIN
-      -- If this is a multi-server job then @database_user_name must be null
-      IF (@database_user_name IS NOT NULL)
-      BEGIN
-        IF (EXISTS (SELECT *
-                    FROM dbo.sysjobs       sj,
-                         dbo.sysjobservers sjs
-                    WHERE (sj.job_id = sjs.job_id)
-                      AND (sj.job_id = @job_id)
-                      AND (sjs.server_id <> 0)))
-        BEGIN
-          RAISERROR(14542, -1, -1, N'database_user_name')
-          RETURN(1) -- Failure
-        END
-      END
-
       -- For a SQL-user, check if it exists
       IF (@database_user_name NOT LIKE N'%\%')
       BEGIN
@@ -6021,12 +4126,17 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_schedule]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_schedule]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_verify_schedule]
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_schedule]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_schedule] AS' 
+END
+GO
+ALTER PROCEDURE [dbo].[sp_verify_schedule]
   @schedule_id            INT,
   @name                   sysname,
   @enabled                TINYINT,
@@ -6328,18 +4438,22 @@ ExitProc:
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_schedule_identifiers]    Script Date: 11-06-2020 18:09:05 ******/
+/****** Object:  StoredProcedure [dbo].[sp_verify_schedule_identifiers]    Script Date: 15-06-2020 17:15:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-CREATE PROCEDURE [dbo].[sp_verify_schedule_identifiers]
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_schedule_identifiers]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_schedule_identifiers] AS' 
+END
+GO
+ALTER PROCEDURE [dbo].[sp_verify_schedule_identifiers]
   @name_of_name_parameter   VARCHAR(60),             -- Eg. '@schedule_name'
   @name_of_id_parameter     VARCHAR(60),             -- Eg. '@schedule_id'
   @schedule_name            sysname             OUTPUT, 
   @schedule_id              INT                 OUTPUT,
   @owner_sid                VARBINARY(85)       OUTPUT,
-  @orig_server_id           INT                 OUTPUT,
   @job_id_filter            UNIQUEIDENTIFIER    = NULL
 AS
 BEGIN
@@ -6368,46 +4482,18 @@ BEGIN
   -- Check schedule id
   IF (@schedule_id IS NOT NULL)
   BEGIN
-    -- if Agent is calling look in all schedules not just the local server schedules
-    if(PROGRAM_NAME() LIKE N'SQLAgent%')
-    BEGIN
         -- Look at all schedules
         SELECT @schedule_name   = name,
-           @owner_sid           = owner_sid,
-           @orig_server_id      = originating_server_id
+           @owner_sid           = owner_sid
         FROM dbo.sysschedules
         WHERE (schedule_id = @schedule_id)
-    END
-    ELSE
-    BEGIN
-        --Look at local schedules only
-        SELECT @schedule_name   = name,
-           @owner_sid           = owner_sid,
-           @orig_server_id      = originating_server_id
-        FROM dbo.sysschedules_localserver_view
-        WHERE (schedule_id = @schedule_id)
-    END
+
 
     IF (@schedule_name IS NULL)
     BEGIN
-     --If the schedule is from an MSX and a sysadmin is calling report a specific 'MSX' message
-      IF(PROGRAM_NAME() NOT LIKE N'SQLAgent%' AND
-         ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1 AND
-         EXISTS(SELECT * 
-                FROM dbo.sysschedules as sched
-                  JOIN dbo.sysoriginatingservers_view as svr
-                    ON sched.originating_server_id = svr.originating_server_id
-                WHERE (schedule_id = @schedule_id) AND 
-                      (svr.master_server = 1)))
-     BEGIN
-       RAISERROR(14274, -1, -1)
-     END
-      ELSE  
-      BEGIN
+
         SELECT @schedule_id_as_char = CONVERT(VARCHAR(36), @schedule_id)
         RAISERROR(14262, -1, -1, '@schedule_id', @schedule_id_as_char)
-      END
-
       RETURN(1) -- Failure
     END
   END
@@ -6422,9 +4508,8 @@ BEGIN
         -- If the name is not ambiguous this gets the corresponding schedule_id (if the schedule exists)
         SELECT @sch_name_count = COUNT(*),
                @schedule_id    = MIN(s.schedule_id),
-               @owner_sid      = MIN(owner_sid),
-               @orig_server_id = MIN(originating_server_id)
-        FROM dbo.sysschedules_localserver_view as s
+               @owner_sid      = MIN(owner_sid)
+        FROM dbo.sysschedules as s
           JOIN dbo.sysjobschedules as js 
             ON s.schedule_id = js.schedule_id
         WHERE (name = @schedule_name) AND
@@ -6436,9 +4521,8 @@ BEGIN
         -- If the name is not ambiguous it is safe use the fields returned by the MIN() function
         SELECT @sch_name_count = COUNT(*),
          @schedule_id     = MIN(schedule_id),
-            @owner_sid       = MIN(owner_sid),
-            @orig_server_id  = MIN(originating_server_id)
-        FROM dbo.sysschedules_localserver_view
+            @owner_sid       = MIN(owner_sid)
+        FROM dbo.sysschedules
         WHERE (name = @schedule_name)
     END
 
@@ -6457,12 +4541,9 @@ BEGIN
          ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1 AND
          EXISTS(SELECT * 
                 FROM dbo.sysschedules as sched
-                  JOIN dbo.sysoriginatingservers_view as svr
-                    ON sched.originating_server_id = svr.originating_server_id
                   JOIN dbo.sysjobschedules as js 
                     ON sched.schedule_id = js.schedule_id
-                WHERE (svr.master_server = 1) AND
-                      (name = @schedule_name) AND
+                WHERE (name = @schedule_name) AND
                       ((@job_id_filter IS NULL) OR (js.job_id = @job_id_filter))))
      BEGIN
        RAISERROR(14274, -1, -1)
