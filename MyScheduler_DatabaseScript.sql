@@ -1,178 +1,201 @@
-/****** Object:  StoredProcedure [dbo].[sp_verify_schedule_identifiers]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_schedule_identifiers]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_verify_schedule_identifiers]
+IF  EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_DiagramPaneCount' , N'SCHEMA',N'dbo', N'VIEW',N'Jobs_View', NULL,NULL))
+EXEC sys.sp_dropextendedproperty @name=N'MS_DiagramPaneCount' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'VIEW',@level1name=N'Jobs_View'
+
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_schedule]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_schedule]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_verify_schedule]
+IF  EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_DiagramPane1' , N'SCHEMA',N'dbo', N'VIEW',N'Jobs_View', NULL,NULL))
+EXEC sys.sp_dropextendedproperty @name=N'MS_DiagramPane1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'VIEW',@level1name=N'Jobs_View'
+
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_jobstep]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_jobstep]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_verify_jobstep]
+/****** Object:  StoredProcedure [dbo].[usp_verify_schedule_identifiers]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_schedule_identifiers]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_verify_schedule_identifiers]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job_time]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job_time]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_verify_job_time]
+/****** Object:  StoredProcedure [dbo].[usp_verify_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_schedule]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_verify_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job_identifiers]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job_identifiers]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_verify_job_identifiers]
+/****** Object:  StoredProcedure [dbo].[usp_verify_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_jobstep]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_verify_jobstep]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job_date]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job_date]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_verify_job_date]
+/****** Object:  StoredProcedure [dbo].[usp_verify_job_time]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_job_time]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_verify_job_time]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_verify_job]
+/****** Object:  StoredProcedure [dbo].[usp_verify_job_identifiers]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_job_identifiers]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_verify_job_identifiers]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_category_identifiers]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_category_identifiers]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_verify_category_identifiers]
+/****** Object:  StoredProcedure [dbo].[usp_verify_job_date]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_job_date]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_verify_job_date]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_update_schedule]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_update_schedule]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_update_schedule]
+/****** Object:  StoredProcedure [dbo].[usp_verify_job]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_job]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_verify_job]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_update_jobstep]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_update_jobstep]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_update_jobstep]
+/****** Object:  StoredProcedure [dbo].[usp_verify_category_identifiers]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_category_identifiers]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_verify_category_identifiers]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_update_job]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_update_job]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_update_job]
+/****** Object:  StoredProcedure [dbo].[usp_update_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_update_schedule]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_update_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_start_jobsteps]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_start_jobsteps]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_start_jobsteps]
+/****** Object:  StoredProcedure [dbo].[usp_update_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_update_jobstep]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_update_jobstep]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_start_job]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_start_job]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_start_job]
+/****** Object:  StoredProcedure [dbo].[usp_update_job]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_update_job]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_update_job]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_sqlagent_set_jobstep_completion_state]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_sqlagent_set_jobstep_completion_state]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_sqlagent_set_jobstep_completion_state]
+/****** Object:  StoredProcedure [dbo].[usp_start_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_start_schedule]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_start_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_sqlagent_log_jobhistory]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_sqlagent_log_jobhistory]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_sqlagent_log_jobhistory]
+/****** Object:  StoredProcedure [dbo].[usp_start_jobsteps]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_start_jobsteps]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_start_jobsteps]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_help_jobstep]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_help_jobstep]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_help_jobstep]
+/****** Object:  StoredProcedure [dbo].[usp_start_job]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_start_job]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_start_job]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_help_jobschedule]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_help_jobschedule]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_help_jobschedule]
+/****** Object:  StoredProcedure [dbo].[usp_set_jobstep_completion_state]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_set_jobstep_completion_state]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_set_jobstep_completion_state]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_get_schedule_description]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_get_schedule_description]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_get_schedule_description]
+/****** Object:  StoredProcedure [dbo].[usp_log_jobhistory]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_log_jobhistory]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_log_jobhistory]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_detach_schedule]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_detach_schedule]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_detach_schedule]
+/****** Object:  StoredProcedure [dbo].[usp_help_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_help_jobstep]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_help_jobstep]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_delete_schedule]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_delete_schedule]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_delete_schedule]
+/****** Object:  StoredProcedure [dbo].[usp_help_jobschedule]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_help_jobschedule]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_help_jobschedule]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_attach_schedule]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_attach_schedule]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_attach_schedule]
+/****** Object:  StoredProcedure [dbo].[usp_get_schedule_description]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_get_schedule_description]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_get_schedule_description]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_schedule]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_schedule]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_add_schedule]
+/****** Object:  StoredProcedure [dbo].[usp_get_jobschedules]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_get_jobschedules]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_get_jobschedules]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_jobstep_internal]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_jobstep_internal]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_add_jobstep_internal]
+/****** Object:  StoredProcedure [dbo].[usp_detach_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_detach_schedule]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_detach_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_jobstep]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_jobstep]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_add_jobstep]
+/****** Object:  StoredProcedure [dbo].[usp_delete_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_delete_schedule]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_delete_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_jobschedule]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_jobschedule]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_add_jobschedule]
+/****** Object:  StoredProcedure [dbo].[usp_attach_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_attach_schedule]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_attach_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_job]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_job]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[sp_add_job]
+/****** Object:  StoredProcedure [dbo].[usp_add_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_add_schedule]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_add_schedule]
 GO
-/****** Object:  View [dbo].[sysjobs_view]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].[sysjobs_view]'))
-DROP VIEW [dbo].[sysjobs_view]
+/****** Object:  StoredProcedure [dbo].[usp_add_jobstep_internal]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_add_jobstep_internal]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_add_jobstep_internal]
 GO
-/****** Object:  Table [dbo].[sysschedules]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysschedules]') AND type in (N'U'))
-DROP TABLE [dbo].[sysschedules]
+/****** Object:  StoredProcedure [dbo].[usp_add_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_add_jobstep]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_add_jobstep]
 GO
-/****** Object:  Table [dbo].[sysjobsteps]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobsteps]') AND type in (N'U'))
-DROP TABLE [dbo].[sysjobsteps]
+/****** Object:  StoredProcedure [dbo].[usp_add_jobschedule]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_add_jobschedule]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_add_jobschedule]
 GO
-/****** Object:  Table [dbo].[sysjobschedules]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobschedules]') AND type in (N'U'))
-DROP TABLE [dbo].[sysjobschedules]
+/****** Object:  StoredProcedure [dbo].[usp_add_job]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_add_job]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_add_job]
 GO
-/****** Object:  Table [dbo].[sysjobs]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobs]') AND type in (N'U'))
-DROP TABLE [dbo].[sysjobs]
+/****** Object:  View [dbo].[Jobs_View]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].[Jobs_View]'))
+DROP VIEW [dbo].[Jobs_View]
 GO
-/****** Object:  Table [dbo].[sysjobhistory]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobhistory]') AND type in (N'U'))
-DROP TABLE [dbo].[sysjobhistory]
+/****** Object:  Table [dbo].[Schedules]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Schedules]') AND type in (N'U'))
+DROP TABLE [dbo].[Schedules]
 GO
-/****** Object:  Table [dbo].[syscategories]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[syscategories]') AND type in (N'U'))
-DROP TABLE [dbo].[syscategories]
+/****** Object:  Table [dbo].[JobSteps]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[JobSteps]') AND type in (N'U'))
+DROP TABLE [dbo].[JobSteps]
 GO
-/****** Object:  UserDefinedFunction [dbo].[udfGetScheduleTimes]    Script Date: 15-06-2020 17:15:35 ******/
+/****** Object:  Table [dbo].[JobSchedules]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[JobSchedules]') AND type in (N'U'))
+DROP TABLE [dbo].[JobSchedules]
+GO
+/****** Object:  Table [dbo].[Jobs]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Jobs]') AND type in (N'U'))
+DROP TABLE [dbo].[Jobs]
+GO
+/****** Object:  Table [dbo].[JobHistory]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[JobHistory]') AND type in (N'U'))
+DROP TABLE [dbo].[JobHistory]
+GO
+/****** Object:  Table [dbo].[JobCategories]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[JobCategories]') AND type in (N'U'))
+DROP TABLE [dbo].[JobCategories]
+GO
+/****** Object:  UserDefinedFunction [dbo].[udfGetScheduleTimes]    Script Date: 24-06-2020 17:00:43 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[udfGetScheduleTimes]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
 DROP FUNCTION [dbo].[udfGetScheduleTimes]
 GO
-/****** Object:  UserDefinedFunction [dbo].[fn_IntToTimeString]    Script Date: 15-06-2020 17:15:35 ******/
+/****** Object:  UserDefinedFunction [dbo].[udfGetNextSchedule]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[udfGetNextSchedule]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[udfGetNextSchedule]
+GO
+/****** Object:  UserDefinedFunction [dbo].[fn_TimeToInt]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_TimeToInt]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[fn_TimeToInt]
+GO
+/****** Object:  UserDefinedFunction [dbo].[fn_Job_Datetime]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_Job_Datetime]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[fn_Job_Datetime]
+GO
+/****** Object:  UserDefinedFunction [dbo].[fn_IntToTimeString]    Script Date: 24-06-2020 17:00:43 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_IntToTimeString]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
 DROP FUNCTION [dbo].[fn_IntToTimeString]
 GO
-/****** Object:  UserDefinedFunction [dbo].[agent_datetime]    Script Date: 15-06-2020 17:15:35 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[agent_datetime]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
-DROP FUNCTION [dbo].[agent_datetime]
+/****** Object:  UserDefinedFunction [dbo].[fn_DateToInt]    Script Date: 24-06-2020 17:00:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_DateToInt]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[fn_DateToInt]
 GO
-/****** Object:  UserDefinedFunction [dbo].[agent_datetime]    Script Date: 15-06-2020 17:15:35 ******/
+/****** Object:  UserDefinedFunction [dbo].[fn_DateToInt]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[agent_datetime]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_DateToInt]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
 BEGIN
-execute dbo.sp_executesql @statement = N'
-
-CREATE FUNCTION [dbo].[agent_datetime](@date int, @time int)
-RETURNS DATETIME
+execute dbo.sp_executesql @statement = N'/************************************************
+-- FUNCTION fn_IntToTimeString
+-- AUTHOR	Alan Jefferson
+-- Date		5/11/2017
+--
+-- Purpose	convert integer representation of time found in sysschedules to a displayable form
+*************************************************/
+CREATE FUNCTION [dbo].[fn_DateToInt] (@date datetime)
+returns varchar(20)
 AS
 BEGIN
- RETURN
-  (
-    CONVERT(DATETIME,
-          CONVERT(NVARCHAR(4),@date / 10000) + N''-'' + 
-          CONVERT(NVARCHAR(2),(@date % 10000)/100)  + N''-'' +
-          CONVERT(NVARCHAR(2),@date % 100) + N'' '' +        
-          CONVERT(NVARCHAR(2),@time / 10000) + N'':'' +        
-          CONVERT(NVARCHAR(2),(@time % 10000)/100) + N'':'' +        
-          CONVERT(NVARCHAR(2),@time % 100),
-    120)
-  )
-END
-
- ' 
+declare @return varchar(20)
+set @return = FORMAT(@date,''yyyyMMdd'')
+return @return;
+END' 
 END
 
 GO
-/****** Object:  UserDefinedFunction [dbo].[fn_IntToTimeString]    Script Date: 15-06-2020 17:15:35 ******/
+/****** Object:  UserDefinedFunction [dbo].[fn_IntToTimeString]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -201,7 +224,481 @@ END'
 END
 
 GO
-/****** Object:  UserDefinedFunction [dbo].[udfGetScheduleTimes]    Script Date: 15-06-2020 17:15:35 ******/
+/****** Object:  UserDefinedFunction [dbo].[fn_Job_Datetime]    Script Date: 24-06-2020 17:00:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_Job_Datetime]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+BEGIN
+execute dbo.sp_executesql @statement = N'-- Alter Function fn_Job_Datetime
+
+
+CREATE FUNCTION [dbo].[fn_Job_Datetime](@date int, @time int)
+RETURNS DATETIME
+AS
+BEGIN
+ RETURN
+  (
+    CONVERT(DATETIME,
+          CONVERT(NVARCHAR(4),@date / 10000) + N''-'' + 
+          CONVERT(NVARCHAR(2),(@date % 10000)/100)  + N''-'' +
+          CONVERT(NVARCHAR(2),@date % 100) + N'' '' +        
+          CONVERT(NVARCHAR(2),@time / 10000) + N'':'' +        
+          CONVERT(NVARCHAR(2),(@time % 10000)/100) + N'':'' +        
+          CONVERT(NVARCHAR(2),@time % 100),
+    120)
+  )
+END
+' 
+END
+
+GO
+/****** Object:  UserDefinedFunction [dbo].[fn_TimeToInt]    Script Date: 24-06-2020 17:00:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_TimeToInt]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+BEGIN
+execute dbo.sp_executesql @statement = N'/************************************************
+-- FUNCTION fn_IntToTimeString
+-- AUTHOR	Alan Jefferson
+-- Date		5/11/2017
+--
+-- Purpose	convert integer representation of time found in sysschedules to a displayable form
+*************************************************/
+CREATE FUNCTION [dbo].[fn_TimeToInt] (@time datetime)
+returns varchar(20)
+AS
+BEGIN
+declare @return varchar(20)
+set @return = FORMAT(@time,''HHmmss'')
+return @return;
+END' 
+END
+
+GO
+/****** Object:  UserDefinedFunction [dbo].[udfGetNextSchedule]    Script Date: 24-06-2020 17:00:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[udfGetNextSchedule]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+BEGIN
+execute dbo.sp_executesql @statement = N' -- SELECT * FROM [dbo].[udfGetNextSchedule] (2)
+CREATE FUNCTION [dbo].[udfGetNextSchedule]
+(
+	@schedule_id int 
+)
+RETURNS 
+--DECLARE @schedule_id int = 2
+--DECLARE
+@t TABLE (
+		scheduleID INT NOT NULL,
+		--serverName SYSNAME NOT NULL,
+		--jobName SYSNAME NOT NULL,
+		--jobDescription NVARCHAR(512) NOT NULL,
+		scheduleName SYSNAME NOT NULL,
+		--categoryName SYSNAME NOT NULL,
+		infoDate DATETIME NOT NULL,
+		startTime DATETIME NOT NULL,
+		endTime DATETIME NOT NULL,
+		--jobEnabled INT NOT NULL,
+		scheduleEnabled INT NOT NULL)
+
+--AS
+
+BEGIN
+
+DECLARE @startDate DATETIME = GETDATE()-1
+DECLARE @endDate DATETIME = GETDATE() +365
+
+-- Create a tally table. If you already have one of your own please use that instead.
+DECLARE	@tallyNumbers TABLE
+		(
+			num SMALLINT PRIMARY KEY CLUSTERED
+		)
+
+DECLARE	@index SMALLINT
+
+SET	@index = 1
+
+WHILE @index <= 8640
+	BEGIN
+		INSERT	@tallyNumbers
+			(
+				num
+			)
+		VALUES	(
+				@index
+			)
+
+		SET	@index = @index + 1
+	END
+
+-- Create a staging table for jobschedules
+DECLARE	@jobSchedules TABLE
+		(
+			rowID INT IDENTITY(1, 1) PRIMARY KEY CLUSTERED,
+			--serverName SYSNAME NOT NULL,
+			--jobName SYSNAME NOT NULL,
+			--jobDescription NVARCHAR(512) NOT NULL,
+			scheduleName SYSNAME NOT NULL,
+			scheduleID INT NOT NULL,
+			--categoryName SYSNAME NOT NULL,
+			freq_type INT NOT NULL,
+			freq_interval INT NOT NULL,
+			freq_subday_type INT NOT NULL,
+			freq_subday_interval INT NOT NULL,
+			freq_relative_interval INT NOT NULL,
+			freq_recurrence_factor INT NOT NULL,
+			startDate DATETIME NOT NULL,
+			startTime DATETIME NOT NULL,
+			endDate DATETIME NOT NULL,
+			endTime DATETIME NOT NULL,
+			--jobEnabled INT NOT NULL,
+			scheduleEnabled INT NOT NULL
+		)
+
+
+-- Popoulate the staging table for JobSchedules with SQL Server 2005 and SQL Server 2008
+INSERT		@JobSchedules
+		(
+			--serverName,
+			--jobName,
+			--jobDescription,
+			scheduleName,
+			scheduleID,
+			--categoryName,
+			freq_type,
+			freq_interval,
+			freq_subday_type,
+			freq_subday_interval,
+			freq_relative_interval,
+			freq_recurrence_factor,
+			startDate,
+			startTime,
+			endDate,
+			endTime,
+			--jobEnabled,
+			scheduleEnabled
+		)
+SELECT		--srv.srvname,
+		--sj.name,
+		--COALESCE(sj.description, ''''),
+		ss.name,
+		ss.schedule_id,
+		--sc.name,
+		ss.freq_type,
+		ss.freq_interval,
+		ss.freq_subday_type,
+		ss.freq_subday_interval,
+		ss.freq_relative_interval,
+		ss.freq_recurrence_factor,
+		COALESCE(STR(ss.active_start_date, 8), CONVERT(CHAR(8), GETDATE(), 112)),
+		STUFF(STUFF(REPLACE(STR(ss.active_start_time, 6), '' '', ''0''), 3, 0, '':''), 6, 0, '':''),
+		STR(ss.active_end_date, 8),
+		STUFF(STUFF(REPLACE(STR(ss.active_end_time, 6), '' '', ''0''), 3, 0, '':''), 6, 0, '':''),
+		--sj.enabled,
+		ss.enabled
+FROM		Schedules AS ss
+--INNER JOIN	JobSchedules AS sjs ON sjs.schedule_id = ss.schedule_id
+--INNER JOIN	Jobs AS sj ON sj.job_id = sjs.job_id
+--INNER JOIN	sys.sysservers AS srv ON srv.srvid = sj.originating_server_id
+--INNER JOIN	JobCategories AS sc ON sc.category_id = sj.category_id
+WHERE		ss.freq_type IN (1, 4, 8, 16, 32)
+AND			ss.schedule_id = @schedule_id
+ORDER BY	--srv.srvname,
+		--sj.name,
+		ss.name
+
+-- Deal with first, second, third, fourth and last occurence
+DECLARE	@tempStart DATETIME,
+	@tempEnd DATETIME
+
+SELECT	@tempStart = DATEADD(MONTH, DATEDIFF(MONTH, ''19000101'', @startDate), ''19000101''),
+	@TempEnd = DATEADD(MONTH, DATEDIFF(MONTH, ''18991231'', @endDate), ''18991231'')
+
+DECLARE	@dayInformation TABLE
+		(
+			infoDate DATETIME PRIMARY KEY CLUSTERED,
+			weekdayName VARCHAR(9) NOT NULL,
+			statusCode INT NOT NULL,
+			lastDay TINYINT DEFAULT 0
+		)
+
+WHILE @tempStart <= @tempEnd
+	BEGIN
+		INSERT	@dayInformation
+			(
+				infoDate,
+				weekdayName,
+				statusCode
+			)
+		SELECT	@tempStart,
+			DATENAME(WEEKDAY, @tempStart),
+			CASE
+				WHEN DATEPART(DAY, @tempStart) BETWEEN 1 AND 7 THEN 1
+				WHEN DATEPART(DAY, @tempStart) BETWEEN 8 AND 14 THEN 2
+				WHEN DATEPART(DAY, @tempStart) BETWEEN 15 AND 21 THEN 4
+				WHEN DATEPART(DAY, @tempStart) BETWEEN 22 AND 28 THEN 8
+				ELSE 0
+			END
+
+		SET	@tempStart = DATEADD(DAY, 1, @tempStart)
+	END
+
+UPDATE		di
+SET		di.statusCode = di.statusCode + 16
+FROM		@dayInformation AS di
+INNER JOIN	(
+			SELECT		DATEDIFF(MONTH, ''19000101'', infoDate) AS theMonth,
+					DATEPART(DAY, MAX(infoDate)) - 6 AS theDay
+			FROM		@dayInformation
+			GROUP BY	DATEDIFF(MONTH, ''19000101'', infoDate)
+		) AS x ON x.theMonth = DATEDIFF(MONTH, ''19000101'', di.infoDate)
+WHERE		DATEPART(DAY, di.infoDate) >= x.theDay
+
+UPDATE		di
+SET		di.lastDay = 16
+FROM		@dayInformation AS di
+INNER JOIN	(
+			SELECT		DATEDIFF(MONTH, ''19000101'', infoDate) AS theMonth,
+					MAX(infoDate) AS theDay
+			FROM		@dayInformation
+			GROUP BY	DATEDIFF(MONTH, ''19000101'', infoDate)
+		) AS x ON x.theMonth = DATEDIFF(MONTH, ''19000101'', di.infoDate)
+WHERE		di.infoDate = x.theDay
+
+UPDATE	@dayInformation
+SET	lastDay = DATEPART(DAY, infoDate)
+WHERE	DATEPART(DAY, infoDate) BETWEEN 1 AND 4
+
+-- Stage all individual schedule times
+DECLARE	@scheduleTimes TABLE
+		(
+			rowID INT NOT NULL,
+			infoDate DATETIME NOT NULL,
+			startTime DATETIME NOT NULL,
+			endTime DATETIME NOT NULL,
+			waitSeconds INT DEFAULT 0
+		)
+
+
+-- Insert one time only schedules
+INSERT	@scheduleTimes
+	(
+		rowID,
+		infoDate,
+		startTime,
+		endTime
+	)
+SELECT	rowID,
+	startDate,
+	startTime,
+	endTime
+FROM	@jobSchedules
+WHERE	freq_type = 1
+	AND startDate >= @StartDate
+	AND startDate <= @EndDate
+
+-- Insert daily schedules
+INSERT		@scheduleTimes
+		(
+			rowID,
+			infoDate,
+			startTime,
+			endTime,
+			waitSeconds
+		)
+SELECT		js.rowID,
+		di.infoDate,
+		js.startTime,
+		js.endTime,
+		CASE js.freq_subday_type
+			WHEN 1 THEN 0
+			WHEN 2 THEN js.freq_subday_interval
+			WHEN 4 THEN 60 * js.freq_subday_interval
+			WHEN 8 THEN 3600 * js.freq_subday_interval
+		END
+FROM		@jobSchedules AS js
+INNER JOIN	@dayInformation AS di ON di.infoDate >= @startDate
+			AND di.infoDate <= @endDate
+WHERE		js.freq_type = 4
+		AND DATEDIFF(DAY, js.startDate, di.infoDate) % js.freq_interval = 0
+
+-- Insert weekly schedules
+INSERT		@scheduleTimes
+		(
+			rowID,
+			infoDate,
+			startTime,
+			endTime,
+			waitSeconds
+		)
+SELECT		js.rowID,
+		di.infoDate,
+		js.startTime,
+		js.endTime,
+		CASE js.freq_subday_type
+			WHEN 1 THEN 0
+			WHEN 2 THEN js.freq_subday_interval
+			WHEN 4 THEN 60 * js.freq_subday_interval
+			WHEN 8 THEN 3600 * js.freq_subday_interval
+		END
+FROM		@jobSchedules AS js
+INNER JOIN	@dayInformation AS di ON di.infoDate >= @startDate
+			AND di.infoDate <= @endDate
+WHERE		js.freq_type = 8
+		AND 1 =	CASE
+				WHEN js.freq_interval & 1 = 1 AND di.weekdayName = ''Sunday'' THEN 1
+				WHEN js.freq_interval & 2 = 2 AND di.weekdayName = ''Monday'' THEN 1
+				WHEN js.freq_interval & 4 = 4 AND di.weekdayName = ''Tuesday'' THEN 1
+				WHEN js.freq_interval & 8 = 8 AND di.weekdayName = ''Wednesday'' THEN 1
+				WHEN js.freq_interval & 16 = 16 AND di.weekdayName = ''Thursday'' THEN 1
+				WHEN js.freq_interval & 32 = 32 AND di.weekdayName = ''Friday'' THEN 1
+				WHEN js.freq_interval & 64 = 64 AND di.weekdayName = ''Saturday'' THEN 1
+				ELSE 0
+			END
+		AND (DATEDIFF(DAY, js.startDate, di.infoDate) / 7) % js.freq_recurrence_factor = 0
+
+-- Insert monthly schedules
+INSERT		@scheduleTimes
+		(
+			rowID,
+			infoDate,
+			startTime,
+			endTime,
+			waitSeconds
+		)
+SELECT		js.rowID,
+		di.infoDate,
+		js.startTime,
+		js.endTime,
+		CASE js.freq_subday_type
+			WHEN 1 THEN 0
+			WHEN 2 THEN js.freq_subday_interval
+			WHEN 4 THEN 60 * js.freq_subday_interval
+			WHEN 8 THEN 3600 * js.freq_subday_interval
+		END
+FROM		@jobSchedules AS js
+INNER JOIN	@dayInformation AS di ON di.infoDate >= @startDate
+			AND di.infoDate <= @endDate
+WHERE		js.freq_type = 16
+		AND DATEPART(DAY, di.infoDate) = js.freq_interval
+		AND DATEDIFF(MONTH, js.startDate, di.infoDate) % js.freq_recurrence_factor = 0
+
+-- Insert monthly relative schedules
+INSERT		@scheduleTimes
+		(
+			rowID,
+			infoDate,
+			startTime,
+			endTime,
+			waitSeconds
+		)
+SELECT		js.rowID,
+		di.infoDate,
+		js.startTime,
+		js.endTime,
+		CASE js.freq_subday_type
+			WHEN 1 THEN 0
+			WHEN 2 THEN js.freq_subday_interval
+			WHEN 4 THEN 60 * js.freq_subday_interval
+			WHEN 8 THEN 3600 * js.freq_subday_interval
+		END
+FROM		@jobSchedules AS js
+INNER JOIN	@dayInformation AS di ON di.infoDate >= @startDate
+			AND di.infoDate <= @endDate
+WHERE		js.freq_type = 32
+		AND 1 =	CASE
+				WHEN js.freq_interval = 1 AND di.weekdayName = ''Sunday'' THEN 1
+				WHEN js.freq_interval = 2 AND di.weekdayName = ''Monday'' THEN 1
+				WHEN js.freq_interval = 3 AND di.weekdayName = ''Tuesday'' THEN 1
+				WHEN js.freq_interval = 4 AND di.weekdayName = ''Wednesday'' THEN 1
+				WHEN js.freq_interval = 5 AND di.weekdayName = ''Thursday'' THEN 1
+				WHEN js.freq_interval = 6 AND di.weekdayName = ''Friday'' THEN 1
+				WHEN js.freq_interval = 7 AND di.weekdayName = ''Saturday'' THEN 1
+				WHEN js.freq_interval = 8 AND js.freq_relative_interval = di.lastDay THEN 1
+				WHEN js.freq_interval = 9 AND di.weekdayName NOT IN (''Sunday'', ''Saturday'') THEN 1
+				WHEN js.freq_interval = 10 AND di.weekdayName IN (''Sunday'', ''Saturday'') THEN 1
+				ELSE 0
+			END
+		AND di.statusCode & js.freq_relative_interval = js.freq_relative_interval
+		AND DATEDIFF(MONTH, js.startDate, di.infoDate) % js.freq_recurrence_factor = 0
+
+--	select * from @scheduleTimes return;
+
+-- Get the daily recurring schedule times
+INSERT		@scheduleTimes
+		(
+			rowID,
+			infoDate,
+			startTime,
+			endTime,
+			waitSeconds
+		)
+SELECT		st.rowID,
+		st.infoDate,
+		DATEADD(SECOND, tn.num * st.waitSeconds, st.startTime),
+		st.endTime,
+		st.waitSeconds
+FROM		@scheduleTimes AS st
+CROSS JOIN	@tallyNumbers AS tn
+WHERE		tn.num * st.waitSeconds <= DATEDIFF(SECOND, st.startTime, st.endTime)
+		AND st.waitSeconds > 0
+
+-- Present the result
+INSERT @t (scheduleID,
+		--serverName,
+		--jobName,
+		--jobDescription,
+		scheduleName,
+		--categoryName,
+		infoDate,
+		startTime,
+		endTime,
+		--jobEnabled,
+		scheduleEnabled)
+SELECT	TOP 1 js.scheduleID,
+		--js.serverName,
+		--js.jobName,
+		--js.jobDescription,
+		js.scheduleName,
+		--js.categoryName,
+		--st.infoDate,
+		st.infoDate + st.startTime,
+		st.startTime,
+		st.endTime,
+		--js.jobEnabled,
+		js.scheduleEnabled
+FROM		@scheduleTimes AS st
+INNER JOIN	@jobSchedules AS js ON js.rowID = st.rowID
+LEFT JOIN (
+	SELECT [dbo].[JobSchedules].schedule_id,
+	MAX([dbo].[fn_Job_Datetime](run_date,run_time)) [LastRunDate]
+	FROM [dbo].[JobHistory] 
+	INNER JOIN [dbo].[JobSchedules] ON  [dbo].[JobHistory].job_id = [dbo].[JobSchedules].job_id
+	WHERE run_status = 1
+	GROUP BY [dbo].[JobSchedules].schedule_id
+)AS JH ON JS.scheduleID = JH.schedule_id
+WHERE js.scheduleEnabled = 1
+AND st.infoDate + st.startTime > GETDATE()
+AND (JH.[LastRunDate] IS NULL OR st.infoDate + st.startTime > JH.[LastRunDate])
+AND (js.freq_type != 4 OR st.startTime!=''00:00:00.000'')
+
+ORDER BY st.rowID
+
+--SELECT * FROM @t
+
+RETURN
+
+END' 
+END
+
+GO
+/****** Object:  UserDefinedFunction [dbo].[udfGetScheduleTimes]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -597,14 +1094,14 @@ END'
 END
 
 GO
-/****** Object:  Table [dbo].[syscategories]    Script Date: 15-06-2020 17:15:35 ******/
+/****** Object:  Table [dbo].[JobCategories]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[syscategories]') AND type in (N'U'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[JobCategories]') AND type in (N'U'))
 BEGIN
-CREATE TABLE [dbo].[syscategories](
+CREATE TABLE [dbo].[JobCategories](
 	[category_id] [int] IDENTITY(1,1) NOT NULL,
 	[category_class] [int] NOT NULL,
 	[category_type] [tinyint] NOT NULL,
@@ -612,14 +1109,14 @@ CREATE TABLE [dbo].[syscategories](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Table [dbo].[sysjobhistory]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  Table [dbo].[JobHistory]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobhistory]') AND type in (N'U'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[JobHistory]') AND type in (N'U'))
 BEGIN
-CREATE TABLE [dbo].[sysjobhistory](
+CREATE TABLE [dbo].[JobHistory](
 	[instance_id] [int] IDENTITY(1,1) NOT NULL,
 	[job_id] [uniqueidentifier] NOT NULL,
 	[step_id] [int] NOT NULL,
@@ -636,16 +1133,16 @@ CREATE TABLE [dbo].[sysjobhistory](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Table [dbo].[sysjobs]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  Table [dbo].[Jobs]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_PADDING ON
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobs]') AND type in (N'U'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Jobs]') AND type in (N'U'))
 BEGIN
-CREATE TABLE [dbo].[sysjobs](
+CREATE TABLE [dbo].[Jobs](
 	[job_id] [uniqueidentifier] NOT NULL,
 	[name] [sysname] NOT NULL,
 	[enabled] [tinyint] NOT NULL,
@@ -666,14 +1163,14 @@ END
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[sysjobschedules]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  Table [dbo].[JobSchedules]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobschedules]') AND type in (N'U'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[JobSchedules]') AND type in (N'U'))
 BEGIN
-CREATE TABLE [dbo].[sysjobschedules](
+CREATE TABLE [dbo].[JobSchedules](
 	[schedule_id] [int] NULL,
 	[job_id] [uniqueidentifier] NULL,
 	[next_run_date] [int] NOT NULL DEFAULT ((0)),
@@ -681,14 +1178,14 @@ CREATE TABLE [dbo].[sysjobschedules](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Table [dbo].[sysjobsteps]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  Table [dbo].[JobSteps]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysjobsteps]') AND type in (N'U'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[JobSteps]') AND type in (N'U'))
 BEGIN
-CREATE TABLE [dbo].[sysjobsteps](
+CREATE TABLE [dbo].[JobSteps](
 	[job_id] [uniqueidentifier] NOT NULL,
 	[step_id] [int] NOT NULL,
 	[step_name] [sysname] NOT NULL,
@@ -715,16 +1212,16 @@ CREATE TABLE [dbo].[sysjobsteps](
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 END
 GO
-/****** Object:  Table [dbo].[sysschedules]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  Table [dbo].[Schedules]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_PADDING ON
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sysschedules]') AND type in (N'U'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Schedules]') AND type in (N'U'))
 BEGIN
-CREATE TABLE [dbo].[sysschedules](
+CREATE TABLE [dbo].[Schedules](
 	[schedule_id] [int] IDENTITY(1,1) NOT NULL,
 	[schedule_uid] [uniqueidentifier] NOT NULL,
 	[name] [sysname] NOT NULL,
@@ -752,13 +1249,15 @@ END
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  View [dbo].[sysjobs_view]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  View [dbo].[Jobs_View]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-IF NOT EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].[sysjobs_view]'))
-EXEC dbo.sp_executesql @statement = N'
+IF NOT EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].[Jobs_View]'))
+EXEC dbo.sp_executesql @statement = N'-- Alter View Jobs_View
+-- Alter View sysjobs_view
+
 /* filter out local jobs  
 
 WHERE        (jobs.owner_sid = SUSER_SID()) OR
@@ -769,96 +1268,137 @@ WHERE        (jobs.owner_sid = SUSER_SID()) OR
                                FROM            dbo.sysjobservers AS js
                                WHERE        (server_id <> 0) AND (job_id = jobs.job_id))
 */
-CREATE VIEW [dbo].[sysjobs_view]
+CREATE VIEW [dbo].[Jobs_View]
 AS
 SELECT        jobs.job_id, jobs.name, jobs.enabled, jobs.description, jobs.start_step_id, jobs.category_id, jobs.owner_sid,
                          jobs.delete_level, jobs.date_created, jobs.date_modified, jobs.version_number
-FROM            dbo.sysjobs AS jobs
-
+FROM            dbo.Jobs AS jobs
 ' 
 GO
-SET IDENTITY_INSERT [dbo].[syscategories] ON 
+SET IDENTITY_INSERT [dbo].[JobCategories] ON 
 
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (0, 1, 1, N'[Uncategorized (Local)]')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (0, 1, 1, N'[Uncategorized (Local)]')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (2, 1, 2, N'[Uncategorized (Multi-Server)]')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (2, 1, 2, N'[Uncategorized (Multi-Server)]')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (98, 2, 3, N'[Uncategorized]')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (98, 2, 3, N'[Uncategorized]')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (99, 3, 3, N'[Uncategorized]')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (99, 3, 3, N'[Uncategorized]')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (8, 1, 1, N'Data Collector')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (8, 1, 1, N'Data Collector')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (7, 1, 1, N'Database Engine Tuning Advisor')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (7, 1, 1, N'Database Engine Tuning Advisor')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (3, 1, 1, N'Database Maintenance')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (3, 1, 1, N'Database Maintenance')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (5, 1, 1, N'Full-Text')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (5, 1, 1, N'Full-Text')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (1, 1, 1, N'Jobs from MSX')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (1, 1, 1, N'Jobs from MSX')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (6, 1, 1, N'Log Shipping')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (6, 1, 1, N'Log Shipping')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (18, 1, 1, N'REPL-Alert Response')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (18, 1, 1, N'REPL-Alert Response')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (16, 1, 1, N'REPL-Checkup')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (16, 1, 1, N'REPL-Checkup')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (10, 1, 1, N'REPL-Distribution')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (10, 1, 1, N'REPL-Distribution')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (11, 1, 1, N'REPL-Distribution Cleanup')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (11, 1, 1, N'REPL-Distribution Cleanup')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (12, 1, 1, N'REPL-History Cleanup')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (12, 1, 1, N'REPL-History Cleanup')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (20, 2, 3, N'Replication')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (20, 2, 3, N'Replication')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (13, 1, 1, N'REPL-LogReader')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (13, 1, 1, N'REPL-LogReader')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (14, 1, 1, N'REPL-Merge')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (14, 1, 1, N'REPL-Merge')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (19, 1, 1, N'REPL-QueueReader')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (19, 1, 1, N'REPL-QueueReader')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (15, 1, 1, N'REPL-Snapshot')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (15, 1, 1, N'REPL-Snapshot')
 GO
-INSERT [dbo].[syscategories] ([category_id], [category_class], [category_type], [name]) VALUES (17, 1, 1, N'REPL-Subscription Cleanup')
+INSERT [dbo].[JobCategories] ([category_id], [category_class], [category_type], [name]) VALUES (17, 1, 1, N'REPL-Subscription Cleanup')
 GO
-SET IDENTITY_INSERT [dbo].[syscategories] OFF
+SET IDENTITY_INSERT [dbo].[JobCategories] OFF
 GO
-SET IDENTITY_INSERT [dbo].[sysjobhistory] ON 
+SET IDENTITY_INSERT [dbo].[JobHistory] ON 
 
 GO
-INSERT [dbo].[sysjobhistory] ([instance_id], [job_id], [step_id], [step_name], [sql_message_id], [sql_severity], [message], [run_status], [run_date], [run_time], [run_duration], [retries_attempted], [server]) VALUES (1, N'b00ad8cc-498e-43fc-8ae2-3a7f372eab84', 1, N'Generate_SummaryReport_And_Email', 0, 0, N'Executed as user: YOGEESHA\Yogi. The step succeeded.', 1, 20200614, 110353, 0, 0, N'YOGEESHA')
+INSERT [dbo].[JobHistory] ([instance_id], [job_id], [step_id], [step_name], [sql_message_id], [sql_severity], [message], [run_status], [run_date], [run_time], [run_duration], [retries_attempted], [server]) VALUES (1, N'301f33fd-a102-4f63-a4e9-7bc2be168b24', 1, N'Generate_SummaryReport_And_Email', 0, 0, N'Executed as user: YOGEESHA\Yogi. The step succeeded.', 1, 20200622, 172445, 0, 0, N'YOGEESHA')
 GO
-INSERT [dbo].[sysjobhistory] ([instance_id], [job_id], [step_id], [step_name], [sql_message_id], [sql_severity], [message], [run_status], [run_date], [run_time], [run_duration], [retries_attempted], [server]) VALUES (2, N'b00ad8cc-498e-43fc-8ae2-3a7f372eab84', 2, N'Generate_DetailedReport_And_Email', 8134, 16, N'Msg 8134, Level 16, State 1, Line 1, (null). Divide by zero error encountered.', 1, 20200614, 110353, 0, 0, N'YOGEESHA')
+INSERT [dbo].[JobHistory] ([instance_id], [job_id], [step_id], [step_name], [sql_message_id], [sql_severity], [message], [run_status], [run_date], [run_time], [run_duration], [retries_attempted], [server]) VALUES (2, N'301f33fd-a102-4f63-a4e9-7bc2be168b24', 2, N'Generate_DetailedReport_And_Email', 0, 0, N'Executed as user: YOGEESHA\Yogi. The step succeeded.', 1, 20200622, 172445, 0, 0, N'YOGEESHA')
 GO
-SET IDENTITY_INSERT [dbo].[sysjobhistory] OFF
+SET IDENTITY_INSERT [dbo].[JobHistory] OFF
 GO
-INSERT [dbo].[sysjobs] ([job_id], [name], [enabled], [description], [start_step_id], [category_id], [owner_sid], [delete_level], [date_created], [date_modified], [version_number]) VALUES (N'b00ad8cc-498e-43fc-8ae2-3a7f372eab84', N'Email_ShortfallSummary_Report', 1, N'Genrate shortfall summary report and email to the receipients', 1, 0, 0x0105000000000005150000006A427F5AEEEC7EF00F3C03ACE9030000, 0, CAST(N'2020-06-14 11:03:16.577' AS DateTime), CAST(N'2020-06-14 11:03:16.580' AS DateTime), 4)
+INSERT [dbo].[Jobs] ([job_id], [name], [enabled], [description], [start_step_id], [category_id], [owner_sid], [delete_level], [date_created], [date_modified], [version_number]) VALUES (N'301f33fd-a102-4f63-a4e9-7bc2be168b24', N'Email_ShortfallSummary_Report', 1, N'Genrate shortfall summary report and email to the receipients', 1, 0, 0x0105000000000005150000006A427F5AEEEC7EF00F3C03ACE9030000, 0, CAST(N'2020-06-22 17:02:29.423' AS DateTime), CAST(N'2020-06-22 17:02:29.427' AS DateTime), 4)
 GO
-INSERT [dbo].[sysjobschedules] ([schedule_id], [job_id], [next_run_date], [next_run_time]) VALUES (1, N'b00ad8cc-498e-43fc-8ae2-3a7f372eab84', 0, 0)
+INSERT [dbo].[JobSchedules] ([schedule_id], [job_id], [next_run_date], [next_run_time]) VALUES (1, N'301f33fd-a102-4f63-a4e9-7bc2be168b24', 20200622, 233000)
 GO
-INSERT [dbo].[sysjobsteps] ([job_id], [step_id], [step_name], [subsystem], [command], [additional_parameters], [cmdexec_success_code], [on_success_action], [on_success_step_id], [on_fail_action], [on_fail_step_id], [server], [database_name], [database_user_name], [retry_attempts], [retry_interval], [output_file_name], [last_run_outcome], [last_run_duration], [last_run_retries], [last_run_date], [last_run_time], [step_uid]) VALUES (N'b00ad8cc-498e-43fc-8ae2-3a7f372eab84', 1, N'Generate_SummaryReport_And_Email', N'TSQL', N'SELECT GETDATE() AS [ReportDate], ''Summary'' AS [Report Type]', NULL, 0, 3, 0, 2, 0, NULL, N'master', NULL, 1, 1, NULL, 1, 0, 0, 20200614, 110353, N'86a131e8-6431-4a8b-bade-38def2aab95f')
+INSERT [dbo].[JobSchedules] ([schedule_id], [job_id], [next_run_date], [next_run_time]) VALUES (2, N'301f33fd-a102-4f63-a4e9-7bc2be168b24', 20200622, 180000)
 GO
-INSERT [dbo].[sysjobsteps] ([job_id], [step_id], [step_name], [subsystem], [command], [additional_parameters], [cmdexec_success_code], [on_success_action], [on_success_step_id], [on_fail_action], [on_fail_step_id], [server], [database_name], [database_user_name], [retry_attempts], [retry_interval], [output_file_name], [last_run_outcome], [last_run_duration], [last_run_retries], [last_run_date], [last_run_time], [step_uid]) VALUES (N'b00ad8cc-498e-43fc-8ae2-3a7f372eab84', 2, N'Generate_DetailedReport_And_Email', N'TSQL', N'SELECT 1/0 AS [ReportDate], ''Detailed'' AS [Report Type]', NULL, 0, 1, 0, 2, 0, NULL, N'master', NULL, 1, 1, NULL, 0, 0, 0, 20200614, 110353, N'98eeeaec-6a1d-43a1-ae8a-70aa26d8ce55')
+INSERT [dbo].[JobSchedules] ([schedule_id], [job_id], [next_run_date], [next_run_time]) VALUES (3, N'301f33fd-a102-4f63-a4e9-7bc2be168b24', 20200622, 110000)
 GO
-SET IDENTITY_INSERT [dbo].[sysschedules] ON 
+INSERT [dbo].[JobSchedules] ([schedule_id], [job_id], [next_run_date], [next_run_time]) VALUES (4, N'301f33fd-a102-4f63-a4e9-7bc2be168b24', 20200630, 90000)
+GO
+INSERT [dbo].[JobSteps] ([job_id], [step_id], [step_name], [subsystem], [command], [additional_parameters], [cmdexec_success_code], [on_success_action], [on_success_step_id], [on_fail_action], [on_fail_step_id], [server], [database_name], [database_user_name], [retry_attempts], [retry_interval], [output_file_name], [last_run_outcome], [last_run_duration], [last_run_retries], [last_run_date], [last_run_time], [step_uid]) VALUES (N'301f33fd-a102-4f63-a4e9-7bc2be168b24', 1, N'Generate_SummaryReport_And_Email', N'TSQL', N'SELECT GETDATE() AS [ReportDate], ''Summary'' AS [Report Type]', N'
+{
+  "Email": {
+    "To": "naik.yogeesha@gmail.com;naik.yogeesha@outlook.com;",
+	"Cc": "yogishdj@live.com",
+	"Bcc": "yogishdj@gmail.com",
+	"Subject": "Test Email",
+	"Body": "Hi,
+	This is to test report scheduler console app.
+
+	Thanks,
+	Report Scheduler"
+  }
+}', 0, 3, 0, 2, 0, NULL, N'master', NULL, 1, 1, NULL, 1, 0, 0, 20200622, 172445, N'0cb31584-fad6-4e81-ba00-2de222a3f703')
+GO
+INSERT [dbo].[JobSteps] ([job_id], [step_id], [step_name], [subsystem], [command], [additional_parameters], [cmdexec_success_code], [on_success_action], [on_success_step_id], [on_fail_action], [on_fail_step_id], [server], [database_name], [database_user_name], [retry_attempts], [retry_interval], [output_file_name], [last_run_outcome], [last_run_duration], [last_run_retries], [last_run_date], [last_run_time], [step_uid]) VALUES (N'301f33fd-a102-4f63-a4e9-7bc2be168b24', 2, N'Generate_DetailedReport_And_Email', N'TSQL', N'SELECT GETDATE() AS [ReportDate], ''Detailed'' AS [Report Type]', N'
+{
+  "Email": {
+    "To": "naik.yogeesha@gmail.com;naik.yogeesha@outlook.com;",
+	"Cc": "yogishdj@live.com",
+	"Bcc": "yogishdj@gmail.com",
+	"Subject": "Test Email",
+	"Body": "Hi,
+	This is to test report scheduler console app.
+
+	Thanks,
+	Report Scheduler"
+  }
+}', 0, 1, 0, 2, 0, NULL, N'master', NULL, 1, 1, NULL, 1, 0, 0, 20200622, 172445, N'529a114f-ed36-471a-99a9-38b91ef7a603')
+GO
+SET IDENTITY_INSERT [dbo].[Schedules] ON 
 
 GO
-INSERT [dbo].[sysschedules] ([schedule_id], [schedule_uid], [name], [owner_sid], [enabled], [freq_type], [freq_interval], [freq_subday_type], [freq_subday_interval], [freq_relative_interval], [freq_recurrence_factor], [active_start_date], [active_end_date], [active_start_time], [active_end_time], [date_created], [date_modified], [version_number]) VALUES (1, N'631b3284-8cff-4234-a40e-00a2a098fac8', N'Every_Friday', 0x0105000000000005150000006A427F5AEEEC7EF00F3C03ACE9030000, 1, 8, 32, 1, 0, 0, 1, 20200611, 99991231, 110000, 235959, CAST(N'2020-06-14 11:03:16.580' AS DateTime), CAST(N'2020-06-14 11:03:16.580' AS DateTime), 1)
+INSERT [dbo].[Schedules] ([schedule_id], [schedule_uid], [name], [owner_sid], [enabled], [freq_type], [freq_interval], [freq_subday_type], [freq_subday_interval], [freq_relative_interval], [freq_recurrence_factor], [active_start_date], [active_end_date], [active_start_time], [active_end_time], [date_created], [date_modified], [version_number]) VALUES (1, N'b76d0fa3-b82a-4433-8ccd-47ae24c8e318', N'Daily Once', 0x0105000000000005150000006A427F5AEEEC7EF00F3C03ACE9030000, 1, 4, 1, 1, 0, 0, 0, 20200620, 99991231, 233000, 235959, CAST(N'2020-06-22 17:02:29.430' AS DateTime), CAST(N'2020-06-22 17:02:29.430' AS DateTime), 1)
 GO
-SET IDENTITY_INSERT [dbo].[sysschedules] OFF
+INSERT [dbo].[Schedules] ([schedule_id], [schedule_uid], [name], [owner_sid], [enabled], [freq_type], [freq_interval], [freq_subday_type], [freq_subday_interval], [freq_relative_interval], [freq_recurrence_factor], [active_start_date], [active_end_date], [active_start_time], [active_end_time], [date_created], [date_modified], [version_number]) VALUES (2, N'a3e178f4-6177-49eb-b72d-0fdac970bfa3', N'Every One Hour', 0x0105000000000005150000006A427F5AEEEC7EF00F3C03ACE9030000, 1, 4, 1, 8, 1, 0, 0, 20200620, 99991231, 0, 235959, CAST(N'2020-06-22 17:02:30.173' AS DateTime), CAST(N'2020-06-22 17:02:30.173' AS DateTime), 1)
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_job]    Script Date: 15-06-2020 17:15:36 ******/
+INSERT [dbo].[Schedules] ([schedule_id], [schedule_uid], [name], [owner_sid], [enabled], [freq_type], [freq_interval], [freq_subday_type], [freq_subday_interval], [freq_relative_interval], [freq_recurrence_factor], [active_start_date], [active_end_date], [active_start_time], [active_end_time], [date_created], [date_modified], [version_number]) VALUES (3, N'631b3284-8cff-4234-a40e-00a2a098fac8', N'Every_Friday', 0x0105000000000005150000006A427F5AEEEC7EF00F3C03ACE9030000, 1, 8, 32, 1, 0, 0, 1, 20200611, 99991231, 110000, 235959, CAST(N'2020-06-22 17:02:32.290' AS DateTime), CAST(N'2020-06-22 17:02:32.290' AS DateTime), 1)
+GO
+INSERT [dbo].[Schedules] ([schedule_id], [schedule_uid], [name], [owner_sid], [enabled], [freq_type], [freq_interval], [freq_subday_type], [freq_subday_interval], [freq_relative_interval], [freq_recurrence_factor], [active_start_date], [active_end_date], [active_start_time], [active_end_time], [date_created], [date_modified], [version_number]) VALUES (4, N'a8b7b3d8-ee01-4d19-a2d2-630908ce9923', N'Monthly_Dynamic', 0x0105000000000005150000006A427F5AEEEC7EF00F3C03ACE9030000, 1, 32, 8, 1, 0, 16, 1, 20200620, 99991231, 90000, 235959, CAST(N'2020-06-22 17:02:32.527' AS DateTime), CAST(N'2020-06-22 17:02:32.527' AS DateTime), 1)
+GO
+SET IDENTITY_INSERT [dbo].[Schedules] OFF
+GO
+/****** Object:  StoredProcedure [dbo].[usp_add_job]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_job]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_add_job]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_add_job] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_add_job] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_add_job]
+-- Alter Procedure usp_add_job
+-- Alter Procedure usp_add_job
+-- Alter Procedure usp_add_job
+-- Alter Procedure sp_add_job
+ALTER PROCEDURE [dbo].[usp_add_job]
   @job_name                     sysname,
   @enabled                      TINYINT          = 1,        -- 0 = Disabled, 1 = Enabled
   @description                  NVARCHAR(512)    = NULL,
@@ -914,7 +1454,7 @@ BEGIN
     SELECT @description = FORMATMESSAGE(14571)
 
   -- If a category ID is provided this overrides any supplied category name
-  EXECUTE @retval = sp_verify_category_identifiers '@category_name',
+  EXECUTE @retval = dbo.usp_verify_category_identifiers '@category_name',
                                                    '@category_id',
                                                     @category_name OUTPUT,
                                                     @category_id   OUTPUT
@@ -922,7 +1462,7 @@ BEGIN
     RETURN(1) -- Failure
 
   -- Check parameters
-  EXECUTE @retval = sp_verify_job NULL,  --  The job id is null since this is a new job
+  EXECUTE @retval = dbo.usp_verify_job NULL,  --  The job id is null since this is a new job
                                   @job_name,
                                   @enabled,
                                   @start_step_id,
@@ -948,7 +1488,7 @@ BEGIN
     END
   END
 
-  INSERT INTO dbo.sysjobs
+  INSERT INTO dbo.Jobs
          (job_id,
           name,
           enabled,
@@ -979,17 +1519,21 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_jobschedule]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_add_jobschedule]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_jobschedule]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_add_jobschedule]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_add_jobschedule] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_add_jobschedule] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_add_jobschedule]                 
+-- Create Procedure usp_add_jobschedule
+-- Create Procedure usp_add_jobschedule
+-- Create Procedure usp_add_jobschedule
+-- Alter Procedure usp_add_jobschedule
+ALTER PROCEDURE [dbo].[usp_add_jobschedule]                 
   @job_id                 UNIQUEIDENTIFIER = NULL,
   @job_name               sysname          = NULL,
   @name                   sysname,
@@ -1015,7 +1559,7 @@ BEGIN
   SET NOCOUNT ON
 
   -- Check that we can uniquely identify the job
-  EXECUTE @retval = sp_verify_job_identifiers '@job_name',
+  EXECUTE @retval = dbo.usp_verify_job_identifiers '@job_name',
                                               '@job_id',
                                                @job_name OUTPUT,
                                                @job_id   OUTPUT
@@ -1024,7 +1568,7 @@ BEGIN
 
 
   -- Add the schedule first
-  EXECUTE @retval = dbo.sp_add_schedule @schedule_name          = @name,
+  EXECUTE @retval = dbo.usp_add_schedule @schedule_name          = @name,
                                              @enabled                = @enabled,
                                              @freq_type              = @freq_type,
                                              @freq_interval          = @freq_interval,
@@ -1043,7 +1587,7 @@ BEGIN
     RETURN(1) -- Failure
  
  
-  EXECUTE @retval = dbo.sp_attach_schedule @job_id           = @job_id, 
+  EXECUTE @retval = dbo.usp_attach_schedule @job_id           = @job_id, 
                                                 @job_name         = NULL,
                                                 @schedule_id      = @schedule_id,
                                                 @schedule_name    = NULL,
@@ -1057,17 +1601,19 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_jobstep]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_add_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_jobstep]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_add_jobstep]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_add_jobstep] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_add_jobstep] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_add_jobstep]
+-- Create Procedure usp_add_jobstep
+-- Alter Procedure usp_add_jobstep
+ALTER PROCEDURE [dbo].[usp_add_jobstep]
   @job_id                UNIQUEIDENTIFIER = NULL,   -- Must provide either this or job_name
   @job_name              sysname          = NULL,   -- Must provide either this or job_id
   @step_id               INT              = NULL,   -- The proc assigns a default
@@ -1122,7 +1668,7 @@ BEGIN
     SET @subsystem = N'SSIS'
   END
 
-  EXECUTE @retval = dbo.sp_add_jobstep_internal @job_id = @job_id,
+  EXECUTE @retval = dbo.usp_add_jobstep_internal @job_id = @job_id,
                                                 @job_name = @job_name,
                                                 @step_id = @step_id,
                                                 @step_name = @step_name,
@@ -1147,17 +1693,22 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_jobstep_internal]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_add_jobstep_internal]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_jobstep_internal]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_add_jobstep_internal]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_add_jobstep_internal] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_add_jobstep_internal] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_add_jobstep_internal]
+-- Alter Procedure usp_add_jobstep_internal
+-- Alter Procedure usp_add_jobstep_internal
+-- Alter Procedure usp_add_jobstep_internal
+-- Alter Procedure sp_add_jobstep_internal
+-- Alter Procedure sp_add_jobstep_internal
+ALTER PROCEDURE [dbo].[usp_add_jobstep_internal]
   @job_id                UNIQUEIDENTIFIER = NULL,   -- Must provide either this or job_name
   @job_name              sysname          = NULL,   -- Must provide either this or job_id
   @step_id               INT              = NULL,   -- The proc assigns a default
@@ -1202,7 +1753,7 @@ BEGIN
   IF (@database_user_name = N'') SELECT @database_user_name = NULL
   IF (@output_file_name   = N'') SELECT @output_file_name   = NULL
 
-  EXECUTE @retval = sp_verify_job_identifiers '@job_name',
+  EXECUTE @retval = dbo.usp_verify_job_identifiers '@job_name',
                                               '@job_id',
                                                @job_name OUTPUT,
                                                @job_id   OUTPUT,
@@ -1222,12 +1773,12 @@ BEGIN
   IF (@step_id IS NULL)
   BEGIN
     SELECT @step_id = ISNULL(MAX(step_id), 0) + 1
-    FROM dbo.sysjobsteps
+    FROM dbo.JobSteps
     WHERE (job_id = @job_id)
   END
 
   -- Check parameters
-  EXECUTE @retval = sp_verify_jobstep @job_id,
+  EXECUTE @retval = dbo.usp_verify_jobstep @job_id,
                                       @step_id,
                                       @step_name,
                                       @subsystem,
@@ -1244,7 +1795,7 @@ BEGIN
 
   -- Get current maximum step id
   SELECT @max_step_id = ISNULL(MAX(step_id), 0)
-  FROM dbo.sysjobsteps
+  FROM dbo.JobSteps
   WHERE (job_id = @job_id)
 
   DECLARE @TranCounter INT;
@@ -1258,7 +1809,7 @@ BEGIN
   -- Modify database.
   BEGIN TRY
     -- Update the job's version/last-modified information
-    UPDATE dbo.sysjobs
+    UPDATE dbo.Jobs
     SET version_number = version_number + 1,
         date_modified = GETDATE()
     WHERE (job_id = @job_id)
@@ -1267,29 +1818,29 @@ BEGIN
     -- NOTE: We MUST do this before inserting the step.
     IF (@step_id <= @max_step_id)
     BEGIN
-      UPDATE dbo.sysjobsteps
+      UPDATE dbo.JobSteps
       SET step_id = step_id + 1
       WHERE (step_id >= @step_id)
         AND (job_id = @job_id)
 
       -- Clean up OnSuccess/OnFail references
-      UPDATE dbo.sysjobsteps
+      UPDATE dbo.JobSteps
       SET on_success_step_id = on_success_step_id + 1
       WHERE (on_success_step_id >= @step_id)
         AND (job_id = @job_id)
 
-      UPDATE dbo.sysjobsteps
+      UPDATE dbo.JobSteps
       SET on_fail_step_id = on_fail_step_id + 1
       WHERE (on_fail_step_id >= @step_id)
         AND (job_id = @job_id)
 
-      UPDATE dbo.sysjobsteps
+      UPDATE dbo.JobSteps
       SET on_success_step_id = 0,
           on_success_action = 1  -- Quit With Success
       WHERE (on_success_step_id = @step_id)
         AND (job_id = @job_id)
 
-      UPDATE dbo.sysjobsteps
+      UPDATE dbo.JobSteps
       SET on_fail_step_id = 0,
           on_fail_action = 2     -- Quit With Failure
       WHERE (on_fail_step_id = @step_id)
@@ -1299,7 +1850,7 @@ BEGIN
     SELECT @step_uid = NEWID()
 
     -- Insert the step
-    INSERT INTO dbo.sysjobsteps
+    INSERT INTO dbo.JobSteps
            (job_id,
             step_id,
             step_name,
@@ -1382,18 +1933,21 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_add_schedule]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_add_schedule]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_schedule]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_add_schedule]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_add_schedule] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_add_schedule] AS' 
 END
 GO
+-- Alter Procedure usp_add_schedule
+-- Alter Procedure usp_add_schedule
+-- Alter Procedure sp_add_schedule
 
-ALTER PROCEDURE [dbo].[sp_add_schedule]
+ALTER PROCEDURE [dbo].[usp_add_schedule]
 (
   @schedule_name        sysname,
   @enabled              TINYINT         = 1,            -- Name does not have to be unique
@@ -1445,7 +1999,7 @@ BEGIN
   END
 
   -- Check schedule (frequency and owner) parameters
-  EXECUTE @retval = sp_verify_schedule NULL,   -- schedule_id does not exist for the new schedule
+  EXECUTE @retval = dbo.usp_verify_schedule NULL,   -- schedule_id does not exist for the new schedule
                                        @name                    = @schedule_name,
                                        @enabled                 = @enabled,
                                        @freq_type               = @freq_type,
@@ -1472,13 +2026,13 @@ BEGIN
     --Try and find the schedule if a @schedule_uid is provided. 
     --A TSX server uses the @schedule_uid to identify a schedule downloaded from the MSX
    SELECT @schedule_id = schedule_id
-    FROM dbo.sysschedules
+    FROM dbo.Schedules
     WHERE schedule_uid = @schedule_uid
 
    IF((@schedule_id IS NOT NULL) AND (@schedule_id <> 0))
    BEGIN
       --If found update the fields
-      UPDATE dbo.sysschedules
+      UPDATE dbo.Schedules
         SET name              = ISNULL(@schedule_name, name),
             enabled              = ISNULL(@enabled, enabled),
          freq_type            = ISNULL(@freq_type, freq_type),
@@ -1498,7 +2052,7 @@ BEGIN
   END
   
   --MSX not found so add a record to sysschedules
-  INSERT INTO dbo.sysschedules
+  INSERT INTO dbo.Schedules
          (schedule_uid,
           name,
           owner_sid,
@@ -1535,18 +2089,22 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_attach_schedule]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_attach_schedule]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_attach_schedule]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_attach_schedule]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_attach_schedule] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_attach_schedule] AS' 
 END
 GO
+-- Create Procedure usp_attach_schedule
+-- Create Procedure usp_attach_schedule
+-- Alter Procedure usp_attach_schedule
+-- Create Procedure sp_attach_schedule
 
-ALTER PROCEDURE [dbo].[sp_attach_schedule]
+ALTER PROCEDURE [dbo].[usp_attach_schedule]
 (
   @job_id               UNIQUEIDENTIFIER    = NULL,     -- Must provide either this or job_name
   @job_name             sysname             = NULL,     -- Must provide either this or job_id
@@ -1559,12 +2117,13 @@ BEGIN
   DECLARE @retval           INT
   DECLARE @sched_owner_sid  VARBINARY(85)
   DECLARE @job_owner_sid    VARBINARY(85)
-
+	DECLARE @next_run_date int
+	DECLARE @next_run_time int
   
   SET NOCOUNT ON
 
   -- Check that we can uniquely identify the job
-  EXECUTE @retval = dbo.sp_verify_job_identifiers '@job_name',
+  EXECUTE @retval = dbo.usp_verify_job_identifiers '@job_name',
                                                        '@job_id',
                                                         @job_name                   OUTPUT,
                                                         @job_id                     OUTPUT,
@@ -1573,7 +2132,7 @@ BEGIN
         RETURN(1) -- Failure
         
   -- Check that we can uniquely identify the schedule
-  EXECUTE @retval = dbo.sp_verify_schedule_identifiers @name_of_name_parameter = '@schedule_name',
+  EXECUTE @retval = dbo.usp_verify_schedule_identifiers @name_of_name_parameter = '@schedule_name',
                                                             @name_of_id_parameter   = '@schedule_id',
                                                             @schedule_name          = @schedule_name    OUTPUT,
                                                             @schedule_id            = @schedule_id      OUTPUT,
@@ -1583,13 +2142,23 @@ BEGIN
 
   -- If the record doesn't already exist create it
   IF( NOT EXISTS(SELECT *  
-                 FROM dbo.sysjobschedules
+                 FROM dbo.JobSchedules
                  WHERE (schedule_id = @schedule_id)
                    AND (job_id = @job_id)) )
   BEGIN
-    INSERT INTO dbo.sysjobschedules (schedule_id, job_id)
-    SELECT @schedule_id, @job_id
-    
+	SELECT 
+		@next_run_date = [dbo].[fn_DateToInt](infoDate),
+		@next_run_time = [dbo].[fn_TimeToInt](infoDate)
+		FROM [dbo].[udfGetNextSchedule] (@schedule_id)
+
+	--DECLARE @message varchar(2000) = FORMATMESSAGE('Invalid time %i. Length should be 6 characters long.',@next_run_time)
+	--SELECT @message
+	--IF LEN(@next_run_time) < 6
+	--	RAISERROR(@message,16,1)
+
+    INSERT INTO dbo.JobSchedules (schedule_id, job_id, next_run_date, next_run_time)
+    SELECT @schedule_id, @job_id, @next_run_date, @next_run_time
+
     SELECT @retval = @@ERROR
 
   END
@@ -1598,18 +2167,22 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_delete_schedule]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_delete_schedule]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_delete_schedule]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_delete_schedule]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_delete_schedule] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_delete_schedule] AS' 
 END
 GO
+-- Create Procedure usp_delete_schedule
+-- Alter Procedure usp_delete_schedule
+-- Create Procedure sp_delete_schedule
+-- Create Procedure sp_delete_schedule
 
-ALTER PROCEDURE [dbo].[sp_delete_schedule]
+ALTER PROCEDURE [dbo].[usp_delete_schedule]
 (
   @schedule_id          INT                 = NULL,     -- Must provide either this or schedule_name
   @schedule_name        sysname             = NULL,     -- Must provide either this or schedule_id
@@ -1628,7 +2201,7 @@ BEGIN
   SELECT @job_count = 0
 
   -- Check that we can uniquely identify the schedule. This only returns a schedule that is visible to this user
-  EXECUTE @retval = dbo.sp_verify_schedule_identifiers @name_of_name_parameter = '@schedule_name',
+  EXECUTE @retval = dbo.usp_verify_schedule_identifiers @name_of_name_parameter = '@schedule_name',
                                                             @name_of_id_parameter   = '@schedule_id',
                                                             @schedule_name          = @schedule_name    OUTPUT,
                                                             @schedule_id            = @schedule_id      OUTPUT,
@@ -1649,7 +2222,7 @@ BEGIN
     
   --check if there are jobs using this schedule
   SELECT @job_count = count(*)
-  FROM sysjobschedules 
+  FROM dbo.JobSchedules 
   WHERE (schedule_id = @schedule_id)   
   
   -- If we aren't force deleting the schedule make sure no jobs are using it
@@ -1664,17 +2237,17 @@ BEGIN
   -- to determine if the schedule ID is for local jobs or MSX jobs. 
   -- Note, an MSX job can't be run on the local server
   SELECT @targ_server_id = MIN(jsvr.server_id)
-  FROM dbo.sysjobschedules AS jsched 
+  FROM dbo.JobSchedules AS jsched 
    JOIN dbo.sysjobservers AS jsvr
       ON jsched.job_id = jsvr.job_id
   WHERE (jsched.schedule_id = @schedule_id)
 
   --OK to delete the job - schedule link
-  DELETE sysjobschedules 
+  DELETE dbo.JobSchedules 
   WHERE schedule_id = @schedule_id
 
   --OK to delete the schedule 
-  DELETE sysschedules 
+  DELETE dbo.Schedules 
   WHERE schedule_id = @schedule_id
 
   /*
@@ -1718,18 +2291,24 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_detach_schedule]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_detach_schedule]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_detach_schedule]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_detach_schedule]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_detach_schedule] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_detach_schedule] AS' 
 END
 GO
+-- Create Procedure usp_detach_schedule
+-- Create Procedure usp_detach_schedule
+-- Alter Procedure usp_detach_schedule
+-- Create Procedure sp_detach_schedule
+-- Create Procedure sp_detach_schedule
+-- Alter Procedure sp_detach_schedule
 
-ALTER PROCEDURE [dbo].[sp_detach_schedule]
+ALTER PROCEDURE [dbo].[usp_detach_schedule]
 (
   @job_id               UNIQUEIDENTIFIER    = NULL,     -- Must provide either this or job_name
   @job_name             sysname             = NULL,     -- Must provide either this or job_id
@@ -1748,7 +2327,7 @@ BEGIN
   SET NOCOUNT ON
 
   -- Check that we can uniquely identify the job
-  EXECUTE @retval = dbo.sp_verify_job_identifiers '@job_name',
+  EXECUTE @retval = dbo.usp_verify_job_identifiers '@job_name',
                                                        '@job_id',
                                                         @job_name OUTPUT,
                                                         @job_id   OUTPUT,
@@ -1758,7 +2337,7 @@ BEGIN
 
         
   -- Check that we can uniquely identify the schedule
-  EXECUTE @retval = dbo.sp_verify_schedule_identifiers @name_of_name_parameter = '@schedule_name',
+  EXECUTE @retval = dbo.usp_verify_schedule_identifiers @name_of_name_parameter = '@schedule_name',
                                                             @name_of_id_parameter   = '@schedule_id',
                                                             @schedule_name          = @schedule_name OUTPUT,
                                                             @schedule_id            = @schedule_id   OUTPUT,
@@ -1769,7 +2348,7 @@ BEGIN
  
   -- If the record doesn't exist raise an error
   IF( NOT EXISTS(SELECT *  
-                 FROM dbo.sysjobschedules
+                 FROM dbo.JobSchedules
                  WHERE (schedule_id = @schedule_id)
                    AND (job_id = @job_id)) )
   BEGIN
@@ -1801,7 +2380,7 @@ BEGIN
     END
    END
 
-    DELETE FROM dbo.sysjobschedules
+    DELETE FROM dbo.JobSchedules
     WHERE (job_id = @job_id)
       AND (schedule_id = @schedule_id)
     
@@ -1811,16 +2390,16 @@ BEGIN
     IF(@retval = 0 AND @delete_unused_schedule = 1)
     BEGIN
         IF(NOT EXISTS(SELECT * 
-                      FROM dbo.sysjobschedules
+                      FROM dbo.JobSchedules
                       WHERE (schedule_id = @schedule_id)))
         BEGIN
-            DELETE FROM dbo.sysschedules
+            DELETE FROM dbo.Schedules
             WHERE (schedule_id = @schedule_id)
         END
     END
 
     -- Update the job's version/last-modified information
-    UPDATE dbo.sysjobs
+    UPDATE dbo.Jobs
     SET version_number = version_number + 1,
         date_modified = GETDATE()
     WHERE (job_id = @job_id)
@@ -1864,17 +2443,76 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_get_schedule_description]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_get_jobschedules]    Script Date: 24-06-2020 17:00:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_get_jobschedules]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_get_jobschedules] AS' 
+END
+GO
+
+-- Get Available Schedules
+ALTER PROCEDURE [dbo].[usp_get_jobschedules]
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @JobSchedules TABLE(job_id UNIQUEIDENTIFIER, schedule_id INT, next_run_datetime DATETIME)
+
+	;WITH CTE_Schedules
+	AS (
+		SELECT 
+		 JS.schedule_id
+		,JS.job_id		
+		,next_run_datetime = [dbo].[fn_Job_Datetime](next_run_date,next_run_time) 
+		FROM [dbo].[JobSchedules] AS JS
+		LEFT JOIN (
+			SELECT job_id,
+			MAX([dbo].[fn_Job_Datetime](run_date,run_time)) [LastRunDate]
+			FROM [dbo].[JobHistory] 
+			WHERE run_status = 1
+			GROUP BY job_id
+		)AS JH ON JS.job_id = JH.job_id
+		WHERE [dbo].[fn_Job_Datetime](next_run_date,next_run_time) <= GETDATE()
+		AND (JH.[LastRunDate] IS NULL OR [dbo].[fn_Job_Datetime](next_run_date,next_run_time) > JH.[LastRunDate])
+	)
+
+	INSERT INTO @JobSchedules(job_id, schedule_id, next_run_datetime)
+	SELECT 		 
+		 S.job_id	
+		,S.schedule_id	
+		,S.next_run_datetime
+	FROM CTE_Schedules S
+
+	--SELECT * FROM @JobSchedules
+
+	SELECT 
+		 S.schedule_id
+		,S.job_id	
+		,JS.step_id	
+		,JS.step_name
+		,S.next_run_datetime
+		,JS.additional_parameters
+	FROM @JobSchedules S
+	INNER JOIN [dbo].[JobSteps] JS ON S.job_id = JS.job_id
+	ORDER BY S.next_run_datetime, S.job_id, JS.step_id	
+END
+GO
+/****** Object:  StoredProcedure [dbo].[usp_get_schedule_description]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_get_schedule_description]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_get_schedule_description]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_get_schedule_description] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_get_schedule_description] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_get_schedule_description]
+-- Alter Procedure usp_get_schedule_description
+ALTER PROCEDURE [dbo].[usp_get_schedule_description]
   @freq_type              INT          = NULL,
   @freq_interval          INT          = NULL,
   @freq_subday_type       INT          = NULL,
@@ -1982,18 +2620,24 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_help_jobschedule]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_help_jobschedule]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_help_jobschedule]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_help_jobschedule]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_help_jobschedule] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_help_jobschedule] AS' 
 END
 GO
+-- Create Procedure usp_help_jobschedule
+-- Alter Procedure usp_help_jobschedule
+-- Alter Procedure usp_help_jobschedule
+-- Alter Procedure sp_help_jobschedule
+-- Create Procedure sp_help_jobschedule
+-- Create Procedure sp_help_jobschedule
 
-ALTER PROCEDURE [dbo].[sp_help_jobschedule]
+ALTER PROCEDURE [dbo].[usp_help_jobschedule]
   @job_id              UNIQUEIDENTIFIER = NULL,
   @job_name            sysname          = NULL,
   @schedule_name       sysname          = NULL,
@@ -2054,7 +2698,7 @@ BEGIN
   BEGIN
   
     SELECT @job_count = COUNT(*)
-    FROM dbo.sysjobschedules
+    FROM dbo.JobSchedules
     WHERE (schedule_id = @schedule_id) 
     
     if(@job_count > 1)
@@ -2065,7 +2709,7 @@ BEGIN
     END
   
     SELECT @job_id = job_id
-    FROM dbo.sysjobschedules
+    FROM dbo.JobSchedules
     WHERE (schedule_id = @schedule_id)
     IF (@job_id IS NULL)
     BEGIN
@@ -2078,7 +2722,7 @@ BEGIN
   -- Check that we can uniquely identify the job
   IF (@job_id IS NOT NULL) OR (@job_name IS NOT NULL)
   BEGIN
-    EXECUTE @retval = sp_verify_job_identifiers '@job_name',
+    EXECUTE @retval = dbo.usp_verify_job_identifiers '@job_name',
                                                 '@job_id',
                                                  @job_name OUTPUT,
                                                  @job_id   OUTPUT,
@@ -2090,7 +2734,7 @@ BEGIN
   IF (@schedule_id IS NOT NULL OR @schedule_name IS NOT NULL)
   BEGIN
     -- Check that we can uniquely identify the schedule
-    EXECUTE @retval = dbo.sp_verify_schedule_identifiers @name_of_name_parameter = '@schedule_name',
+    EXECUTE @retval = dbo.usp_verify_schedule_identifiers @name_of_name_parameter = '@schedule_name',
                                                               @name_of_id_parameter   = '@schedule_id',
                                                               @schedule_name          = @schedule_name OUTPUT,
                                                               @schedule_id            = @schedule_id   OUTPUT,
@@ -2106,8 +2750,8 @@ BEGIN
   IF (@schedule_name IS NOT NULL)
   BEGIN
     IF (NOT EXISTS (SELECT *
-                    FROM dbo.sysjobschedules AS js
-                      JOIN dbo.sysschedules AS s
+                    FROM dbo.JobSchedules AS js
+                      JOIN dbo.Schedules AS s
                         ON js.schedule_id = s.schedule_id
                     WHERE (js.job_id = @job_id)
                       AND (s.name = @schedule_name)))
@@ -2137,8 +2781,8 @@ BEGIN
          js.next_run_time,
          s.schedule_uid
   INTO #temp_jobschedule
-  FROM dbo.sysjobschedules AS js
-    JOIN dbo.sysschedules AS s
+  FROM dbo.JobSchedules AS js
+    JOIN dbo.Schedules AS s
       ON js.schedule_id = s.schedule_id
   WHERE ((@job_id IS NULL) OR (js.job_id = @job_id))
     AND ((@schedule_name IS NULL) OR (s.name = @schedule_name))
@@ -2171,7 +2815,7 @@ BEGIN
         WHERE (schedule_description = FORMATMESSAGE(14549))
         SET ROWCOUNT 0
 
-        EXECUTE sp_get_schedule_description
+        EXECUTE dbo.usp_get_schedule_description
           @freq_type,
           @freq_interval,
           @freq_subday_type,
@@ -2192,26 +2836,28 @@ BEGIN
   END
 
   -- Return the result set, adding job count to it
-  SELECT *, (SELECT COUNT(*) FROM sysjobschedules WHERE sysjobschedules.schedule_id = #temp_jobschedule.schedule_id) as 'job_count'
+  SELECT *, (SELECT COUNT(*) FROM dbo.JobSchedules WHERE JobSchedules.schedule_id = #temp_jobschedule.schedule_id) as 'job_count'
   FROM #temp_jobschedule
   ORDER BY schedule_id
 
   RETURN(@@error) -- 0 means success
 END
 
-
 GO
-/****** Object:  StoredProcedure [dbo].[sp_help_jobstep]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_help_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_help_jobstep]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_help_jobstep]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_help_jobstep] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_help_jobstep] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_help_jobstep]
+-- Alter Procedure usp_help_jobstep
+-- Alter Procedure usp_help_jobstep
+-- Alter Procedure sp_help_jobstep
+ALTER PROCEDURE [dbo].[usp_help_jobstep]
   @job_id    UNIQUEIDENTIFIER = NULL, -- Must provide either this or job_name
   @job_name  sysname          = NULL, -- Must provide either this or job_id
   @step_id   INT              = NULL,
@@ -2225,7 +2871,7 @@ BEGIN
 
   SET NOCOUNT ON
 
-  EXECUTE @retval = sp_verify_job_identifiers '@job_name',
+  EXECUTE @retval = dbo.usp_verify_job_identifiers '@job_name',
                                               '@job_id',
                                                @job_name OUTPUT,
                                                @job_id   OUTPUT,
@@ -2242,7 +2888,7 @@ BEGIN
   BEGIN
     -- Get current maximum step id
     SELECT @max_step_id = ISNULL(MAX(step_id), 0)
-    FROM dbo.sysjobsteps
+    FROM dbo.JobSteps
     WHERE job_id = @job_id
    IF @max_step_id = 0
    BEGIN
@@ -2262,7 +2908,7 @@ BEGIN
   IF ((@step_id IS NULL) AND (@step_name IS NOT NULL))
   BEGIN
     SELECT @step_id = step_id
-    FROM dbo.sysjobsteps
+    FROM dbo.JobSteps
     WHERE (step_name = @step_name)
       AND (job_id = @job_id)
 
@@ -2296,7 +2942,7 @@ BEGIN
            last_run_retries,
            last_run_date,
            last_run_time
-    FROM dbo.sysjobsteps
+    FROM dbo.JobSteps
     WHERE (job_id = @job_id)
       AND ((@step_id IS NULL) OR (step_id = @step_id))
     ORDER BY job_id, step_id
@@ -2335,7 +2981,7 @@ BEGIN
            last_run_retries,
            last_run_date,
            last_run_time
-    FROM dbo.sysjobsteps
+    FROM dbo.JobSteps
     WHERE (job_id = @job_id)
       AND ((@step_id IS NULL) OR (step_id = @step_id))
     ORDER BY job_id, step_id
@@ -2346,17 +2992,24 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_sqlagent_log_jobhistory]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_log_jobhistory]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_sqlagent_log_jobhistory]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_log_jobhistory]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_sqlagent_log_jobhistory] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_log_jobhistory] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_sqlagent_log_jobhistory]
+-- Alter Procedure usp_log_jobhistory
+-- Alter Procedure usp_log_jobhistory
+-- Alter Procedure usp_log_jobhistory
+-- Alter Procedure usp_sqlagent_log_jobhistory
+-- Create Procedure sp_sqlagent_log_jobhistory
+-- Alter Procedure sp_sqlagent_log_jobhistory
+-- Alter Procedure sp_sqlagent_log_jobhistory
+ALTER PROCEDURE [dbo].[usp_log_jobhistory]
   @job_id               UNIQUEIDENTIFIER,
   @step_id              INT,
   @sql_message_id       INT = 0,
@@ -2388,7 +3041,7 @@ BEGIN
 
   -- Check job_id
   IF (NOT EXISTS (SELECT *
-                  FROM dbo.sysjobs_view
+                  FROM dbo.Jobs_View
                   WHERE (job_id = @job_id)))
   BEGIN
     DECLARE @job_id_as_char      VARCHAR(36)
@@ -2401,7 +3054,7 @@ BEGIN
   IF (@step_id <> 0) -- 0 means 'for the whole job'
   BEGIN
     SELECT @step_name = step_name
-    FROM dbo.sysjobsteps
+    FROM dbo.JobSteps
     WHERE (job_id = @job_id)
       AND (step_id = @step_id)
     IF (@step_name IS NULL)
@@ -2423,17 +3076,17 @@ BEGIN
   END
 
   -- Check run_date
-  EXECUTE @retval = sp_verify_job_date @run_date, '@run_date', 10
+  EXECUTE @retval = dbo.usp_verify_job_date @run_date, '@run_date', 10
   IF (@retval <> 0)
     RETURN(1) -- Failure
 
   -- Check run_time
-  EXECUTE @retval = sp_verify_job_time @run_time, '@run_time', 10
+  EXECUTE @retval = dbo.usp_verify_job_time @run_time, '@run_time', 10
   IF (@retval <> 0)
     RETURN(1) -- Failure
 
   -- Insert the history row
-  INSERT INTO dbo.sysjobhistory
+  INSERT INTO dbo.JobHistory
          (job_id,
           step_id,
           step_name,
@@ -2505,17 +3158,20 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_sqlagent_set_jobstep_completion_state]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_set_jobstep_completion_state]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_sqlagent_set_jobstep_completion_state]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_set_jobstep_completion_state]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_sqlagent_set_jobstep_completion_state] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_set_jobstep_completion_state] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_sqlagent_set_jobstep_completion_state]
+-- Create Procedure usp_set_jobstep_completion_state
+-- Alter Procedure usp_set_jobstep_completion_state
+-- Alter Procedure sp_sqlagent_set_jobstep_completion_state
+ALTER PROCEDURE [dbo].[usp_set_jobstep_completion_state]
     @job_id                UNIQUEIDENTIFIER,
     @step_id               INT,
     @last_run_outcome      INT,
@@ -2527,7 +3183,7 @@ ALTER PROCEDURE [dbo].[sp_sqlagent_set_jobstep_completion_state]
 AS
 BEGIN
     -- Update job step completion state in sysjobsteps as well as sysjobactivity
-    UPDATE [dbo].[sysjobsteps]
+    UPDATE [dbo].[JobSteps]
     SET last_run_outcome      = @last_run_outcome,
         last_run_duration     = @last_run_duration,
         last_run_retries      = @last_run_retries,
@@ -2537,7 +3193,7 @@ BEGIN
     AND   step_id  = @step_id
 
     DECLARE @last_executed_step_date DATETIME 
-    SET @last_executed_step_date = [dbo].[agent_datetime](@last_run_date, @last_run_time)
+    SET @last_executed_step_date = [dbo].[fn_Job_Datetime](@last_run_date, @last_run_time)
 
     --UPDATE [dbo].[sysjobactivity]
     --SET last_executed_step_date = @last_executed_step_date,
@@ -2547,17 +3203,21 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_start_job]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_start_job]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_start_job]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_start_job]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_start_job] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_start_job] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_start_job]
+-- Alter Procedure usp_start_job
+-- Create Procedure usp_start_job
+-- Alter Procedure usp_start_job
+-- Alter Procedure sp_start_job
+ALTER PROCEDURE [dbo].[usp_start_job]
   @job_name    sysname          = NULL,
   @job_id      UNIQUEIDENTIFIER = NULL,
   @error_flag  INT              = 1,    -- Set to 0 to suppress the error from sp_sqlagent_notify if SQLServerAgent is not running
@@ -2583,7 +3243,7 @@ BEGIN
   IF (@server_name = N'') SELECT @server_name = NULL
   IF (@step_name = N'')   SELECT @step_name = NULL
 
-  EXECUTE @retval = sp_verify_job_identifiers '@job_name',
+  EXECUTE @retval = dbo.usp_verify_job_identifiers '@job_name',
                                               '@job_id',
                                                @job_name OUTPUT,
                                                @job_id   OUTPUT,
@@ -2606,7 +3266,7 @@ BEGIN
     IF (@step_name IS NOT NULL)
     BEGIN
       SELECT @step_id = step_id
-      FROM dbo.sysjobsteps
+      FROM dbo.JobSteps
       WHERE (step_name = @step_name)
         AND (job_id = @job_id)
 
@@ -2617,7 +3277,7 @@ BEGIN
       END
     END
 
-    EXECUTE @retval = dbo.[sp_start_jobsteps] 
+    EXECUTE @retval = dbo.[usp_start_jobsteps] 
                                                   @job_id      = @job_id,
                                                   @schedule_id = NULL -- This is the start step
 
@@ -2628,17 +3288,22 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_start_jobsteps]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_start_jobsteps]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_start_jobsteps]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_start_jobsteps]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_start_jobsteps] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_start_jobsteps] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_start_jobsteps]
+-- Alter Procedure usp_start_jobsteps
+-- Create Procedure sp_start_jobsteps
+-- Create Procedure sp_start_jobsteps
+-- Create Procedure sp_start_jobsteps
+-- Create Procedure sp_start_jobsteps
+ALTER PROCEDURE [dbo].[usp_start_jobsteps]
   @job_id      UNIQUEIDENTIFIER = NULL, 
   @schedule_id INT              = NULL 
 AS
@@ -2724,7 +3389,7 @@ BEGIN
 		,last_run_date
 		,last_run_time
 	)  
-	EXECUTE @retval = [dbo].[sp_help_jobstep] 
+	EXECUTE @retval = [dbo].[usp_help_jobstep] 
 	  @job_id    = @job_id, -- Must provide either this or job_name
 	  @job_name  = NULL, -- Must provide either this or job_id
 	  @step_id   = NULL,
@@ -2775,14 +3440,14 @@ BEGIN
 		-- TODO: Set parameter values here.
 		SET @step_id	= @Min
 		SET @run_status = 1 
-		SET @run_date	= FORMAT(@StartTime,'yyyyMMdd')	
-		SET @run_time	= FORMAT(@StartTime,'hhmmss')	
+		SET @run_date	= [dbo].[fn_DateToInt](@StartTime)	
+		SET @run_time	= [dbo].[fn_TimeToInt](@StartTime)
 		SET @run_duration = DATEDIFF(MINUTE, @StartTime, GETDATE())		
 		SET @retries_attempted		= 0
 		SET @run_status = 1
 		SET @server = @@SERVERNAME		
 
-		EXECUTE [dbo].[sp_sqlagent_set_jobstep_completion_state]
+		EXECUTE [dbo].[usp_set_jobstep_completion_state]
 			@job_id					= @job_id
 			,@step_id               = @step_id
 			,@last_run_outcome      = @last_run_outcome
@@ -2792,7 +3457,7 @@ BEGIN
 			,@last_run_time         = @run_time
 			,@session_id            = @@SPID
 
-		EXECUTE @retval = [dbo].[sp_sqlagent_log_jobhistory] 
+		EXECUTE @retval = [dbo].[usp_log_jobhistory] 
 			@job_id					= @job_id
 			,@step_id				= @step_id				
 			,@sql_message_id		= @sql_message_id		
@@ -2843,17 +3508,89 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_update_job]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_start_schedule]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_update_job]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_start_schedule]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_update_job] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_start_schedule] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_update_job]
+
+ALTER PROCEDURE [dbo].[usp_start_schedule]
+  @schedule_id    int 
+AS
+BEGIN
+	DECLARE @retval		INT
+	DECLARE @job_id		uniqueidentifier
+	DECLARE @job_name	sysname
+	DECLARE @next_run_date int
+	DECLARE @next_run_time int
+	-- Variables for Loop
+	DECLARE @Min		INT
+	DECLARE @Max		INT
+
+	SET NOCOUNT ON
+
+	DECLARE @JobSchedules TABLE(Id INT IDENTITY(1,1), job_id uniqueidentifier, job_name	sysname)
+
+	INSERT INTO @JobSchedules (job_id, job_name)
+	SELECT S.job_id, J.name 
+	FROM JobSchedules S
+	INNER JOIN Jobs J ON S.job_id = S.job_id 
+	WHERE S.schedule_id = @schedule_id
+
+	SELECT @Min=MIN(Id), @Max= MAX(Id)	
+	FROM @JobSchedules
+
+	WHILE(@Min<=@Max)
+	BEGIN
+		SELECT @job_id  = job_id,  @job_name = job_name FROM @JobSchedules WHERE Id  = @Min
+
+		EXECUTE @retval = dbo.[usp_start_job] @job_id  = @job_id
+
+		IF (@retval = 0) 
+		  RAISERROR(14243, 0, 1, @job_name)
+
+
+		SELECT 
+			@next_run_date = FORMAT(infoDate,'yyyyMMdd'),
+			@next_run_time = FORMAT(infoDate,'HHmmss')
+		 FROM [dbo].[udfGetNextSchedule] (@schedule_id)
+
+		UPDATE dbo.JobSchedules 
+		SET next_run_date = @next_run_date, 
+			next_run_time = @next_run_time 
+		WHERE (job_id = @job_id 
+		and schedule_id = @schedule_id)
+		
+		SELECT @Min = MIN(Id) FROM @JobSchedules WHERE Id >	@Min
+	END
+
+  RETURN(@retval) -- 0 means success
+END
+
+GO
+/****** Object:  StoredProcedure [dbo].[usp_update_job]    Script Date: 24-06-2020 17:00:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER OFF
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_update_job]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_update_job] AS' 
+END
+GO
+-- Alter Procedure usp_update_job
+-- Alter Procedure usp_update_job
+-- Alter Procedure usp_update_job
+-- Create Procedure sp_update_job
+-- Alter Procedure sp_update_job
+-- Create Procedure sp_update_job
+-- Alter Procedure sp_update_job
+ALTER PROCEDURE [dbo].[usp_update_job]
   @job_id                       UNIQUEIDENTIFIER = NULL, -- Must provide this or current_name
   @job_name                     sysname          = NULL, -- Must provide this or job_id
   @new_name                     sysname          = NULL,
@@ -2892,7 +3629,7 @@ BEGIN
 
   SET NOCOUNT ON
 
-  EXECUTE @retval = sp_verify_job_identifiers '@job_name',
+  EXECUTE @retval = dbo.usp_verify_job_identifiers '@job_name',
                                               '@job_id',
                                                @job_name OUTPUT,
                                                @job_id   OUTPUT
@@ -2933,8 +3670,8 @@ BEGIN
          --@x_notify_netsnd_operator_name = so2.name,                   -- From sysoperators
          --@x_notify_page_operator_name   = so3.name,                   -- From sysoperators
          @x_delete_level                = sjv.delete_level
-  FROM dbo.sysjobs_view                 sjv
-       ,dbo.syscategories                sc
+  FROM dbo.Jobs_View                 sjv
+       ,dbo.JobCategories                sc
   WHERE (sjv.job_id = @job_id)
     AND (sjv.category_id = sc.category_id)
 
@@ -2950,7 +3687,7 @@ BEGIN
   END
 
   -- Check job category, only sysadmin can modify mutli-server jobs        
-  IF (EXISTS (SELECT * FROM dbo.syscategories WHERE (category_class = 1) -- Job
+  IF (EXISTS (SELECT * FROM dbo.JobCategories WHERE (category_class = 1) -- Job
                                                      AND (category_type = 2) -- Multi-Server
                                                      AND (category_id = @x_category_id)
                                                      AND (ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) <> 1))) -- is not sysadmin
@@ -2993,7 +3730,7 @@ BEGIN
   IF (@category_name                = N'') SELECT @category_name                = NULL
 
   -- Check new values
-  EXECUTE @retval = sp_verify_job @job_id,
+  EXECUTE @retval = dbo.usp_verify_job @job_id,
                                   @new_name,
                                   @enabled,
                                   @start_step_id,
@@ -3010,7 +3747,7 @@ BEGIN
   IF (@owner_login_name IS NOT NULL)
   BEGIN
     IF (EXISTS (SELECT *
-                FROM dbo.sysjobsteps
+                FROM dbo.JobSteps
                 WHERE (job_id = @job_id)
                   AND (subsystem = N'TSQL')))
     BEGIN
@@ -3020,7 +3757,7 @@ BEGIN
                     AND (sysadmin <> 1)))
       BEGIN
         -- The job is being re-assigned to an non-SA
-        UPDATE dbo.sysjobsteps
+        UPDATE dbo.JobSteps
         SET database_user_name = NULL
         WHERE (job_id = @job_id)
           AND (subsystem = N'TSQL')
@@ -3029,7 +3766,7 @@ BEGIN
   END
 
 
-  UPDATE dbo.sysjobs
+  UPDATE dbo.Jobs
   SET name                       = @new_name,
       enabled                    = @enabled,
       description                = @description,
@@ -3048,17 +3785,22 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_update_jobstep]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_update_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_update_jobstep]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_update_jobstep]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_update_jobstep] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_update_jobstep] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_update_jobstep]
+-- Alter Procedure usp_update_jobstep
+-- Alter Procedure usp_update_jobstep
+-- Alter Procedure usp_update_jobstep
+-- Alter Procedure sp_update_jobstep
+-- Alter Procedure sp_update_jobstep
+ALTER PROCEDURE [dbo].[usp_update_jobstep]
   @job_id                 UNIQUEIDENTIFIER = NULL, -- Must provide either this or job_name
   @job_name               sysname          = NULL, -- Not updatable (provided for identification purposes only)
   @step_id                INT,                     -- Not updatable (provided for identification purposes only)
@@ -3139,7 +3881,7 @@ BEGIN
     END
   END
 
-  EXECUTE @retval = sp_verify_job_identifiers '@job_name',
+  EXECUTE @retval = dbo.usp_verify_job_identifiers '@job_name',
                                               '@job_id',
                                                @job_name OUTPUT,
                                                @job_id   OUTPUT,
@@ -3159,7 +3901,7 @@ BEGIN
 
   -- Check that the step exists
   IF (NOT EXISTS (SELECT *
-                  FROM dbo.sysjobsteps
+                  FROM dbo.JobSteps
                   WHERE (job_id = @job_id)
                     AND (step_id = @step_id)))
   BEGIN
@@ -3187,7 +3929,7 @@ BEGIN
          @x_last_run_retries     = last_run_retries,
          @x_last_run_date        = last_run_date,
          @x_last_run_time        = last_run_time
-  FROM dbo.sysjobsteps
+  FROM dbo.JobSteps
   WHERE (job_id = @job_id)
     AND (step_id = @step_id)
 
@@ -3217,7 +3959,7 @@ BEGIN
 
 
   -- Check new values
-  EXECUTE @retval = sp_verify_jobstep @job_id,
+  EXECUTE @retval = dbo.usp_verify_jobstep @job_id,
                                       @step_id,
                                       @new_step_name,
                                       @subsystem,
@@ -3235,13 +3977,13 @@ BEGIN
   BEGIN TRANSACTION
 
     -- Update the job's version/last-modified information
-    UPDATE dbo.sysjobs
+    UPDATE dbo.Jobs
     SET version_number = version_number + 1,
         date_modified = GETDATE()
     WHERE (job_id = @job_id)
 
     -- Update the step
-    UPDATE dbo.sysjobsteps
+    UPDATE dbo.JobSteps
     SET step_name             = @step_name,
         subsystem             = @subsystem,
         command               = @command,
@@ -3271,18 +4013,22 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_update_schedule]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_update_schedule]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_update_schedule]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_update_schedule]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_update_schedule] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_update_schedule] AS' 
 END
 GO
+-- Create Procedure usp_update_schedule
+-- Alter Procedure usp_update_schedule
+-- Alter Procedure usp_update_schedule
+-- Create Procedure sp_update_schedule
 
-ALTER PROCEDURE [dbo].[sp_update_schedule]
+ALTER PROCEDURE [dbo].[usp_update_schedule]
 (
   @schedule_id              INT             = NULL,     -- Must provide either this or schedule_name
   @name                     sysname         = NULL,     -- Must provide either this or schedule_id
@@ -3347,7 +4093,7 @@ BEGIN
   END
 
   -- Check that we can uniquely identify the schedule. This only returns a schedule that is visible to this user
-  EXECUTE @retval = dbo.sp_verify_schedule_identifiers @name_of_name_parameter = '@name',
+  EXECUTE @retval = dbo.usp_verify_schedule_identifiers @name_of_name_parameter = '@name',
                                                             @name_of_id_parameter   = '@schedule_id',
                                                             @schedule_name          = @name             OUTPUT,
                                                             @schedule_id            = @schedule_id      OUTPUT,
@@ -3402,7 +4148,7 @@ BEGIN
          @x_active_end_date        = active_end_date,
          @x_active_start_time      = active_start_time,
          @x_active_end_time        = active_end_time
-  FROM dbo.sysschedules
+  FROM dbo.Schedules
   WHERE (schedule_id = @schedule_id )     
   
   
@@ -3421,7 +4167,7 @@ BEGIN
   IF (@active_end_time        IS NULL) SELECT @active_end_time        = @x_active_end_time
       
   -- Check schedule (frequency and owner) parameters
-  EXECUTE @retval = sp_verify_schedule @schedule_id             = @schedule_id,
+  EXECUTE @retval = dbo.usp_verify_schedule @schedule_id             = @schedule_id,
                                        @name                    = @new_name,
                                        @enabled                 = @enabled,
                                        @freq_type               = @freq_type,
@@ -3439,7 +4185,7 @@ BEGIN
     RETURN(1) -- Failure  
 
   -- Update the sysschedules table
-  UPDATE dbo.sysschedules
+  UPDATE dbo.Schedules
   SET name                   = @new_name,
       owner_sid              = @owner_sid,
       enabled                = @enabled,
@@ -3463,18 +4209,20 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_category_identifiers]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_category_identifiers]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_category_identifiers]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_category_identifiers]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_category_identifiers] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_verify_category_identifiers] AS' 
 END
 GO
+-- Alter Procedure usp_verify_category_identifiers
+-- Alter Procedure sp_verify_category_identifiers
 
-ALTER PROCEDURE [dbo].[sp_verify_category_identifiers]
+ALTER PROCEDURE [dbo].[usp_verify_category_identifiers]
    @name_of_name_parameter [varchar](60),
    @name_of_id_parameter [varchar](60),
    @category_name [sysname] OUTPUT,
@@ -3503,7 +4251,7 @@ BEGIN
   IF (@category_id IS NOT NULL)
   BEGIN
     SELECT @category_name = name
-    FROM dbo.syscategories
+    FROM dbo.JobCategories
     WHERE (category_id = @category_id)
     IF (@category_name IS NULL)
     BEGIN
@@ -3518,7 +4266,7 @@ BEGIN
   BEGIN
     -- The name is not ambiguous, so get the corresponding category_id (if the job exists)
     SELECT @category_id = category_id
-    FROM dbo.syscategories
+    FROM dbo.JobCategories
     WHERE (name = @category_name)
     IF (@category_id IS NULL)
     BEGIN
@@ -3531,18 +4279,21 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_job]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_job]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_job] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_verify_job] AS' 
 END
 GO
+-- Alter Procedure usp_verify_job
+-- Alter Procedure sp_verify_job
+-- Alter Procedure sp_verify_job
 
-ALTER PROCEDURE [dbo].[sp_verify_job]
+ALTER PROCEDURE [dbo].[usp_verify_job]
   @job_id                       UNIQUEIDENTIFIER,
   @name                         sysname,
   @enabled                      TINYINT,
@@ -3591,7 +4342,7 @@ BEGIN
 
     -- Get current maximum step id
     SELECT @max_step_id = ISNULL(MAX(step_id), 0)
-    FROM dbo.sysjobsteps
+    FROM dbo.JobSteps
     WHERE (job_id = @job_id)
 
     IF (@start_step_id < 1) OR (@start_step_id > @max_step_id + 1)
@@ -3610,7 +4361,7 @@ BEGIN
 
   -- A local job cannot be added to a multi-server job_category
   IF (@job_type = 1) AND (EXISTS (SELECT *
-                                  FROM dbo.syscategories
+                                  FROM dbo.JobCategories
                                   WHERE (category_class = 1) -- Job
                                     AND (category_type = 2) -- Multi-Server
                                     AND (name = @category_name)))
@@ -3621,7 +4372,7 @@ BEGIN
 
   -- A multi-server job cannot be added to a local job_category
   IF (@job_type = 2) AND (EXISTS (SELECT *
-                                  FROM dbo.syscategories
+                                  FROM dbo.JobCategories
                                   WHERE (category_class = 1) -- Job
                                     AND (category_type = 1) -- Local
                                     AND (name = @category_name)))
@@ -3647,7 +4398,7 @@ BEGIN
   ELSE
   BEGIN
     SELECT @category_id = category_id
-    FROM dbo.syscategories
+    FROM dbo.JobCategories
     WHERE (category_class = 1) -- Job
       AND (name = @category_name)
   END
@@ -3705,19 +4456,19 @@ BEGIN
   RETURN(0) -- Success
 END
 
-
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job_date]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_job_date]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job_date]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_job_date]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_job_date] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_verify_job_date] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_verify_job_date]
+-- Alter Procedure usp_verify_job_date
+ALTER PROCEDURE [dbo].[usp_verify_job_date]
   @date           INT,
   @date_name      VARCHAR(60) = 'date',
   @error_severity INT         = -1
@@ -3738,17 +4489,19 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job_identifiers]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_job_identifiers]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job_identifiers]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_job_identifiers]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_job_identifiers] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_verify_job_identifiers] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_verify_job_identifiers]
+-- Alter Procedure usp_verify_job_identifiers
+-- Create Procedure sp_verify_job_identifiers
+ALTER PROCEDURE [dbo].[usp_verify_job_identifiers]
   @name_of_name_parameter  VARCHAR(60),             -- Eg. '@job_name'
   @name_of_id_parameter    VARCHAR(60),             -- Eg. '@job_id'
   @job_name                sysname          OUTPUT, -- Eg. 'My Job'
@@ -3781,7 +4534,7 @@ BEGIN
   BEGIN
     SELECT @job_name = name,
            @owner_sid = owner_sid
-    FROM dbo.sysjobs_view
+    FROM dbo.Jobs_View
     WHERE (job_id = @job_id)
     
     -- the view would take care of all the permissions issues.
@@ -3798,7 +4551,7 @@ BEGIN
   BEGIN
     -- Check if the job name is ambiguous
     IF ((SELECT COUNT(*)
-         FROM dbo.sysjobs_view
+         FROM dbo.Jobs_View
          WHERE (name = @job_name)) > 1)
     BEGIN
       RAISERROR(14293, -1, -1, @job_name, @name_of_id_parameter, @name_of_name_parameter)
@@ -3808,7 +4561,7 @@ BEGIN
     -- The name is not ambiguous, so get the corresponding job_id (if the job exists)
     SELECT @job_id = job_id,
            @owner_sid = owner_sid
-    FROM dbo.sysjobs_view
+    FROM dbo.Jobs_View
     WHERE (name = @job_name)
     
     -- the view would take care of all the permissions issues.
@@ -3834,18 +4587,19 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_job_time]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_job_time]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_job_time]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_job_time]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_job_time] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_verify_job_time] AS' 
 END
 GO
+-- Alter Procedure usp_verify_job_time
 
-ALTER PROCEDURE [dbo].[sp_verify_job_time]
+ALTER PROCEDURE [dbo].[usp_verify_job_time]
   @time           INT,
   @time_name      VARCHAR(60) = 'time',
   @error_severity INT = -1
@@ -3899,17 +4653,19 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_jobstep]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_jobstep]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_jobstep]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_jobstep] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_verify_jobstep] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_verify_jobstep]
+-- Alter Procedure usp_verify_jobstep
+-- Alter Procedure sp_verify_jobstep
+ALTER PROCEDURE [dbo].[usp_verify_jobstep]
   @job_id             UNIQUEIDENTIFIER,
   @step_id            INT,
   @step_name          sysname,
@@ -3942,7 +4698,7 @@ BEGIN
 
   -- Get current maximum step id
   SELECT @max_step_id = ISNULL(MAX(step_id), 0)
-  FROM dbo.sysjobsteps
+  FROM dbo.JobSteps
   WHERE (job_id = @job_id)
 
   -- Check step id
@@ -3987,7 +4743,7 @@ BEGIN
 
   -- Check step name
   IF (EXISTS (SELECT *
-              FROM dbo.sysjobsteps
+              FROM dbo.JobSteps
               WHERE (job_id = @job_id)
                 AND (step_name = @step_name)))
   BEGIN
@@ -4126,17 +4882,20 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_schedule]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_schedule]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_schedule]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_schedule]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_schedule] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_verify_schedule] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_verify_schedule]
+-- Alter Procedure usp_verify_schedule
+-- Alter Procedure sp_verify_schedule
+-- Alter Procedure sp_verify_schedule
+ALTER PROCEDURE [dbo].[usp_verify_schedule]
   @schedule_id            INT,
   @name                   sysname,
   @enabled                TINYINT,
@@ -4258,11 +5017,11 @@ BEGIN
   IF (@active_end_date = 0)
     SELECT @active_end_date = 99991231
 
-  EXECUTE @return_code = sp_verify_job_date @active_end_date, '@active_end_date'
+  EXECUTE @return_code = dbo.usp_verify_job_date @active_end_date, '@active_end_date'
   IF (@return_code <> 0)
     RETURN(1) -- Failure
 
-  EXECUTE @return_code = sp_verify_job_date @active_start_date, '@active_start_date'
+  EXECUTE @return_code = dbo.usp_verify_job_date @active_start_date, '@active_start_date'
   IF (@return_code <> 0)
     RETURN(1) -- Failure
 
@@ -4272,11 +5031,11 @@ BEGIN
     RETURN(1) -- Failure
   END
 
-  EXECUTE @return_code = sp_verify_job_time @active_end_time, '@active_end_time'
+  EXECUTE @return_code = dbo.usp_verify_job_time @active_end_time, '@active_end_time'
   IF (@return_code <> 0)
     RETURN(1) -- Failure
 
-  EXECUTE @return_code = sp_verify_job_time @active_start_time, '@active_start_time'
+  EXECUTE @return_code = dbo.usp_verify_job_time @active_start_time, '@active_start_time'
   IF (@return_code <> 0)
     RETURN(1) -- Failure
 
@@ -4438,17 +5197,20 @@ ExitProc:
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_verify_schedule_identifiers]    Script Date: 15-06-2020 17:15:36 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_schedule_identifiers]    Script Date: 24-06-2020 17:00:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_verify_schedule_identifiers]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_schedule_identifiers]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[sp_verify_schedule_identifiers] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[usp_verify_schedule_identifiers] AS' 
 END
 GO
-ALTER PROCEDURE [dbo].[sp_verify_schedule_identifiers]
+-- Alter Procedure usp_verify_schedule_identifiers
+-- Alter Procedure sp_verify_schedule_identifiers
+-- Alter Procedure sp_verify_schedule_identifiers
+ALTER PROCEDURE [dbo].[usp_verify_schedule_identifiers]
   @name_of_name_parameter   VARCHAR(60),             -- Eg. '@schedule_name'
   @name_of_id_parameter     VARCHAR(60),             -- Eg. '@schedule_id'
   @schedule_name            sysname             OUTPUT, 
@@ -4485,7 +5247,7 @@ BEGIN
         -- Look at all schedules
         SELECT @schedule_name   = name,
            @owner_sid           = owner_sid
-        FROM dbo.sysschedules
+        FROM dbo.Schedules
         WHERE (schedule_id = @schedule_id)
 
 
@@ -4509,8 +5271,8 @@ BEGIN
         SELECT @sch_name_count = COUNT(*),
                @schedule_id    = MIN(s.schedule_id),
                @owner_sid      = MIN(owner_sid)
-        FROM dbo.sysschedules as s
-          JOIN dbo.sysjobschedules as js 
+        FROM dbo.Schedules as s
+          JOIN dbo.JobSchedules as js 
             ON s.schedule_id = js.schedule_id
         WHERE (name = @schedule_name) AND
               (js.job_id = @job_id_filter)
@@ -4522,7 +5284,7 @@ BEGIN
         SELECT @sch_name_count = COUNT(*),
          @schedule_id     = MIN(schedule_id),
             @owner_sid       = MIN(owner_sid)
-        FROM dbo.sysschedules
+        FROM dbo.Schedules
         WHERE (name = @schedule_name)
     END
 
@@ -4540,8 +5302,8 @@ BEGIN
       IF(PROGRAM_NAME() NOT LIKE N'SQLAgent%' AND
          ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 1 AND
          EXISTS(SELECT * 
-                FROM dbo.sysschedules as sched
-                  JOIN dbo.sysjobschedules as js 
+                FROM dbo.Schedules as sched
+                  JOIN dbo.JobSchedules as js 
                     ON sched.schedule_id = js.schedule_id
                 WHERE (name = @schedule_name) AND
                       ((@job_id_filter IS NULL) OR (js.job_id = @job_id_filter))))
@@ -4560,3 +5322,129 @@ BEGIN
 
   RETURN(0) -- Success
 END
+
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_DiagramPane1' , N'SCHEMA',N'dbo', N'VIEW',N'Jobs_View', NULL,NULL))
+EXEC sys.sp_addextendedproperty @name=N'MS_DiagramPane1', @value=N'[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]
+Begin DesignProperties = 
+   Begin PaneConfigurations = 
+      Begin PaneConfiguration = 0
+         NumPanes = 4
+         Configuration = "(H (1[41] 4[21] 2[25] 3) )"
+      End
+      Begin PaneConfiguration = 1
+         NumPanes = 3
+         Configuration = "(H (1 [50] 4 [25] 3))"
+      End
+      Begin PaneConfiguration = 2
+         NumPanes = 3
+         Configuration = "(H (1 [50] 2 [25] 3))"
+      End
+      Begin PaneConfiguration = 3
+         NumPanes = 3
+         Configuration = "(H (4 [30] 2 [40] 3))"
+      End
+      Begin PaneConfiguration = 4
+         NumPanes = 2
+         Configuration = "(H (1 [56] 3))"
+      End
+      Begin PaneConfiguration = 5
+         NumPanes = 2
+         Configuration = "(H (2 [66] 3))"
+      End
+      Begin PaneConfiguration = 6
+         NumPanes = 2
+         Configuration = "(H (4 [50] 3))"
+      End
+      Begin PaneConfiguration = 7
+         NumPanes = 1
+         Configuration = "(V (3))"
+      End
+      Begin PaneConfiguration = 8
+         NumPanes = 3
+         Configuration = "(H (1[56] 4[18] 2) )"
+      End
+      Begin PaneConfiguration = 9
+         NumPanes = 2
+         Configuration = "(H (1 [75] 4))"
+      End
+      Begin PaneConfiguration = 10
+         NumPanes = 2
+         Configuration = "(H (1[66] 2) )"
+      End
+      Begin PaneConfiguration = 11
+         NumPanes = 2
+         Configuration = "(H (4 [60] 2))"
+      End
+      Begin PaneConfiguration = 12
+         NumPanes = 1
+         Configuration = "(H (1) )"
+      End
+      Begin PaneConfiguration = 13
+         NumPanes = 1
+         Configuration = "(V (4))"
+      End
+      Begin PaneConfiguration = 14
+         NumPanes = 1
+         Configuration = "(V (2))"
+      End
+      ActivePaneConfig = 0
+   End
+   Begin DiagramPane = 
+      Begin Origin = 
+         Top = 0
+         Left = 0
+      End
+      Begin Tables = 
+         Begin Table = "jobs"
+            Begin Extent = 
+               Top = 6
+               Left = 38
+               Bottom = 136
+               Right = 270
+            End
+            DisplayFlags = 280
+            TopColumn = 0
+         End
+         Begin Table = "svr"
+            Begin Extent = 
+               Top = 6
+               Left = 308
+               Bottom = 119
+               Right = 506
+            End
+            DisplayFlags = 280
+            TopColumn = 0
+         End
+      End
+   End
+   Begin SQLPane = 
+   End
+   Begin DataPane = 
+      Begin ParameterDefaults = ""
+      End
+   End
+   Begin CriteriaPane = 
+      Begin ColumnWidths = 12
+         Column = 1440
+         Alias = 900
+         Table = 1170
+         Output = 720
+         Append = 1400
+         NewValue = 1170
+         SortType = 1350
+         SortOrder = 1410
+         GroupBy = 1350
+         Filter = 1350
+         Or = 1350
+         Or = 1350
+         Or = 1350
+         Or = 1350
+      End
+   End
+End
+' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'VIEW',@level1name=N'Jobs_View'
+GO
+IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_DiagramPaneCount' , N'SCHEMA',N'dbo', N'VIEW',N'Jobs_View', NULL,NULL))
+EXEC sys.sp_addextendedproperty @name=N'MS_DiagramPaneCount', @value=N'1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'VIEW',@level1name=N'Jobs_View'
+GO
