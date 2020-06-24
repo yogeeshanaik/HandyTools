@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "WindowsServiceSample": {
+      "commandName": "Project",
+      "commandLineArgs": "--console",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
