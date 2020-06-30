@@ -1,176 +1,168 @@
-IF  EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_DiagramPaneCount' , N'SCHEMA',N'dbo', N'VIEW',N'Jobs_View', NULL,NULL))
-EXEC sys.sp_dropextendedproperty @name=N'MS_DiagramPaneCount' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'VIEW',@level1name=N'Jobs_View'
-
-GO
-IF  EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_DiagramPane1' , N'SCHEMA',N'dbo', N'VIEW',N'Jobs_View', NULL,NULL))
-EXEC sys.sp_dropextendedproperty @name=N'MS_DiagramPane1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'VIEW',@level1name=N'Jobs_View'
-
-GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_schedule_identifiers]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_schedule_identifiers]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_schedule_identifiers]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_verify_schedule_identifiers]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_schedule]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_schedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_verify_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_jobstep]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_jobstep]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_verify_jobstep]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_job_time]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_job_time]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_job_time]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_verify_job_time]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_job_identifiers]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_job_identifiers]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_job_identifiers]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_verify_job_identifiers]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_job_date]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_job_date]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_job_date]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_verify_job_date]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_job]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_job]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_job]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_verify_job]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_category_identifiers]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_category_identifiers]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_verify_category_identifiers]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_verify_category_identifiers]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_update_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_update_schedule]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_update_schedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_update_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_update_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_update_jobstep]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_update_jobstep]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_update_jobstep]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_update_job]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_update_job]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_update_job]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_update_job]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_start_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_start_schedule]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_start_schedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_start_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_start_jobsteps]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_start_jobsteps]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_start_jobsteps]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_start_jobsteps]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_start_job]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_start_job]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_start_job]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_start_job]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_set_jobstep_completion_state]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_set_jobstep_completion_state]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_set_jobstep_completion_state]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_set_jobstep_completion_state]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_log_jobhistory]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_log_jobhistory]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_log_jobhistory]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_log_jobhistory]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_help_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_help_jobstep]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_help_jobstep]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_help_jobstep]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_help_jobschedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_help_jobschedule]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_help_jobschedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_help_jobschedule]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_get_schedule_description]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_get_schedule_description]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_get_schedule_description]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_get_schedule_description]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_get_jobschedules]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_get_jobschedules]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_get_jobschedules]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_get_jobschedules]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_detach_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_detach_schedule]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_detach_schedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_detach_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_delete_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_delete_schedule]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_delete_schedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_delete_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_attach_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_attach_schedule]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_attach_schedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_attach_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_add_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_add_schedule]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_add_schedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_add_schedule]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_add_jobstep_internal]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_add_jobstep_internal]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_add_jobstep_internal]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_add_jobstep_internal]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_add_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_add_jobstep]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_add_jobstep]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_add_jobstep]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_add_jobschedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_add_jobschedule]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_add_jobschedule]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_add_jobschedule]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_add_job]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_add_job]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_add_job]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[usp_add_job]
 GO
-/****** Object:  View [dbo].[Jobs_View]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  View [dbo].[Jobs_View]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].[Jobs_View]'))
 DROP VIEW [dbo].[Jobs_View]
 GO
-/****** Object:  Table [dbo].[Schedules]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  Table [dbo].[Schedules]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Schedules]') AND type in (N'U'))
 DROP TABLE [dbo].[Schedules]
 GO
-/****** Object:  Table [dbo].[JobSteps]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  Table [dbo].[JobSteps]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[JobSteps]') AND type in (N'U'))
 DROP TABLE [dbo].[JobSteps]
 GO
-/****** Object:  Table [dbo].[JobSchedules]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  Table [dbo].[JobSchedules]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[JobSchedules]') AND type in (N'U'))
 DROP TABLE [dbo].[JobSchedules]
 GO
-/****** Object:  Table [dbo].[Jobs]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  Table [dbo].[Jobs]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Jobs]') AND type in (N'U'))
 DROP TABLE [dbo].[Jobs]
 GO
-/****** Object:  Table [dbo].[JobHistory]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  Table [dbo].[JobHistory]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[JobHistory]') AND type in (N'U'))
 DROP TABLE [dbo].[JobHistory]
 GO
-/****** Object:  Table [dbo].[JobCategories]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  Table [dbo].[JobCategories]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[JobCategories]') AND type in (N'U'))
 DROP TABLE [dbo].[JobCategories]
 GO
-/****** Object:  UserDefinedFunction [dbo].[udfGetScheduleTimes]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  UserDefinedFunction [dbo].[udfGetScheduleTimes]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[udfGetScheduleTimes]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
 DROP FUNCTION [dbo].[udfGetScheduleTimes]
 GO
-/****** Object:  UserDefinedFunction [dbo].[udfGetNextSchedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  UserDefinedFunction [dbo].[udfGetNextSchedule]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[udfGetNextSchedule]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
 DROP FUNCTION [dbo].[udfGetNextSchedule]
 GO
-/****** Object:  UserDefinedFunction [dbo].[fn_TimeToInt]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  UserDefinedFunction [dbo].[fn_TimeToInt]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_TimeToInt]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
 DROP FUNCTION [dbo].[fn_TimeToInt]
 GO
-/****** Object:  UserDefinedFunction [dbo].[fn_Job_Datetime]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  UserDefinedFunction [dbo].[fn_Job_Datetime]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_Job_Datetime]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
 DROP FUNCTION [dbo].[fn_Job_Datetime]
 GO
-/****** Object:  UserDefinedFunction [dbo].[fn_IntToTimeString]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  UserDefinedFunction [dbo].[fn_IntToTimeString]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_IntToTimeString]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
 DROP FUNCTION [dbo].[fn_IntToTimeString]
 GO
-/****** Object:  UserDefinedFunction [dbo].[fn_DateToInt]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  UserDefinedFunction [dbo].[fn_DateToInt]    Script Date: 30-06-2020 16:31:54 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_DateToInt]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
 DROP FUNCTION [dbo].[fn_DateToInt]
 GO
-/****** Object:  UserDefinedFunction [dbo].[fn_DateToInt]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  UserDefinedFunction [dbo].[fn_DateToInt]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -195,7 +187,7 @@ END'
 END
 
 GO
-/****** Object:  UserDefinedFunction [dbo].[fn_IntToTimeString]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  UserDefinedFunction [dbo].[fn_IntToTimeString]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -224,7 +216,7 @@ END'
 END
 
 GO
-/****** Object:  UserDefinedFunction [dbo].[fn_Job_Datetime]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  UserDefinedFunction [dbo].[fn_Job_Datetime]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -254,7 +246,7 @@ END
 END
 
 GO
-/****** Object:  UserDefinedFunction [dbo].[fn_TimeToInt]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  UserDefinedFunction [dbo].[fn_TimeToInt]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -279,7 +271,7 @@ END'
 END
 
 GO
-/****** Object:  UserDefinedFunction [dbo].[udfGetNextSchedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  UserDefinedFunction [dbo].[udfGetNextSchedule]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -698,7 +690,7 @@ END'
 END
 
 GO
-/****** Object:  UserDefinedFunction [dbo].[udfGetScheduleTimes]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  UserDefinedFunction [dbo].[udfGetScheduleTimes]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1094,7 +1086,7 @@ END'
 END
 
 GO
-/****** Object:  Table [dbo].[JobCategories]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  Table [dbo].[JobCategories]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1109,7 +1101,7 @@ CREATE TABLE [dbo].[JobCategories](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Table [dbo].[JobHistory]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  Table [dbo].[JobHistory]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1133,7 +1125,7 @@ CREATE TABLE [dbo].[JobHistory](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Table [dbo].[Jobs]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  Table [dbo].[Jobs]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1163,7 +1155,7 @@ END
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[JobSchedules]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  Table [dbo].[JobSchedules]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1178,7 +1170,7 @@ CREATE TABLE [dbo].[JobSchedules](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Table [dbo].[JobSteps]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  Table [dbo].[JobSteps]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1212,7 +1204,7 @@ CREATE TABLE [dbo].[JobSteps](
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 END
 GO
-/****** Object:  Table [dbo].[Schedules]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  Table [dbo].[Schedules]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1249,7 +1241,7 @@ END
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  View [dbo].[Jobs_View]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  View [dbo].[Jobs_View]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1329,9 +1321,13 @@ INSERT [dbo].[JobHistory] ([instance_id], [job_id], [step_id], [step_name], [sql
 GO
 INSERT [dbo].[JobHistory] ([instance_id], [job_id], [step_id], [step_name], [sql_message_id], [sql_severity], [message], [run_status], [run_date], [run_time], [run_duration], [retries_attempted], [server]) VALUES (2, N'301f33fd-a102-4f63-a4e9-7bc2be168b24', 2, N'Generate_DetailedReport_And_Email', 0, 0, N'Executed as user: YOGEESHA\Yogi. The step succeeded.', 1, 20200622, 172445, 0, 0, N'YOGEESHA')
 GO
+INSERT [dbo].[JobHistory] ([instance_id], [job_id], [step_id], [step_name], [sql_message_id], [sql_severity], [message], [run_status], [run_date], [run_time], [run_duration], [retries_attempted], [server]) VALUES (1002, N'301f33fd-a102-4f63-a4e9-7bc2be168b24', 1, N'Generate_SummaryReport_And_Email', 0, 0, N'Executed as user: YOGEESHA\Yogi. The step succeeded.', 1, 20200625, 161018, 0, 0, N'YOGEESHA')
+GO
 SET IDENTITY_INSERT [dbo].[JobHistory] OFF
 GO
 INSERT [dbo].[Jobs] ([job_id], [name], [enabled], [description], [start_step_id], [category_id], [owner_sid], [delete_level], [date_created], [date_modified], [version_number]) VALUES (N'301f33fd-a102-4f63-a4e9-7bc2be168b24', N'Email_ShortfallSummary_Report', 1, N'Genrate shortfall summary report and email to the receipients', 1, 0, 0x0105000000000005150000006A427F5AEEEC7EF00F3C03ACE9030000, 0, CAST(N'2020-06-22 17:02:29.423' AS DateTime), CAST(N'2020-06-22 17:02:29.427' AS DateTime), 4)
+GO
+INSERT [dbo].[Jobs] ([job_id], [name], [enabled], [description], [start_step_id], [category_id], [owner_sid], [delete_level], [date_created], [date_modified], [version_number]) VALUES (N'594e06c4-936e-433e-8f9b-df6eee9c49e9', N'AuditReport', 1, N'No description available.', 1, 0, 0x0105000000000005150000006A427F5AEEEC7EF00F3C03ACE9030000, 0, CAST(N'2020-06-26 09:21:07.460' AS DateTime), CAST(N'2020-06-26 09:21:07.527' AS DateTime), 3)
 GO
 INSERT [dbo].[JobSchedules] ([schedule_id], [job_id], [next_run_date], [next_run_time]) VALUES (1, N'301f33fd-a102-4f63-a4e9-7bc2be168b24', 20200622, 233000)
 GO
@@ -1340,6 +1336,8 @@ GO
 INSERT [dbo].[JobSchedules] ([schedule_id], [job_id], [next_run_date], [next_run_time]) VALUES (3, N'301f33fd-a102-4f63-a4e9-7bc2be168b24', 20200622, 110000)
 GO
 INSERT [dbo].[JobSchedules] ([schedule_id], [job_id], [next_run_date], [next_run_time]) VALUES (4, N'301f33fd-a102-4f63-a4e9-7bc2be168b24', 20200630, 90000)
+GO
+INSERT [dbo].[JobSchedules] ([schedule_id], [job_id], [next_run_date], [next_run_time]) VALUES (2, N'594e06c4-936e-433e-8f9b-df6eee9c49e9', 20200626, 100000)
 GO
 INSERT [dbo].[JobSteps] ([job_id], [step_id], [step_name], [subsystem], [command], [additional_parameters], [cmdexec_success_code], [on_success_action], [on_success_step_id], [on_fail_action], [on_fail_step_id], [server], [database_name], [database_user_name], [retry_attempts], [retry_interval], [output_file_name], [last_run_outcome], [last_run_duration], [last_run_retries], [last_run_date], [last_run_time], [step_uid]) VALUES (N'301f33fd-a102-4f63-a4e9-7bc2be168b24', 1, N'Generate_SummaryReport_And_Email', N'TSQL', N'SELECT GETDATE() AS [ReportDate], ''Summary'' AS [Report Type]', N'
 {
@@ -1354,7 +1352,7 @@ INSERT [dbo].[JobSteps] ([job_id], [step_id], [step_name], [subsystem], [command
 	Thanks,
 	Report Scheduler"
   }
-}', 0, 3, 0, 2, 0, NULL, N'master', NULL, 1, 1, NULL, 1, 0, 0, 20200622, 172445, N'0cb31584-fad6-4e81-ba00-2de222a3f703')
+}', 0, 3, 0, 2, 0, NULL, N'master', NULL, 1, 1, NULL, 1, 0, 0, 20200625, 161018, N'0cb31584-fad6-4e81-ba00-2de222a3f703')
 GO
 INSERT [dbo].[JobSteps] ([job_id], [step_id], [step_name], [subsystem], [command], [additional_parameters], [cmdexec_success_code], [on_success_action], [on_success_step_id], [on_fail_action], [on_fail_step_id], [server], [database_name], [database_user_name], [retry_attempts], [retry_interval], [output_file_name], [last_run_outcome], [last_run_duration], [last_run_retries], [last_run_date], [last_run_time], [step_uid]) VALUES (N'301f33fd-a102-4f63-a4e9-7bc2be168b24', 2, N'Generate_DetailedReport_And_Email', N'TSQL', N'SELECT GETDATE() AS [ReportDate], ''Detailed'' AS [Report Type]', N'
 {
@@ -1371,6 +1369,8 @@ INSERT [dbo].[JobSteps] ([job_id], [step_id], [step_name], [subsystem], [command
   }
 }', 0, 1, 0, 2, 0, NULL, N'master', NULL, 1, 1, NULL, 1, 0, 0, 20200622, 172445, N'529a114f-ed36-471a-99a9-38b91ef7a603')
 GO
+INSERT [dbo].[JobSteps] ([job_id], [step_id], [step_name], [subsystem], [command], [additional_parameters], [cmdexec_success_code], [on_success_action], [on_success_step_id], [on_fail_action], [on_fail_step_id], [server], [database_name], [database_user_name], [retry_attempts], [retry_interval], [output_file_name], [last_run_outcome], [last_run_duration], [last_run_retries], [last_run_date], [last_run_time], [step_uid]) VALUES (N'594e06c4-936e-433e-8f9b-df6eee9c49e9', 1, N'Current Day Audit', N'TSQL', N'SELECT GETDATE()', NULL, 0, 1, 0, 2, 0, NULL, N'master', NULL, 0, 0, NULL, 0, 0, 0, 0, 0, N'ce840dc2-6be2-41e1-b61a-3eb444d444eb')
+GO
 SET IDENTITY_INSERT [dbo].[Schedules] ON 
 
 GO
@@ -1384,7 +1384,7 @@ INSERT [dbo].[Schedules] ([schedule_id], [schedule_uid], [name], [owner_sid], [e
 GO
 SET IDENTITY_INSERT [dbo].[Schedules] OFF
 GO
-/****** Object:  StoredProcedure [dbo].[usp_add_job]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_add_job]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -1425,11 +1425,11 @@ BEGIN
   IF (@category_name                = N'') SELECT @category_name                = NULL
 
   --only members of sysadmins role can set the owner
-  IF (@owner_login_name IS NOT NULL AND ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 0) AND (@owner_login_name <> SUSER_SNAME())
-  BEGIN
-    RAISERROR(14515, -1, -1)
-    RETURN(1) -- Failure
-  END
+  --IF (@owner_login_name IS NOT NULL AND ISNULL(IS_SRVROLEMEMBER(N'sysadmin'), 0) = 0) AND (@owner_login_name <> SUSER_SNAME())
+  --BEGIN
+  --  RAISERROR(14515, -1, -1)
+  --  RETURN(1) -- Failure
+  --END
     
   -- Default the owner (if not supplied or if a non-sa is [illegally] trying to create a job for another user)
   -- allow special account only when caller is sysadmin
@@ -1519,7 +1519,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_add_jobschedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_add_jobschedule]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -1601,7 +1601,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_add_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_add_jobstep]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -1693,7 +1693,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_add_jobstep_internal]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_add_jobstep_internal]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -1933,7 +1933,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_add_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_add_schedule]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -2089,7 +2089,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_attach_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_attach_schedule]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -2167,7 +2167,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_delete_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_delete_schedule]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -2291,7 +2291,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_detach_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_detach_schedule]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -2443,7 +2443,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_get_jobschedules]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_get_jobschedules]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2501,7 +2501,7 @@ BEGIN
 	ORDER BY S.next_run_datetime, S.job_id, JS.step_id	
 END
 GO
-/****** Object:  StoredProcedure [dbo].[usp_get_schedule_description]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_get_schedule_description]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -2620,7 +2620,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_help_jobschedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_help_jobschedule]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -2844,7 +2844,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_help_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_help_jobstep]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -2992,7 +2992,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_log_jobhistory]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_log_jobhistory]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -3158,7 +3158,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_set_jobstep_completion_state]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_set_jobstep_completion_state]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -3203,7 +3203,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_start_job]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_start_job]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -3288,7 +3288,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_start_jobsteps]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_start_jobsteps]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -3305,7 +3305,8 @@ GO
 -- Create Procedure sp_start_jobsteps
 ALTER PROCEDURE [dbo].[usp_start_jobsteps]
   @job_id      UNIQUEIDENTIFIER = NULL, 
-  @schedule_id INT              = NULL 
+  @schedule_id INT              = NULL, 
+  @step_id INT					= NULL
 AS
 BEGIN
 
@@ -3320,7 +3321,6 @@ BEGIN
 
   -- Start: Custom Code
 
-		DECLARE @step_id int
 		DECLARE @sql_message_id int
 		DECLARE @sql_severity int
 		DECLARE @message nvarchar(4000)
@@ -3334,7 +3334,8 @@ BEGIN
 		DECLARE @retries_attempted int
 		DECLARE @server sysname
 		DECLARE @session_id int
-
+		DECLARE @next_run_date int
+		DECLARE @next_run_time int
 		DECLARE @StartTime DATETIME
 
 		-- Variables for Loop
@@ -3392,9 +3393,17 @@ BEGIN
 	EXECUTE @retval = [dbo].[usp_help_jobstep] 
 	  @job_id    = @job_id, -- Must provide either this or job_name
 	  @job_name  = NULL, -- Must provide either this or job_id
-	  @step_id   = NULL,
+	  @step_id   = @step_id,
 	  @step_name = NULL,
 	  @suffix    = 0     -- A flag to control how the result set is formatted
+
+	-- Find the last step
+	declare @last_step_id        int
+	select max([last_step_id]) from (
+		select max(on_success_step_id) as [last_step_id] from JobSteps where job_id = @job_id union
+		select max(on_fail_step_id	 ) as [last_step_id] from JobSteps where job_id = @job_id union
+		select max(step_id			 ) as [last_step_id] from JobSteps where job_id = @job_id
+	) as t
 
 	SELECT @Min=MIN(step_id), @Max= MAX(step_id) FROM @JobSteps
 
@@ -3471,6 +3480,21 @@ BEGIN
 			,@server				= @server				
 			,@session_id			= @session_id
 
+		-- if last step of the job, then update next run date and time
+		IF @last_step_id = @step_id
+		BEGIN 
+			SELECT 
+				@next_run_date = FORMAT(infoDate,'yyyyMMdd'),
+				@next_run_time = FORMAT(infoDate,'HHmmss')
+			 FROM [dbo].[udfGetNextSchedule] (@schedule_id)
+
+			UPDATE dbo.JobSchedules 
+			SET next_run_date = @next_run_date, 
+				next_run_time = @next_run_time 
+			WHERE (job_id = @job_id 
+			and schedule_id = @schedule_id)
+		END
+
 		/*
 		1 = Quit the job reporting success.
 		2 = Quit the job reporting failure.
@@ -3508,7 +3532,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_start_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_start_schedule]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -3573,7 +3597,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_update_job]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_update_job]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -3785,7 +3809,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_update_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_update_jobstep]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -4013,7 +4037,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_update_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_update_schedule]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -4209,7 +4233,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_category_identifiers]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_category_identifiers]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -4279,7 +4303,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_job]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_job]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -4457,7 +4481,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_job_date]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_job_date]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -4489,7 +4513,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_job_identifiers]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_job_identifiers]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -4587,7 +4611,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_job_time]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_job_time]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -4653,7 +4677,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_jobstep]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_jobstep]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -4882,7 +4906,7 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_schedule]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_schedule]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -5197,7 +5221,7 @@ ExitProc:
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[usp_verify_schedule_identifiers]    Script Date: 24-06-2020 17:00:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_verify_schedule_identifiers]    Script Date: 30-06-2020 16:31:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER OFF
@@ -5322,129 +5346,3 @@ BEGIN
 
   RETURN(0) -- Success
 END
-
-GO
-IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_DiagramPane1' , N'SCHEMA',N'dbo', N'VIEW',N'Jobs_View', NULL,NULL))
-EXEC sys.sp_addextendedproperty @name=N'MS_DiagramPane1', @value=N'[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]
-Begin DesignProperties = 
-   Begin PaneConfigurations = 
-      Begin PaneConfiguration = 0
-         NumPanes = 4
-         Configuration = "(H (1[41] 4[21] 2[25] 3) )"
-      End
-      Begin PaneConfiguration = 1
-         NumPanes = 3
-         Configuration = "(H (1 [50] 4 [25] 3))"
-      End
-      Begin PaneConfiguration = 2
-         NumPanes = 3
-         Configuration = "(H (1 [50] 2 [25] 3))"
-      End
-      Begin PaneConfiguration = 3
-         NumPanes = 3
-         Configuration = "(H (4 [30] 2 [40] 3))"
-      End
-      Begin PaneConfiguration = 4
-         NumPanes = 2
-         Configuration = "(H (1 [56] 3))"
-      End
-      Begin PaneConfiguration = 5
-         NumPanes = 2
-         Configuration = "(H (2 [66] 3))"
-      End
-      Begin PaneConfiguration = 6
-         NumPanes = 2
-         Configuration = "(H (4 [50] 3))"
-      End
-      Begin PaneConfiguration = 7
-         NumPanes = 1
-         Configuration = "(V (3))"
-      End
-      Begin PaneConfiguration = 8
-         NumPanes = 3
-         Configuration = "(H (1[56] 4[18] 2) )"
-      End
-      Begin PaneConfiguration = 9
-         NumPanes = 2
-         Configuration = "(H (1 [75] 4))"
-      End
-      Begin PaneConfiguration = 10
-         NumPanes = 2
-         Configuration = "(H (1[66] 2) )"
-      End
-      Begin PaneConfiguration = 11
-         NumPanes = 2
-         Configuration = "(H (4 [60] 2))"
-      End
-      Begin PaneConfiguration = 12
-         NumPanes = 1
-         Configuration = "(H (1) )"
-      End
-      Begin PaneConfiguration = 13
-         NumPanes = 1
-         Configuration = "(V (4))"
-      End
-      Begin PaneConfiguration = 14
-         NumPanes = 1
-         Configuration = "(V (2))"
-      End
-      ActivePaneConfig = 0
-   End
-   Begin DiagramPane = 
-      Begin Origin = 
-         Top = 0
-         Left = 0
-      End
-      Begin Tables = 
-         Begin Table = "jobs"
-            Begin Extent = 
-               Top = 6
-               Left = 38
-               Bottom = 136
-               Right = 270
-            End
-            DisplayFlags = 280
-            TopColumn = 0
-         End
-         Begin Table = "svr"
-            Begin Extent = 
-               Top = 6
-               Left = 308
-               Bottom = 119
-               Right = 506
-            End
-            DisplayFlags = 280
-            TopColumn = 0
-         End
-      End
-   End
-   Begin SQLPane = 
-   End
-   Begin DataPane = 
-      Begin ParameterDefaults = ""
-      End
-   End
-   Begin CriteriaPane = 
-      Begin ColumnWidths = 12
-         Column = 1440
-         Alias = 900
-         Table = 1170
-         Output = 720
-         Append = 1400
-         NewValue = 1170
-         SortType = 1350
-         SortOrder = 1410
-         GroupBy = 1350
-         Filter = 1350
-         Or = 1350
-         Or = 1350
-         Or = 1350
-         Or = 1350
-      End
-   End
-End
-' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'VIEW',@level1name=N'Jobs_View'
-GO
-IF NOT EXISTS (SELECT * FROM ::fn_listextendedproperty(N'MS_DiagramPaneCount' , N'SCHEMA',N'dbo', N'VIEW',N'Jobs_View', NULL,NULL))
-EXEC sys.sp_addextendedproperty @name=N'MS_DiagramPaneCount', @value=N'1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'VIEW',@level1name=N'Jobs_View'
-GO
