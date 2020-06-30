@@ -6,6 +6,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Data;
 using System.IO;
+using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading;
@@ -56,11 +57,33 @@ namespace WindowsServiceSample
 
             foreach (DataRow rowSchedule in dtSchedules?.Rows)
             {
-                var json = rowSchedule["additional_parameters"]?.ToString();
+                var json = rowSchedule["additional_parameters"]?.ToString()??string.Empty;
                 dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
 
+                string reportName = "Test Report"; // jsonObj["Report"]["Name"].ToString();
+                string to = jsonObj["Email"]["To"].ToString();
+                string cc = jsonObj["Email"]["Cc"].ToString();
+                string bcc = jsonObj["Email"]["Bcc"].ToString();
+                string subject = jsonObj["Email"]["Subject"].ToString();
+                string body = jsonObj["Email"]["Body"].ToString();
+
+                var mailMessage =
+                      new MailMessage()
+                      {
+                          Subject = subject,
+                          Body = body,
+                          IsBodyHtml = false,
+                          //Attachments = { new Attachment(stream, $"Receipt-{receiptEmailData.Receipt.CourseName}.pdf") }
+                      };
+                mailMessage.From = new MailAddress(((System.Net.NetworkCredential)_smtpClient.Credentials).UserName, "");
+                to.Split(';').ToList().ForEach(i => { if (i.Length > 0) mailMessage.To.Add(new MailAddress(i.Trim(), "")); });
+                cc.Split(';').ToList().ForEach(i => { if (i.Length > 0) mailMessage.CC.Add(new MailAddress(i.Trim(), "")); });
+                bcc.Split(';').ToList().ForEach(i => { if (i.Length > 0) mailMessage.Bcc.Add(new MailAddress(i.Trim(), "")); });
+
+                db.AddParameter("job_id", rowSchedule["job_id"]);
                 db.AddParameter("schedule_id", rowSchedule["schedule_id"]);
-                var dsResults = db.GetDataSet("[dbo].[usp_start_schedule]", CommandType.StoredProcedure, ConnectionState.Open);
+                db.AddParameter("step_id", rowSchedule["step_id"]);
+                var dsResults = db.GetDataSet("[dbo].[usp_start_jobsteps]", CommandType.StoredProcedure, ConnectionState.Open);
 
                 // Assumption: Each step will have only one resultset for report
                 foreach (DataTable dataTable in dsResults?.Tables)
@@ -71,25 +94,9 @@ namespace WindowsServiceSample
                     //save the data to a memory stream
                     System.IO.MemoryStream ms = new System.IO.MemoryStream(data);
 
-                    var mailMessage =
-                      new MailMessage()
-                      {
-                          Subject = jsonObj["Email"]["Subject"].ToString(),
-                          Body = jsonObj["Email"]["Body"].ToString(),
-                          IsBodyHtml = false,
-                          //Attachments = { new Attachment(stream, $"Receipt-{receiptEmailData.Receipt.CourseName}.pdf") }
-                      };
-
-                    mailMessage.Attachments.Add(new System.Net.Mail.Attachment(ms, "example.xls", "application/vnd.ms-excel"));
-
-                    mailMessage.From = new MailAddress(((System.Net.NetworkCredential)_smtpClient.Credentials).UserName, "");
-                    foreach (string address in jsonObj["Email"]["To"].ToString().Split(';'))
-                    {
-                        if (address.Length > 0)
-                            mailMessage.To.Add(new MailAddress(address.Trim(), ""));
-                    }                    
-                    _smtpClient.Send(mailMessage);
+                    mailMessage.Attachments.Add(new System.Net.Mail.Attachment(ms, reportName, "application/vnd.ms-excel"));                    
                 }
+                _smtpClient.Send(mailMessage);
             }
         }
 
