@@ -57,7 +57,6 @@
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.btnDelete = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.explorerTree1 = new WindowsExplorer.ExplorerTree();
             this.toolStrip3 = new System.Windows.Forms.ToolStrip();
             this.lnkExpand = new System.Windows.Forms.LinkLabel();
             this.btnLoad = new System.Windows.Forms.Button();
@@ -113,7 +112,6 @@
             this.rtbXmlEditor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.rtbXmlEditor.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.rtbXmlEditor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtbXmlEditor.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.rtbXmlEditor.IsReplaceMode = false;
             this.rtbXmlEditor.Location = new System.Drawing.Point(235, 75);
             this.rtbXmlEditor.Name = "rtbXmlEditor";
@@ -166,6 +164,7 @@
             // txtSelectedFilePath
             // 
             this.txtSelectedFilePath.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSelectedFilePath.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSelectedFilePath.Name = "txtSelectedFilePath";
             this.txtSelectedFilePath.ReadOnly = true;
             this.txtSelectedFilePath.Size = new System.Drawing.Size(100, 25);
@@ -173,7 +172,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.explorerTree1);
             this.panel3.Controls.Add(this.tvFiles);
             this.panel3.Controls.Add(this.txtNodeFilter);
             this.panel3.Controls.Add(this.toolStrip1);
@@ -363,20 +361,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(693, 75);
             this.panel2.TabIndex = 0;
-            // 
-            // explorerTree1
-            // 
-            this.explorerTree1.BackColor = System.Drawing.Color.White;
-            this.explorerTree1.Location = new System.Drawing.Point(12, 26);
-            this.explorerTree1.Name = "explorerTree1";
-            this.explorerTree1.SelectedPath = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\IDE";
-            this.explorerTree1.ShowAddressbar = true;
-            this.explorerTree1.ShowMyDocuments = true;
-            this.explorerTree1.ShowMyFavorites = true;
-            this.explorerTree1.ShowMyNetwork = true;
-            this.explorerTree1.ShowToolbar = true;
-            this.explorerTree1.Size = new System.Drawing.Size(240, 336);
-            this.explorerTree1.TabIndex = 7;
             // 
             // toolStrip3
             // 
@@ -581,7 +565,6 @@
         private System.Windows.Forms.ToolStrip toolStrip3;
         private DelayTextBox txtNodeFilter;
         private System.Windows.Forms.ImageList imageList1;
-        private WindowsExplorer.ExplorerTree explorerTree1;
     }
 }
 

@@ -60,8 +60,8 @@ namespace CodeYogi
             //*/
             //System.AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionTrapper;
 
-            //new Xml_Editor.TemplateManager().ShowDialog();
-            new frmExplorer().ShowDialog();
+            new Xml_Editor.TemplateManager().ShowDialog();
+            //new frmExplorer().ShowDialog();
             return;
         }
 
